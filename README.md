@@ -1,1 +1,1 @@
-# PashaOsadchi-PashaOsadchi.github.io
+# PashaOsadchi.github.io
