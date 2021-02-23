@@ -14,8 +14,8 @@
         "type": "image/png"
       }
       ],
-      "scope": "/",
-      "start_url": "https://ladyzhyn.com/",
+      "scope": "https://ladyzhyn.com/",
+      "start_url": "/",
       "display": "fullscreen",
       "theme_color": "#696969",
       "background_color": "#696969"
