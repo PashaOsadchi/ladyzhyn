@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Адресок!</title>
+
+    <link rel="icon" type="image/png" sizes="192x192" href="icon/icon_192.png">
+    <link rel="manifest" href="pwa.webmanifest">
+
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/html.css">
+    <link rel="stylesheet" href="css/body.css">
+
+    <link rel="stylesheet" href="css/tag_label.css">
+    <link rel="stylesheet" href="css/tag_select.css">
+    <link rel="stylesheet" href="css/tag_input.css">
+    <link rel="stylesheet" href="css/tag_summary.css">
+    <link rel="stylesheet" href="css/tag_details.css">
+    <link rel="stylesheet" href="css/tag_button.css">
+    <link rel="stylesheet" href="css/tag_a.css">
+    <link rel="stylesheet" href="css/tag_dialog.css">
+
+    <link rel="stylesheet" href="css/id_map.css">
+    <link rel="stylesheet" href="css/id_page_name.css">
+
+    <link rel="stylesheet" href="css/class_button.css">
+    <link rel="stylesheet" href="css/class_div_level.css">
+    <link rel="stylesheet" href="css/class_marker.css">
+    <link rel="stylesheet" href="css/class_grid.css">
+    <link rel="stylesheet" href="css/class_div_add_address_route.css">
+    <link rel="stylesheet" href="css/class_logo.css">
+    <link rel="stylesheet" href="css/class_checkbox_block.css">
+    <link rel="stylesheet" href="css/class_container_menu.css">
+
+    <link rel="stylesheet" href="css/media_screen.css">
+    <link rel="stylesheet" href="css/variables.css">
+
+    <script defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbM1P2ElI-R4k04dFUU4gZ5PnsXS2wUYk&callback=initMap&libraries=geometry,visualization"></script>
+    <script defer src="js/custom_marker.js"></script>
+    <script defer src="js/resize.js"></script>
+    <script defer src="js/paving_route.js"></script>
+    <script defer src="js/touch.js"></script>
+    <script defer src="js/calculates_central_point.js"></script>
+    <script defer src="js/script.js"></script>
+    <script defer src="js/map_listener.js"></script>
+
+    <script src="js/find_coordinates_last_selected_address.js"></script>
+
+    <script src="js/copy_clipboard.js"></script>
+
+    <script src="js/map.js"></script>
+    <script src="js/dialog.js"></script>
+    <script src="js/onclick_details.js"></script>
+    <script src="js/address.js"></script>
+    <script src="js/map_offset.js"></script>
+    <script src="js/maps_geometry.js"></script>
+    <script src="js/geolocation_gps.js"></script>
+    <script src="js/change_color_show_hide_button.js"></script>
+
+    <script src="js/сopy_buffer_exchange_link_coordinates_route.js"></script>
+    <script src="js/сopy_buffer_exchange_address.js"></script>
+    <script src="js/сopy_buffer_exchange_link_coordinates_last_selected_address.js"></script>
+    <script src="js/сopy_buffer_exchange_link_coordinates_last_selected_organization.js"></script>
+    <script src="js/сopy_buffer_exchange_data_last_selected_organization.js"></script>
+
+    <script src="js/delete_markers.js"></script>
+
+    <script src="js/clears_div.js"></script>
+
+    <script src="js/find_organization.js"></script>
+
+    <script src="js/display_addresses_radius_current_coordinates.js"></script>
+    <script src="js/display_addresses_radius_selected_coordinates.js"></script>
+    <script src="js/display_addresses.js"></script>
+    <script src="js/display_organization.js"></script>
+
+    <script src="js/open_close_sidebar.js"></script>
+    <script src="js/open_dialog_detailed_information.js"></script>
+
+    <script src="js/add_address_route.js"></script>
+    <script src="js/add_organization_route.js"></script>
+    <script src="js/add_waypoints_full_arr.js"></script>
+    <script src="js/add_map_density_population.js"></script>
+    <script src="js/add_current_coordinates_route.js"></script>
+    <script src="js/add_map_polyline_community_boundary.js"></script>
+    <script src="js/add_map_current_coordinates.js"></script>
+
+    <script src="js/data_human_settlement.js"></script>
+    <script src="js/data_street.js"></script>
+    <script src="js/data_house.js"></script>
+    <script src="js/data_entrance.js"></script>
+    <script src="js/data_apartment.js"></script>
+    <script src="js/data_error_text.js"></script>
+
+    <script src="js/data_organization.js"></script>
+    <script src="js/data_organization_type.js"></script>
+
+    <script src="js/data_community_boundary.js"></script>
+    <script src="js/data_community_boundary_ladyzhyn.js"></script>
+    <script src="js/data_community_boundary_lukashivka.js"></script>
+    <script src="js/data_community_boundary_hubnyk.js"></script>
+    <script src="js/data_community_boundary_ruzhytske.js"></script>
+    <script src="js/data_community_boundary_zaozerne.js"></script>
+    <script src="js/data_community_boundary_vasylivka.js"></script>
+</head>
+
+<dialog id="id_dialog_error"></dialog>
+<dialog id="id_dialog_detailed_information"></dialog>
+
+<body id="id_body">
+    <header id="id_page_header">
+        <img class="logo" src="img/logo.png" alt="Геоінформаційний портал Ладижинської територіальної громади" title="Геоінформаційний портал Ладижинської територіальної громади">
+
+        <div id="id_container_menu" class="container_menu" onclick="open_close_sidebar()">
+            <div id="id_bar_1" class="bar"></div>
+            <div id="id_bar_2" class="bar"></div>
+            <div id="id_bar_3" class="bar"></div>
+        </div>
+    </header>
+
+    <div id="map"></div>
+
+    <div class="div_first_page_level_1" id="id_sidebar">
+        <details class="datails_leveil_1" id="id_details_address" onclick="onclick_details_address()">
+            <summary class="summary_title_name">Адреси</summary>
+
+            <button class="button_sidebar_copy" onclick="сopy_buffer_exchange_address()">Копіювати у буфер обміну
+                останню вибрану адресу</button>
+            <button class="button_sidebar_copy"
+                onclick="сopy_buffer_exchange_link_coordinates_last_selected_address()">Копіювати у буфер обміну
+                посилання із кординатами останньої вибраної адреси</button>
+
+            <button class="button_sidebar_add_map" onclick="display_addresses_radius_current_coordinates()">Відобразити
+                адреси на карті які знаходяться в радіусі 500 метрів від поточних кординат</button>
+            <button class="button_sidebar_add_map" onclick="display_addresses_radius_selected_coordinates()">Відобразити
+                адреси на карті які знаходяться в радіусі 500 метрів від вибраної адреси</button>
+            <button class="button_sidebar_add_map" onclick="display_addresses()">Відобразити вибрані адреси на
+                карті</button>
+            <button class="button_sidebar_delete" onclick="delete_markers()">Видалити адреси із карти</button>
+            <button class="button_sidebar_add_address_route" onclick="add_address_route()">Додати адресу у
+                маршрут</button>
+
+            <div class="checkbox_block">
+                <input type="checkbox" name="" id="id_display_address_reduction">
+                <label id="id_label_display_address_reduction" for="id_display_address_reduction">Відображати на карті
+                    скорочену назву вулиці</label>
+            </div>
+
+            <div class="div_first_page_level_2" id="human_settlemen_bloc">
+                <details id="id_details_human_settlement" onclick="onclick_details_human_settlement()">
+                    <summary class="summary_address_type_name">Вибір населеного пункту
+                        <select id="id_human_settlements" name="env" onchange="onchange_human_settlements()">
+                            <option id="id_option_human_settlements"></option>
+                            <script>
+                                function add_select_human_settlements() {
+                                    for (i = 0; i < data_human_settlement_arr.length; i++) {
+                                        document.write(`<option value="${data_human_settlement_arr[i].human_settlement_id}">${data_human_settlement_arr[i].human_settlement_short_name}</option>`);
+                                    };
+                                }
+                                document.getElementById("id_option_human_settlements").insertAdjacentHTML = add_select_human_settlements();
+                            </script>
+                        </select>
+                    </summary>
+
+                    <button class="button_sidebar_copy"
+                        onclick="copy_clipboard(full_address_information_obj.human_settlement, 'населений пункт')">Копіювати
+                        у буфер обміну повну інформацію про населений пункт</button>
+
+                    <div id="bloc_detailed_information_human_settlement">
+                        <label id="number_house_label" for="">Загальна кількість будинків</label>
+                        <input type="number" name="" id="number_house" disabled>
+                        <label id="number_private_house_label" for="">Кількість будинків приватного сектору</label>
+                        <input type="number" name="" id="number_private_house" disabled>
+                        <label id="number_artment_building_label" for="">Кількість багатоквартирних будинків</label>
+                        <input type="number" name="" id="number_artment_building" disabled>
+                        <label id="number_street_label" for="">Кількість вулиць</label>
+                        <input type="number" name="" id="number_street" disabled>
+                        <label id="number_entrance_label" for="">Кількість підїздів</label>
+                        <input type="number" name="" id="number_entrance" disabled>
+                        <label id="number_apartment_label" for="">Кількість квартир</label>
+                        <input type="number" name="" id="number_apartment" disabled>
+
+                        <label id="human_settlement_name_label" for="">Імя населеного пункту</label>
+                        <input type="text" name="" id="human_settlement_name" disabled>
+                        <label id="human_settlement_zip_code_label" for="">Індекс</label>
+                        <input type="text" name="" id="human_settlement_zip_code" disabled>
+
+                        <label id="" for="">Зареєстровано всього осіб</label>
+                        <input type="text" name="" id="human_settlement_total_number_registered_person" disabled>
+
+                        <label id="" for="">Зареєстровано чоловіків (% від загальної кількості)</label>
+                        <input type="text" name="" id="human_settlement_total_number_registered_men" disabled>
+
+                        <label id="" for="">Зареєстровано жінок (% від загальної кількості)</label>
+                        <input type="text" name="" id="human_settlement_total_number_registered_women" disabled>
+
+                        <label id="" for="">Зареєстровано дітей до 14 років (% від загальної кількості)</label>
+                        <input type="text" name="" id="human_settlement_total_number_registered_children_up_14_years"
+                            disabled>
+
+                        <label id="" for="">Зареєстровано дітей від 14 до 18 років (% від загальної кількості)</label>
+                        <input type="text" name=""
+                            id="human_settlement_total_number_registered_children_from_14_to_18_years" disabled>
+                    </div>
+                </details>
+            </div>
+
+            <div class="div_next_to_first_page_level_2" id="street_bloc">
+                <details id="id_details_street" onclick="onclick_details_street()">
+                    <summary class="summary_address_type_name">Вибір вулиці
+                        <select name="" id="id_select_streets" onchange="onchange_streets()">
+                            <option value=""></option>
+                        </select>
+                    </summary>
+
+                    <button class="button_sidebar_copy"
+                        onclick="copy_clipboard(full_address_information_obj.street, 'вулицю')">Копіювати у буфер обміну
+                        повну інформацію про вулицю</button>
+
+                    <div id="bloc_detailed_information_street">
+                        <label id="street_number_house_label" for="">Загальна кількість будинків</label>
+                        <input type="number" name="" id="street_number_house" disabled>
+                        <label id="street_number_private_house_label" for="">Кількість будинків приватного
+                            сектору</label>
+                        <input type="number" name="" id="street_number_private_house" disabled>
+                        <label id="street_number_artment_building_label" for="">Кількість багатоквартирних
+                            будинків</label>
+                        <input type="number" name="" id="street_number_artment_building" disabled>
+                        <label id="street_number_entrance_label" for="">Кількість підїздів</label>
+                        <input type="number" name="" id="street_number_entrance" disabled>
+                        <label id="street_number_apartment_label" for="">Кількість квартир</label>
+                        <input type="number" name="" id="street_number_apartment" disabled>
+
+                        <label id="street_name_label" for="">Назва вулиці</label>
+                        <input type="text" name="" id="street_name" disabled>
+                        <label id="street_name_old_label" for="">Минула назва вулиці</label>
+                        <input type="text" name="" id="street_name_old" disabled>
+                        <label id="street_voice_search_label" for="">Текст голосового пошуку</label>
+                        <input type="text" name="" id="street_voice_search" disabled>
+                        <label id="street_zip_code_label" for="">Індекс</label>
+                        <input type="text" name="" id="street_zip_code" disabled>
+                    </div>
+                </details>
+            </div>
+
+            <div class="div_next_to_first_page_level_2" id="house_bloc">
+                <details id="id_details_house" onclick="onclick_details_house()">
+                    <summary class="summary_address_type_name">Вибір будинку
+                        <select name="" id="id_select_house" onchange="onchange_house()">
+                            <option value=""></option>
+                        </select>
+                    </summary>
+
+                    <button class="button_sidebar_copy"
+                        onclick="copy_clipboard(full_address_information_obj.house, 'будинок')">Копіювати у буфер обміну
+                        повну інформацію про будинок</button>
+
+                    <div id="bloc_detailed_information_house">
+                        <label id="id_house_number_entrance_label" for="">Кількість підїздів</label>
+                        <input type="number" name="" id="id_house_number_entrance" disabled>
+                        <label id="id_house_number_apartment_label" for="">Кількість квартир</label>
+                        <input type="number" name="" id="id_house_number_apartment" disabled>
+
+                        <label id="house_name_label" for="">Номер будинку</label>
+                        <input type="text" name="" id="house_name" disabled>
+                        <label id="14" for="">Довгота</label>
+                        <input type="number" name="" id="id_house_longitude" disabled>
+                        <label id="15" for="">Широта</label>
+                        <input type="number" name="" id="id_house_latitude" disabled>
+                        <label id="16" for="">Кадастровий номер земельної ділянки</label>
+                        <input type="text" name="" id="id_house_kadastr_number" disabled>
+                    </div>
+                </details>
+            </div>
+
+            <div class="div_next_to_first_page_level_2" id="entrance_bloc">
+                <details id="id_details_entrance" onclick="onclick_details_entrance()">
+                    <summary class="summary_address_type_name">Вибір підїзду
+                        <select name="" id="id_select_entrance" onchange="onchange_entrance()">
+                        </select>
+                    </summary>
+
+                    <button class="button_sidebar_copy"
+                        onclick="copy_clipboard(full_address_information_obj.entrance, 'підїзд')">Копіювати у буфер
+                        обміну повну інформацію про підїзд</button>
+
+                    <div id="bloc_detailed_information_entrance">
+                        <label id="entrance_name_label" for="">№ підїзду</label>
+                        <input type="number" name="" id="entrance_name" disabled>
+                        <label id="entrance_first_apartment_entrance_label" for="">Початковий номер квартири у
+                            підїзді</label>
+                        <input type="number" name="" id="entrance_first_apartment_entrance" disabled>
+                        <label id="entrance_last_apartment_entrance_label" for="">Кінцевий номер квартири у
+                            підїзді</label>
+                        <input type="number" name="" id="entrance_last_apartment_entrance" disabled>
+                        <label id="entrance_longitude_label" for="">Довгота</label>
+                        <input type="number" name="" id="entrance_longitude" disabled>
+                        <label id="entrance_latitude_label" for="">Широта</label>
+                        <input type="number" name="" id="entrance_latitude" disabled>
+                    </div>
+                </details>
+            </div>
+
+            <div class="div_next_to_first_page_level_2" id="apartment_bloc">
+                <details id="id_details_apartment" onclick="onclick_details_apartment()">
+                    <summary class="summary_address_type_name">Вибір квартири
+                        <select name="" id="id_select_apartment" onchange="onchange_apartment()">
+                        </select>
+                    </summary>
+
+                    <button class="button_sidebar_copy"
+                        onclick="copy_clipboard(full_address_information_obj.apartment, 'квартиру')">Копіювати у буфер
+                        обміну повну інформацію про квартиру</button>
+                    <div id="bloc_detailed_information_apartment">
+                        <label id="apartment_name_label" for="">Номер квартири</label>
+                        <input type="text" name="" id="apartment_name" disabled>
+
+                        <label id="apartment_kadastr_number_label" for="">Кадастровий номер прибудови</label>
+                        <input type="text" name="" id="apartment_kadastr_number" disabled>
+                    </div>
+                </details>
+        </details>
+
+        <details class="datails_leveil_1" id="id_details_organization" onclick="onclick_details_organization()">
+            <summary class="summary_title_name">Організації</summary>
+
+            <button class="button_sidebar_copy"
+                onclick="сopy_buffer_exchange_link_coordinates_last_selected_organization()">Копіювати у буфер обміну
+                посилання із кординатами останньої вибраної організації</button>
+            <button class="button_sidebar_copy"
+                onclick="сopy_buffer_exchange_data_last_selected_organization()">Копіювати у буфер обміну інформацію про
+                останню вибрану організацію</button>
+
+
+            <button class="button_sidebar_find" onclick="find_organization()">Шукати організації</button>
+            <button class="button_sidebar_add_map" onclick="display_organization()">Відобразити організації на
+                карті</button>
+            <button class="button_sidebar_add_map" onclick="display_selected_organization()">Відобразити вибрану
+                організацію на карті</button>
+            <button class="button_sidebar_delete" onclick="delete_markers_organization()">Видалити організацію(ції) із
+                карти</button>
+            <button class="button_sidebar_add_address_route" onclick="add_organization_route()">Додати адресу
+                організації у
+                маршрут</button>
+
+            <div class="div_first_page_level_2">
+                <details id="" onclick="" open>
+                    <summary class="summary_address_type_name">Параметри пошуку організації</summary>
+
+                    <label for="">Пошук по назві організації</label>
+                    <input type="text" name="" list="id_datalist_organization" id="id_input_organization">
+                    <datalist id="id_datalist_organization">
+                        <option id="id_option_datalist_organization"></option>
+                        <script>
+                            function add_select_organization() {
+                                for (i = 0; i < data_organization_arr.length; i++) {
+                                    document.write(`<option value="${data_organization_arr[i].organization_id}. ${data_organization_arr[i].organization_type}: ${data_organization_arr[i].organization_name}"></option>`);
+                                };
+                            }
+                            document.getElementById("id_option_datalist_organization").insertAdjacentHTML = add_select_organization();
+                        </script>
+                    </datalist>
+
+                    <label for="">Фільтр по типу організації</label>
+                    <select name="" id="id_select_organization_type" onchange="">
+                        <option id="id_option_data_organization_type"></option>
+                        <script>
+                            function add_select_organization_type() {
+                                for (i = 0; i < data_organization_type_arr.length; i++) {
+                                    document.write(`<option value="${data_organization_type_arr[i].organization_id}">${data_organization_type_arr[i].organization_type}</option>`);
+                                };
+                            }
+                            document.getElementById("id_option_data_organization_type").insertAdjacentHTML = add_select_organization_type();
+                        </script>
+                    </select>
+
+                    <div class="checkbox_block">
+                        <input type="checkbox" name="" id="id_chbox_all_find_organization">
+                        <label id="id_label_chbox_all_find_organization" for="id_chbox_all_find_organization">Знайти всі
+                            організації</label>
+                    </div>
+                </details>
+            </div>
+
+            <div class="div_next_to_first_page_level_2">
+                <details id="" onclick="" open>
+                    <summary class="summary_address_type_name">Результат пошуку організацій</summary>
+                    <label for="">Кількість знайдених організацій</label>
+                    <input type="text" name="" id="id_number_found_organization" readonly>
+
+                    <label for="">Вибір знайдених організації</label>
+                    <select name="" id="id_select_found_organization" onchange="onchange_organization()">
+                        <option value=""></option>
+                    </select>
+                </details>
+            </div>
+
+            <div class="div_next_to_first_page_level_2">
+                <details id="" onclick="">
+                    <summary class="summary_address_type_name">Детальна інформація про вибрану організацію
+                    </summary>
+
+                    <label for="">Назва</label>
+                    <input type="text" name="" id="id_organization_name">
+
+                    <label for="">Тип</label>
+                    <input type="text" name="" id="id_organization_type">
+
+                    <label for="">Адреса</label>
+                    <input type="text" name="" id="id_organization_address">
+
+                    <label for="">Примітка до адреси</label>
+                    <input type="text" name="" id="id_organization_note_address">
+
+                    <label for="">Понеділок</label>
+                    <input type="text" name="" id="id_organization_monday">
+
+                    <label for="">Вівторок</label>
+                    <input type="text" name="" id="id_organization_tuesday">
+
+                    <label for="">Середа</label>
+                    <input type="text" name="" id="id_organization_wednesday">
+
+                    <label for="">Четвер</label>
+                    <input type="text" name="" id="id_organization_thursday">
+
+                    <label for="">Пятниця</label>
+                    <input type="text" name="" id="id_organization_friday">
+
+                    <label for="">Субота</label>
+                    <input type="text" name="" id="id_organization_saturday">
+
+                    <label for="">Неділя</label>
+                    <input type="text" name="" id="id_organization_sunday">
+                </details>
+            </div>
+        </details>
+
+        <details class="datails_leveil_1" id="id_details_route" onclick="onclick_details_route()">
+            <summary class="summary_title_name">Маршрут</summary>
+            <button class="button_sidebar_copy" onclick="сopy_buffer_exchange_link_coordinates_route()">Копіювати у
+                буфер обміну посилання із прокладеним маршрутом</button>
+
+            <button class="button_sidebar_add_map" onclick="paving_route()">Відобразити на карті прокладений
+                маршрут</button>
+            <button class="button_sidebar_delete" onclick="delete_route()">Видалити маршрут із карти</button>
+            <button class="button_sidebar_delete" onclick="delete_list_waypoints()">Очистити перелік маршрутних
+                точок</button>
+
+            <div class="div_first_page_level_2" id="">
+                <label for="">Вибір виду транспорту який використовується для руху маршрутом</label>
+                <div class="checkbox_block">
+                    <input type="checkbox" name="" id="id_chbox_paving_rout_driving"
+                        onclick="id_chbox_paving_rout_walking.checked = false; paving_route_travel_mode = 'DRIVING'"
+                        checked>
+                    <label id="id_label_chbox_paving_rout_driving" for="id_chbox_paving_rout_driving">Автомобіль</label>
+                </div>
+                <div class="checkbox_block">
+                    <input type="checkbox" name="" id="id_chbox_paving_rout_walking"
+                        onclick="id_chbox_paving_rout_driving.checked = false; paving_route_travel_mode = 'WALKING'">
+                    <label id="id_label_chbox_paving_rout_walking" for="id_chbox_paving_rout_walking">Велосипед або
+                        пішохідна прогулянка</label>
+                </div>
+            </div>
+
+            <div class="div_next_to_first_page_level_2" id="">
+                <label for="">Перелік маршрутних точок</label>
+                <div id="id_list_waypoints"></div>
+            </div>
+        </details>
+
+        <details class="datails_leveil_1" id="id_details_virtual_tour" onclick="onclick_details_virtual_tour()">
+            <summary class="summary_title_name">Віртуальні тури</summary>
+
+            <a href="https://pashaosadchi.github.io/">Зимова казка у дендрологічному парку "Ладижинський гай"</a>
+        </details>
+
+        <details class="datails_leveil_1" id="id_details_density_population"
+            onclick="onclick_details_density_population()">
+            <summary class="summary_title_name">Густота населення</summary>
+
+            <button class="button_sidebar_add_map"
+                onclick="change_color_show_hide_button(this); add_map_density_population_house_multifamily()">Показати\Приховати
+                на
+                карті густоту
+                населення у багатоквартирних будинках</button>
+
+            <button class="button_sidebar_add_map"
+                onclick="change_color_show_hide_button(this); add_map_density_population_house_private()">Показати\Приховати
+                на
+                карті густоту
+                населення у приватних будинках</button>
+        </details>
+
+        <details class="datails_leveil_1" id="id_details_community_boundary"
+            onclick="onclick_details_community_boundary()">
+            <summary class="summary_title_name">Межі населених пунктів</summary>
+
+            <button class="button_sidebar_add_map"
+                onclick="change_color_show_hide_button(this); add_map_polyline_community_boundary_all()">Показати\Приховати
+                межі населених
+                пунктів</button>
+        </details>
+
+        <details class="datails_leveil_1" id="id_details_current_coordinates"
+            onclick="onclick_details_current_coordinates()">
+            <summary class="summary_title_name">Поточні кординати</summary>
+            <button class="button_sidebar_add_map"
+                onclick="change_color_show_hide_button(this); add_map_current_coordinates()">Показати\Приховати поточні
+                кординати</button>
+            <button class="button_sidebar_add_address_route" onclick="add_current_coordinates_route()">Додати у маршрут
+                поточні координати</button>
+        </details>
+
+        <details class="datails_leveil_1" id="id_details_interesting_places"
+            onclick="onclick_details_interesting_places()">
+            <summary class="summary_title_name">Цікаві місця</summary>
+        </details>
+    </div>
+</body>
+
+</html>

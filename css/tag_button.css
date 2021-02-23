@@ -1,0 +1,28 @@
+/* https://bitsofco.de/when-do-the-hover-focus-and-active-pseudo-classes-apply/ */
+
+button {
+    font-size: 1.15rem;
+    min-height: 35px;
+    color: rgb(255, 255, 255);
+    margin-top: 4px;
+    border: none;
+}
+
+/* Збігається, коли користувач позначає елемент за допомогою вказівного пристрою, наприклад, утримуючи над ним вказівник миші. */
+button:hover {
+    outline: none;
+    border: none;
+    opacity: 0.6;
+}
+
+/* Збігається, коли елемент має фокус. */
+button:focus {
+    outline: none;
+    border: none;
+}
+
+/* Збігається, коли елемент активується користувачем, наприклад натискається. */
+button:active {
+    border: none;
+    opacity: 1;
+}
