@@ -1,8 +1,8 @@
 // https://web.dev/add-manifest/
 // https://dev.to/njromano/how-to-scope-your-pwa-service-workers-1n6m
 {
-  "name": "Ладижин (геопортал)",
-    "short_name": "Ладижин (геопортал)",
+  "name": "Ладижин-геопортал",
+    "short_name": "Ладижин-геопортал",
     "description": "Прогресивний WEB додаток",
     "icons": [
       {
