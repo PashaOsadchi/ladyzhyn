@@ -1,0 +1,35 @@
+/* https://developer.mozilla.org/ru/docs/Learn/CSS/Styling_text/Styling_links */
+
+a {
+    outline: none;
+    text-decoration: none;
+    margin-top: 4px;
+}
+
+/* Стан за замовчуванням */
+/* a:link {
+    color: #1623dd;
+} */
+
+/* Посилання, коли вона вже переглянуло (існує в історії браузера) */
+a:visited {
+    color: #ffffff;
+}
+
+/* Посилання, коли вона була сфокусована */
+a:focus {
+    border-bottom: 1px solid;
+    background: #bae498;
+}
+
+/* Посилання, коли на неї вказівником миші */
+a:hover {
+    background: #ffffff;
+    color: hsl(234, 69%, 34%);
+}
+
+/* Посилання, коли вона активується (наприклад при кліці по ній) */
+a:active {
+    background: #265301;
+    color: #cdfeaa;
+}
