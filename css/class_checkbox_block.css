@@ -1,0 +1,7 @@
+.checkbox_block {
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    /* justify-content: center; */ 
+    /* align-items: center;  */
+    margin: 4px 0px 4px 0px;
+}

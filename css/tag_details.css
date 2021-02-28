@@ -1,0 +1,14 @@
+details {
+    /* margin-top: 4px;
+    margin-bottom: 4px; */
+    display: flex;
+    flex-direction: column;
+}
+
+details summary::-webkit-details-marker {
+    color: rgb(255, 255, 255);
+}
+
+.datails_leveil_1 {
+    margin-bottom: 7px;
+}
