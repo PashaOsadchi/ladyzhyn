@@ -95,3 +95,16 @@
 .marker_equipped_recreation_areas::after {
   background: rgba(49, 189, 31, 0.753);
 }
+
+/* Трикутник */
+.marker_public_transport_stops {
+  position: absolute;
+  transform: translateY(50%);
+  border: 10px solid transparent;
+  border-top: 10px solid rgba(31, 118, 189, 0.753);
+}
+
+/* Напис */
+.marker_public_transport_stops::after {
+  background: rgba(31, 118, 189, 0.753);
+}

@@ -140,6 +140,7 @@
     <script src="js/add_map_current_coordinates.js"></script>
     <script src="js/add_map_recreation_areas.js"></script>
     <script src="js/add_map_equipped_recreation_areas.js"></script>
+    <script src="js/add_map_public_transport_stops_all.js"></script>
 
     <script src="js/data_human_settlement.js"></script>
     <script src="js/data_street.js"></script>
@@ -161,6 +162,8 @@
     <script src="js/data_community_boundary_vasylivka.js"></script>
 
     <script src="js/data_equipped_recreation_areas.js"></script>
+
+    <script src="js/data_public_transport_stops.js"></script>
     
 </head>
 
@@ -593,7 +596,16 @@
             <summary class="summary_title_name">Плани зонування</summary>
 
             <button class="button_sidebar_add_map"
-                onclick="id_dialog_openseadragon_master_plan_map.showModal();">Показати план зонування м.Ладижина</button>
+                onclick="id_dialog_openseadragon_master_plan_map.showModal()">Показати план зонування м.Ладижина</button>
+            
+        </details>
+
+        <details class="datails_leveil_1" id="id_details_public_transport"
+            onclick="onclick_details_public_transport()">
+            <summary class="summary_title_name">Громадський транспорт</summary>
+
+            <button class="button_sidebar_add_map"
+                onclick="change_color_show_hide_button(this); add_map_public_transport_stops_all()">Показати\Приховати зупинки громадського транспорту</button>
             
         </details>
     </div>

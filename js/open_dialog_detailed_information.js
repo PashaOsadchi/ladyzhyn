@@ -86,6 +86,17 @@ function open_dialog_detailed_information(id) {
 
             dialog_detailed_information.innerHTML = `${equipped_recreation_areas_str}</div>`;
             break;
+        // Зупинка громадського транспорту
+        case 6:
+            const public_transport_stops_arr = data_public_transport_stops_arr.filter((e) => e.id == id_arr[1]);
+            dialog_detailed_information.showModal();
+
+            dialog_detailed_information.innerHTML = `
+            <div id="dialog_detailed_information_header">Детальна інформація про графіки руху</div>
+            <div id="dialog_detailed_information_content">
+            ${public_transport_stops_arr[0].detailed_information}</div>`;
+
+            break;    
         default:
             return open_dialog_error(error_text_29);
     }
