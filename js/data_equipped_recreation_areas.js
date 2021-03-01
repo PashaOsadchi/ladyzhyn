@@ -22,7 +22,7 @@ const data_equipped_recreation_areas_arr = [
     },
     {
         id: 4,
-        name: "Є столик, накриття, гойдалка",
+        name: "Є столик, три будиночки, дві гойдалки, мангал, дитяча гірка, вбиральня",
         detailed_information: "",
         latitude: 48.64588,
         longitude: 29.25669,
@@ -96,5 +96,19 @@ const data_equipped_recreation_areas_arr = [
         detailed_information: "",
         latitude: 48.64698,
         longitude: 29.30876
+    },
+    {
+        id: 15,
+        name: "Є столик",
+        detailed_information: "",
+        latitude: 48.61916,
+        longitude: 29.31018
+    },
+    {
+        id: 16,
+        name: "Є столик, мангал",
+        detailed_information: "",
+        latitude: 48.62533,
+        longitude: 29.31789
     },
 ];
