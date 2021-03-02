@@ -16,16 +16,16 @@ function сopy_buffer_exchange_link_coordinates_route() {
             if(i == waypoints_arr.length - 1) continue;
 
             if(waypoints_number == 0) {
-                waypoints_str += `${waypoints_arr[i].location.lat}, ${waypoints_arr[i].location.lng}`;
+                waypoints_str += `${waypoints_arr[i].location.lat},${waypoints_arr[i].location.lng}`;
             } else {
-                waypoints_str += `|${waypoints_arr[i].location.lat}, ${waypoints_arr[i].location.lng}`;
+                waypoints_str += `|${waypoints_arr[i].location.lat},${waypoints_arr[i].location.lng}`;
             }
             waypoints_number += 1;
         }
 
-        url_str  = `https://www.google.com/maps/dir/?api=1&origin=${waypoints_arr[0].location.lat}, ${waypoints_arr[0].location.lng}&waypoints=${waypoints_str}&destination=${waypoints_arr[waypoints_arr.length - 1].location.lat}, ${waypoints_arr[waypoints_arr.length - 1].location.lng}&travelmode=${paving_route_travel_mode}`;
+        url_str  = `https://www.google.com/maps/dir/?api=1&origin=${waypoints_arr[0].location.lat},${waypoints_arr[0].location.lng}&waypoints=${waypoints_str}&destination=${waypoints_arr[waypoints_arr.length - 1].location.lat},${waypoints_arr[waypoints_arr.length - 1].location.lng}&travelmode=${paving_route_travel_mode}`;
     } else {
-        url_str  = `https://www.google.com/maps/dir/?api=1&origin=${waypoints_arr[0].location.lat}, ${waypoints_arr[0].location.lng}&destination=${waypoints_arr[1].location.lat}, ${waypoints_arr[1].location.lng}&travelmode=${paving_route_travel_mode}`;
+        url_str  = `https://www.google.com/maps/dir/?api=1&origin=${waypoints_arr[0].location.lat},${waypoints_arr[0].location.lng}&destination=${waypoints_arr[1].location.lat},${waypoints_arr[1].location.lng}&travelmode=${paving_route_travel_mode}`;
     }
     
 
