@@ -6251,3 +6251,16 @@ const data_organization_arr = [
         "organization_number_employees": ""
     }
 ]
+
+// Додає організації у даталіст
+function add_datalist_organization() {
+    for (i = 0; i < data_organization_arr.length; i++) {
+        const option = document.createElement("option");
+        option.setAttribute("value", `${data_organization_arr[i].organization_id}. ${data_organization_arr[i].organization_type}: ${data_organization_arr[i].organization_name}`);
+
+        document.getElementById("id_datalist_organization").appendChild(option);
+    };
+}
+
+// Додає організації у даталіст після завантаження сторінки
+document.addEventListener('DOMContentLoaded', add_datalist_organization(), false);

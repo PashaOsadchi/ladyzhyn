@@ -84,3 +84,17 @@ const data_human_settlement_arr = [
         "human_settlement_length_border": 7178
     }
 ]
+
+// Додає населені пункти у список
+function add_select_human_settlements() {
+    for (i = 0; i < data_human_settlement_arr.length; i++) {
+        const option = document.createElement("option");
+        option.setAttribute("value", data_human_settlement_arr[i].human_settlement_id);
+        option.innerHTML = `${data_human_settlement_arr[i].human_settlement_short_name}`;
+
+        document.getElementById("id_human_settlements").appendChild(option);
+    };
+}
+
+// Додає населені пункти у список після завантаження сторінки
+document.addEventListener('DOMContentLoaded', add_select_human_settlements(), false);

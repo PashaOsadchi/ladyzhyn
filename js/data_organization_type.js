@@ -277,3 +277,17 @@ const data_organization_type_arr = [
         "organization_type": "Ювелірна майстерня"
     }
 ]
+
+// Додає типи організацій у список
+function add_select_organization_type() {
+    for (i = 0; i < data_organization_type_arr.length; i++) {
+        const option = document.createElement("option");
+        option.setAttribute("value", data_organization_type_arr[i].organization_id);
+        option.innerHTML = `${data_organization_type_arr[i].organization_type}`;
+
+        document.getElementById("id_select_organization_type").appendChild(option);
+    };
+}
+
+// Додає типи організацій у список після завантаження сторінки
+document.addEventListener('DOMContentLoaded', add_select_organization_type(), false);
