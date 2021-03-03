@@ -1,5 +1,5 @@
-function detect_device_platform() {
-    var userDeviceArray = [
+function detect_device_platform_1() {
+    const userDeviceArray = [
         { device: "Android", platform: /Android/ },
         { device: "iPhone", platform: /iPhone/ },
         { device: "iPad", platform: /iPad/ },
@@ -10,10 +10,10 @@ function detect_device_platform() {
         { device: "Windows", platform: /Windows NT/ },
         { device: "Macintosh", platform: /Macintosh/ },
     ];
-    var platform = navigator.userAgent;
+    const platform = navigator.userAgent;
 
     function getPlatform() {
-        for (var i in userDeviceArray) {
+        for (let i in userDeviceArray) {
             if (userDeviceArray[i].platform.test(platform)) {
                 return userDeviceArray[i].device;
             }
@@ -22,3 +22,11 @@ function detect_device_platform() {
     }
     return getPlatform();
 }
+
+function detect_device_platform_2() {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+        console.log("Вы используете мобильное устройство (телефон или планшет).");
+    } else console.log("Вы используете ПК.");
+}
+
+// document.addEventListener("DOMContentLoaded", detect_device_platform_2(), false);

@@ -23,6 +23,35 @@ function slider_open_sidebar() {
     }
 };
 
+let touch_close_start_x = 0;
+let touch_close_start_y = 0;
+let touch_close_end_x = 0;
+let touch_close_end_y = 0;
+
+const slider_close = document.getElementById("id_sidebar");
+
+slider_close.addEventListener("touchstart", (e) => {
+    touch_close_start_x = e.changedTouches[0].clientX;
+    touch_close_start_y = e.changedTouches[0].clientY;
+});
+
+slider_close.addEventListener("touchend", (e) => {
+    touch_close_end_x = e.changedTouches[0].clientX;
+    touch_close_end_y = e.changedTouches[0].clientY;
+    slider_close_sidebar();
+});
+
+// Закриває меню при натисканні на праві частині екрана
+function slider_close_sidebar() {
+    // Кординати початку дорівнюють кординатам закінчення (закриває меню)
+    if (touch_close_end_x == touch_close_start_x && touch_close_end_x == touch_close_start_x) {
+        // Перевіряє чи було натискання на відстані не більше як 10 px від правого краю екрана
+        if (touch_close_start_x > window.innerWidth - 10) {
+            open_close_sidebar();
+        }
+    }
+}
+
 /* let touch_close_start_x = 0;
 let touch_close_end_x = 0;
 
