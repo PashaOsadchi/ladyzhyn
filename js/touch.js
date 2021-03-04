@@ -38,7 +38,8 @@ slider_close.addEventListener("touchstart", (e) => {
 slider_close.addEventListener("touchend", (e) => {
     touch_close_end_x = e.changedTouches[0].clientX;
     touch_close_end_y = e.changedTouches[0].clientY;
-    slider_close_sidebar();
+    // Якщо бокова панель видима то дозволяє приховати її
+    if (!sidebar_hidden) slider_close_sidebar();
 });
 
 // Закриває меню при натисканні на праві частині екрана
