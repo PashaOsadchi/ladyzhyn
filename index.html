@@ -215,7 +215,7 @@
             color: rgb(255, 255, 255);
         }
 
-        input:checked + label {
+        input:checked+label {
             padding: 0px 5px 0px 5px;
             background: rgba(31, 219, 24, 0.7);
             color: rgb(255, 255, 255);
@@ -257,7 +257,7 @@
             font-size: 20px;
         }
 
-        summary > select {
+        summary>select {
             background-color: rgb(252, 252, 252) !important;
             position: relative;
             left: -6px;
@@ -503,7 +503,8 @@
             display: inline-block;
             position: absolute;
             min-width: 21px;
-            /* top: -0.5px; */ /* Неможливо налаштувати перекриття */
+            /* top: -0.5px; */
+            /* Неможливо налаштувати перекриття */
             transform: translate(-50%, -167%);
             padding: 0px 1px 0px 1px;
             color: white;
@@ -513,99 +514,100 @@
             text-align: center;
             white-space: nowrap;
             /* overflow: hidden;
-        text-overflow: ellipsis; */ /* якщо необхідно обмежити строку то зафіксувати ширину */
+        text-overflow: ellipsis; */
+            /* якщо необхідно обмежити строку то зафіксувати ширину */
         }
 
         /* Трикутник */
         .marker_house {
-        position: absolute;
-        transform: translateY(50%);
-        border: 10px solid transparent;
-        border-top: 10px solid rgba(248, 141, 0, 0.705);
+            position: absolute;
+            transform: translateY(50%);
+            border: 10px solid transparent;
+            border-top: 10px solid rgba(248, 141, 0, 0.705);
         }
 
         /* Напис */
         .marker_house::after {
-        background: rgba(248, 141, 0, 0.705);
+            background: rgba(248, 141, 0, 0.705);
         }
 
         /* Трикутник */
         .marker_entrance {
-        position: absolute;
-        transform: translateY(50%);
-        border: 10px solid transparent;
-        border-top: 10px solid rgba(244, 248, 0, 0.705);
+            position: absolute;
+            transform: translateY(50%);
+            border: 10px solid transparent;
+            border-top: 10px solid rgba(244, 248, 0, 0.705);
         }
 
         /* Напис */
         .marker_entrance::after {
-        background: rgba(244, 248, 0, 0.705);
+            background: rgba(244, 248, 0, 0.705);
         }
 
         /* Трикутник */
         .marker_apartment {
-        position: absolute;
-        transform: translateY(50%);
-        border: 10px solid transparent;
-        border-top: 10px solid rgba(132, 248, 0, 0.705);
+            position: absolute;
+            transform: translateY(50%);
+            border: 10px solid transparent;
+            border-top: 10px solid rgba(132, 248, 0, 0.705);
         }
 
         /* Напис */
         .marker_apartment::after {
-        background: rgba(132, 248, 0, 0.705);
+            background: rgba(132, 248, 0, 0.705);
         }
 
         /* Трикутник */
         .marker_organization {
-        position: absolute;
-        transform: translateY(50%);
-        border: 10px solid transparent;
-        border-top: 10px solid rgba(0, 248, 236, 0.705);
+            position: absolute;
+            transform: translateY(50%);
+            border: 10px solid transparent;
+            border-top: 10px solid rgba(0, 248, 236, 0.705);
         }
 
         /* Напис */
         .marker_organization::after {
-        background: rgba(0, 248, 236, 0.705);
+            background: rgba(0, 248, 236, 0.705);
         }
 
 
         /* Трикутник */
         .marker_route {
-        position: absolute;
-        transform: translateY(50%);
-        border: 10px solid transparent;
-        border-top: 10px solid rgba(56, 192, 216, 0.753);
+            position: absolute;
+            transform: translateY(50%);
+            border: 10px solid transparent;
+            border-top: 10px solid rgba(56, 192, 216, 0.753);
         }
 
         /* Напис */
         .marker_route::after {
-        background: rgba(56, 192, 216, 0.753);
+            background: rgba(56, 192, 216, 0.753);
         }
 
         /* Трикутник */
         .marker_equipped_recreation_areas {
-        position: absolute;
-        transform: translateY(50%);
-        border: 10px solid transparent;
-        border-top: 10px solid rgba(49, 189, 31, 0.753);
+            position: absolute;
+            transform: translateY(50%);
+            border: 10px solid transparent;
+            border-top: 10px solid rgba(49, 189, 31, 0.753);
         }
 
         /* Напис */
         .marker_equipped_recreation_areas::after {
-        background: rgba(49, 189, 31, 0.753);
+            background: rgba(49, 189, 31, 0.753);
         }
 
         /* Трикутник */
         .marker_public_transport_stops {
-        position: absolute;
-        transform: translateY(50%);
-        border: 10px solid transparent;
-        border-top: 10px solid rgba(31, 118, 189, 0.753);
+            position: absolute;
+            transform: translateY(50%);
+            border: 10px solid transparent;
+            border-top: 10px solid rgba(31, 118, 189, 0.753);
         }
 
         /* Напис */
         .marker_public_transport_stops::after {
-        background: rgba(31, 118, 189, 0.753);
+            background: rgba(31, 118, 189, 0.753);
         }
     </style>
 
@@ -632,7 +634,7 @@
 
         .field_value {
             grid-area: value;
-        /*  background-color: rgba(255, 255, 255, 0.822);
+            /*  background-color: rgba(255, 255, 255, 0.822);
             color: rgb(0, 0, 0, 0.822); */
         }
 
@@ -647,8 +649,10 @@
             height: 100%;
             position: relative;
             transform: rotate(45deg);
-            -ms-transform: rotate(45deg); /* IE 9 */
-            -webkit-transform: rotate(45deg); /* Safari and Chrome */
+            -ms-transform: rotate(45deg);
+            /* IE 9 */
+            -webkit-transform: rotate(45deg);
+            /* Safari and Chrome */
         }
 
         .cross_close:before,
@@ -705,7 +709,7 @@
         .checkbox_block {
             display: grid;
             grid-template-columns: 30px 1fr;
-            /* justify-content: center; */ 
+            /* justify-content: center; */
             /* align-items: center;  */
             margin: 4px 0px 4px 0px;
         }
@@ -727,7 +731,7 @@
         }
 
         .bar_1_change {
-            transform:  translate(0px, 11px) rotate(-45deg);
+            transform: translate(0px, 11px) rotate(-45deg);
             background-color: rgb(252, 0, 0);
         }
 
@@ -737,7 +741,7 @@
         }
 
         .bar_3_change {
-            transform:  translate(0px, -11px) rotate(45deg);
+            transform: translate(0px, -11px) rotate(45deg);
             background-color: rgb(252, 0, 0);
         }
     </style>
@@ -805,6 +809,7 @@
     <script defer src="js/add_map_recreation_areas.js"></script>
     <script defer src="js/add_map_equipped_recreation_areas.js"></script>
     <script defer src="js/add_map_public_transport_stops_all.js"></script>
+    <script defer src="js/add_map_route_public_transport.js"></script>
 
     <script defer src="js/data_street.js"></script>
     <script defer src="js/data_house.js"></script>
@@ -824,6 +829,7 @@
     <script defer src="js/data_equipped_recreation_areas.js"></script>
 
     <script defer src="js/data_public_transport_stops.js"></script>
+    <script defer src="js/data_route_public_transport.js"></script>
 
 </head>
 
@@ -1053,7 +1059,6 @@
                 останню вибрану організацію</button>
 
 
-            <button class="button_sidebar_find" onclick="find_organization()">Шукати організації</button>
             <button class="button_sidebar_add_map" onclick="display_organization()">Відобразити організації на
                 карті</button>
             <button class="button_sidebar_add_map" onclick="display_selected_organization()">Відобразити вибрану
@@ -1063,13 +1068,14 @@
             <button class="button_sidebar_add_address_route" onclick="add_organization_route()">Додати адресу
                 організації у
                 маршрут</button>
+            <button class="button_sidebar_find" onclick="find_organization()">Шукати організації</button>
 
             <div class="div_first_page_level_2">
                 <details id="" onclick="" open>
                     <summary class="summary_address_type_name">Параметри пошуку організації</summary>
 
                     <label for="">Пошук по назві організації</label>
-                    <input type="text" name="" list="id_datalist_organization" id="id_input_organization">
+                    <input type="text" name="" list="id_datalist_organization" id="id_input_organization"> 
                     <datalist id="id_datalist_organization">
                         <option id="id_option_datalist_organization"></option>
                     </datalist>
@@ -1246,6 +1252,13 @@
             <button class="button_sidebar_add_map"
                 onclick="change_color_show_hide_button(this); add_map_public_transport_stops_all()">Показати\Приховати
                 зупинки громадського транспорту</button>
+
+            <button class="button_sidebar_delete"  onclick="delete_map_route_public_transport()">Приховати маршрут</button>
+
+            <label for="">Вибрати та показати маршрут</label>
+            <select name="" id="id_select_route_public_transport" onchange="add_map_route_public_transport()">
+                <option value=""></option>
+            </select>
 
         </details>
     </div>

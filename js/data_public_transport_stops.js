@@ -392,9 +392,7 @@ const data_public_transport_stops_arr = [
     {
         id: 31,
         name: "мкр.Прибережний",
-        detailed_information: `
-        
-        `,
+        detailed_information: ``,
         latitude: 48.692591,
         longitude: 29.236229,
     },
@@ -642,8 +640,13 @@ const data_public_transport_stops_arr = [
     {
         id: 53,
         name: "с-ще Губник",
-        detailed_information: `
-        
+        detailed_information: `<b>с-ще Губник – м.Ладижин</b>
+        <br>
+        7-15, 12-50, 17-50 (кожен день крім суботи та неділі)
+        <br>
+        6-45, 10-30, 16-50 (тільки в суботу)
+        <br>
+        6-45, 16-50 (тільки в неділю)
         `,
         latitude: 48.617687,
         longitude: 29.300292,
@@ -651,8 +654,14 @@ const data_public_transport_stops_arr = [
     {
         id: 54,
         name: "ТОВ «Швейцарія»",
-        detailed_information: `
-        
+        detailed_information: `<b>м.Ладижин – ТОВ «Швейцарія» (через «Енергетик»)</b>
+        <br>
+        8-25, 11-30
+        <br>
+        <br>
+        <b>м.Ладижин – ТОВ «Швейцарія» (через лікарню)</b>
+        <br>
+        18-35
         `,
         latitude: 48.669283,
         longitude: 29.304581,
@@ -685,5 +694,32 @@ const data_public_transport_stops_arr = [
         `,
         latitude: 48.691300,
         longitude: 29.232261,
+    },
+    {
+        id: 57,
+        name: "Енергетик",
+        detailed_information: `<b>м.Ладижин – с-ще Губник</b>
+        <br>
+        6-40, 12-30, 17-30 (кожен день крім суботи та неділі)
+        <br>
+        6-20, 10-00, 16-30 (тільки в суботу)
+        <br>
+        6-20, 16-30 (тільки в неділю)`,
+        latitude: 48.686415,
+        longitude: 29.231251,
+    },
+    {
+        id: 58,
+        name: "Енергетик",
+        detailed_information: ``,
+        latitude: 48.686365,
+        longitude: 29.231866,
+    },
+    {
+        id: 59,
+        name: "ТОВ «Поділля»",
+        detailed_information: ``,
+        latitude: 48.680410,
+        longitude: 29.287203,
     },
 ];
