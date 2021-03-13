@@ -119,4 +119,36 @@ const data_bicycle_parking_arr = [
         latitude: 48.7048,
         longitude: 29.1081,
     },
+    {
+        id: 16,
+        name: "Велопарковка на 3 місця",
+        detailed_information: `
+        <b>Кількість місць:</b> 3`,
+        latitude: 48.69272, 
+        longitude: 29.23673,
+    },
+    {
+        id: 17,
+        name: "Велопарковка на 5 місць",
+        detailed_information: `
+        <b>Кількість місць:</b> 5`,
+        latitude: 48.6919, 
+        longitude: 29.23244,
+    },
+    {
+        id: 18,
+        name: "Велопарковка на 3 місця",
+        detailed_information: `
+        <b>Кількість місць:</b> 3`,
+        latitude: 48.69149, 
+        longitude: 29.23302,
+    },
+    {
+        id: 19,
+        name: "Велопарковка на 11 місць",
+        detailed_information: `
+        <b>Кількість місць:</b> 11`,
+        latitude: 48.68576,
+        longitude: 29.2365,
+    },
 ];
