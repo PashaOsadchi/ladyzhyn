@@ -645,8 +645,21 @@
         }
 
         /* Напис */
-        .marker_city_lights::after {
+        .marker_bicycle_parking::after {
             background: rgba(189, 31, 65, 0.753);
+        }
+
+        /* Трикутник */
+        .marker_bicycle_parking {
+            position: absolute;
+            transform: translateY(50%);
+            border: 10px solid transparent;
+            border-top: 10px solid rgba(31, 189, 110, 0.753);
+        }
+
+        /* Напис */
+        .marker_bicycle_parking::after {
+            background: rgba(31, 189, 110, 0.753);
         }
 
     </style>
@@ -853,6 +866,7 @@
     <script defer src="js/add_map_bulletin_boards_all.js"></script>
     <script defer src="js/add_map_billboards_all.js"></script>
     <script defer src="js/add_map_city_lights.js"></script>
+    <script defer src="js/add_map_bicycle_parking_all.js"></script>
 
     <script defer src="js/data_street.js"></script>
     <script defer src="js/data_house.js"></script>
@@ -863,6 +877,7 @@
     <script defer src="js/data_bulletin_boards.js"></script>
     <script defer src="js/data_billboards.js"></script>
     <script defer src="js/data_city_lights.js"></script>
+    <script defer src="js/data_bicycle_parking.js"></script>
 
     <script defer src="js/data_community_boundary.js"></script>
     <script defer src="js/data_community_boundary_ladyzhyn.js"></script>
@@ -1322,6 +1337,20 @@
             <button class="button_sidebar_add_map"
                 onclick="change_color_show_hide_button(this); add_map_city_lights_all()">Показати\Приховати
                 сітілайти</button>
+        </details>
+
+        <details class="datails_leveil_1" id="id_details_cycling_infrastructure" onclick="onclick_details_cycling_infrastructure()">
+            <summary class="summary_title_name">Велоінфраструктура</summary>
+
+            <button class="button_sidebar_add_map"
+                onclick="change_color_show_hide_button(this); add_map_bicycle_parking_all()">Показати\Приховати
+                велопарковки</button>
+            
+            <!-- <button class="button_sidebar_add_map"
+                onclick="change_color_show_hide_button(this); add_map_billboards_all()">Показати\Приховати
+                пункти велосипедного прокату</button> -->
+            
+            
         </details>
     </div>
 </body>

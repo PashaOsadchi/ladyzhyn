@@ -129,6 +129,17 @@ function open_dialog_detailed_information(id) {
             <div id="dialog_detailed_information_content">
             ${city_lights_arr[0].detailed_information}</div>`;
 
+            break; 
+        // Велопарковки
+        case 10:
+            const bicycle_parking_arr = data_bicycle_parking_arr.filter((e) => e.id == id_arr[1]);
+            dialog_detailed_information.showModal();
+
+            dialog_detailed_information.innerHTML = `
+            <div id="dialog_detailed_information_header">Детальна інформація про велопарковку</div>
+            <div id="dialog_detailed_information_content">
+            ${bicycle_parking_arr[0].detailed_information}</div>`;
+
             break;  
         default:
             return open_dialog_error(error_text_29);
