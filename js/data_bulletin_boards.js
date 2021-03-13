@@ -371,4 +371,28 @@ const data_bulletin_boards_arr = [
         latitude: 48.69119, 
         longitude: 29.23291,
     },
+    {
+        id: 32,
+        name: "Дошка оголошень 2x1",
+        detailed_information: `
+        <b>Ширина (м):</b> 2<br>
+        <b>Висота (м):</b> 1<br>
+        <b>Площа (м²):</b> 2<br>
+        <b>Використовуються сторони:</b> одна<br>
+        `,
+        latitude: 48.61734,
+        longitude: 29.30037,
+    },
+    {
+        id: 33,
+        name: "Дошка оголошень 1.2x0.8",
+        detailed_information: `
+        <b>Ширина (м):</b> 1.2<br>
+        <b>Висота (м):</b> 0.8<br>
+        <b>Площа (м²):</b> 0.96<br>
+        <b>Використовуються сторони:</b> одна<br>
+        `,
+        latitude: 48.69119, 
+        longitude: 29.23291,
+    },
 ];

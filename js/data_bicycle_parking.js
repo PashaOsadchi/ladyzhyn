@@ -151,4 +151,12 @@ const data_bicycle_parking_arr = [
         latitude: 48.68576,
         longitude: 29.2365,
     },
+    {
+        id: 20,
+        name: "Велопарковка на 4 місця",
+        detailed_information: `
+        <b>Кількість місць:</b> 4`,
+        latitude: 48.68052, 
+        longitude: 29.26152,
+    },
 ];
