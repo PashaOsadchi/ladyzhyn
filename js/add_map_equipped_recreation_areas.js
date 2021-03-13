@@ -1,11 +1,19 @@
-let  equipped_recreation_areas_or_added = false;
+let equipped_recreation_areas_or_added = false;
+let markers_equipped_recreation_areas = [];
 
 // Додає на карту облаштовані зони відпочинку
 function add_map_equipped_recreation_areas_all() {
 
     if (equipped_recreation_areas_or_added) {
         equipped_recreation_areas_or_added = false;
-        return delete_markers();
+        
+        // Видаляє маркери
+        for (let i = 0; i < markers_equipped_recreation_areas.length; i++) {
+            markers_equipped_recreation_areas[i].remove();
+            markers_equipped_recreation_areas[i].setMap(null);
+        }
+        markers_equipped_recreation_areas = [];
+        return
     }
 
     for (let i = 0; i < data_equipped_recreation_areas_arr.length; i++) {
@@ -18,7 +26,7 @@ function add_map_equipped_recreation_areas_all() {
                 marker_class_name: 'marker marker_equipped_recreation_areas'
             }
         );
-        markers.push(overlay);
+        markers_equipped_recreation_areas.push(overlay);
     }
 
     equipped_recreation_areas_or_added = true;

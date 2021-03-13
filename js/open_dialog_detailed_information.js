@@ -97,6 +97,39 @@ function open_dialog_detailed_information(id) {
             ${public_transport_stops_arr[0].detailed_information}</div>`;
 
             break;    
+        // Дошка оголошень
+        case 7:
+            const bulletin_boards_arr = data_bulletin_boards_arr.filter((e) => e.id == id_arr[1]);
+            dialog_detailed_information.showModal();
+
+            dialog_detailed_information.innerHTML = `
+            <div id="dialog_detailed_information_header">Детальна інформація про дошку оголошень</div>
+            <div id="dialog_detailed_information_content">
+            ${bulletin_boards_arr[0].detailed_information}</div>`;
+
+            break;  
+        // Білборди
+        case 8:
+            const billboards_arr = data_billboards_arr.filter((e) => e.id == id_arr[1]);
+            dialog_detailed_information.showModal();
+
+            dialog_detailed_information.innerHTML = `
+            <div id="dialog_detailed_information_header">Детальна інформація про білборд</div>
+            <div id="dialog_detailed_information_content">
+            ${billboards_arr[0].detailed_information}</div>`;
+
+            break; 
+        // Сітілайти
+        case 9:
+            const city_lights_arr = data_city_lights_arr.filter((e) => e.id == id_arr[1]);
+            dialog_detailed_information.showModal();
+
+            dialog_detailed_information.innerHTML = `
+            <div id="dialog_detailed_information_header">Детальна інформація про сітілайт</div>
+            <div id="dialog_detailed_information_content">
+            ${city_lights_arr[0].detailed_information}</div>`;
+
+            break;  
         default:
             return open_dialog_error(error_text_29);
     }

@@ -609,6 +609,46 @@
         .marker_public_transport_stops::after {
             background: rgba(31, 118, 189, 0.753);
         }
+
+        /* Трикутник */
+        .marker_bulletin_boards {
+            position: absolute;
+            transform: translateY(50%);
+            border: 10px solid transparent;
+            border-top: 10px solid rgba(118, 31, 189, 0.753);
+        }
+
+        /* Напис */
+        .marker_bulletin_boards::after {
+            background: rgba(118, 31, 189, 0.753);
+        }
+
+        /* Трикутник */
+        .marker_billboards {
+            position: absolute;
+            transform: translateY(50%);
+            border: 10px solid transparent;
+            border-top: 10px solid rgba(189, 31, 163, 0.753);
+        }
+
+        /* Напис */
+        .marker_billboards::after {
+            background: rgba(189, 31, 163, 0.753);
+        }
+
+        /* Трикутник */
+        .marker_city_lights {
+            position: absolute;
+            transform: translateY(50%);
+            border: 10px solid transparent;
+            border-top: 10px solid rgba(189, 31, 65, 0.753);
+        }
+
+        /* Напис */
+        .marker_city_lights::after {
+            background: rgba(189, 31, 65, 0.753);
+        }
+
     </style>
 
     <!-- class_div_add_address_route -->
@@ -810,6 +850,9 @@
     <script defer src="js/add_map_equipped_recreation_areas.js"></script>
     <script defer src="js/add_map_public_transport_stops_all.js"></script>
     <script defer src="js/add_map_route_public_transport.js"></script>
+    <script defer src="js/add_map_bulletin_boards_all.js"></script>
+    <script defer src="js/add_map_billboards_all.js"></script>
+    <script defer src="js/add_map_city_lights.js"></script>
 
     <script defer src="js/data_street.js"></script>
     <script defer src="js/data_house.js"></script>
@@ -817,6 +860,9 @@
     <script defer src="js/data_apartment.js"></script>
     <script defer src="js/data_error_text.js"></script>
     <script defer src="js/data_recreation_areas.js"></script>
+    <script defer src="js/data_bulletin_boards.js"></script>
+    <script defer src="js/data_billboards.js"></script>
+    <script defer src="js/data_city_lights.js"></script>
 
     <script defer src="js/data_community_boundary.js"></script>
     <script defer src="js/data_community_boundary_ladyzhyn.js"></script>
@@ -1260,6 +1306,22 @@
                 <option value=""></option>
             </select>
 
+        </details>
+
+        <details class="datails_leveil_1" id="id_details_advertising_media" onclick="onclick_details_advertising_media()">
+            <summary class="summary_title_name">Рекламні засоби</summary>
+
+            <button class="button_sidebar_add_map"
+                onclick="change_color_show_hide_button(this); add_map_bulletin_boards_all()">Показати\Приховати
+                дошки оголошень</button>
+            
+            <button class="button_sidebar_add_map"
+                onclick="change_color_show_hide_button(this); add_map_billboards_all()">Показати\Приховати
+                білборди</button>
+            
+            <button class="button_sidebar_add_map"
+                onclick="change_color_show_hide_button(this); add_map_city_lights_all()">Показати\Приховати
+                сітілайти</button>
         </details>
     </div>
 </body>
