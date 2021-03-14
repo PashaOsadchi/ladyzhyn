@@ -18,6 +18,7 @@ function voice_recognition() {
     // Виконується коли служба розпізнавання мови повертає результат
     recognition.onresult = function (event) {
         const results = event.results;
+        recognition.stop();
 
         const transcript = results[results.length - 1][0].transcript;
         voice_command_decoding(transcript);
@@ -43,7 +44,7 @@ function voice_recognition() {
             case "language-not-supported":
                 open_dialog_error(`Мова не підтримується!(${event.error})`);
             default:
-                open_dialog_error(`(${event.error})`);
+                open_dialog_error(`Невідома помилка! (${event.error})`);
         };
     };
 
