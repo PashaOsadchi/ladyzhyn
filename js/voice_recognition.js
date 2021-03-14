@@ -1,14 +1,73 @@
+let recognition;
 let markers_human_settlement_voice = [];
 let markers_house_voice = [];
 let markers_entrance_voice = [];
 
-// Розпізнавання голосу
 function voice_recognition() {
-    const recognition = new webkitSpeechRecognition();
+    recognition.start();
+}
 
-    setTimeout(() => recognition.stop(), 4000);
+if (!('webkitSpeechRecognition' in window)) {
+    open_dialog_error(`Ваший браузер не підтримує розпізнавання голосу! Використовуйте браузер Chrome останньої версії`);
+} else {
+    recognition = new webkitSpeechRecognition();
 
     recognition.lang = "uk";
+    // Означає, що коли користувач перестане говорити, розпізнавання мови закінчиться
+    recognition.continuous = false;
+    recognition.interimResults = false;
+
+    // Виконується коли мова перестає виявлятися
+    recognition.onspeechend = function() {
+        recognition.stop();
+    };
+
+    // Виконується коли служба розпізнавання мови повертає результат
+    recognition.onresult = function (event) {
+        const results = event.results;
+        recognition.stop();
+
+        const transcript = results[results.length - 1][0].transcript;
+        voice_command_decoding(transcript);
+    };
+
+    // Виконується коли виникає помилка
+    recognition.onerror = function (event) {
+        switch (event.error) {
+            case "not-allowed":
+                open_dialog_error(`Надайте доступ до мікрофону!(${event.error})`);
+            case "network":
+                open_dialog_error(`Відсутнє інтернет зєднання!(${event.error})`);
+            case "no-speech":
+                open_dialog_error(`Голос не знайдено!(${event.error})`);
+            case "aborted":
+                open_dialog_error(`Голосове введення було перерване!(${event.error})`);
+            case "audio-capture":
+                open_dialog_error(`Не вдалося розпізнати звук!(${event.error})`);
+            case "service-not-allowed":
+                open_dialog_error(`Користувацький агент забороняє використовувти голосову службу!(${event.error})`);
+            case "bad-grammar":
+                open_dialog_error(`Помилка в граматиці!(${event.error})`);
+            case "language-not-supported":
+                open_dialog_error(`Мова не підтримується!(${event.error})`);
+            default:
+                open_dialog_error(`Невідома помилка! (${event.error})`);
+        };
+    };
+};
+
+/* // Розпізнавання голосу
+function voice_recognition() {
+    if (!('webkitSpeechRecognition' in window)) {
+        return open_dialog_error(`Ваший браузер не підтримує розпізнавання голосу! Використовуйте браузер Chrome останньої версії`);
+    };
+
+    const recognition = new webkitSpeechRecognition();
+
+    // setTimeout(() => recognition.stop(), 4000);
+
+    recognition.lang = "uk";
+    // Означає, що коли користувач перестане говорити, розпізнавання мови закінчиться
     recognition.continuous = false;
     recognition.interimResults = false;
 
@@ -51,7 +110,7 @@ function voice_recognition() {
     };
 
     recognition.start();
-}
+} */
 
 // Декодує голосову команду
 function voice_command_decoding(command_str) {
