@@ -28,7 +28,7 @@ function open_dialog_detailed_information(id) {
 
             dialog_detailed_information.innerHTML =  `
             <div id="dialog_detailed_information_header">Детальна інформація про підїзд</div>
-            <<div id="dialog_detailed_information_content">
+            <div id="dialog_detailed_information_content">
             <b>Номер підїзду: </b> ${entrance_arr[0].entrance_name}<br>
             <b>Квартири: </b> ${entrance_arr[0].entrance_first_apartment_entrance} - ${entrance_arr[0].entrance_last_apartment_entrance}  
             </div>`;
@@ -140,7 +140,49 @@ function open_dialog_detailed_information(id) {
             <div id="dialog_detailed_information_content">
             ${bicycle_parking_arr[0].detailed_information}</div>`;
 
-            break;  
+            break;
+        // Населений пункт
+        case 11:
+            const human_settlement_arr = data_human_settlement_arr.filter((e) => e.human_settlement_id == id_arr[1]);
+            dialog_detailed_information.showModal();
+
+            const number_house_arr = data_house_arr.filter((e) => e.house_human_settlement_code == id_arr[1])
+
+            const number_entrance_arr = data_entrance_arr.filter((e) => e.entrance_human_settlement_code == id_arr[1]);
+            street_arr = data_street_arr.filter((e) => e.street_human_settlement_code == id_arr[1]);
+
+            let counter_apartment = 0;
+            for (let i = 0; i < number_entrance_arr.length; i++) {
+                const arr = data_apartment_arr.filter((e) => e.apartment_entrance_code == number_entrance_arr[i].entrance_id);
+                counter_apartment += arr.length;
+            }
+
+            const total_number_registered_person = human_settlement_arr[0].human_settlement_total_number_registered_men + human_settlement_arr[0].human_settlement_total_number_registered_women + human_settlement_arr[0].human_settlement_total_number_registered_children_up_14_years + human_settlement_arr[0].human_settlement_total_number_registered_children_from_14_to_18_years;
+            const human_settlement_total_number_registered_men = `${human_settlement_arr[0].human_settlement_total_number_registered_men} (${Math.trunc((((human_settlement_arr[0].human_settlement_total_number_registered_men / total_number_registered_person) * 100) * 100) / 100)}%)`;
+            const human_settlement_total_number_registered_women = `${human_settlement_arr[0].human_settlement_total_number_registered_women} (${Math.trunc((((human_settlement_arr[0].human_settlement_total_number_registered_women / total_number_registered_person) * 100) * 100) / 100)}%)`;
+            const human_settlement_total_number_registered_children_up_14_years = `${human_settlement_arr[0].human_settlement_total_number_registered_children_up_14_years} (${Math.trunc((((human_settlement_arr[0].human_settlement_total_number_registered_children_up_14_years / total_number_registered_person) * 100) * 100) / 100)}%)`;
+            const human_settlement_total_number_registered_children_from_14_to_18_years = `${human_settlement_arr[0].human_settlement_total_number_registered_children_from_14_to_18_years} (${Math.trunc((((human_settlement_arr[0].human_settlement_total_number_registered_children_from_14_to_18_years / total_number_registered_person) * 100) * 100) / 100)}%)`;
+
+            dialog_detailed_information.innerHTML = `
+            <div id="dialog_detailed_information_header">Детальна інформація про населений пункт</div>
+            <div id="dialog_detailed_information_content">
+            <b>Імя населеного пункту: </b> ${human_settlement_arr[0].human_settlement_short_name}<br>
+            <b>Індекс: </b> ${human_settlement_arr[0].human_settlement_zip_code}<br>
+            <br>
+            <b>Загальна кількість будинків: </b> ${number_house_arr.length}<br>            
+            <b>Кількість будинків приватного сектору: </b> ${number_house_arr.filter((e) => e.house_multifamily == 'false').length}<br>
+            <b>Кількість багатоквартирних будинків: </b> ${number_house_arr.filter((e) => e.house_multifamily == 'true').length}<br>
+            <b>Кількість вулиць: </b> ${street_arr.length}<br>
+            <b>Кількість підїздів: </b> ${number_entrance_arr.length}<br>
+            <b>Кількість квартир: </b> ${counter_apartment}<br>
+            <br>
+            <b>Зареєстровано всього осіб: </b> ${total_number_registered_person}<br>
+            <b>Зареєстровано чоловіків (% від загальної кількості): </b> ${human_settlement_total_number_registered_men}<br>
+            <b>Зареєстровано жінок (% від загальної кількості): </b> ${human_settlement_total_number_registered_women}<br>
+            <b>Зареєстровано дітей до 14 років (% від загальної кількості): </b> ${human_settlement_total_number_registered_children_up_14_years}<br>
+            <b>Зареєстровано дітей від 14 до 18 років (% від загальної кількості): </b> ${human_settlement_total_number_registered_children_from_14_to_18_years}<br>
+            </div>`;
+            break;    
         default:
             return open_dialog_error(error_text_29);
     }

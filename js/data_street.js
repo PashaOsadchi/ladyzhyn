@@ -96,7 +96,7 @@ const data_street_arr = [
         "street_zip_code": "24321",
         "street_name_old": "",
         "street_name": "вул.Івана Сагаєва",
-        "street_voice_search": "вул івана сагаєва"
+        "street_voice_search": "вул івана агаєва"
     },
     {
         "street_id": "12",
@@ -672,7 +672,7 @@ const data_street_arr = [
         "street_zip_code": "23664",
         "street_name_old": "вул.Срібняка",
         "street_name": "вул.А.Мацевича",
-        "street_voice_search": "заозерне вул мацевича"
+        "street_voice_search": "заозерне вул мацієвича"
     },
     {
         "street_id": "76",

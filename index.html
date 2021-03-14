@@ -107,6 +107,8 @@
         #id_page_header {
             grid-area: header;
             margin: 4px;
+            /* Необхідне для центрування кнопки голосового пошуку */
+            position: relative;
         }
 
         #map {
@@ -662,6 +664,19 @@
             background: rgba(31, 189, 110, 0.753);
         }
 
+        /* Трикутник */
+        .marker_center_human_settlement {
+            position: absolute;
+            transform: translateY(50%);
+            border: 10px solid transparent;
+            border-top: 10px solid rgba(128, 189, 31, 0.753);
+        }
+
+        /* Напис */
+        .marker_center_human_settlement::after {
+            background: rgba(128, 189, 31, 0.753);
+        }
+
     </style>
 
     <!-- class_div_add_address_route -->
@@ -750,13 +765,6 @@
         }
     </style>
 
-    <!-- class_logo -->
-    <style>
-        .logo {
-            height: 40px;
-        }
-    </style>
-
     <!-- class_checkbox_block -->
     <style>
         .checkbox_block {
@@ -799,6 +807,34 @@
         }
     </style>
 
+    <!-- id_icon_voice_recognition -->
+    <style>
+        #icon_voice_recognition {
+            position: absolute;
+            right: 50%; 
+            transform: translate(50%, 0%);
+        }
+
+        /* Збігається, коли користувач позначає елемент за допомогою вказівного пристрою, наприклад, утримуючи над ним вказівник миші. */
+        #icon_voice_recognition:hover {
+            outline: none;
+            border: none;
+            opacity: 0.6;
+        }
+
+        /* Збігається, коли елемент має фокус. */
+        #icon_voice_recognition:focus {
+            outline: none;
+            border: none;
+        }
+
+        /* Збігається, коли елемент активується користувачем, наприклад натискається. */
+        #icon_voice_recognition:active {
+            border: none;
+            opacity: 1;
+        }
+    </style>
+
     <script src="js/map.js"></script>
 
     <!-- Використовуються для формування сторінки -->
@@ -831,6 +867,7 @@
     <script defer src="js/maps_geometry.js"></script>
     <script defer src="js/geolocation_gps.js"></script>
     <script defer src="js/change_color_show_hide_button.js"></script>
+    <script defer src="js/voice_recognition.js"></script>
 
     <script defer src="js/сopy_buffer_exchange_link_coordinates_route.js"></script>
     <script defer src="js/сopy_buffer_exchange_address.js"></script>
@@ -867,6 +904,7 @@
     <script defer src="js/add_map_billboards_all.js"></script>
     <script defer src="js/add_map_city_lights.js"></script>
     <script defer src="js/add_map_bicycle_parking_all.js"></script>
+    <script defer src="js/add_map_bicycle_service_center_all.js"></script>
 
     <script defer src="js/data_street.js"></script>
     <script defer src="js/data_house.js"></script>
@@ -903,9 +941,11 @@
 
 <body id="id_body">
     <header id="id_page_header">
-        <img class="logo" src="img/logo.png"
+        <img height="40" src="img/logo.png"
             alt="Геоінформаційний портал Ладижинської територіальної громади (сайт на стадії розробки)"
             title="Геоінформаційний портал Ладижинської територіальної громади (сайт на стадії розробки)">
+
+        <img height="40" width="40" id="icon_voice_recognition" src="icon/voice_recognition.png" alt="Голосовий пошук" onclick="voice_recognition()"> 
 
         <div id="id_container_menu" class="container_menu" onclick="open_close_sidebar()">
             <div id="id_bar_1" class="bar"></div>
@@ -1346,10 +1386,8 @@
                 onclick="change_color_show_hide_button(this); add_map_bicycle_parking_all()">Показати\Приховати
                 велопарковки</button>
             
-            <!-- <button class="button_sidebar_add_map"
-                onclick="change_color_show_hide_button(this); add_map_billboards_all()">Показати\Приховати
-                пункти велосипедного прокату</button> -->
-            
+            <button class="button_sidebar_add_map"
+                onclick="change_color_show_hide_button(this); add_map_bicycle_service_center_all()">Показати\Приховати веломайстерні</button>
             
         </details>
     </div>

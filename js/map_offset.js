@@ -39,27 +39,27 @@ function map_offset_human_settlement(human_settlement_code) {
     }
 
     switch (human_settlement_code) {
-        case "1":
+        case 1:
             map.panTo(new google.maps.LatLng(48.68677362481703, 29.248837454518203));
             map.setZoom(13 - screen_width_ratio);
             break;
-        case "2":
+        case 2:
             map.panTo(new google.maps.LatLng(48.65109331945063, 29.200714947265933));
             map.setZoom(15 - screen_width_ratio);
             break;
-        case "3":
+        case 3:
             map.panTo(new google.maps.LatLng(48.61740696905776, 29.30100051479657));
             map.setZoom(17 - screen_width_ratio);
             break;
-        case "4":
+        case 4:
             map.panTo(new google.maps.LatLng(48.621492176556735, 29.298640170952904));
             map.setZoom(17 - screen_width_ratio);
             break;
-        case "5":
+        case 5:
             map.panTo(new google.maps.LatLng(48.69385687061192, 29.153430135115773));
             map.setZoom(15 - screen_width_ratio);
             break;
-        case "6":
+        case 6:
             map.panTo(new google.maps.LatLng(48.70237907383064, 29.109437764549867));
             map.setZoom(15 - screen_width_ratio);
             break;
