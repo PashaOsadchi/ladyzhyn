@@ -5,6 +5,7 @@ let markers_entrance_voice = [];
 
 function voice_recognition() {
     recognition.start();
+    open_circles_preloader();
 }
 
 if (!('webkitSpeechRecognition' in window)) {
@@ -24,6 +25,8 @@ if (!('webkitSpeechRecognition' in window)) {
 
     // Виконується коли служба розпізнавання мови повертає результат
     recognition.onresult = function (event) {
+        id_dialog_circles_preloader.close();
+        
         const results = event.results;
         recognition.stop();
 
