@@ -8,6 +8,7 @@ function voice_recognition() {
 
     recognition.lang = "uk";
     recognition.continuous = false;
+    recognition.interimResults = false;
 
     // Виконується коли мова перестає виявлятися
     recognition.onspeechend = function() {
