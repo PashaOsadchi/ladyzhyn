@@ -6,6 +6,8 @@ let markers_entrance_voice = [];
 function voice_recognition() {
     const recognition = new webkitSpeechRecognition();
 
+    setTimeout(() => recognition.stop(), 4000);
+
     recognition.lang = "uk";
     recognition.continuous = false;
     recognition.interimResults = false;
