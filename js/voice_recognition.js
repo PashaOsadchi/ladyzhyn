@@ -9,17 +9,20 @@ function voice_recognition() {
     recognition.lang = "uk";
     recognition.continuous = false;
 
+    // Виконується коли мова перестає виявлятися
     recognition.onspeechend = function() {
         recognition.stop();
-    }
+    };
 
-    recognition.onresult = async function (event) {
+    // Виконується коли служба розпізнавання мови повертає результат
+    recognition.onresult = function (event) {
         const results = event.results;
 
         const transcript = results[results.length - 1][0].transcript;
         voice_command_decoding(transcript);
     };
 
+    // Виконується коли виникає помилка
     recognition.onerror = function (event) {
         switch (event.error) {
             case "not-allowed":
@@ -40,7 +43,7 @@ function voice_recognition() {
                 open_dialog_error(`Мова не підтримується!(${event.error})`);
             default:
                 open_dialog_error(`(${event.error})`);
-        }
+        };
     };
 
     recognition.start();
