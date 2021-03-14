@@ -9,6 +9,10 @@ function voice_recognition() {
     recognition.lang = "uk";
     recognition.continuous = false;
 
+    recognition.onspeechend = function() {
+        recognition.stop();
+    }
+
     recognition.onresult = async function (event) {
         const results = event.results;
 
