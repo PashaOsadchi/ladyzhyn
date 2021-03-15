@@ -189,7 +189,7 @@ function open_dialog_detailed_information(id) {
             dialog_detailed_information.showModal();
 
             dialog_detailed_information.innerHTML = `
-            <div id="dialog_detailed_information_header">Детальна інформація про об'єкти альтернативної енергетики</div>
+            <div id="dialog_detailed_information_header">Детальна інформація про об'єкт альтернативної енергетики</div>
             <div id="dialog_detailed_information_content">
             ${alternative_energy_facilities_arr[0].detailed_information}</div>`;
 
