@@ -182,7 +182,18 @@ function open_dialog_detailed_information(id) {
             <b>Зареєстровано дітей до 14 років (% від загальної кількості): </b> ${human_settlement_total_number_registered_children_up_14_years}<br>
             <b>Зареєстровано дітей від 14 до 18 років (% від загальної кількості): </b> ${human_settlement_total_number_registered_children_from_14_to_18_years}<br>
             </div>`;
-            break;    
+            break;
+        // Об'єкти альтернативної енергетики
+        case 12:
+            const alternative_energy_facilities_arr = data_alternative_energy_facilities_arr.filter((e) => e.id == id_arr[1]);
+            dialog_detailed_information.showModal();
+
+            dialog_detailed_information.innerHTML = `
+            <div id="dialog_detailed_information_header">Детальна інформація про об'єкти альтернативної енергетики</div>
+            <div id="dialog_detailed_information_content">
+            ${alternative_energy_facilities_arr[0].detailed_information}</div>`;
+
+            break;   
         default:
             return open_dialog_error(error_text_29);
     }
