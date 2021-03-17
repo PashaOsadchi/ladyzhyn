@@ -3,7 +3,6 @@
     // console.log(event.request.url);
 }); */
 
-("use strict");
 const CACHE_STATIC = "static-cache-v1";
 
 function hndlEventInstall(evt) {
