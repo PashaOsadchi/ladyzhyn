@@ -11,7 +11,7 @@ function hndlEventInstall(evt) {
      * @returns {Promise<void>}
      */
     async function cacheStaticFiles() {
-        const files = ["./", "./pwa.webmanifest", "./index.html", "./sw.js"];
+        const files = ["/", "/pwa.webmanifest", "/index.html", "/sw.js"];
         const cacheStat = await caches.open(CACHE_STATIC);
         await Promise.all(
             files.map(function (url) {
