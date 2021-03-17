@@ -1,4 +1,4 @@
-async function display_addresses() {
+async function add_map_addresses() {
     delete_markers();
     
     let str;

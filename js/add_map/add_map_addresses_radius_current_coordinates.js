@@ -1,7 +1,7 @@
 let arr_house_radius_current_coordinates = [];
 
 // Відображає адреси на карті які знаходяться в радіусі 500 метрів від поточних кординат
-async function display_addresses_radius_current_coordinates() {
+async function add_map_addresses_radius_current_coordinates() {
     if (arr_house_radius_current_coordinates.length > 0) return open_dialog_error(error_text_17);
 
     const geolocation = await geolocation_gps();

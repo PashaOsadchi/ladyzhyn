@@ -292,7 +292,7 @@
             flex-direction: column;
         }
 
-        details summary::-webkit-details-marker {
+        details summary::marker {
             color: rgb(255, 255, 255);
         }
 
@@ -823,6 +823,7 @@
     <!-- id_icon_voice_recognition -->
     <style>
         #icon_voice_recognition {
+            display: none;
             position: absolute;
             right: 50%; 
             transform: translate(50%, 0%);
@@ -1215,12 +1216,12 @@
     }
     </style>
 
-    <script src="js/map.js"></script>
+    <script src="js/map/map.js"></script>
 
     <!-- Використовуються для формування сторінки -->
-    <script defer src="js/data_human_settlement.js"></script>
-    <script defer src="js/data_organization.js"></script>
-    <script defer src="js/data_organization_type.js"></script>
+    <script defer src="js/data/data_human_settlement.js"></script>
+    <script defer src="js/data/data_organization.js"></script>
+    <script defer src="js/data/data_organization_type.js"></script>
 
     <script defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbM1P2ElI-R4k04dFUU4gZ5PnsXS2wUYk&callback=initMap&libraries=geometry,visualization"></script>
@@ -1230,30 +1231,28 @@
     <script defer src="js/touch.js"></script>
     <script defer src="js/calculates_central_point.js"></script>
     <script defer src="js/script.js"></script>
-    <script defer src="js/map_listener.js"></script>
+    <script defer src="js/map/map_listener.js"></script>
     <script defer src="js/fullscreen_сhange.js"></script>
-
-    <script defer src="js/add_openseadragon_master_plan_map.js"></script>
 
     <script defer src="js/registration_service_worker.js"></script>
     <script defer src="js/find_coordinates_last_selected_address.js"></script>
     <script defer src="js/copy_clipboard.js"></script>
-    <script defer src="js/openseadragon.js"></script>
+    <script defer src="js/openseadragon/openseadragon.js"></script>
 
     <script defer src="js/dialog.js"></script>
     <script defer src="js/onclick_details.js"></script>
     <script defer src="js/address.js"></script>
-    <script defer src="js/map_offset.js"></script>
-    <script defer src="js/maps_geometry.js"></script>
+    <script defer src="js/map/map_offset.js"></script>
+    <script defer src="js/map/map_geometry.js"></script>
     <script defer src="js/geolocation_gps.js"></script>
     <script defer src="js/change_color_show_hide_button.js"></script>
     <script defer src="js/voice_recognition.js"></script>
 
-    <script defer src="js/сopy_buffer_exchange_link_coordinates_route.js"></script>
-    <script defer src="js/сopy_buffer_exchange_address.js"></script>
-    <script defer src="js/сopy_buffer_exchange_link_coordinates_last_selected_address.js"></script>
-    <script defer src="js/сopy_buffer_exchange_link_coordinates_last_selected_organization.js"></script>
-    <script defer src="js/сopy_buffer_exchange_data_last_selected_organization.js"></script>
+    <script defer src="js/сopy_buffer_exchange/сopy_buffer_exchange_link_coordinates_route.js"></script>
+    <script defer src="js/сopy_buffer_exchange/сopy_buffer_exchange_address.js"></script>
+    <script defer src="js/сopy_buffer_exchange/сopy_buffer_exchange_link_coordinates_last_selected_address.js"></script>
+    <script defer src="js/сopy_buffer_exchange/сopy_buffer_exchange_link_coordinates_last_selected_organization.js"></script>
+    <script defer src="js/сopy_buffer_exchange/сopy_buffer_exchange_data_last_selected_organization.js"></script>
 
     <script defer src="js/delete_markers.js"></script>
 
@@ -1261,56 +1260,57 @@
 
     <script defer src="js/find_organization.js"></script>
 
-    <script defer src="js/display_addresses_radius_current_coordinates.js"></script>
-    <script defer src="js/display_addresses_radius_selected_coordinates.js"></script>
-    <script defer src="js/display_addresses.js"></script>
-    <script defer src="js/display_organization.js"></script>
-
     <script defer src="js/open_close_sidebar.js"></script>
     <script defer src="js/open_dialog_detailed_information.js"></script>
 
-    <script defer src="js/add_address_route.js"></script>
-    <script defer src="js/add_organization_route.js"></script>
-    <script defer src="js/add_waypoints_full_arr.js"></script>
-    <script defer src="js/add_map_density_population.js"></script>
-    <script defer src="js/add_current_coordinates_route.js"></script>
-    <script defer src="js/add_map_polyline_community_boundary.js"></script>
-    <script defer src="js/add_map_current_coordinates.js"></script>
-    <script defer src="js/add_map_recreation_areas.js"></script>
-    <script defer src="js/add_map_equipped_recreation_areas.js"></script>
-    <script defer src="js/add_map_public_transport_stops_all.js"></script>
-    <script defer src="js/add_map_route_public_transport.js"></script>
-    <script defer src="js/add_map_bulletin_boards_all.js"></script>
-    <script defer src="js/add_map_billboards_all.js"></script>
-    <script defer src="js/add_map_city_lights.js"></script>
-    <script defer src="js/add_map_bicycle_parking_all.js"></script>
-    <script defer src="js/add_map_bicycle_service_center_all.js"></script>
-    <script defer src="js/add_map_alternative_energy_facilities_all.js"></script>
+    <script defer src="js/add/add_address_route.js"></script>
+    <script defer src="js/add/add_organization_route.js"></script>
+    <script defer src="js/add/add_waypoints_full_arr.js"></script>
+    <script defer src="js/add/add_current_coordinates_route.js"></script>
+    <script defer src="js/add/add_openseadragon_master_plan_map.js"></script>
 
-    <script defer src="js/data_street.js"></script>
-    <script defer src="js/data_house.js"></script>
-    <script defer src="js/data_entrance.js"></script>
-    <script defer src="js/data_apartment.js"></script>
-    <script defer src="js/data_error_text.js"></script>
-    <script defer src="js/data_recreation_areas.js"></script>
-    <script defer src="js/data_bulletin_boards.js"></script>
-    <script defer src="js/data_billboards.js"></script>
-    <script defer src="js/data_city_lights.js"></script>
-    <script defer src="js/data_bicycle_parking.js"></script>
-    <script defer src="js/data_alternative_energy_facilities.js"></script>
+    <script defer src="js/add_map/add_map_density_population.js"></script>
+    <script defer src="js/add_map/add_map_polyline_community_boundary.js"></script>
+    <script defer src="js/add_map/add_map_current_coordinates.js"></script>
+    <script defer src="js/add_map/add_map_recreation_areas.js"></script>
+    <script defer src="js/add_map/add_map_equipped_recreation_areas.js"></script>
+    <script defer src="js/add_map/add_map_public_transport_stops_all.js"></script>
+    <script defer src="js/add_map/add_map_route_public_transport.js"></script>
+    <script defer src="js/add_map/add_map_bulletin_boards_all.js"></script>
+    <script defer src="js/add_map/add_map_billboards_all.js"></script>
+    <script defer src="js/add_map/add_map_city_lights.js"></script>
+    <script defer src="js/add_map/add_map_bicycle_parking_all.js"></script>
+    <script defer src="js/add_map/add_map_bicycle_service_center_all.js"></script>
+    <script defer src="js/add_map/add_map_alternative_energy_facilities_all.js"></script>
+    <script defer src="js/add_map/add_map_addresses_radius_current_coordinates.js"></script>
+    <script defer src="js/add_map/add_map_addresses_radius_selected_coordinates.js"></script>
+    <script defer src="js/add_map/add_map_addresses.js"></script>
+    <script defer src="js/add_map/add_map_organization.js"></script>
 
-    <script defer src="js/data_community_boundary.js"></script>
-    <script defer src="js/data_community_boundary_ladyzhyn.js"></script>
-    <script defer src="js/data_community_boundary_lukashivka.js"></script>
-    <script defer src="js/data_community_boundary_hubnyk.js"></script>
-    <script defer src="js/data_community_boundary_ruzhytske.js"></script>
-    <script defer src="js/data_community_boundary_zaozerne.js"></script>
-    <script defer src="js/data_community_boundary_vasylivka.js"></script>
+    <script defer src="js/data/data_street.js"></script>
+    <script defer src="js/data/data_house.js"></script>
+    <script defer src="js/data/data_entrance.js"></script>
+    <script defer src="js/data/data_apartment.js"></script>
+    <script defer src="js/data/data_error_text.js"></script>
+    <script defer src="js/data/data_recreation_areas.js"></script>
+    <script defer src="js/data/data_bulletin_boards.js"></script>
+    <script defer src="js/data/data_billboards.js"></script>
+    <script defer src="js/data/data_city_lights.js"></script>
+    <script defer src="js/data/data_bicycle_parking.js"></script>
+    <script defer src="js/data/data_alternative_energy_facilities.js"></script>
 
-    <script defer src="js/data_equipped_recreation_areas.js"></script>
+    <script defer src="js/data/data_community_boundary.js"></script>
+    <script defer src="js/data/data_community_boundary_ladyzhyn.js"></script>
+    <script defer src="js/data/data_community_boundary_lukashivka.js"></script>
+    <script defer src="js/data/data_community_boundary_hubnyk.js"></script>
+    <script defer src="js/data/data_community_boundary_ruzhytske.js"></script>
+    <script defer src="js/data/data_community_boundary_zaozerne.js"></script>
+    <script defer src="js/data/data_community_boundary_vasylivka.js"></script>
 
-    <script defer src="js/data_public_transport_stops.js"></script>
-    <script defer src="js/data_route_public_transport.js"></script>
+    <script defer src="js/data/data_equipped_recreation_areas.js"></script>
+
+    <script defer src="js/data/data_public_transport_stops.js"></script>
+    <script defer src="js/data/data_route_public_transport.js"></script>
 
 </head>
 
@@ -1330,7 +1330,7 @@
             title="Геоінформаційний портал Ладижинської територіальної громади (сайт на стадії розробки)">
 
         <img height="40" width="40" id="icon_voice_recognition" src="icon/voice_recognition.png" alt="Голосовий пошук" onclick="voice_recognition()"> 
-
+        
         <div id="id_container_menu" class="container_menu" onclick="open_close_sidebar()">
             <div id="id_bar_1" class="bar"></div>
             <div id="id_bar_2" class="bar"></div>
@@ -1350,11 +1350,11 @@
                 onclick="сopy_buffer_exchange_link_coordinates_last_selected_address()">Копіювати у буфер обміну
                 посилання із кординатами останньої вибраної адреси</button>
 
-            <button class="button_sidebar_add_map" onclick="display_addresses_radius_current_coordinates()">Відобразити
+            <button class="button_sidebar_add_map" onclick="add_map_addresses_radius_current_coordinates()">Відобразити
                 адреси на карті які знаходяться в радіусі 500 метрів від поточних кординат</button>
-            <button class="button_sidebar_add_map" onclick="display_addresses_radius_selected_coordinates()">Відобразити
+            <button class="button_sidebar_add_map" onclick="add_map_addresses_radius_selected_coordinates()">Відобразити
                 адреси на карті які знаходяться в радіусі 500 метрів від вибраної адреси</button>
-            <button class="button_sidebar_add_map" onclick="display_addresses()">Відобразити вибрані адреси на
+            <button class="button_sidebar_add_map" onclick="add_map_addresses()">Відобразити вибрані адреси на
                 карті</button>
             <button class="button_sidebar_delete" onclick="delete_markers()">Видалити адреси із карти</button>
             <button class="button_sidebar_add_address_route" onclick="add_address_route()">Додати адресу у
@@ -1544,9 +1544,9 @@
                 останню вибрану організацію</button>
 
 
-            <button class="button_sidebar_add_map" onclick="display_organization()">Відобразити організації на
+            <button class="button_sidebar_add_map" onclick="add_map_organization()">Відобразити організації на
                 карті</button>
-            <button class="button_sidebar_add_map" onclick="display_selected_organization()">Відобразити вибрану
+            <button class="button_sidebar_add_map" onclick="add_map_selected_organization()">Відобразити вибрану
                 організацію на карті</button>
             <button class="button_sidebar_delete" onclick="delete_markers_organization()">Видалити організацію(ції) із
                 карти</button>

@@ -2,7 +2,7 @@
 let markers_organization = [];
 
 // Відображає на карті всі знайдені організації
-function display_organization() {
+function add_map_organization() {
     if (find_organization_arr.length == 0) return open_dialog_error(error_text_24);
 
     delete_markers_organization();
@@ -16,7 +16,7 @@ function display_organization() {
 }
 
 // Відображає на карті одну вибрану організацію
-function display_selected_organization() {
+function add_map_selected_organization() {
     // Визначає вибрану організацію
     const select_organization_selectedIndex = document.getElementById("id_select_found_organization").selectedIndex;
     const select_organization_options = document.getElementById("id_select_found_organization").options;

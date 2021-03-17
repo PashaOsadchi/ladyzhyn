@@ -1,7 +1,7 @@
 let arr_house_radius_selected_coordinates = [];
 
 // Відображає адреси на карті які знаходяться в радіусі 500 метрів від вибраної адреси
-function display_addresses_radius_selected_coordinates() {
+function add_map_addresses_radius_selected_coordinates() {
     if (arr_house_radius_selected_coordinates.length > 0) return open_dialog_error(error_text_19);
 
     if (last_selected_address_obj.lat == 0 || last_selected_address_obj.lon == 0) return open_dialog_error(error_text_20);
