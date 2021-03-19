@@ -56,7 +56,7 @@ if ("webkitSpeechRecognition" in window || "SpeechRecognition" in window) {
         const transcript = results[results.length - 1][0].transcript;
 
         // console.log(`5 - onresult:  (${performance.now() - t_0})`, transcript);
-        voice_command_decoding(transcript);
+        determines_type_voice_command(transcript);
     };
 
     // Виконується, коли мова, яка буде використана для розпізнавання мови, закінчиться.
@@ -164,15 +164,37 @@ function voice_recognition() {
     recognition.start();
 } */
 
-// Декодує голосову команду
-function voice_command_decoding(command_str) {
-    command_str = command_str.replace("вулиця", "вул");
+// Визначає тип голосової команди
+function determines_type_voice_command(command_str) {
+    // Видаляє попередньо додані маркери
+    delete_voice_search_address_markers();
+    delete_markers_organization();
 
+    command_str = command_str.replace("вулиця", "вул");
     // console.log('command_str: ', command_str)
-    let house_arr = [];
+
     let human_settlement_id = 0;
-    let street_id = 0;
-    let house_id = 0;
+
+    let organization_type_id = 0;
+    let organization_type = 0;
+
+    let voice_search_command_id = 0;
+    let voice_search_command_name = 0;
+
+    // Шукає голосову команду
+    for (let i_1 = 0; i_1 < data_voice_search_commands_arr.length; i_1++) {
+
+        for (let i_2 = 0; i_2 < data_voice_search_commands_arr[i_1].voice_search.length; i_2++) {
+            const reg = new RegExp(data_voice_search_commands_arr[i_1].voice_search[i_2], "i");
+
+            if (reg.test(command_str)) {
+                voice_search_command_id = data_voice_search_commands_arr[i_1].id;
+                voice_search_command_name = data_voice_search_commands_arr[i_1].name;
+                break;
+            }
+        }
+    }
+    // console.log(`${command_str} - ${voice_search_command_id} - ${voice_search_command_name}`)
 
     // Шукає населений пункт
     for (let i = 0; i < data_human_settlement_arr.length; i++) {
@@ -185,10 +207,67 @@ function voice_command_decoding(command_str) {
     }
     // console.log('human_settlement_id: ', human_settlement_id)
 
-    // Перевіряє чи знайдено населений пункт
-    if (human_settlement_id == 0) {
-        return open_dialog_error("Населений пункт не знайдено! Спробуйте ще раз.");
+    // Шукає тип організації
+    for (let i_1 = 0; i_1 < data_organization_type_arr.length; i_1++) {
+
+        for (let i_2 = 0; i_2 < data_organization_type_arr[i_1].voice_search.length; i_2++) {
+            const reg = new RegExp(data_organization_type_arr[i_1].voice_search[i_2], "i");
+
+            if (reg.test(command_str)) {
+                organization_type_id = data_organization_type_arr[i_1].organization_id;
+                organization_type = data_organization_type_arr[i_1].organization_type;
+                break;
+            }
+        }
     }
+    // console.log(`${command_str} - ${organization_type_id} - ${organization_type}`)
+
+    // Перевіряє чи знайдено начення
+    if (voice_search_command_id !== 0 && human_settlement_id == 0 && organization_type == 0) {
+        switch (voice_search_command_id) {
+            // Очищає карту
+            case 1:
+                // Видаляє всі маркери
+                delete_markers_all();
+                break;
+            // Оновлює сторінку
+            case 2:
+                location.reload();
+                break;
+        }
+        return; 
+
+    } else if (voice_search_command_id == 0 && human_settlement_id !== 0 && organization_type == 0) {
+        return voice_command_decoding_address(command_str, human_settlement_id);
+
+    } else if (voice_search_command_id == 0 && human_settlement_id == 0 && organization_type !== 0) {
+        return voice_command_add_map_organization(organization_type)
+
+    } else if (voice_search_command_id !== 0 && human_settlement_id !== 0 && organization_type !== 0) {
+        return open_dialog_error("Одночасно розпізнає лише одну команду!<br> Спробуйте ще раз.");
+
+    } else if (voice_search_command_id == 0 && human_settlement_id == 0 && organization_type == 0) {
+        return open_dialog_error("Команду не знайдено! Спробуйте ще раз.");
+    }
+}
+
+function voice_command_add_map_organization(organization_type) {
+    const organization_arr = data_organization_arr.filter((e) => e.organization_type == organization_type);
+
+    add_overlay_map_organization(organization_arr);
+
+    // Якщо було знайдено одну організацію то маштабує карту для однієї організації
+    if (organization_arr.length == 1) return map_offset_selected_organization(organization_arr);
+
+    // Маштабує карту враховуючи видимість декількох організацій
+    map_offset_few_organization(organization_arr);
+}
+
+// Декодує голосову команду пошуку адреси
+function voice_command_decoding_address(command_str, human_settlement_id) {
+    let house_arr = [];
+    let street_id = 0;
+    let house_id = 0;
 
     // Відфільтровує вулиці знайденого населеного пункту
     const street_settlement_arr = data_street_arr.filter(function (e) {
@@ -254,7 +333,7 @@ function voice_command_decoding(command_str) {
 // Додає на карту центр населеного пункту
 function add_map_human_settlement_voice(human_settlement_arr) {
     // Видаляє попередньо додані маркери
-    removes_previously_added_markers();
+    delete_voice_search_address_markers();
 
     overlay = new custom_marker(new google.maps.LatLng(human_settlement_arr[0].human_settlement_latitude, human_settlement_arr[0].human_settlement_longitude), map, {
         marker_id: `11-${human_settlement_arr[0].human_settlement_id}`,
@@ -270,7 +349,7 @@ function add_map_human_settlement_voice(human_settlement_arr) {
 // Додає на карту усі адреси вулиці
 function add_map_street_voice(house_arr) {
     // Видаляє попередньо додані маркери
-    removes_previously_added_markers();
+    delete_voice_search_address_markers();
 
     // Додає будинки на карту
     for (let i = 0; i < house_arr.length; i++) {
@@ -306,7 +385,7 @@ function add_map_street_voice(house_arr) {
 // Додає на карту аресу одного будинку
 function add_map_house_voice(house_arr) {
     // Видаляє попередньо додані маркери
-    removes_previously_added_markers();
+    delete_voice_search_address_markers();
 
     overlay = new custom_marker(new google.maps.LatLng(Number(house_arr[0].house_latitude), Number(house_arr[0].house_longitude)), map, {
         marker_id: `1-${house_arr[0].house_id}`,
@@ -332,28 +411,4 @@ function add_map_house_voice(house_arr) {
     // Після додавання будинку маштабує карту
     map.panTo(new google.maps.LatLng(Number(house_arr[0].house_latitude), Number(house_arr[0].house_longitude)));
     map.setZoom(19);
-}
-
-// Видаляє попередньо додані маркери
-function removes_previously_added_markers() {
-    // Видаляє попередній маркер центра населеного пункту
-    for (let i = 0; i < markers_human_settlement_voice.length; i++) {
-        markers_human_settlement_voice[i].remove();
-        markers_human_settlement_voice[i].setMap(null);
-    }
-    markers_human_settlement_voice = [];
-
-    // Видаляє попередній маркер будинків
-    for (let i = 0; i < markers_house_voice.length; i++) {
-        markers_house_voice[i].remove();
-        markers_house_voice[i].setMap(null);
-    }
-    markers_house_voice = [];
-
-    // Видаляє попередній маркер підїздів
-    for (let i = 0; i < markers_entrance_voice.length; i++) {
-        markers_entrance_voice[i].remove();
-        markers_entrance_voice[i].setMap(null);
-    }
-    markers_entrance_voice = [];
 }

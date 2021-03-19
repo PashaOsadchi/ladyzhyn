@@ -38,7 +38,7 @@ function map_offset_human_settlement(human_settlement_code) {
         screen_width_ratio = 2;
     }
 
-    switch (human_settlement_code) {
+    switch (Number(human_settlement_code)) {
         case 1:
             map.panTo(new google.maps.LatLng(48.68677362481703, 29.248837454518203));
             map.setZoom(13 - screen_width_ratio);
