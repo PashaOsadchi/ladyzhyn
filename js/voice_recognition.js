@@ -166,20 +166,20 @@ function voice_recognition() {
 
 // Визначає тип голосової команди
 function determines_type_voice_command(command_str) {
-    // Видаляє попередньо додані маркери
-    delete_voice_search_address_markers();
-    delete_markers_organization();
+    // Видаляє всі маркери
+    delete_markers_all();
 
     command_str = command_str.replace("вулиця", "вул");
     // console.log('command_str: ', command_str)
 
     let human_settlement_id = 0;
+    let human_settlement_name_voice_search = '';
 
     let organization_type_id = 0;
-    let organization_type = 0;
+    let organization_type = '';
 
     let voice_search_command_id = 0;
-    let voice_search_command_name = 0;
+    let voice_search_command_name = '';
 
     // Шукає голосову команду
     for (let i_1 = 0; i_1 < data_voice_search_commands_arr.length; i_1++) {
@@ -188,9 +188,11 @@ function determines_type_voice_command(command_str) {
             const reg = new RegExp(data_voice_search_commands_arr[i_1].voice_search[i_2], "i");
 
             if (reg.test(command_str)) {
-                voice_search_command_id = data_voice_search_commands_arr[i_1].id;
-                voice_search_command_name = data_voice_search_commands_arr[i_1].name;
-                break;
+                // Знаходить найдовший текст який відповідає пошуку
+                if (data_voice_search_commands_arr[i_1].name.length > voice_search_command_name.length) {
+                    voice_search_command_id = data_voice_search_commands_arr[i_1].id;
+                    voice_search_command_name = data_voice_search_commands_arr[i_1].name;
+                }
             }
         }
     }
@@ -202,6 +204,7 @@ function determines_type_voice_command(command_str) {
 
         if (reg.test(command_str)) {
             human_settlement_id = data_human_settlement_arr[i].human_settlement_id;
+            human_settlement_name_voice_search = data_human_settlement_arr[i].human_settlement_name_voice_search;
             break;
         }
     }
@@ -222,6 +225,27 @@ function determines_type_voice_command(command_str) {
     }
     // console.log(`${command_str} - ${organization_type_id} - ${organization_type}`)
 
+    // Знаходить найдовший текст який відповідає пошуку
+    if (human_settlement_name_voice_search.length > organization_type.length && human_settlement_name_voice_search.length > voice_search_command_name.length) {
+        organization_type_id = 0;
+        voice_search_command_id = 0;
+    }
+
+    // Знаходить найдовший текст який відповідає пошуку
+    if (organization_type.length > human_settlement_name_voice_search.length && organization_type.length > voice_search_command_name.length) {
+        human_settlement_id = 0;
+        voice_search_command_id = 0;
+    }
+
+    // Знаходить найдовший текст який відповідає пошуку
+    if (voice_search_command_name.length > human_settlement_name_voice_search.length && voice_search_command_name.length > organization_type.length) {
+        human_settlement_id = 0;
+        organization_type_id = 0;
+    }
+    // console.log('voice_search_command_id - ', voice_search_command_id)
+    // console.log('human_settlement_id - ', human_settlement_id)
+    // console.log('organization_type_id', organization_type_id)
+
     // Перевіряє чи знайдено начення
     if (voice_search_command_id !== 0 && human_settlement_id == 0 && organization_type == 0) {
         switch (voice_search_command_id) {
@@ -233,6 +257,65 @@ function determines_type_voice_command(command_str) {
             // Оновлює сторінку
             case 2:
                 location.reload();
+                break;
+            // Густина населення у багатоквартирних будинках
+            case 3:
+                add_map_density_population_house_multifamily();
+                break;
+            // Густина населення у приватних будинках
+            case 4:
+                add_map_density_population_house_private();
+                break;
+            // Межі населених пунктів
+            case 5:
+                add_map_polyline_community_boundary_all();
+                break;
+            // Поточні кординати
+            case 6:
+                add_map_current_coordinates();
+                break;
+            // Облаштовані зони відпочинку  
+            case 7:
+                add_map_equipped_recreation_areas_all();
+                break;
+            // Зони відпочинку  
+            case 8:
+                add_map_recreation_areas_all();
+                break;
+            // План зонування м.Ладижина
+            case 9:
+                id_dialog_openseadragon_master_plan_map.showModal();
+                break;
+            // Зупинки громадського транспорту
+            case 10:
+                add_map_public_transport_stops_all();
+                break;
+            // Дошки оголошень
+            case 11:
+                add_map_bulletin_boards_all();
+                break;
+            // Білборди
+            case 12:
+                add_map_billboards_all();
+                break;
+            // Сітілайти
+            case 13:
+                add_map_city_lights_all();
+                break;
+            // Велопарковки
+            case 14:
+                add_map_bicycle_parking_all();
+                break;
+            // Веломайстерні
+            case 15:
+                add_map_bicycle_service_center_all()
+                break;
+            // Об'єкти альтернативної енергетики
+            case 16:
+                add_map_alternative_energy_facilities_all();
+                break;
+            default:
+                console.log('default');
                 break;
         }
         return; 
@@ -250,6 +333,7 @@ function determines_type_voice_command(command_str) {
         return open_dialog_error("Команду не знайдено! Спробуйте ще раз.");
     }
 }
+
 
 function voice_command_add_map_organization(organization_type) {
     const organization_arr = data_organization_arr.filter((e) => e.organization_type == organization_type);

@@ -1,19 +1,11 @@
 let alternative_energy_facilities_or_added = false;
 let markers_alternative_energy_facilities = [];
 
-// Додає на карту велопарковки
+// Додає на карту об'єкти альтернативної енергетики
 function add_map_alternative_energy_facilities_all() {
 
     if (alternative_energy_facilities_or_added) {
-        alternative_energy_facilities_or_added = false;
-        
-        // Видаляє маркери
-        for (let i = 0; i < markers_alternative_energy_facilities.length; i++) {
-            markers_alternative_energy_facilities[i].remove();
-            markers_alternative_energy_facilities[i].setMap(null);
-        }
-        markers_alternative_energy_facilities = [];
-        return
+        return delete_alternative_energy_facilities_markers();
     }
 
     for (let i = 0; i < data_alternative_energy_facilities_arr.length; i++) {
@@ -31,6 +23,6 @@ function add_map_alternative_energy_facilities_all() {
 
     alternative_energy_facilities_or_added = true;
 
-    // Після додавання велопарковок маштабує карту
+    // Після додавання об'єктів альтернативної енергетики маштабує карту
     map_offset_community_boundary();
 }

@@ -5,15 +5,7 @@ let markers_equipped_recreation_areas = [];
 function add_map_equipped_recreation_areas_all() {
 
     if (equipped_recreation_areas_or_added) {
-        equipped_recreation_areas_or_added = false;
-        
-        // Видаляє маркери
-        for (let i = 0; i < markers_equipped_recreation_areas.length; i++) {
-            markers_equipped_recreation_areas[i].remove();
-            markers_equipped_recreation_areas[i].setMap(null);
-        }
-        markers_equipped_recreation_areas = [];
-        return
+        return delete_equipped_recreation_areas_markers();
     }
 
     for (let i = 0; i < data_equipped_recreation_areas_arr.length; i++) {

@@ -5,15 +5,7 @@ let markers_billboards = [];
 function add_map_billboards_all() {
 
     if (billboards_or_added) {
-        billboards_or_added = false;
-        
-        // Видаляє маркери
-        for (let i = 0; i < markers_billboards.length; i++) {
-            markers_billboards[i].remove();
-            markers_billboards[i].setMap(null);
-        }
-        markers_billboards = [];
-        return
+        return delete_billboards_markers();
     }
 
     for (let i = 0; i < data_billboards_arr.length; i++) {

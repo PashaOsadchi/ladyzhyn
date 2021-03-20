@@ -5,15 +5,7 @@ let markers_public_transport_stops = [];
 function add_map_public_transport_stops_all() {
 
     if (public_transport_stops_all_or_added) {
-        public_transport_stops_all_or_added = false;
-        
-        // Видаляє маркери
-        for (let i = 0; i < markers_public_transport_stops.length; i++) {
-            markers_public_transport_stops[i].remove();
-            markers_public_transport_stops[i].setMap(null);
-        }
-        markers_public_transport_stops = [];
-        return
+        return delete_public_transport_stops_markers();
     }
 
     for (let i = 0; i < data_public_transport_stops_arr.length; i++) {

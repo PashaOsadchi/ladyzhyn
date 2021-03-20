@@ -5,15 +5,7 @@ let markers_city_lights = [];
 function add_map_city_lights_all() {
 
     if (city_lights_or_added) {
-        city_lights_or_added = false;
-        
-        // Видаляє маркери
-        for (let i = 0; i < markers_city_lights.length; i++) {
-            markers_city_lights[i].remove();
-            markers_city_lights[i].setMap(null);
-        }
-        markers_city_lights = [];
-        return
+        return delete_city_lights_markers();
     }
 
     for (let i = 0; i < data_city_lights_arr.length; i++) {

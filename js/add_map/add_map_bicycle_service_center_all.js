@@ -2,7 +2,7 @@ let bicycle_service_center_or_added = false;
 let markers_bicycle_service_center = [];
 
 function add_map_bicycle_service_center_all() {
-
+ 
     if (bicycle_service_center_or_added) {
         bicycle_service_center_or_added = false;
         

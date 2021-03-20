@@ -41,12 +41,7 @@ function add_map_recreation_areas(patch_arr, name_polygon, message_text) {
 // Додає на карту зони відпочинку
 function add_map_recreation_areas_all() {
     if (areas_recreation_arr.length) {
-        // Видаляє зони відпочинку
-        for (let i = 0; i < areas_recreation_arr.length; i++) {
-            areas_recreation_arr[i].setMap(null);
-        }
-        areas_recreation_arr = [];
-        return;
+        return delete_recreation_areas_markers();
     }
 
     for (let i = 0; i < data_recreation_areas_arr.length; i++) {

@@ -5,15 +5,7 @@ let markers_bulletin_boards = [];
 function add_map_bulletin_boards_all() {
 
     if (bulletin_boards_or_added) {
-        bulletin_boards_or_added = false;
-
-        // Видаляє маркери
-        for (let i = 0; i < markers_bulletin_boards.length; i++) {
-            markers_bulletin_boards[i].remove();
-            markers_bulletin_boards[i].setMap(null);
-        }
-        markers_bulletin_boards = [];
-        return
+        return delete_bulletin_boards_markers();
     }
 
     for (let i = 0; i < data_bulletin_boards_arr.length; i++) {

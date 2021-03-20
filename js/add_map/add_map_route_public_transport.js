@@ -1,17 +1,5 @@
 let polyline_route_public_transport_arr = [];
 
-// Приховує вибраний маршрут руху
-function delete_map_route_public_transport() {
-    if (polyline_route_public_transport_arr.length) {
-        // Видаляє межі усіх населених пунктів
-        for (let i = 0; i < polyline_route_public_transport_arr.length; i++) {
-            polyline_route_public_transport_arr[i].setMap(null);
-        }
-        polyline_route_public_transport_arr = [];
-    }
-    
-}
-
 // Додає на карту маршрут руху
 function add_map_polyline_route_public_transport(obj) {
     const name_polyline = `polyline_route_public_transport_${obj}`;
@@ -60,7 +48,7 @@ function add_map_polyline_route_public_transport(obj) {
 }
 
 function add_map_route_public_transport() {
-    delete_map_route_public_transport();
+    delete_route_public_transport_markers();
 
     // Визначає вибраний маршрут
     const select_route_public_transport_selectedIndex = document.getElementById('id_select_route_public_transport').selectedIndex;

@@ -5,15 +5,7 @@ let markers_bicycle_parking = [];
 function add_map_bicycle_parking_all() {
 
     if (bicycle_parking_or_added) {
-        bicycle_parking_or_added = false;
-        
-        // Видаляє маркери
-        for (let i = 0; i < markers_bicycle_parking.length; i++) {
-            markers_bicycle_parking[i].remove();
-            markers_bicycle_parking[i].setMap(null);
-        }
-        markers_bicycle_parking = [];
-        return
+        return delete_bicycle_parking_markers();
     }
 
     for (let i = 0; i < data_bicycle_parking_arr.length; i++) {
