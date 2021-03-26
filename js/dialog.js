@@ -69,7 +69,7 @@ function open_dialog_search() {
     </div>
     `;
 
-    add_datalist_search();
+    // add_datalist_search();
 }
 
 // Блокує прокрутку сторінки
