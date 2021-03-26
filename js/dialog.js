@@ -4,8 +4,12 @@ function open_dialog_error(str) {
     dialog_error.showModal();
 
     dialog_error.innerHTML = `
-    <div id="dialog_error_header">Помилка!</div>
-    <div id="dialog_error_content">${str}</div>
+    <div>
+        <div id="dialog_error_header">Помилка</div>
+        <img height="16" width="16" id="icon_close_dialog" src="icon/close.png" alt="Закрити" onclick="id_dialog_error.close();"> 
+    </div> 
+
+    <div class="dialog_value">${str}</div>
     `;
 }
 
@@ -15,6 +19,7 @@ document.onclick = (event) => {
         id_dialog_detailed_information.close();
         id_dialog_openseadragon_master_plan_map.close();
         id_dialog_circles_preloader.close();
+        id_dialog_search.close();
     }
 };
 
@@ -40,6 +45,25 @@ function open_circles_preloader() {
 </div>
     `;
 };
+
+function open_dialog_search() {
+    const dialog_error = document.getElementById('id_dialog_search');
+
+    dialog_error.showModal();
+
+    dialog_error.innerHTML = `
+    <div>
+        <div id="dialog_search_header">Пошук</div>
+        <img height="16" width="16" id="icon_close_dialog" src="icon/close.png" alt="Закрити" onclick="id_dialog_search.close();"> 
+    </div>
+    <div id="id_block_search">
+        <input type="text" name="" id="id_input_search">
+        <button id="id_button_search" onclick="search()">
+            <img height="26" width="26" id="icon_dialog_search" src="icon/search.png"> 
+        </button>
+    </div>
+    `;
+}
 
 // Блокує прокрутку сторінки
 function disable_scrolling() {

@@ -433,6 +433,14 @@
             width: 100%;
             height: 100%;
         }
+
+        #dialog_search_header {
+            font-size: 10mm;
+            background-color: rgba(0, 162, 255, 0.767);
+            color: #ffffff;
+            text-align: center;
+            padding: 5px;
+        }
     </style>
 
     <!-- class_button -->
@@ -721,60 +729,8 @@
 
         .field_close {
             grid-area: close;
+            margin-top: 2px;
             /* background-color: rgba(131, 131, 131, 0.822); */
-        }
-
-        /* Хрестик закрити */
-        .cross_close {
-            width: 100%;
-            height: 100%;
-            position: relative;
-            transform: rotate(45deg);
-            -ms-transform: rotate(45deg);
-            /* IE 9 */
-            -webkit-transform: rotate(45deg);
-            /* Safari and Chrome */
-        }
-
-        .cross_close:before,
-        .cross_close:after {
-            content: "";
-            position: absolute;
-            z-index: -1;
-            background: #d00;
-        }
-
-        .cross_close:before {
-            left: 50%;
-            width: 10%;
-            margin-left: -5%;
-            height: 100%;
-        }
-
-        .cross_close:after {
-            top: 50%;
-            height: 10%;
-            margin-top: -5%;
-            width: 100%;
-        }
-
-        /* Збігається, коли користувач позначає елемент за допомогою вказівного пристрою, наприклад, утримуючи над ним вказівник миші. */
-        .cross_close:hover {
-            outline: none;
-            border: none;
-            opacity: 0.6;
-        }
-
-        /* Збігається, коли елемент має фокус. */
-        .cross_close:focus {
-            outline: none;
-            border: none;
-        }
-
-        /* Збігається, коли елемент активується користувачем, наприклад натискається. */
-        .cross_close:active {
-            border: none;
-            opacity: 1;
         }
     </style>
 
@@ -823,10 +779,12 @@
     <!-- id_icon_voice_recognition -->
     <style>
         #icon_voice_recognition {
-            display: none;
+            /* display: none;
             position: absolute;
             right: 50%; 
-            transform: translate(50%, 0%);
+            transform: translate(50%, 0%); */
+            float: right;
+            margin: 7px 10px 0px 0px;
         }
 
         /* Збігається, коли користувач позначає елемент за допомогою вказівного пристрою, наприклад, утримуючи над ним вказівник миші. */
@@ -844,6 +802,60 @@
 
         /* Збігається, коли елемент активується користувачем, наприклад натискається. */
         #icon_voice_recognition:active {
+            border: none;
+            opacity: 1;
+        }
+    </style>
+
+    <!-- id_icon_search -->
+    <style>
+        #icon_search {
+            float: right;
+            margin: 7px 10px 0px 0px;
+        }
+
+        /* Збігається, коли користувач позначає елемент за допомогою вказівного пристрою, наприклад, утримуючи над ним вказівник миші. */
+        #icon_search:hover {
+            outline: none;
+            border: none;
+            opacity: 0.6;
+        }
+
+        /* Збігається, коли елемент має фокус. */
+        #icon_search:focus {
+            outline: none;
+            border: none;
+        }
+
+        /* Збігається, коли елемент активується користувачем, наприклад натискається. */
+        #icon_search:active {
+            border: none;
+            opacity: 1;
+        }
+    </style>
+
+    <!-- id_icon_clear_map -->
+    <style>
+        #icon_clear_map {
+            float: right;
+            margin: 7px 10px 0px 0px;
+        }
+
+        /* Збігається, коли користувач позначає елемент за допомогою вказівного пристрою, наприклад, утримуючи над ним вказівник миші. */
+        #icon_clear_map:hover {
+            outline: none;
+            border: none;
+            opacity: 0.6;
+        }
+
+        /* Збігається, коли елемент має фокус. */
+        #icon_clear_map:focus {
+            outline: none;
+            border: none;
+        }
+
+        /* Збігається, коли елемент активується користувачем, наприклад натискається. */
+        #icon_clear_map:active {
             border: none;
             opacity: 1;
         }
@@ -1216,6 +1228,62 @@
     }
     </style>
 
+    <!-- id_icon_close -->
+    <style>
+        #icon_close {
+            float: right;
+        }
+    </style>
+
+    <!-- icon_close_dialog -->
+    <style>
+        #icon_close_dialog {
+            position: absolute;
+            margin: 4px;
+            top: 0px;
+            right: 0px;
+        }
+    </style>
+
+    <!-- search -->
+    <style>
+        #id_block_search {
+            position: relative;
+            margin: 4px;
+        }
+
+        #id_input_search {
+            width: 290px;
+            height: 42px;
+            padding-left: 10px;
+            border: 2px solid #7BA7AB;
+            border-radius: 5px;
+            outline: none;
+            background: #F9F0DA;
+            color: #9E9C9C;
+        }
+
+        #id_button_search {
+            position: absolute; 
+            top: 0;
+            right: 0px;
+            width: 42px;
+            height: 42px;
+            margin: 0;
+            border: none;
+            background: #7BA7AB;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+
+    <!-- id_icon_dialog_search -->
+    <style>
+        #icon_dialog_search {
+            margin: 9px 0 0 5px;
+        }
+    </style>
+
     <script src="js/map/map.js"></script>
 
     <!-- Використовуються для формування сторінки -->
@@ -1259,6 +1327,8 @@
     <script defer src="js/clears_div.js"></script>
 
     <script defer src="js/find_organization.js"></script>
+
+    <script defer src="js/search.js"></script>
 
     <script defer src="js/open_close_sidebar.js"></script>
     <script defer src="js/open_dialog_detailed_information.js"></script>
@@ -1334,19 +1404,25 @@
 
 <dialog id="id_dialog_circles_preloader"></dialog>
 
+<dialog id="id_dialog_search"></dialog>
+
 <body id="id_body">
     <header id="id_page_header">
         <img height="40" src="img/logo.png"
             alt="Геоінформаційний портал Ладижинської територіальної громади (сайт на стадії розробки)"
             title="Геоінформаційний портал Ладижинської територіальної громади (сайт на стадії розробки)">
 
-        <img height="40" width="40" id="icon_voice_recognition" src="icon/voice_recognition.png" alt="Голосовий пошук" onclick="voice_recognition()"> 
-        
         <div id="id_container_menu" class="container_menu" onclick="open_close_sidebar()">
             <div id="id_bar_1" class="bar"></div>
             <div id="id_bar_2" class="bar"></div>
             <div id="id_bar_3" class="bar"></div>
         </div>
+
+        <img height="26" width="26" id="icon_clear_map" src="icon/clear_map.png" alt="Очистити карту" onclick="delete_markers_all()"> 
+
+        <img height="26" width="26" id="icon_voice_recognition" src="icon/voice_recognition.png" alt="Голосовий пошук" onclick="voice_recognition()"> 
+
+        <img height="26" width="26" id="icon_search" src="icon/search.png" alt="Пошук" onclick="open_dialog_search()"> 
     </header>
 
     <div id="map"></div>
