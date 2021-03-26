@@ -66,10 +66,25 @@ function open_dialog_search() {
         <button id="id_button_search" onclick="search()">
             <img height="26" width="26" id="icon_dialog_search" src="icon/search.png"> 
         </button>
-    </div>
+
+        <div class="tag_cloud_search">
+            <ul>
+                <li onclick="id_dialog_search.close(); determines_type_voice_command('Магазини')">Магазини</li>
+                <li onclick="id_dialog_search.close(); determines_type_voice_command('Заправки')">Заправки</li>
+                <li onclick="id_dialog_search.close(); determines_type_voice_command('Аптеки')">Аптеки</li>
+                <li onclick="id_dialog_search.close(); determines_type_voice_command('Стоматолог')">Стоматолог</li>
+                <li onclick="id_dialog_search.close(); determines_type_voice_command('Кафе')">Кафе</li>
+                <li onclick="id_dialog_search.close(); determines_type_voice_command('Садики')">Садики</li>
+                <li onclick="id_dialog_search.close(); determines_type_voice_command('Ресторани')">Ресторани</li>
+                <li onclick="id_dialog_search.close(); determines_type_voice_command('Супермаркети')">Супермаркети</li>
+                <li onclick="id_dialog_search.close(); determines_type_voice_command('Автосервіси')">Автосервіси</li>
+                <li onclick="id_dialog_search.close(); determines_type_voice_command('Дошки оголошень')">Дошки оголошень</li>
+                <li onclick="id_dialog_search.close(); determines_type_voice_command('Місця відпочинку')">Місця відпочинку</li>
+            </ul>
+        </div>
     `;
 
-    // add_datalist_search();
+    add_datalist_search();
 }
 
 // Блокує прокрутку сторінки
