@@ -57,12 +57,19 @@ function open_dialog_search() {
         <img height="16" width="16" id="icon_close_dialog" src="icon/close.png" alt="Закрити" onclick="id_dialog_search.close();"> 
     </div>
     <div id="id_block_search">
-        <input type="text" name="" id="id_input_search">
+        <input type="text" list="id_datalist_search" id="id_input_search">
+
+        <datalist id="id_datalist_search" style="height:5.1em;overflow:hidden" >
+            <option id="id_option_datalist_search"></option>
+        </datalist>
+
         <button id="id_button_search" onclick="search()">
             <img height="26" width="26" id="icon_dialog_search" src="icon/search.png"> 
         </button>
     </div>
     `;
+
+    add_datalist_search();
 }
 
 // Блокує прокрутку сторінки
