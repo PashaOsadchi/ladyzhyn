@@ -87,7 +87,7 @@ function open_dialog_search() {
     document.getElementById("id_input_search").focus();
     document.getElementById("id_input_search").select();
 
-    //add_datalist_search();
+    add_datalist_search();
 }
 
 // Блокує прокрутку сторінки
