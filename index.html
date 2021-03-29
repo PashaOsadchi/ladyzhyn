@@ -99,6 +99,7 @@
             grid-template-columns: 1fr 0%;
             gap: 0px;
             height: 100vh;
+            height: calc(var(--vh, 1vh) * 100);
             margin: 0;
             padding: 0;
             background-color: var(--background-color-page);
@@ -1370,6 +1371,8 @@
     <script defer src="js/find_organization.js"></script>
 
     <script defer src="js/search.js"></script>
+
+    <script defer src="js/adaptive_height_body.js"></script>
 
     <script defer src="js/open_close_sidebar.js"></script>
     <script defer src="js/open_dialog_detailed_information.js"></script>
