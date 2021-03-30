@@ -1457,19 +1457,19 @@
             alt="Геоінформаційний портал Ладижинської територіальної громади (сайт на стадії розробки)"
             title="Геоінформаційний портал Ладижинської територіальної громади (сайт на стадії розробки)">
 
-        <div id="id_container_menu" class="container_menu" onclick="open_close_sidebar()">
+        <div id="id_container_menu" class="container_menu" title="Меню" onclick="open_close_sidebar()">
             <div id="id_bar_1" class="bar"></div>
             <div id="id_bar_2" class="bar"></div>
             <div id="id_bar_3" class="bar"></div>
         </div>
 
-        <img height="26" width="26" id="icon_clear_map" src="icon/clear_map.png" alt="Очистити карту"
+        <img height="26" width="26" id="icon_clear_map" src="icon/clear_map.png" alt="Очистити карту" title="Очистити карту"
             onclick="delete_markers_all()">
 
-        <img height="26" width="26" id="icon_voice_recognition" src="icon/voice_recognition.png" alt="Голосовий пошук"
+        <img height="26" width="26" id="icon_voice_recognition" src="icon/voice_recognition.png" alt="Голосовий пошук" title="Голосовий пошук"
             onclick="voice_recognition()">
 
-        <img height="26" width="26" id="icon_search" src="icon/search.png" alt="Пошук" onclick="open_dialog_search()">
+        <img height="26" width="26" id="icon_search" src="icon/search.png" alt="Пошук" title="Пошук" onclick="open_dialog_search()">
     </header>
 
     <div id="map"></div>
@@ -1484,11 +1484,11 @@
                 onclick="сopy_buffer_exchange_link_coordinates_last_selected_address()">Копіювати у буфер обміну
                 посилання із кординатами останньої вибраної адреси</button>
 
-            <button class="button_sidebar_add_map" onclick="add_map_addresses_radius_current_coordinates()">Відобразити
+            <button class="button_sidebar_add_map" id="id_button_add_map_addresses_radius_current_coordinates" onclick="add_map_addresses_radius_current_coordinates()">Відобразити
                 адреси на карті які знаходяться в радіусі 500 метрів від поточних кординат</button>
-            <button class="button_sidebar_add_map" onclick="add_map_addresses_radius_selected_coordinates()">Відобразити
+            <button class="button_sidebar_add_map" id="id_button_add_map_addresses_radius_selected_coordinates" onclick="add_map_addresses_radius_selected_coordinates()">Відобразити
                 адреси на карті які знаходяться в радіусі 500 метрів від вибраної адреси</button>
-            <button class="button_sidebar_add_map" onclick="add_map_addresses()">Відобразити вибрані адреси на
+            <button class="button_sidebar_add_map" id="id_button_add_map_addresses" onclick="add_map_addresses()">Відобразити вибрані адреси на
                 карті</button>
             <button class="button_sidebar_delete" onclick="delete_markers()">Видалити адреси із карти</button>
             <button class="button_sidebar_add_address_route" onclick="add_address_route()">Додати адресу у
@@ -1678,9 +1678,9 @@
                 останню вибрану організацію</button>
 
 
-            <button class="button_sidebar_add_map" onclick="add_map_organization()">Відобразити організації на
+            <button class="button_sidebar_add_map" id="id_button_add_map_organization" onclick="add_map_organization()">Відобразити організації на
                 карті</button>
-            <button class="button_sidebar_add_map" onclick="add_map_selected_organization()">Відобразити вибрану
+            <button class="button_sidebar_add_map" id="id_button_add_map_selected_organization" onclick="add_map_selected_organization()">Відобразити вибрану
                 організацію на карті</button>
             <button class="button_sidebar_delete" onclick="delete_markers_organization()">Видалити організацію(ції) із
                 карти</button>
@@ -1771,7 +1771,7 @@
             <button class="button_sidebar_copy" onclick="сopy_buffer_exchange_link_coordinates_route()">Копіювати у
                 буфер обміну посилання із прокладеним маршрутом</button>
 
-            <button class="button_sidebar_add_map" onclick="paving_route()">Відобразити на карті прокладений
+            <button class="button_sidebar_add_map" id="id_button_paving_route" onclick="paving_route()">Відобразити на карті прокладений
                 маршрут</button>
             <button class="button_sidebar_delete" onclick="delete_route()">Видалити маршрут із карти</button>
             <button class="button_sidebar_delete" onclick="delete_list_waypoints()">Очистити перелік маршрутних
@@ -1810,13 +1810,13 @@
             onclick="onclick_details_density_population()">
             <summary class="summary_title_name">Густота населення</summary>
 
-            <button class="button_sidebar_add_map"
+            <button class="button_sidebar_add_map" id="id_button_add_map_density_population_house_multifamily" 
                 onclick="change_color_show_hide_button(this); add_map_density_population_house_multifamily()">Показати\Приховати
                 на
                 карті густоту
                 населення у багатоквартирних будинках</button>
 
-            <button class="button_sidebar_add_map"
+            <button class="button_sidebar_add_map" id="id_button_add_map_density_population_house_private"
                 onclick="change_color_show_hide_button(this); add_map_density_population_house_private()">Показати\Приховати
                 на
                 карті густоту
@@ -1827,7 +1827,7 @@
             onclick="onclick_details_community_boundary()">
             <summary class="summary_title_name">Межі населених пунктів</summary>
 
-            <button class="button_sidebar_add_map"
+            <button class="button_sidebar_add_map" id="id_button_add_map_polyline_community_boundary_all"
                 onclick="change_color_show_hide_button(this); add_map_polyline_community_boundary_all()">Показати\Приховати
                 межі населених
                 пунктів</button>
@@ -1836,7 +1836,7 @@
         <details class="datails_leveil_1" id="id_details_current_coordinates"
             onclick="onclick_details_current_coordinates()">
             <summary class="summary_title_name">Поточні кординати</summary>
-            <button class="button_sidebar_add_map"
+            <button class="button_sidebar_add_map" id="id_button_add_map_current_coordinates"
                 onclick="change_color_show_hide_button(this); add_map_current_coordinates()">Показати\Приховати поточні
                 кординати</button>
             <button class="button_sidebar_add_address_route" onclick="add_current_coordinates_route()">Додати у маршрут
@@ -1846,11 +1846,11 @@
         <details class="datails_leveil_1" id="id_details_recreation_areas" onclick="onclick_details_recreation_areas()">
             <summary class="summary_title_name">Зони відпочинку</summary>
 
-            <button class="button_sidebar_add_map"
+            <button class="button_sidebar_add_map" id="id_button_add_map_recreation_areas_all"
                 onclick="change_color_show_hide_button(this); add_map_recreation_areas_all()">Показати\Приховати зони
                 відпочинку</button>
 
-            <button class="button_sidebar_add_map"
+            <button class="button_sidebar_add_map" id="id_button_add_map_equipped_recreation_areas_all"
                 onclick="change_color_show_hide_button(this); add_map_equipped_recreation_areas_all()">Показати\Приховати
                 облаштовані зони відпочинку</button>
 
@@ -1859,7 +1859,7 @@
         <details class="datails_leveil_1" id="id_details_master_plan_map" onclick="onclick_details_master_plan_map()">
             <summary class="summary_title_name">Плани зонування</summary>
 
-            <button class="button_sidebar_add_map"
+            <button class="button_sidebar_add_map" id="id_button_add_map_master_plan"
                 onclick="id_dialog_openseadragon_master_plan_map.showModal()">Показати план зонування
                 м.Ладижина</button>
 
@@ -1868,7 +1868,7 @@
         <details class="datails_leveil_1" id="id_details_public_transport" onclick="onclick_details_public_transport()">
             <summary class="summary_title_name">Громадський транспорт</summary>
 
-            <button class="button_sidebar_add_map"
+            <button class="button_sidebar_add_map" id="id_button_add_map_public_transport_stops_all"
                 onclick="change_color_show_hide_button(this); add_map_public_transport_stops_all()">Показати\Приховати
                 зупинки громадського транспорту</button>
 
@@ -1886,15 +1886,15 @@
             onclick="onclick_details_advertising_media()">
             <summary class="summary_title_name">Рекламні засоби</summary>
 
-            <button class="button_sidebar_add_map"
+            <button class="button_sidebar_add_map" id="id_button_add_map_bulletin_boards_all"
                 onclick="change_color_show_hide_button(this); add_map_bulletin_boards_all()">Показати\Приховати
                 дошки оголошень</button>
 
-            <button class="button_sidebar_add_map"
+            <button class="button_sidebar_add_map" id="id_button_add_map_billboards_all"
                 onclick="change_color_show_hide_button(this); add_map_billboards_all()">Показати\Приховати
                 білборди</button>
 
-            <button class="button_sidebar_add_map"
+            <button class="button_sidebar_add_map" id="id_button_add_map_city_lights_all"
                 onclick="change_color_show_hide_button(this); add_map_city_lights_all()">Показати\Приховати
                 сітілайти</button>
         </details>
@@ -1903,11 +1903,11 @@
             onclick="onclick_details_cycling_infrastructure()">
             <summary class="summary_title_name">Велоінфраструктура</summary>
 
-            <button class="button_sidebar_add_map"
+            <button class="button_sidebar_add_map" id="id_button_add_map_bicycle_parking_all"
                 onclick="change_color_show_hide_button(this); add_map_bicycle_parking_all()">Показати\Приховати
                 велопарковки</button>
 
-            <button class="button_sidebar_add_map"
+            <button class="button_sidebar_add_map" id="id_button_add_map_bicycle_service_center_all"
                 onclick="change_color_show_hide_button(this); add_map_bicycle_service_center_all()">Показати\Приховати
                 веломайстерні</button>
 
@@ -1917,7 +1917,7 @@
             onclick="onclick_details_alternative_energy()">
             <summary class="summary_title_name">Альтернативна енергетика</summary>
 
-            <button class="button_sidebar_add_map"
+            <button class="button_sidebar_add_map" id="id_button_add_map_alternative_energy_facilities_all"
                 onclick="change_color_show_hide_button(this); add_map_alternative_energy_facilities_all()">Показати\Приховати
                 об'єкти альтернативної енергетики</button>
 

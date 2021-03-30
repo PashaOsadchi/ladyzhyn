@@ -15,6 +15,10 @@ function delete_markers_all() {
     delete_public_transport_stops_markers();
     delete_recreation_areas_markers();
     delete_route_public_transport_markers();
+
+    // Змінює колір кнопок
+    const elements = document.querySelectorAll('.button_sidebar_add_map');
+    for (let element of elements) element.style.backgroundColor = 'rgba(102, 255, 0, 0.6)';
 }
 
 // Видаляє маркери адрес із карти
