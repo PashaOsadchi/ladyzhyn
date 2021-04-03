@@ -314,6 +314,10 @@ function determines_type_voice_command(command_str) {
             case 16:
                 add_map_alternative_energy_facilities_all();
                 break;
+            // Об'єкти паркувального простору
+            case 17:
+                add_map_parking_space_all();
+                break;
             default:
                 console.log('default');
                 break;

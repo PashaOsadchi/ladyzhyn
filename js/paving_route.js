@@ -21,7 +21,7 @@ function paving_route() {
 
     // Викликається API Google Maps для визначення маршруту
     directionsService.route(request, function (response, status) {
-        // Перевіряється резельтат надходження маршруту
+        // Перевіряється результат надходження маршруту
         switch (status) {
             // Вказує, що відповідь містить дійсний DirectionsResult
             case google.maps.DirectionsStatus.OK:
@@ -29,7 +29,7 @@ function paving_route() {
 
                 for (let i = 0; i < waypoints_full_arr.length; i++) {
                     overlay = new custom_marker(new google.maps.LatLng(Number(waypoints_full_arr[i].latitude), Number(waypoints_full_arr[i].longitude)), map, {
-                        marker_id: `5-${waypoints_full_arr[i].id}`,
+                        marker_id: `${waypoints_full_arr[i].dialog_detailed_information_code}-${waypoints_full_arr[i].code}`,
                         marker_name: waypoints_full_arr[i].name,
                         marker_class_name: 'marker marker_route'
                     });

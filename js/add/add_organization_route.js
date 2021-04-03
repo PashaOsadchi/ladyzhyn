@@ -30,6 +30,7 @@ function add_organization_route() {
         'Організація', 
         name_organization, 
         organization_arr[0].organization_longitude, 
-        organization_arr[0].organization_latitude
+        organization_arr[0].organization_latitude,
+        4
     );
 }

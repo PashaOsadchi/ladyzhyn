@@ -28,7 +28,8 @@ function add_address_route() {
                 `Центр населеного пункту`,
                 full_address,
                 human_settlement_arr[0].human_settlement_longitude,
-                human_settlement_arr[0].human_settlement_latitude
+                human_settlement_arr[0].human_settlement_latitude,
+                11
             );
             break;
         case "1,1,0,0,0": // Вибрана вулиця - вибирає кординати першого будинку
@@ -53,7 +54,8 @@ function add_address_route() {
                 `Перший будинок на вулиці`, 
                 full_address, 
                 house_arr[0].house_longitude, 
-                house_arr[0].house_latitude
+                house_arr[0].house_latitude,
+                1
             );
             break;
         case "1,1,1,0,0": // Вибраний будинок
@@ -77,7 +79,8 @@ function add_address_route() {
                 `Будинок`, 
                 full_address, 
                 house_arr_2[0].house_longitude, 
-                house_arr_2[0].house_latitude
+                house_arr_2[0].house_latitude,
+                1
             );
             break;
         case "1,1,1,1,0": // Вибраний підїзд
@@ -100,15 +103,16 @@ function add_address_route() {
                 `Підїзд`, 
                 full_address, 
                 entrance_arr[0].entrance_longitude, 
-                entrance_arr[0].entrance_latitude
+                entrance_arr[0].entrance_latitude,
+                2
             );
             break;
         case "1,1,1,1,1": // Вибрана квартира
             // Перевіряє чи не перевищено максимальну кількість точок у маршруті
             if (waypoints_arr.length == 25) return open_dialog_error(error_text_12);
 
-            const apartment_arr = data_apartment_arr.filter((e) => e.apartment_id == selected_code_administrative_unit.apartment_code);
-            const entrance_arr_2 = data_entrance_arr.filter((e) => e.entrance_id == apartment_arr[0].apartment_entrance_code);
+            const apartment_arr = data_apartment_arr.filter((e) => e.id == selected_code_administrative_unit.apartment_code);
+            const entrance_arr_2 = data_entrance_arr.filter((e) => e.entrance_id == apartment_arr[0].entrance_code);
 
             waypoints_arr.push({
                 location: {
@@ -120,12 +124,13 @@ function add_address_route() {
 
             // Додає дані у перелік маршрутних точок для створення маркерів
             add_waypoints_full_arr(
-                apartment_arr[0].entrance_id, 
+                apartment_arr[0].id, 
                 "data_apartment_arr", 
                 `Квартира`, 
                 full_address, 
                 entrance_arr_2[0].entrance_longitude, 
-                entrance_arr_2[0].entrance_latitude
+                entrance_arr_2[0].entrance_latitude,
+                3
             );
             break;
         default:

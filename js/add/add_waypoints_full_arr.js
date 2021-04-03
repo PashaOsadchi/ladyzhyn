@@ -1,5 +1,5 @@
 // Додає дані у перелік маршрутних точок для створення маркерів
-function add_waypoints_full_arr(id, name_arr, name_address, full_address, longitude, latitude) {
+function add_waypoints_full_arr(code, name_arr, name_address, full_address, longitude, latitude, dialog_detailed_information_code) {
     let index = waypoints_full_arr.length;
 
     waypoints_full_arr.push({
@@ -10,6 +10,8 @@ function add_waypoints_full_arr(id, name_arr, name_address, full_address, longit
         full_address: full_address,
         longitude: longitude,
         latitude: latitude,
+        dialog_detailed_information_code: dialog_detailed_information_code,
+        code: code,
     });
 
     const div = document.createElement("div");

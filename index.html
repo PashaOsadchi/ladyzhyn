@@ -1401,6 +1401,7 @@
     <script defer src="js/add_map/add_map_addresses_radius_selected_coordinates.js"></script>
     <script defer src="js/add_map/add_map_addresses.js"></script>
     <script defer src="js/add_map/add_map_organization.js"></script>
+    <script defer src="js/add_map/add_map_parking_space.js"></script>
 
     <script defer src="js/data/data_street.js"></script>
     <script defer src="js/data/data_house.js"></script>
@@ -1427,6 +1428,9 @@
 
     <script defer src="js/data/data_public_transport_stops.js"></script>
     <script defer src="js/data/data_route_public_transport.js"></script>
+
+    <script defer src="js/data/data_parking_space_type.js"></script>
+    <script defer src="js/data/data_parking_space.js"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-8FMGYGY8LZ"></script>
@@ -1661,7 +1665,7 @@
                         <label id="apartment_name_label" for="">Номер квартири</label>
                         <input type="text" name="" id="apartment_name" disabled>
 
-                        <label id="apartment_kadastr_number_label" for="">Кадастровий номер прибудови</label>
+                        <label id="kadastr_number_label" for="">Кадастровий номер прибудови</label>
                         <input type="text" name="" id="apartment_kadastr_number" disabled>
                     </div>
                 </details>
@@ -1920,6 +1924,16 @@
             <button class="button_sidebar_add_map" id="id_button_add_map_alternative_energy_facilities_all"
                 onclick="change_color_show_hide_button(this); add_map_alternative_energy_facilities_all()">Показати\Приховати
                 об'єкти альтернативної енергетики</button>
+
+        </details>
+
+        <details class="datails_leveil_1" id="id_details_parking_space"
+            onclick="onclick_details_parking_space()">
+            <summary class="summary_title_name">Паркувальний простір</summary>
+
+            <button class="button_sidebar_add_map" id="id_button_add_map_parking_space_all"
+                onclick="change_color_show_hide_button(this); add_map_parking_space_all()">Показати\Приховати
+                об'єкти паркувального простору</button>
 
         </details>
     </div>

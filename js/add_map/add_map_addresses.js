@@ -61,7 +61,7 @@ async function add_map_addresses() {
             break;
         case '1,1,1,1,1':  // Адреса квартири
             const entrance_arr_2 = data_entrance_arr.filter((e) => e.entrance_id == selected_code_administrative_unit.entrance_code);
-            const apartment_arr_1 = data_apartment_arr.filter((e) => e.apartment_id == selected_code_administrative_unit.apartment_code);
+            const apartment_arr_1 = data_apartment_arr.filter((e) => e.id == selected_code_administrative_unit.apartment_code);
             add_overlay_map_apartment(apartment_arr_1, entrance_arr_2);
 
             map.panTo(new google.maps.LatLng(entrance_arr_2[0].entrance_latitude, entrance_arr_2[0].entrance_longitude));
@@ -128,8 +128,8 @@ function add_overlay_map_apartment(apartment_arr, entrance_arr) {
             new google.maps.LatLng(Number(entrance_arr[i].entrance_latitude), Number(entrance_arr[i].entrance_longitude)),
             map,
             {
-                marker_id: `3-${apartment_arr[i].apartment_id}`,
-                marker_name: apartment_arr[i].apartment_name,
+                marker_id: `3-${apartment_arr[i].id}`,
+                marker_name: apartment_arr[i].name,
                 marker_class_name: 'marker marker_apartment'
             }
         );

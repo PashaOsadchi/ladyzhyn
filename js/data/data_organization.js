@@ -1,6 +1,6 @@
 const data_organization_arr = [
     {
-        organization_id: "1",
+        organization_id: 1,
         organization_type: "Автомагазин",
         organization_name: "Автотовари",
         organization_does_not_work: "false",
@@ -19,7 +19,7 @@ const data_organization_arr = [
         organization_number_employees: "",
     },
     {
-        organization_id: "2",
+        organization_id: 2,
         organization_type: "Автомагазин",
         organization_name: "Пята передача",
         organization_does_not_work: "false",
@@ -38,7 +38,7 @@ const data_organization_arr = [
         organization_number_employees: "",
     },
     {
-        organization_id: "3",
+        organization_id: 3,
         organization_type: "Автомагазин",
         organization_name: "Форсаж",
         organization_does_not_work: "false",
@@ -57,7 +57,7 @@ const data_organization_arr = [
         organization_number_employees: "",
     },
     {
-        organization_id: "4",
+        organization_id: 4,
         organization_type: "Автомагазин",
         organization_name: "",
         organization_does_not_work: "false",
@@ -76,7 +76,7 @@ const data_organization_arr = [
         organization_number_employees: "",
     },
     {
-        organization_id: "5",
+        organization_id: 5,
         organization_type: "Автомийка",
         organization_name: "",
         organization_does_not_work: "true",
@@ -95,7 +95,7 @@ const data_organization_arr = [
         organization_number_employees: "",
     },
     {
-        organization_id: "6",
+        organization_id: 6,
         organization_type: "Автомийка",
         organization_name: "Автолюкс",
         organization_does_not_work: "false",
@@ -114,7 +114,7 @@ const data_organization_arr = [
         organization_number_employees: "",
     },
     {
-        organization_id: "7",
+        organization_id: 7,
         organization_type: "Автомийка",
         organization_name: "XXL",
         organization_does_not_work: "true",
@@ -133,7 +133,7 @@ const data_organization_arr = [
         organization_number_employees: "",
     },
     {
-        organization_id: "8",
+        organization_id: 8,
         organization_type: "Автомийка",
         organization_name: "",
         organization_does_not_work: "true",
@@ -152,7 +152,7 @@ const data_organization_arr = [
         organization_number_employees: "",
     },
     {
-        organization_id: "9",
+        organization_id: 9,
         organization_type: "Автомийка",
         organization_name: "Самообслуговування",
         organization_does_not_work: "false",
@@ -171,7 +171,7 @@ const data_organization_arr = [
         organization_number_employees: "",
     },
     {
-        organization_id: "10",
+        organization_id: 11,
         organization_type: "Автомийка",
         organization_name: "",
         organization_does_not_work: "false",
@@ -914,7 +914,7 @@ const data_organization_arr = [
     {
         organization_id: "49",
         organization_type: "Гаражний кооператив",
-        organization_name: "5",
+        organization_name: 5,
         organization_does_not_work: "false",
         organization_monday: "00:00-00:00",
         organization_tuesday: "00:00-00:00",
@@ -933,7 +933,7 @@ const data_organization_arr = [
     {
         organization_id: "50",
         organization_type: "Гаражний кооператив",
-        organization_name: "3",
+        organization_name: 3,
         organization_does_not_work: "false",
         organization_monday: "00:00-00:00",
         organization_tuesday: "00:00-00:00",
@@ -952,7 +952,7 @@ const data_organization_arr = [
     {
         organization_id: "51",
         organization_type: "Гаражний кооператив",
-        organization_name: "1",
+        organization_name: 1,
         organization_does_not_work: "false",
         organization_monday: "00:00-00:00",
         organization_tuesday: "00:00-00:00",
@@ -971,7 +971,7 @@ const data_organization_arr = [
     {
         organization_id: "52",
         organization_type: "Гаражний кооператив",
-        organization_name: "4",
+        organization_name: 4,
         organization_does_not_work: "false",
         organization_monday: "00:00-00:00",
         organization_tuesday: "00:00-00:00",
@@ -990,7 +990,7 @@ const data_organization_arr = [
     {
         organization_id: "53",
         organization_type: "Гаражний кооператив",
-        organization_name: "2",
+        organization_name: 2,
         organization_does_not_work: "false",
         organization_monday: "00:00-00:00",
         organization_tuesday: "00:00-00:00",

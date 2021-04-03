@@ -126,7 +126,7 @@ async function onchange_human_settlements() {
 
     let counter_apartment = 0;
     for (let i = 0; i < number_entrance_arr.length; i++) {
-        const arr = data_apartment_arr.filter((e) => e.apartment_entrance_code == number_entrance_arr[i].entrance_id);
+        const arr = data_apartment_arr.filter((e) => e.entrance_code == number_entrance_arr[i].entrance_id);
         counter_apartment += arr.length;
     }
     number_apartment.value = counter_apartment;
@@ -226,7 +226,7 @@ async function onchange_streets() {
 
     let counter_apartment = 0;
     for (let i = 0; i < number_entrance_arr.length; i++) {
-        const arr = data_apartment_arr.filter((e) => e.apartment_entrance_code == number_entrance_arr[i].entrance_id);
+        const arr = data_apartment_arr.filter((e) => e.entrance_code == number_entrance_arr[i].entrance_id);
         counter_apartment += arr.length;
     }
     street_number_apartment.value = counter_apartment;
@@ -316,7 +316,7 @@ async function onchange_house() {
 
     let counter_apartment = 0;
     for (let i = 0; i < number_entrance_arr.length; i++) {
-        const arr = data_apartment_arr.filter((e) => e.apartment_entrance_code == number_entrance_arr[i].entrance_id);
+        const arr = data_apartment_arr.filter((e) => e.entrance_code == number_entrance_arr[i].entrance_id);
         counter_apartment += arr.length;
     }
     id_house_number_apartment.value = counter_apartment;
@@ -351,22 +351,22 @@ async function onchange_entrance() {
     const select_entrance_selectedIndex = document.getElementById('id_select_entrance').selectedIndex;
     const select_entrance_options = document.getElementById('id_select_entrance').options;
     select_find_text = select_entrance_options[select_entrance_selectedIndex].text;
-    const apartment_entrance_code = select_entrance_options[select_entrance_selectedIndex].value;
+    const entrance_code = select_entrance_options[select_entrance_selectedIndex].value;
 
     selected_code_administrative_unit.entrance_code = select_entrance_options[select_entrance_selectedIndex].value;
     selected_code_administrative_unit.apartment_code = '';
 
     // Завантажує квартири
-    apartment_arr = data_apartment_arr.filter(function (e) { return e.apartment_entrance_code == apartment_entrance_code });
+    apartment_arr = data_apartment_arr.filter(function (e) { return e.entrance_code == entrance_code });
 
     // Додає у список квартири
     for (let i = 0; i < apartment_arr.length; i++) {
-        o = new Option('кв. ' + apartment_arr[i].apartment_name, apartment_arr[i].apartment_id, false, false);
+        o = new Option('кв. ' + apartment_arr[i].name, apartment_arr[i].id, false, false);
         select_apartment.add(o);
     };
 
     // Завантажує підїзди
-    entrance_arr = data_entrance_arr.filter((e) => e.entrance_id == apartment_entrance_code);
+    entrance_arr = data_entrance_arr.filter((e) => e.entrance_id == entrance_code);
 
     // Виводить на сторінку детальну інформацію про підїзд
     entrance_first_apartment_entrance.value = entrance_arr[0].entrance_first_apartment_entrance;
@@ -409,11 +409,11 @@ function onchange_apartment() {
     full_address = `${human_settlement_2}, ${street}, буд. ${house}, ${entrance_2}, ${apartment}`;
 
     // Завантажує квартиру
-    apartment_arr = data_apartment_arr.filter((e) => e.apartment_id == select_apartment_find_code);
+    apartment_arr = data_apartment_arr.filter((e) => e.id == select_apartment_find_code);
 
     // Виводить на сторінку детальну інформацію про квартиру
-    apartment_kadastr_number.value = apartment_arr[0].apartment_kadastr_number;
-    apartment_name.value = apartment_arr[0].apartment_name;
+    apartment_kadastr_number.value = apartment_arr[0].kadastr_number;
+    apartment_name.value = apartment_arr[0].name;
 
     // Знаходить кординати останньої вибраної адреси
     find_coordinates_last_selected_address();

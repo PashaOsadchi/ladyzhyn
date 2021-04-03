@@ -35,14 +35,14 @@ function open_dialog_detailed_information(id) {
             break;
         // Квартира
         case 3:
-            const apartment_arr = data_apartment_arr.filter((e) => e.apartment_id == id_arr[1]);
+            const apartment_arr = data_apartment_arr.filter((e) => e.id == id_arr[1]);
             dialog_detailed_information.showModal();
 
             let apartment_str = `
             <div id="dialog_detailed_information_header">Детальна інформація про квартиру</div>
-            <<div id="dialog_detailed_information_content">
-            <b>Номер квартири: </b> ${apartment_arr[0].apartment_name} `;
-            if (apartment_arr[0].apartment_kadastr_number) { apartment_str += `<b>Кадастровий номер:</b> <a href="https://e.land.gov.ua/back/cadaster/?cad_num=${apartment_arr[0].apartment_kadastr_number}">${apartment_arr[0].apartment_kadastr_number}</a>` }
+            <div id="dialog_detailed_information_content">
+            <b>Номер квартири: </b> ${apartment_arr[0].name} `;
+            if (apartment_arr[0].kadastr_number) { apartment_str += `<b>Кадастровий номер:</b> <a href="https://e.land.gov.ua/back/cadaster/?cad_num=${apartment_arr[0].kadastr_number}">${apartment_arr[0].kadastr_number}</a>` }
 
             dialog_detailed_information.innerHTML = `${apartment_str}</div>`;
             break;

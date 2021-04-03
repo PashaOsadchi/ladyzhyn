@@ -7990,19 +7990,19 @@ $.extend( $.Viewer.prototype, $.EventSource.prototype, $.ControlDock.prototype, 
             this.pageScroll = $.getPageScroll();
 
             this.elementMargin = this.element.style.margin;
-            this.element.style.margin = "0";
+            this.element.style.margin = '';
             this.elementPadding = this.element.style.padding;
-            this.element.style.padding = "0";
+            this.element.style.padding = '';
 
             this.bodyMargin = bodyStyle.margin;
             this.docMargin = docStyle.margin;
-            bodyStyle.margin = "0";
-            docStyle.margin = "0";
+            bodyStyle.margin = '';
+            docStyle.margin = '';
 
             this.bodyPadding = bodyStyle.padding;
             this.docPadding = docStyle.padding;
-            bodyStyle.padding = "0";
-            docStyle.padding = "0";
+            bodyStyle.padding = '';
+            docStyle.padding = '';
 
             this.bodyWidth = bodyStyle.width;
             this.docWidth = docStyle.width;
@@ -13433,7 +13433,7 @@ $.extend( $.TmsTileSource.prototype, $.TileSource.prototype, /** @lends OpenSead
      * When creating zoomify formatted images one "xml" like file with name ImageProperties.xml
      * will be created as well. Here is an example of such a file:
      *
-     * <IMAGE_PROPERTIES WIDTH="1000" HEIGHT="1000" NUMTILES="21" NUMIMAGES="1" VERSION="1.8" TILESIZE="256" />
+     * <IMAGE_PROPERTIES WIDTH="1000" HEIGHT="1000" NUMTILES="21" NUMIMAGES=1 VERSION="1.8" TILESIZE="256" />
      *
      * To use this xml file as metadata source you must supply the path to the ImageProperties.xml file and leave out all other parameters:
      * As stated above, this method of loading a zoomify tilesource is currently not supported

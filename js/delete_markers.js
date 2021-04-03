@@ -15,6 +15,7 @@ function delete_markers_all() {
     delete_public_transport_stops_markers();
     delete_recreation_areas_markers();
     delete_route_public_transport_markers();
+    delete_parking_space_markers();
 
     // Змінює колір кнопок
     const elements = document.querySelectorAll('.button_sidebar_add_map');
@@ -201,4 +202,13 @@ function delete_route_public_transport_markers() {
         }
         polyline_route_public_transport_arr = [];
     }
+}
+
+// Видаляє маркери об'єкти паркувального простору
+function delete_parking_space_markers() {
+    // Видаляє об'єкти паркувального простору
+    for (let i = 0; i < parking_space_arr.length; i++) {
+        parking_space_arr[i].setMap(null);
+    }
+    parking_space_arr = [];
 }
