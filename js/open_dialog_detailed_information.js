@@ -11,7 +11,11 @@ function open_dialog_detailed_information(id) {
             dialog_detailed_information.showModal();
 
             let house_str = `
-            <div id="dialog_detailed_information_header">Детальна інформація про будинок</div>
+            <div>
+                <div id="dialog_detailed_information_header">Детальна інформація про будинок</div>
+                <img height="16" width="16" id="icon_close_dialog" src="icon/close.png" alt="Закрити" onclick="id_dialog_detailed_information.close()"> 
+            </div> 
+
             <div id="dialog_detailed_information_content">
             <b>Номер будинку: </b> ${house_arr[0].house_name} `;
 
@@ -27,7 +31,11 @@ function open_dialog_detailed_information(id) {
             dialog_detailed_information.showModal();
 
             dialog_detailed_information.innerHTML =  `
-            <div id="dialog_detailed_information_header">Детальна інформація про підїзд</div>
+            <div>
+                <div id="dialog_detailed_information_header">Детальна інформація про підїзд</div>
+                <img height="16" width="16" id="icon_close_dialog" src="icon/close.png" alt="Закрити" onclick="id_dialog_detailed_information.close()"> 
+            </div> 
+
             <div id="dialog_detailed_information_content">
             <b>Номер підїзду: </b> ${entrance_arr[0].entrance_name}<br>
             <b>Квартири: </b> ${entrance_arr[0].entrance_first_apartment_entrance} - ${entrance_arr[0].entrance_last_apartment_entrance}  
@@ -39,7 +47,11 @@ function open_dialog_detailed_information(id) {
             dialog_detailed_information.showModal();
 
             let apartment_str = `
-            <div id="dialog_detailed_information_header">Детальна інформація про квартиру</div>
+            <div>
+                <div id="dialog_detailed_information_header">Детальна інформація про квартиру</div>
+                <img height="16" width="16" id="icon_close_dialog" src="icon/close.png" alt="Закрити" onclick="id_dialog_detailed_information.close()"> 
+            </div> 
+
             <div id="dialog_detailed_information_content">
             <b>Номер квартири: </b> ${apartment_arr[0].name} `;
             if (apartment_arr[0].kadastr_number) { apartment_str += `<b>Кадастровий номер:</b> <a href="https://e.land.gov.ua/back/cadaster/?cad_num=${apartment_arr[0].kadastr_number}">${apartment_arr[0].kadastr_number}</a>` }
@@ -52,7 +64,11 @@ function open_dialog_detailed_information(id) {
             dialog_detailed_information.showModal();
 
             let organization_str = `
-            <div id="dialog_detailed_information_header">Детальна інформація про організацію</div>
+            <div>
+                <div id="dialog_detailed_information_header">Детальна інформація про організацію</div>
+                <img height="16" width="16" id="icon_close_dialog" src="icon/close.png" alt="Закрити" onclick="id_dialog_detailed_information.close()"> 
+            </div> 
+
             <div id="dialog_detailed_information_content">
             <b>Назва: </b> ${organization_arr[0].organization_name}<br>
             <b>Тип: </b> ${organization_arr[0].organization_type}<br>
@@ -79,7 +95,11 @@ function open_dialog_detailed_information(id) {
             dialog_detailed_information.showModal();
 
             let equipped_recreation_areas_str = `
-            <div id="dialog_detailed_information_header">Детальна інформація про облаштовану зону відпочинку</div>
+            <div>
+                <div id="dialog_detailed_information_header">Детальна інформація про облаштовану зону відпочинку</div>
+                <img height="16" width="16" id="icon_close_dialog" src="icon/close.png" alt="Закрити" onclick="id_dialog_detailed_information.close()"> 
+            </div> 
+
             <div id="dialog_detailed_information_content">
             ${equipped_recreation_areas_arr[0].name} `;
             if (equipped_recreation_areas_arr[0].detailed_information !== '') { equipped_recreation_areas_str += `<br><b>Детальна інформація:</b><br> ${equipped_recreation_areas_arr[0].detailed_information}` }
@@ -92,7 +112,11 @@ function open_dialog_detailed_information(id) {
             dialog_detailed_information.showModal();
 
             dialog_detailed_information.innerHTML = `
-            <div id="dialog_detailed_information_header">Детальна інформація про графіки руху</div>
+            <div>
+                <div id="dialog_detailed_information_header">Детальна інформація про графіки руху</div>
+                <img height="16" width="16" id="icon_close_dialog" src="icon/close.png" alt="Закрити" onclick="id_dialog_detailed_information.close()"> 
+            </div> 
+
             <div id="dialog_detailed_information_content">
             ${public_transport_stops_arr[0].detailed_information}</div>`;
 
@@ -103,7 +127,11 @@ function open_dialog_detailed_information(id) {
             dialog_detailed_information.showModal();
 
             dialog_detailed_information.innerHTML = `
-            <div id="dialog_detailed_information_header">Детальна інформація про дошку оголошень</div>
+            <div>
+                <div id="dialog_detailed_information_header">Детальна інформація про дошку оголошень</div>
+                <img height="16" width="16" id="icon_close_dialog" src="icon/close.png" alt="Закрити" onclick="id_dialog_detailed_information.close()"> 
+            </div> 
+
             <div id="dialog_detailed_information_content">
             ${bulletin_boards_arr[0].detailed_information}</div>`;
 
@@ -114,7 +142,11 @@ function open_dialog_detailed_information(id) {
             dialog_detailed_information.showModal();
 
             dialog_detailed_information.innerHTML = `
-            <div id="dialog_detailed_information_header">Детальна інформація про білборд</div>
+            <div>
+                <div id="dialog_detailed_information_header">Детальна інформація про білборд</div>
+                <img height="16" width="16" id="icon_close_dialog" src="icon/close.png" alt="Закрити" onclick="id_dialog_detailed_information.close()"> 
+            </div> 
+
             <div id="dialog_detailed_information_content">
             ${billboards_arr[0].detailed_information}</div>`;
 
@@ -125,7 +157,11 @@ function open_dialog_detailed_information(id) {
             dialog_detailed_information.showModal();
 
             dialog_detailed_information.innerHTML = `
-            <div id="dialog_detailed_information_header">Детальна інформація про сітілайт</div>
+            <div>
+                <div id="dialog_detailed_information_header">Детальна інформація про сітілайт</div>
+                <img height="16" width="16" id="icon_close_dialog" src="icon/close.png" alt="Закрити" onclick="id_dialog_detailed_information.close()"> 
+            </div> 
+
             <div id="dialog_detailed_information_content">
             ${city_lights_arr[0].detailed_information}</div>`;
 
@@ -136,7 +172,11 @@ function open_dialog_detailed_information(id) {
             dialog_detailed_information.showModal();
 
             dialog_detailed_information.innerHTML = `
-            <div id="dialog_detailed_information_header">Детальна інформація про велопарковку</div>
+            <div>
+                <div id="dialog_detailed_information_header">Детальна інформація про велопарковку</div>
+                <img height="16" width="16" id="icon_close_dialog" src="icon/close.png" alt="Закрити" onclick="id_dialog_detailed_information.close()"> 
+            </div> 
+
             <div id="dialog_detailed_information_content">
             ${bicycle_parking_arr[0].detailed_information}</div>`;
 
@@ -164,7 +204,11 @@ function open_dialog_detailed_information(id) {
             const human_settlement_total_number_registered_children_from_14_to_18_years = `${human_settlement_arr[0].human_settlement_total_number_registered_children_from_14_to_18_years} (${Math.trunc((((human_settlement_arr[0].human_settlement_total_number_registered_children_from_14_to_18_years / total_number_registered_person) * 100) * 100) / 100)}%)`;
 
             dialog_detailed_information.innerHTML = `
-            <div id="dialog_detailed_information_header">Детальна інформація про населений пункт</div>
+            <div>
+                <div id="dialog_detailed_information_header">Детальна інформація про населений пункт</div>
+                <img height="16" width="16" id="icon_close_dialog" src="icon/close.png" alt="Закрити" onclick="id_dialog_detailed_information.close()"> 
+            </div> 
+
             <div id="dialog_detailed_information_content">
             <b>Імя населеного пункту: </b> ${human_settlement_arr[0].human_settlement_short_name}<br>
             <b>Індекс: </b> ${human_settlement_arr[0].human_settlement_zip_code}<br>
@@ -189,7 +233,11 @@ function open_dialog_detailed_information(id) {
             dialog_detailed_information.showModal();
 
             dialog_detailed_information.innerHTML = `
-            <div id="dialog_detailed_information_header">Детальна інформація про об'єкт альтернативної енергетики</div>
+            <div>
+                <div id="dialog_detailed_information_header">Детальна інформація про об'єкт альтернативної енергетики</div>
+                <img height="16" width="16" id="icon_close_dialog" src="icon/close.png" alt="Закрити" onclick="id_dialog_detailed_information.close()"> 
+            </div> 
+
             <div id="dialog_detailed_information_content">
             ${alternative_energy_facilities_arr[0].detailed_information}</div>`;
             break;   
