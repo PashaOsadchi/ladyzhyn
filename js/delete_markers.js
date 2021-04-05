@@ -16,6 +16,7 @@ function delete_markers_all() {
     delete_recreation_areas_markers();
     delete_route_public_transport_markers();
     delete_parking_space_markers();
+    delete_video_surveillance_markers();
 
     // Змінює колір кнопок
     const elements = document.querySelectorAll('.button_sidebar_add_map');
@@ -211,4 +212,13 @@ function delete_parking_space_markers() {
         parking_space_arr[i].setMap(null);
     }
     parking_space_arr = [];
+}
+
+// Видаляє маркери камери відеоспостереження
+function delete_video_surveillance_markers() {
+    // Видаляє об'єкти паркувального простору
+    for (let i = 0; i < video_surveillance_arr.length; i++) {
+        video_surveillance_arr[i].setMap(null);
+    }
+    video_surveillance_arr = [];
 }

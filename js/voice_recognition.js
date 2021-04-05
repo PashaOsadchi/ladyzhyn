@@ -318,6 +318,10 @@ function determines_type_voice_command(command_str) {
             case 17:
                 add_map_parking_space_all();
                 break;
+             // Камери відеоспостереження
+             case 18:
+                add_map_video_surveillance_all();
+                break;
             default:
                 console.log('default');
                 break;

@@ -1402,6 +1402,7 @@
     <script defer src="js/add_map/add_map_addresses.js"></script>
     <script defer src="js/add_map/add_map_organization.js"></script>
     <script defer src="js/add_map/add_map_parking_space.js"></script>
+    <script defer src="js/add_map/add_map_video_surveillance.js"></script>
 
     <script defer src="js/data/data_street.js"></script>
     <script defer src="js/data/data_house.js"></script>
@@ -1431,6 +1432,9 @@
 
     <script defer src="js/data/data_parking_space_type.js"></script>
     <script defer src="js/data/data_parking_space.js"></script>
+
+    <script defer src="js/data/data_surveillance_cameras.js"></script>
+    <script defer src="js/data/data_place_installation_surveillance_camera.js"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-8FMGYGY8LZ"></script>
@@ -1934,6 +1938,16 @@
             <button class="button_sidebar_add_map" id="id_button_add_map_parking_space_all"
                 onclick="change_color_show_hide_button(this); add_map_parking_space_all()">Показати\Приховати
                 об'єкти паркувального простору</button>
+
+        </details>
+
+        <details class="datails_leveil_1" id="id_details_video_surveillance_cameras"
+            onclick="onclick_details_video_surveillance_cameras()">
+            <summary class="summary_title_name">Камери відеоспостереження</summary>
+
+            <button class="button_sidebar_add_map" id="id_button_add_map_video_surveillance_cameras_all"
+                onclick="change_color_show_hide_button(this); add_map_video_surveillance_all()">Показати\Приховати
+                камери відеоспостереження</button>
 
         </details>
     </div>

@@ -10,6 +10,6 @@ function calculates_central_point() {
     central_point_longitude /= data_community_boundary_arr.length;
     central_point_latitude /= data_community_boundary_arr.length;
 
-    console.log(central_point_latitude, ' ', central_point_longitude);
+    //console.log(central_point_latitude, ' ', central_point_longitude);
 }
 //calculates_central_point()
