@@ -158,9 +158,7 @@ function add_overlay_map_house_multifamily_all() {
         }
         arr_house[i].house_name_2 = `${full_name_street} ${arr_house[i].house_name}`;
     }
-
-    add_overlay_map_entrance(data_entrance_arr)
-
+    
     add_overlay_map_house_2(arr_house);
     map_offset_community_boundary();
 }
