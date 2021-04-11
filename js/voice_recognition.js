@@ -322,6 +322,10 @@ function determines_type_voice_command(command_str) {
              case 18:
                 add_map_video_surveillance_all();
                 break;
+             // Багатоквартирні будинки
+             case 19:
+                add_overlay_map_house_multifamily_all();
+                break;
             default:
                 console.log('default');
                 break;
