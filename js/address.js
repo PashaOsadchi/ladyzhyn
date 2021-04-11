@@ -111,7 +111,7 @@ async function onchange_human_settlements() {
     
     number_private_house.value = number_house_arr.filter((e) => e.house_multifamily == 'false').length;
 
-    number_artment_building.value = number_house_arr.filter((e) => e.house_multifamily == 'true').length;
+    number_artment_building.value = number_house_arr.filter((e) => e.house_multifamily == true).length;
 
     // Виводить на сторінку детальну інформацію про населений пункт (населення)
     const total_number_registered_person = human_settlement_arr[0].human_settlement_total_number_registered_men + human_settlement_arr[0].human_settlement_total_number_registered_women + human_settlement_arr[0].human_settlement_total_number_registered_children_up_14_years + human_settlement_arr[0].human_settlement_total_number_registered_children_from_14_to_18_years;
@@ -138,7 +138,7 @@ async function onchange_human_settlements() {
 full_address_information_obj.human_settlement = `
 Загальна кількість будинків: ${number_house_arr.length}
 Кількість будинків приватного сектору: ${number_house_arr.filter((e) => e.house_multifamily == 'false').length}
-Кількість багатоквартирних будинків: ${number_house_arr.filter((e) => e.house_multifamily == 'true').length}
+Кількість багатоквартирних будинків: ${number_house_arr.filter((e) => e.house_multifamily == true).length}
 Кількість вулиць: ${street_arr.length}
 Кількість підїздів: ${number_entrance_arr.length}
 Кількість квартир: ${counter_apartment}
@@ -208,7 +208,7 @@ async function onchange_streets() {
     // Додає у список будинки
     for (let i = 0; i < house_arr.length; i++) {
         let name = house_arr[i].house_name;
-        if (house_arr[i].house_multifamily == 'true') name += '  (багатоквартирний)';
+        if (house_arr[i].house_multifamily) name += '  (багатоквартирний)';
         o = new Option(name, house_arr[i].house_id, false, false);
         select_house.add(o);
     };
@@ -219,7 +219,7 @@ async function onchange_streets() {
 
     street_number_private_house.value = number_house_arr.filter((e) => e.house_multifamily == 'false').length;
 
-    street_number_artment_building.value = number_house_arr.filter((e) => e.house_multifamily == 'true').length;
+    street_number_artment_building.value = number_house_arr.filter((e) => e.house_multifamily == true).length;
 
     const number_entrance_arr = data_entrance_arr.filter((e) => e.entrance_code_street == house_code_street);
     street_number_entrance.value = number_entrance_arr.length;

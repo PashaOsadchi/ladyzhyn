@@ -1,6 +1,6 @@
 async function add_map_addresses() {
     delete_markers();
-    
+
     let str;
     selected_code_administrative_unit.human_settlement_code >= 1 ? str = '1,' : str = '0,';
     selected_code_administrative_unit.street_code >= 1 ? str += '1,' : str += '0,';
@@ -11,8 +11,8 @@ async function add_map_addresses() {
     switch (str) {
         case '1,0,0,0,0': // Всі адреси населеного пункту
 
-        if (selected_code_administrative_unit.human_settlement_code == 1) return  open_dialog_error(error_text_22);          
-        
+            if (selected_code_administrative_unit.human_settlement_code == 1) return open_dialog_error(error_text_22);
+
             let arr_house_1 = data_house_arr.filter((e) => e.house_human_settlement_code == selected_code_administrative_unit.human_settlement_code);
             // Додає до номера будинку назву вулиці
             for (let i = 0; i < arr_house_1.length; i++) {
@@ -40,9 +40,9 @@ async function add_map_addresses() {
             break;
         case '1,1,1,0,0':  // Адреса будинку
             const arr_house_3 = data_house_arr.filter((e) => e.house_id == selected_code_administrative_unit.house_code);
-            
+
             // Якщо будинок багатоквартирний то додатково відображає підїзди
-            if (arr_house_3[0].house_multifamily == 'true') { 
+            if (arr_house_3[0].house_multifamily) {
                 entrance_arr = data_entrance_arr.filter((e) => e.entrance_code_house == selected_code_administrative_unit.house_code);
                 add_overlay_map_entrance(entrance_arr);
             }
@@ -135,4 +135,32 @@ function add_overlay_map_apartment(apartment_arr, entrance_arr) {
         );
         markers.push(overlay);
     }
+}
+
+// Додає на карту усі багатоквартирні будинки
+function add_overlay_map_house_multifamily_all() {
+    delete_markers();
+    
+    let arr_house = data_house_arr.filter((e) => e.house_multifamily == true);
+
+    // Додає до номера будинку назву вулиці
+    for (let i = 0; i < arr_house.length; i++) {
+        // Знаходить вулицю яка відноситься до даного будинку
+        const find_street_arr = data_street_arr.filter((e) => e.street_code == arr_house[i].house_code_street);
+        let full_name_street = find_street_arr[0].street_name;
+
+        // Якщо відмічено що відображати скорочену назву вулиці то скорочує назву геоніму і вулиці
+        if (id_display_address_reduction.checked) {
+            const arr = full_name_street.split('.');
+            const geonym = arr[0].substr(0, 1);
+            const street_name = arr[1].substr(0, 4);
+            full_name_street = `${geonym}.${street_name}`;
+        }
+        arr_house[i].house_name_2 = `${full_name_street} ${arr_house[i].house_name}`;
+    }
+
+    add_overlay_map_entrance(data_entrance_arr)
+
+    add_overlay_map_house_2(arr_house);
+    map_offset_community_boundary();
 }
