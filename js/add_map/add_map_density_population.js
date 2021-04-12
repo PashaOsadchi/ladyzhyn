@@ -157,7 +157,7 @@ function add_map_density_population_house_private_2() {
 
     // Якщо будинок приватний то додає у масив із точками для відображення густини населення кординати будинку
     for (let i = 0; i < data_house_arr.length; i++) {
-        if (data_house_arr[i].house_multifamily == "false") {
+        if (!data_house_arr[i].house_multifamily) {
             const obj = {
                 location: new google.maps.LatLng(Number(data_house_arr[i].house_latitude), Number(data_house_arr[i].house_longitude)),
                 weight: 1,
