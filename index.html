@@ -225,13 +225,14 @@
             border-radius: 10px;
         }
 
-        *:required:valid {
+        /* *:required:valid {
             background-color: rgba(0, 255, 13, 0.397) !important;
+            
         }
 
         *:required:invalid {
-            background-color: rgb(255, 0, 0) !important;
-        }
+            background-color: rgba(255, 0, 0, 0.3) !important;
+        } */
 
         input:disabled,
         textarea:disabled {
@@ -1295,6 +1296,7 @@
         .tag_cloud_search ul {
             list-style-type: none;
             padding: 0;
+            margin: 5px 0px 5px 0px;
         }
 
         .tag_cloud_search li {
@@ -1323,6 +1325,18 @@
         .tag_cloud_search li:active {
             border: none;
             opacity: 1;
+        }
+
+        /* Видаляє стрілку яка з'являється при наведенні */
+        #id_input_search::-webkit-calendar-picker-indicator {
+            display: none !important;
+        }
+    </style>
+
+    <!-- id_search_error_message -->
+    <style>
+        #id_search_error_message {
+            color: rgba(255, 0, 55, 0.753);
         }
     </style>
 

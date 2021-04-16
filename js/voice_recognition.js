@@ -1,4 +1,5 @@
 // https://wicg.github.io/speech-api/
+// https://www.google.com/intl/en/chrome/demos/speech.html
 
 let recognition;
 let markers_human_settlement_voice = [];
@@ -252,78 +253,97 @@ function determines_type_voice_command(command_str) {
             // Очищає карту
             case 1:
                 // Видаляє всі маркери
+                id_dialog_search.close();
                 delete_markers_all();
                 break;
             // Оновлює сторінку
             case 2:
+                id_dialog_search.close();
                 location.reload();
                 break;
             // Густина населення у багатоквартирних будинках
             case 3:
+                id_dialog_search.close();
                 add_map_density_population_house_multifamily();
                 break;
             // Густина населення у приватних будинках
             case 4:
+                id_dialog_search.close();
                 add_map_density_population_house_private();
                 break;
             // Межі населених пунктів
             case 5:
+                id_dialog_search.close();
                 add_map_polyline_community_boundary_all();
                 break;
             // Поточні кординати
             case 6:
+                id_dialog_search.close();
                 add_map_current_coordinates();
                 break;
             // Облаштовані зони відпочинку  
             case 7:
+                id_dialog_search.close();
                 add_map_equipped_recreation_areas_all();
                 break;
             // Зони відпочинку  
             case 8:
+                id_dialog_search.close();
                 add_map_recreation_areas_all();
                 break;
             // План зонування м.Ладижина
             case 9:
+                id_dialog_search.close();
                 id_dialog_openseadragon_master_plan_map.showModal();
                 break;
             // Зупинки громадського транспорту
             case 10:
+                id_dialog_search.close();
                 add_map_public_transport_stops_all();
                 break;
             // Дошки оголошень
             case 11:
+                id_dialog_search.close();
                 add_map_bulletin_boards_all();
                 break;
             // Білборди
             case 12:
+                id_dialog_search.close();
                 add_map_billboards_all();
                 break;
             // Сітілайти
             case 13:
+                id_dialog_search.close();
                 add_map_city_lights_all();
                 break;
             // Велопарковки
             case 14:
+                id_dialog_search.close();
                 add_map_bicycle_parking_all();
                 break;
             // Веломайстерні
             case 15:
-                add_map_bicycle_service_center_all()
+                id_dialog_search.close();
+                add_map_bicycle_service_center_all();
                 break;
             // Об'єкти альтернативної енергетики
             case 16:
+                id_dialog_search.close();
                 add_map_alternative_energy_facilities_all();
                 break;
             // Об'єкти паркувального простору
             case 17:
+                id_dialog_search.close();
                 add_map_parking_space_all();
                 break;
              // Камери відеоспостереження
              case 18:
+                id_dialog_search.close();
                 add_map_video_surveillance_all();
                 break;
              // Багатоквартирні будинки
              case 19:
+                id_dialog_search.close();
                 add_overlay_map_house_multifamily_all();
                 break;
             default:
@@ -333,16 +353,19 @@ function determines_type_voice_command(command_str) {
         return; 
 
     } else if (voice_search_command_id == 0 && human_settlement_id !== 0 && organization_type == 0) {
+        id_dialog_search.close();
         return voice_command_decoding_address(command_str, human_settlement_id);
 
-    } else if (voice_search_command_id == 0 && human_settlement_id == 0 && organization_type !== 0) {
+    } else if (voice_search_command_id == 0 && human_settlement_id == 0 && organization_type_id > 0) {
+        id_dialog_search.close();
         return voice_command_add_map_organization(organization_type)
 
     } else if (voice_search_command_id !== 0 && human_settlement_id !== 0 && organization_type !== 0) {
+        id_dialog_search.close();
         return open_dialog_error("Одночасно розпізнає лише одну команду!<br> Спробуйте ще раз.");
 
     } else if (voice_search_command_id == 0 && human_settlement_id == 0 && organization_type == 0) {
-        return open_dialog_error("Команду не знайдено! Спробуйте ще раз.");
+        return document.querySelector('#id_search_error_message').innerHTML = 'Значення не знайдено!'
     }
 }
 

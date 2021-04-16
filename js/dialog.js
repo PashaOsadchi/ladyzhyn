@@ -57,7 +57,9 @@ function open_dialog_search() {
         <img height="16" width="16" id="icon_close_dialog" src="icon/close.png" alt="Закрити" onclick="id_dialog_search.close();"> 
     </div>
     <div id="id_block_search">
-        <input type="text" list="id_datalist_search" id="id_input_search">
+        <input type="text" list="id_datalist_search" id="id_input_search" oninput="document.querySelector('#id_search_error_message').innerHTML = ''">
+
+        <div id="id_search_error_message"></div>
 
         <datalist id="id_datalist_search" style="height:5.1em;overflow:hidden" >
             <option id="id_option_datalist_search"></option>
@@ -71,15 +73,24 @@ function open_dialog_search() {
             <ul>
                 <li onclick="id_dialog_search.close(); determines_type_voice_command('Магазини')">Магазини</li>
                 <li onclick="id_dialog_search.close(); determines_type_voice_command('Заправки')">Заправки</li>
-                <li onclick="id_dialog_search.close(); determines_type_voice_command('Аптеки')">Аптеки</li>
-                <li onclick="id_dialog_search.close(); determines_type_voice_command('Стоматолог')">Стоматолог</li>
                 <li onclick="id_dialog_search.close(); determines_type_voice_command('Кафе')">Кафе</li>
-                <li onclick="id_dialog_search.close(); determines_type_voice_command('Садики')">Садики</li>
-                <li onclick="id_dialog_search.close(); determines_type_voice_command('Ресторани')">Ресторани</li>
+                <li onclick="id_dialog_search.close(); determines_type_voice_command('Камери')">Камери</li>
+
+                <li onclick="id_dialog_search.close(); determines_type_voice_command('Стоматолог')">Стоматолог</li>
+                <li onclick="id_dialog_search.close(); determines_type_voice_command('Аптеки')">Аптеки</li>
                 <li onclick="id_dialog_search.close(); determines_type_voice_command('Супермаркети')">Супермаркети</li>
-                <li onclick="id_dialog_search.close(); determines_type_voice_command('Автосервіси')">Автосервіси</li>
-                <li onclick="id_dialog_search.close(); determines_type_voice_command('Дошки оголошень')">Дошки оголошень</li>
+
+                <li onclick="id_dialog_search.close(); determines_type_voice_command('Садики')">Садики</li>
+                <li onclick="id_dialog_search.close(); determines_type_voice_command('Парковки')">Парковки</li>
                 <li onclick="id_dialog_search.close(); determines_type_voice_command('Місця відпочинку')">Місця відпочинку</li>
+
+                <li onclick="id_dialog_search.close(); determines_type_voice_command('Дошки оголошень')">Дошки оголошень</li>
+                <li onclick="id_dialog_search.close(); determines_type_voice_command('Масажний кабінет')">Масажний кабінет</li>
+                
+                <li onclick="id_dialog_search.close(); determines_type_voice_command('Автосервіси')">Автосервіси</li>
+                <li onclick="id_dialog_search.close(); determines_type_voice_command('Ресторани')">Ресторани</li>
+                <li onclick="id_dialog_search.close(); determines_type_voice_command('Нотаріус')">Нотаріус</li>
+                
             </ul>
         </div>
     `;
