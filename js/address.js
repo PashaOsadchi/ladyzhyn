@@ -109,7 +109,7 @@ async function onchange_human_settlements() {
     const number_house_arr = data_house_arr.filter((e) => e.house_human_settlement_code == street_human_settlement_code);
     number_house.value = number_house_arr.length;
     
-    number_private_house.value = number_house_arr.filter((e) => e.house_multifamily == 'false').length;
+    number_private_house.value = number_house_arr.filter((e) => e.house_multifamily == false).length;
 
     number_artment_building.value = number_house_arr.filter((e) => e.house_multifamily == true).length;
 
@@ -137,7 +137,7 @@ async function onchange_human_settlements() {
 // Формує для копіювання повну інформацію про населений пункт
 full_address_information_obj.human_settlement = `
 Загальна кількість будинків: ${number_house_arr.length}
-Кількість будинків приватного сектору: ${number_house_arr.filter((e) => e.house_multifamily == 'false').length}
+Кількість будинків приватного сектору: ${number_house_arr.filter((e) => e.house_multifamily == false).length}
 Кількість багатоквартирних будинків: ${number_house_arr.filter((e) => e.house_multifamily == true).length}
 Кількість вулиць: ${street_arr.length}
 Кількість підїздів: ${number_entrance_arr.length}
@@ -217,7 +217,7 @@ async function onchange_streets() {
     const number_house_arr = data_house_arr.filter((e) => e.house_code_street == house_code_street);
     street_number_house.value = number_house_arr.length;
 
-    street_number_private_house.value = number_house_arr.filter((e) => e.house_multifamily == 'false').length;
+    street_number_private_house.value = number_house_arr.filter((e) => e.house_multifamily == false).length;
 
     street_number_artment_building.value = number_house_arr.filter((e) => e.house_multifamily == true).length;
 

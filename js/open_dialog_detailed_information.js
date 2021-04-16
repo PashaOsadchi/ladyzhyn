@@ -214,7 +214,7 @@ function open_dialog_detailed_information(id) {
             <b>Індекс: </b> ${human_settlement_arr[0].human_settlement_zip_code}<br>
             <br>
             <b>Загальна кількість будинків: </b> ${number_house_arr.length}<br>            
-            <b>Кількість будинків приватного сектору: </b> ${number_house_arr.filter((e) => e.house_multifamily == 'false').length}<br>
+            <b>Кількість будинків приватного сектору: </b> ${number_house_arr.filter((e) => e.house_multifamily == false).length}<br>
             <b>Кількість багатоквартирних будинків: </b> ${number_house_arr.filter((e) => e.house_multifamily == true).length}<br>
             <b>Кількість вулиць: </b> ${street_arr.length}<br>
             <b>Кількість підїздів: </b> ${number_entrance_arr.length}<br>
