@@ -32,7 +32,7 @@ function adding_selecting_found(arr, field_name) {
         if (reg.test(el[field_name])) {
             const result_arr = el[field_name].match(reg);
             const name = el[field_name].replace(result_arr[0], `<span>${result_arr[0]}</span>`);
-            list_search_parameters += `<div onclick="change_color_show_hide_button(this); determines_type_voice_command('${el[field_name]}')">${name}</div>`;
+            list_search_parameters += `<div onclick="determines_type_voice_command('${el[field_name]}')">${name}</div>`;
         }
     });
 
@@ -46,17 +46,17 @@ function forms_list_commands() {
 
     // Додає типовий перелік команд
     data_voice_search_commands_arr.forEach((el) => {
-        list_search_parameters += `<div onclick="change_color_show_hide_button(this); determines_type_voice_command('${el.name}')">${el.name}</div>`;
+        list_search_parameters += `<div onclick="determines_type_voice_command('${el.name}')">${el.name}</div>`;
     });
 
     // Додає назви населених пунктів
     data_human_settlement_arr.forEach((el) => {
-        list_search_parameters += `<div onclick="change_color_show_hide_button(this); determines_type_voice_command('${el.human_settlement_name_voice_search}')">${el.human_settlement_name_voice_search}</div>`;
+        list_search_parameters += `<div onclick="determines_type_voice_command('${el.human_settlement_name_voice_search}')">${el.human_settlement_name_voice_search}</div>`;
     });
 
     // Додає типи організацій
     data_organization_type_arr.forEach((el) => {
-        list_search_parameters += `<div onclick="change_color_show_hide_button(this); determines_type_voice_command('${el.organization_type}')">${el.organization_type}</div>`;
+        list_search_parameters += `<div onclick="determines_type_voice_command('${el.organization_type}')">${el.organization_type}</div>`;
     });
 
     document.querySelector("#id_list_search_parameters").innerHTML = list_search_parameters;
