@@ -1250,7 +1250,9 @@
     <!-- search -->
     <style>
         #id_dialog_search {
-            max-width: 400px;
+            position: fixed;
+            top: 10px;
+            width: 300px;
         }
 
         #id_block_search {
@@ -1260,7 +1262,7 @@
         }
 
         #id_input_search {
-            /* width: 290px; */
+            width: 100%;
             height: 42px;
             padding-left: 10px;
             border: 2px solid #7BA7AB;
@@ -1291,52 +1293,56 @@
         }
     </style>
 
-    <!-- tag_cloud_search -->
+    <!-- id_list_search_parameters -->
     <style>
-        .tag_cloud_search ul {
-            list-style-type: none;
-            padding: 0;
+        #id_list_search_parameters {
+            height: 30vh;
             margin: 5px 0px 5px 0px;
+            overflow: auto;
+            overflow-x: hidden;
         }
 
-        .tag_cloud_search li {
-            margin-top: 4px;
+        #id_list_search_parameters div {
             display: inline-block;
             position: relative;
-            color: #ffffff;
-            text-align: center;
-            padding: 0px 6px 0px 6px;
-            font: 20px;
-            border-radius: 20px;
-            background-color: rgba(86, 175, 50, 0.8);
+            color: rgb(255, 255, 255);
+            width: 97%;
+            padding: 2px 5px 2px 5px;
+            margin: 0px 0px 5px 0px;
+            background-color:rgba(0, 102, 255, 0.4);
+            border-radius: 7px;
         }
 
-        .tag_cloud_search li:hover {
+        #id_list_search_parameters div:hover {
             outline: none;
             border: none;
             opacity: 0.6;
         }
 
-        .tag_cloud_search li:focus {
+        #id_list_search_parameters div:focus {
             outline: none;
             border: none;
         }
 
-        .tag_cloud_search li:active {
+        #id_list_search_parameters div:active {
             border: none;
             opacity: 1;
         }
 
-        /* Видаляє стрілку яка з'являється при наведенні */
-        #id_input_search::-webkit-calendar-picker-indicator {
-            display: none !important;
+        #id_list_search_parameters hr {
+            margin: 1px 0px 1px 0px;
+        }
+
+        #id_list_search_parameters span {
+            background-color: rgba(244, 248, 0, 0.705);
         }
     </style>
 
-    <!-- id_search_error_message -->
+    <!-- id_icon_not_found -->
     <style>
-        #id_search_error_message {
-            color: rgba(255, 0, 55, 0.753);
+        #id_icon_not_found {
+            margin-left: 15px;
+            opacity: 0.5;
         }
     </style>
 

@@ -363,10 +363,7 @@ function determines_type_voice_command(command_str) {
     } else if (voice_search_command_id !== 0 && human_settlement_id !== 0 && organization_type !== 0) {
         id_dialog_search.close();
         return open_dialog_error("Одночасно розпізнає лише одну команду!<br> Спробуйте ще раз.");
-
-    } else if (voice_search_command_id == 0 && human_settlement_id == 0 && organization_type == 0) {
-        return document.querySelector('#id_search_error_message').innerHTML = 'Значення не знайдено!'
-    }
+    } 
 }
 
 

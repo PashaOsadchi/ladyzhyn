@@ -1,32 +1,63 @@
-function search() {
-    if (id_input_search.value == '') return document.querySelector('#id_search_error_message').innerHTML = 'Введіть значення для пошуку!';
-    
-    determines_type_voice_command(id_input_search.value);
+function event_value_search_field_changes() {
+    // Перелік пошукових параметрів
+    let list_search_parameters = "";
+
+    // Якщо в поле для пошук ведено більше одного символа
+    if (id_input_search.value.length > 2) {
+        // Додає типовий перелік команд
+        list_search_parameters = adding_selecting_found(data_voice_search_commands_arr, "name");
+
+        // Додає назви населених пунктів
+        list_search_parameters += adding_selecting_found(data_human_settlement_arr, "human_settlement_name_voice_search");
+
+        // Додає типи організацій
+        list_search_parameters += adding_selecting_found(data_organization_type_arr, "organization_type");
+
+        if (list_search_parameters == "") {
+            document.querySelector("#id_list_search_parameters").innerHTML = '<img height="260" width="260" id="id_icon_not_found" src="icon/not_found.svg" alt="Не знайдено" title="Не знайдено">';
+        } else {
+            document.querySelector("#id_list_search_parameters").innerHTML = list_search_parameters;
+        }
+    } else {
+        forms_list_commands();
+    }
 }
 
+function adding_selecting_found(arr, field_name) {
+    let list_search_parameters = "";
 
-function add_datalist_search() {
+    arr.forEach((el) => {
+        const reg = new RegExp(id_input_search.value, "i");
 
-    // Додає назви населених пунктів у даталіст
-    for (i = 0; i < data_human_settlement_arr.length; i++) {
-        const option = document.createElement("option");
-        option.setAttribute("value", data_human_settlement_arr[i].human_settlement_name_voice_search);
-        document.getElementById("id_datalist_search").appendChild(option);
-    }
-
-    // Додає назви вулиць у даталіст
-    /* for (i = 0; i < data_street_arr.length; i++) {
-        const option = document.createElement("option");
-        option.setAttribute("value", data_street_arr[i].street_voice_search);
-        document.getElementById("id_datalist_search").appendChild(option);
-    } */
-
-    // Додає типи організацій у даталіст
-    for (i_1 = 0; i_1 < data_organization_type_arr.length; i_1++) {
-        for (i_2 = 0; i_2 < data_organization_type_arr[i_1].voice_search.length; i_2++) {
-            const option = document.createElement("option");
-            option.setAttribute("value", data_organization_type_arr[i_1].voice_search[i_2]);
-            document.getElementById("id_datalist_search").appendChild(option);
+        if (reg.test(el[field_name])) {
+            const result_arr = el[field_name].match(reg);
+            const name = el[field_name].replace(result_arr[0], `<span>${result_arr[0]}</span>`);
+            list_search_parameters += `<div onclick="id_dialog_search.close(); determines_type_voice_command('${el[field_name]}')">${name}</div>`;
         }
-    }
+    });
+
+    return list_search_parameters;
+}
+
+// Формує перелік команд
+function forms_list_commands() {
+    // Перелік пошукових параметрів
+    let list_search_parameters = "";
+
+    // Додає типовий перелік команд
+    data_voice_search_commands_arr.forEach((el) => {
+        list_search_parameters += `<div onclick="id_dialog_search.close(); determines_type_voice_command('${el.name}')">${el.name}</div>`;
+    });
+
+    // Додає назви населених пунктів
+    data_human_settlement_arr.forEach((el) => {
+        list_search_parameters += `<div onclick="id_dialog_search.close(); determines_type_voice_command('${el.human_settlement_name_voice_search}')">${el.human_settlement_name_voice_search}</div>`;
+    });
+
+    // Додає типи організацій
+    data_organization_type_arr.forEach((el) => {
+        list_search_parameters += `<div onclick="id_dialog_search.close(); determines_type_voice_command('${el.organization_type}')">${el.organization_type}</div>`;
+    });
+
+    document.querySelector("#id_list_search_parameters").innerHTML = list_search_parameters;
 }
