@@ -19,7 +19,6 @@ document.onclick = (event) => {
         id_dialog_detailed_information.close();
         id_dialog_openseadragon_master_plan_map.close();
         id_dialog_circles_preloader.close();
-        id_dialog_search.close();
     }
 };
 
@@ -44,30 +43,6 @@ function open_circles_preloader() {
     <div style="border: none !important"></div>
 </div>
     `;
-}
-
-function open_dialog_search() {
-    const dialog_search = document.getElementById("id_dialog_search");
-
-    dialog_search.showModal();
-
-    dialog_search.innerHTML = `
-    <div>
-        <div id="dialog_search_header">Пошук</div>
-        <img height="16" width="16" id="icon_close_dialog" src="icon/close.png" alt="Закрити" onclick="id_dialog_search.close();"> 
-    </div>
-    
-    <div id="id_block_search">
-        <input type="search" id="id_input_search" oninput="event_value_search_field_changes()">
-
-        <div id="id_list_search_parameters"></div>
-    </div>
-    `;
-
-    forms_list_commands();
-
-    document.getElementById("id_input_search").focus();
-    document.getElementById("id_input_search").select();
 }
 
 // Блокує прокрутку сторінки

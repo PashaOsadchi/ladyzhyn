@@ -14,7 +14,7 @@ function event_value_search_field_changes() {
         list_search_parameters += adding_selecting_found(data_organization_type_arr, "organization_type");
 
         if (list_search_parameters == "") {
-            document.querySelector("#id_list_search_parameters").innerHTML = '<img height="260" width="260" id="id_icon_not_found" src="icon/not_found.svg" alt="Не знайдено" title="Не знайдено">';
+            forms_list_commands();
         } else {
             document.querySelector("#id_list_search_parameters").innerHTML = list_search_parameters;
         }
@@ -32,7 +32,7 @@ function adding_selecting_found(arr, field_name) {
         if (reg.test(el[field_name])) {
             const result_arr = el[field_name].match(reg);
             const name = el[field_name].replace(result_arr[0], `<span>${result_arr[0]}</span>`);
-            list_search_parameters += `<div onclick="id_dialog_search.close(); determines_type_voice_command('${el[field_name]}')">${name}</div>`;
+            list_search_parameters += `<div onclick="change_color_show_hide_button(this); determines_type_voice_command('${el[field_name]}')">${name}</div>`;
         }
     });
 
@@ -46,17 +46,17 @@ function forms_list_commands() {
 
     // Додає типовий перелік команд
     data_voice_search_commands_arr.forEach((el) => {
-        list_search_parameters += `<div onclick="id_dialog_search.close(); determines_type_voice_command('${el.name}')">${el.name}</div>`;
+        list_search_parameters += `<div onclick="change_color_show_hide_button(this); determines_type_voice_command('${el.name}')">${el.name}</div>`;
     });
 
     // Додає назви населених пунктів
     data_human_settlement_arr.forEach((el) => {
-        list_search_parameters += `<div onclick="id_dialog_search.close(); determines_type_voice_command('${el.human_settlement_name_voice_search}')">${el.human_settlement_name_voice_search}</div>`;
+        list_search_parameters += `<div onclick="change_color_show_hide_button(this); determines_type_voice_command('${el.human_settlement_name_voice_search}')">${el.human_settlement_name_voice_search}</div>`;
     });
 
     // Додає типи організацій
     data_organization_type_arr.forEach((el) => {
-        list_search_parameters += `<div onclick="id_dialog_search.close(); determines_type_voice_command('${el.organization_type}')">${el.organization_type}</div>`;
+        list_search_parameters += `<div onclick="change_color_show_hide_button(this); determines_type_voice_command('${el.organization_type}')">${el.organization_type}</div>`;
     });
 
     document.querySelector("#id_list_search_parameters").innerHTML = list_search_parameters;
