@@ -436,12 +436,17 @@
             height: 100%;
         }
 
-        #dialog_search_header {
-            font-size: 10mm;
-            background-color: rgba(0, 162, 255, 0.767);
+        #dialog_statistics_header {
+            font-size: 7mm;
+            background-color: rgba(132, 0, 255, 0.767);
             color: #ffffff;
             text-align: center;
+            padding: 5px 30px 5px 30px;
+        }
+
+        #dialog_statistics_content {
             padding: 5px;
+            color: rgba(0, 0, 0, 0.8);
         }
     </style>
 
@@ -1313,6 +1318,27 @@
         }
     </style>
 
+    <!-- id_dialog_statistics table, th, td  -->
+    <style>
+        #id_dialog_statistics table, th, td {
+            border: 1px solid rgba(0, 0, 0, 0.3);
+            border-collapse: collapse;
+        }
+
+        #id_dialog_statistics table  {
+            width: 100%;
+            color: rgba(0, 0, 0, 0.8);
+        }
+
+        #id_dialog_statistics th {
+            text-align: left;
+        }
+
+        #id_dialog_statistics th, td {
+            padding: 3px;
+        }
+    </style>
+
     <script src="js/map/map.js"></script>
 
     <!-- Використовуються для формування сторінки -->
@@ -1403,6 +1429,7 @@
     <script defer src="js/data/data_bicycle_parking.js"></script>
     <script defer src="js/data/data_alternative_energy_facilities.js"></script>
     <script defer src="js/data/data_voice_search_commands.js"></script>
+    <script defer src="js/data/data_information_registered_vehicles.js"></script>
 
     <script defer src="js/data/data_community_boundary.js"></script>
     <script defer src="js/data/data_community_boundary_ladyzhyn.js"></script>
@@ -1422,6 +1449,8 @@
 
     <script defer src="js/data/data_surveillance_cameras.js"></script>
     <script defer src="js/data/data_place_installation_surveillance_camera.js"></script>
+
+    <script defer src="js/open_dialog_statistics.js"></script>
 
     <script defer src="js/content_loaded.js"></script>
 
@@ -1445,6 +1474,8 @@
 </dialog>
 
 <dialog id="id_dialog_circles_preloader"></dialog>
+
+<dialog id="id_dialog_statistics"></dialog>
 
 <body id="id_body">
     <header id="id_page_header">
@@ -1943,6 +1974,14 @@
             <button class="button_sidebar_add_map" id="id_button_add_map_video_surveillance_cameras_all"
                 onclick="change_color_show_hide_button(this); add_map_video_surveillance_all()">Показати\Приховати
                 камери відеоспостереження</button>
+
+        </details>
+
+        <details class="datails_leveil_1" id="id_details_statistics"
+            onclick="onclick_details_statistics()">
+            <summary class="summary_title_name">Статистика</summary>
+
+            <button class="button_sidebar_add_map" id="id_button_statistics" onclick="open_dialog_statistics_information_registered_vehicles()">Інформація про зареєстровані транспортні засоби</button>
 
         </details>
     </div>
