@@ -1501,7 +1501,7 @@
 
     <div class="div_first_page_level_1" id="id_sidebar">
         
-        <details class="datails_leveil_1" id="id_details_search" onclick="onclick_details_search()">
+        <details class="datails_leveil_1" id="id_details_search" onclick="onclick_details(this)">
             <summary class="summary_title_name">Пошук</summary>
 
             <input type="search" id="id_input_search" placeholder="" oninput="event_value_search_field_changes()">
@@ -1509,7 +1509,7 @@
             <div id="id_list_search_parameters"></div>
         </details>
 
-        <details class="datails_leveil_1" id="id_details_address" onclick="onclick_details_address()">
+        <details class="datails_leveil_1" id="id_details_address" onclick="onclick_details(this)">
             <summary class="summary_title_name">Адреси</summary>
 
             <button class="button_sidebar_copy" onclick="сopy_buffer_exchange_address()">Копіювати у буфер обміну
@@ -1701,7 +1701,7 @@
                 </details>
         </details>
 
-        <details class="datails_leveil_1" id="id_details_organization" onclick="onclick_details_organization()">
+        <details class="datails_leveil_1" id="id_details_organization" onclick="onclick_details(this)">
             <summary class="summary_title_name">Організації</summary>
 
             <button class="button_sidebar_copy"
@@ -1800,7 +1800,7 @@
             </div>
         </details>
 
-        <details class="datails_leveil_1" id="id_details_route" onclick="onclick_details_route()">
+        <details class="datails_leveil_1" id="id_details_route" onclick="onclick_details(this)">
             <summary class="summary_title_name">Маршрут</summary>
             <button class="button_sidebar_copy" onclick="сopy_buffer_exchange_link_coordinates_route()">Копіювати у
                 буфер обміну посилання із прокладеним маршрутом</button>
@@ -1833,15 +1833,14 @@
             </div>
         </details>
 
-        <details class="datails_leveil_1" id="id_details_virtual_tour" onclick="onclick_details_virtual_tour()">
+        <details class="datails_leveil_1" id="id_details_virtual_tour" onclick="onclick_details(this)">
             <summary class="summary_title_name">Віртуальні тури</summary>
 
             <a href="https://pashaosadchi.github.io/Winter_tale_in_the_dendrological_park_Ladyzhynsky_grove/">Зимова
                 казка у дендрологічному парку "Ладижинський гай"</a>
         </details>
 
-        <details class="datails_leveil_1" id="id_details_density_population"
-            onclick="onclick_details_density_population()">
+        <details class="datails_leveil_1" id="id_details_density_population" onclick="onclick_details(this)">
             <summary class="summary_title_name">Густота населення</summary>
 
             <button class="button_sidebar_add_map" id="id_button_add_map_density_population_house_multifamily" 
@@ -1857,8 +1856,7 @@
                 населення у приватних будинках</button>
         </details>
 
-        <details class="datails_leveil_1" id="id_details_community_boundary"
-            onclick="onclick_details_community_boundary()">
+        <details class="datails_leveil_1" id="id_details_community_boundary" onclick="onclick_details(this)">
             <summary class="summary_title_name">Межі населених пунктів</summary>
 
             <button class="button_sidebar_add_map" id="id_button_add_map_polyline_community_boundary_all"
@@ -1867,8 +1865,7 @@
                 пунктів</button>
         </details>
 
-        <details class="datails_leveil_1" id="id_details_current_coordinates"
-            onclick="onclick_details_current_coordinates()">
+        <details class="datails_leveil_1" id="id_details_current_coordinates" onclick="onclick_details(this)">
             <summary class="summary_title_name">Поточні кординати</summary>
             <button class="button_sidebar_add_map" id="id_button_add_map_current_coordinates"
                 onclick="change_color_show_hide_button(this); add_map_current_coordinates()">Показати\Приховати поточні
@@ -1877,7 +1874,7 @@
                 поточні координати</button>
         </details>
 
-        <details class="datails_leveil_1" id="id_details_recreation_areas" onclick="onclick_details_recreation_areas()">
+        <details class="datails_leveil_1" id="id_details_recreation_areas" onclick="onclick_details(this)">
             <summary class="summary_title_name">Зони відпочинку</summary>
 
             <button class="button_sidebar_add_map" id="id_button_add_map_recreation_areas_all"
@@ -1890,7 +1887,7 @@
 
         </details>
 
-        <details class="datails_leveil_1" id="id_details_master_plan_map" onclick="onclick_details_master_plan_map()">
+        <details class="datails_leveil_1" id="id_details_master_plan_map" onclick="onclick_details(this)">
             <summary class="summary_title_name">Плани зонування</summary>
 
             <button class="button_sidebar_add_map" id="id_button_add_map_master_plan"
@@ -1899,7 +1896,7 @@
 
         </details>
 
-        <details class="datails_leveil_1" id="id_details_public_transport" onclick="onclick_details_public_transport()">
+        <details class="datails_leveil_1" id="id_details_public_transport" onclick="onclick_details(this)">
             <summary class="summary_title_name">Громадський транспорт</summary>
 
             <button class="button_sidebar_add_map" id="id_button_add_map_public_transport_stops_all"
@@ -1916,8 +1913,7 @@
 
         </details>
 
-        <details class="datails_leveil_1" id="id_details_advertising_media"
-            onclick="onclick_details_advertising_media()">
+        <details class="datails_leveil_1" id="id_details_advertising_media" onclick="onclick_details(this)">
             <summary class="summary_title_name">Рекламні засоби</summary>
 
             <button class="button_sidebar_add_map" id="id_button_add_map_bulletin_boards_all"
@@ -1933,8 +1929,7 @@
                 сітілайти</button>
         </details>
 
-        <details class="datails_leveil_1" id="id_details_cycling_infrastructure"
-            onclick="onclick_details_cycling_infrastructure()">
+        <details class="datails_leveil_1" id="id_details_cycling_infrastructure" onclick="onclick_details(this)">
             <summary class="summary_title_name">Велоінфраструктура</summary>
 
             <button class="button_sidebar_add_map" id="id_button_add_map_bicycle_parking_all"
@@ -1947,8 +1942,7 @@
 
         </details>
 
-        <details class="datails_leveil_1" id="id_details_alternative_energy"
-            onclick="onclick_details_alternative_energy()">
+        <details class="datails_leveil_1" id="id_details_alternative_energy" onclick="onclick_details(this)">
             <summary class="summary_title_name">Альтернативна енергетика</summary>
 
             <button class="button_sidebar_add_map" id="id_button_add_map_alternative_energy_facilities_all"
@@ -1957,8 +1951,7 @@
 
         </details>
 
-        <details class="datails_leveil_1" id="id_details_parking_space"
-            onclick="onclick_details_parking_space()">
+        <details class="datails_leveil_1" id="id_details_parking_space" onclick="onclick_details(this)">
             <summary class="summary_title_name">Паркувальний простір</summary>
 
             <button class="button_sidebar_add_map" id="id_button_add_map_parking_space_all"
@@ -1967,8 +1960,7 @@
 
         </details>
 
-        <details class="datails_leveil_1" id="id_details_video_surveillance_cameras"
-            onclick="onclick_details_video_surveillance_cameras()">
+        <details class="datails_leveil_1" id="id_details_video_surveillance_cameras" onclick="onclick_details(this)">
             <summary class="summary_title_name">Камери відеоспостереження</summary>
 
             <button class="button_sidebar_add_map" id="id_button_add_map_video_surveillance_cameras_all"
@@ -1977,8 +1969,7 @@
 
         </details>
 
-        <details class="datails_leveil_1" id="id_details_statistics"
-            onclick="onclick_details_statistics()">
+        <details class="datails_leveil_1" id="id_details_statistics" onclick="onclick_details(this)">
             <summary class="summary_title_name">Статистика</summary>
 
             <button class="button_sidebar_add_map" id="id_button_statistics" onclick="open_dialog_statistics_information_registered_vehicles()">Інформація про зареєстровані транспортні засоби</button>

@@ -11,8 +11,6 @@ function open_dialog_statistics_information_registered_vehicles() {
 
         <div id="dialog_statistics_content">
 
-        
-
         <table>
             <tr> 
                 <th>Виробник</th>
@@ -20,7 +18,16 @@ function open_dialog_statistics_information_registered_vehicles() {
             </tr>
     `;
 
-    data_information_registered_vehicles_arr.forEach(el => str += `<tr> <td>${el.producer}</td> <td>${el.number}</td> </tr>`);
+    data_information_registered_vehicles_arr.forEach(
+        (el) =>
+            (str += `
+    <tr> 
+        <td>${el.producer}</td>
+        <td>${el.number}</td>
+    </tr>`)
+    );
 
-    statistics.innerHTML = `${str} </table> </div>`;
+    statistics.innerHTML = `${str} 
+        </table> 
+    </div>`;
 }

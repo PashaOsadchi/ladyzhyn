@@ -253,97 +253,78 @@ function determines_type_voice_command(command_str) {
             // Очищає карту
             case 1:
                 // Видаляє всі маркери
-                
                 delete_markers_all();
                 break;
             // Оновлює сторінку
             case 2:
-                
                 location.reload();
                 break;
             // Густина населення у багатоквартирних будинках
             case 3:
-                
                 add_map_density_population_house_multifamily();
                 break;
             // Густина населення у приватних будинках
             case 4:
-                
                 add_map_density_population_house_private();
                 break;
             // Межі населених пунктів
             case 5:
-                
                 add_map_polyline_community_boundary_all();
                 break;
             // Поточні кординати
             case 6:
-                
                 add_map_current_coordinates();
                 break;
             // Облаштовані зони відпочинку  
             case 7:
-                
                 add_map_equipped_recreation_areas_all();
                 break;
             // Зони відпочинку  
             case 8:
-                
                 add_map_recreation_areas_all();
                 break;
             // План зонування м.Ладижина
             case 9:
-                
                 id_dialog_openseadragon_master_plan_map.showModal();
                 break;
             // Зупинки громадського транспорту
             case 10:
-                
                 add_map_public_transport_stops_all();
                 break;
             // Дошки оголошень
             case 11:
-                
                 add_map_bulletin_boards_all();
                 break;
             // Білборди
             case 12:
-                
                 add_map_billboards_all();
                 break;
             // Сітілайти
             case 13:
-                
                 add_map_city_lights_all();
                 break;
             // Велопарковки
             case 14:
-                
                 add_map_bicycle_parking_all();
                 break;
             // Веломайстерні
             case 15:
-                
                 add_map_bicycle_service_center_all();
                 break;
             // Об'єкти альтернативної енергетики
             case 16:
-                
                 add_map_alternative_energy_facilities_all();
                 break;
             // Об'єкти паркувального простору
             case 17:
-                
                 add_map_parking_space_all();
                 break;
              // Камери відеоспостереження
              case 18:
-                
                 add_map_video_surveillance_all();
                 break;
              // Багатоквартирні будинки
              case 19:
-                
                 add_overlay_map_house_multifamily_all();
                 break;
             default:
