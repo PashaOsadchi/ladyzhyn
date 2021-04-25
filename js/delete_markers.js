@@ -1,6 +1,7 @@
 // https://developers.google.com/maps/documentation/javascript/markers#remove
 
-function delete_markers_all() {
+// Видаляє усі накладення на карті
+function delete_all_overlay_maps() {
     delete_markers();
     delete_markers_organization();
     delete_markers_route();
@@ -17,6 +18,9 @@ function delete_markers_all() {
     delete_route_public_transport_markers();
     delete_parking_space_markers();
     delete_video_surveillance_markers();
+
+    delete_heatmap_house_multifamily();
+    delete_heatmap_house_private();
 
     // Змінює колір кнопок
     const elements = document.querySelectorAll('.button_sidebar_add_map');

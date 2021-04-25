@@ -62,15 +62,12 @@ const zoom_radius_arr = [
 let heatmap_house_multifamily = null;
 let heatmap_house_private = null;
 
+
+
 // Додає на карту шар із густиною населення на території Ладижинської територіальної громади (сайт на стадії розробки)
 function add_map_density_population_house_multifamily() {
     if (heatmap_house_multifamily) {
-        // Видаляє теплову карту
-        heatmap_house_multifamily.setMap(heatmap_house_multifamily.getMap() ? null : map);
-        heatmap_house_multifamily = null;
-        // Видаляє всі методи прослуховування подій на карті
-        google.maps.event.removeListener(listener_add_map_density_population_house_multifamily);
-        google.maps.event.removeListener(listener_map_offset_house_private);
+        delete_heatmap_house_multifamily();
         return;
     }
 
@@ -130,13 +127,7 @@ function add_map_density_population_house_multifamily_2() {
 // Додає на карту шар із густиною населення на території Ладижинської територіальної громади (сайт на стадії розробки) для приватних будинків
 function add_map_density_population_house_private() {
     if (heatmap_house_private) {
-        // Видаляє теплову карту
-        heatmap_house_private.setMap(heatmap_house_private.getMap() ? null : map);
-        heatmap_house_private = null;
-        // Видаляє всі методи прослуховування подій на карті
-        //google.maps.event.clearInstanceListeners(map);
-        google.maps.event.removeListener(listener_add_map_density_population_house_private);
-        google.maps.event.removeListener(listener_map_offset_house_private);
+        delete_heatmap_house_private();
         return;
     }
 
@@ -191,4 +182,27 @@ function add_map_density_population_house_private_2() {
         heatmap_house_private.set("radius", heatmap_house_private.get("radius") ? null : 0);
         heatmap_house_private.set("radius", heatmap_house_private.get("radius") ? null : radius);
     });
+}
+
+// Видаляє теплову карту
+function delete_heatmap_house_multifamily() {
+    if (heatmap_house_multifamily) {
+        heatmap_house_multifamily.setMap(heatmap_house_multifamily.getMap() ? null : map);
+        heatmap_house_multifamily = null;
+        // Видаляє всі методи прослуховування подій на карті
+        google.maps.event.removeListener(listener_add_map_density_population_house_multifamily);
+        google.maps.event.removeListener(listener_map_offset_house_private);
+    }
+}
+
+// Видаляє теплову карту
+function delete_heatmap_house_private() {
+    if (heatmap_house_private) {
+        heatmap_house_private.setMap(heatmap_house_private.getMap() ? null : map);
+        heatmap_house_private = null;
+        // Видаляє всі методи прослуховування подій на карті
+        //google.maps.event.clearInstanceListeners(map);
+        google.maps.event.removeListener(listener_add_map_density_population_house_private);
+        google.maps.event.removeListener(listener_map_offset_house_private);
+    }
 }
