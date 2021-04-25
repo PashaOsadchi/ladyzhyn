@@ -1,2 +1,2 @@
 // Формує перелік команд після завантаження сторінки
-document.addEventListener("DOMContentLoaded", forms_list_commands(), true);
+document.addEventListener("DOMContentLoaded", forms_list_search_voice_commands(), true);

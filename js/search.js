@@ -14,14 +14,14 @@ function event_value_search_field_changes() {
         list_search_parameters += adding_selecting_found(data_organization_type_arr, "organization_type");
 
         if (list_search_parameters == "") {
-            forms_list_commands();
+            document.querySelector("#id_list_search_parameters").innerHTML = '';
         } else {
             document.querySelector("#id_list_search_parameters").innerHTML = list_search_parameters;
         }
     } else {
-        forms_list_commands();
+        document.querySelector("#id_list_search_parameters").innerHTML = '';
     }
-}
+};
 
 function adding_selecting_found(arr, field_name) {
     let list_search_parameters = "";
@@ -37,27 +37,4 @@ function adding_selecting_found(arr, field_name) {
     });
 
     return list_search_parameters;
-}
-
-// Формує перелік команд
-function forms_list_commands() {
-    // Перелік пошукових параметрів
-    let list_search_parameters = "";
-
-    // Додає типовий перелік команд
-    data_voice_search_commands_arr.forEach((el) => {
-        list_search_parameters += `<div onclick="determines_type_voice_command('${el.name}')">${el.name}</div>`;
-    });
-
-    // Додає назви населених пунктів
-    data_human_settlement_arr.forEach((el) => {
-        list_search_parameters += `<div onclick="determines_type_voice_command('${el.human_settlement_name_voice_search}')">${el.human_settlement_name_voice_search}</div>`;
-    });
-
-    // Додає типи організацій
-    data_organization_type_arr.forEach((el) => {
-        list_search_parameters += `<div onclick="determines_type_voice_command('${el.organization_type}')">${el.organization_type}</div>`;
-    });
-
-    document.querySelector("#id_list_search_parameters").innerHTML = list_search_parameters;
-}
+};
