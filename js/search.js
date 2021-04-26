@@ -32,7 +32,7 @@ function adding_selecting_found(arr, field_name) {
         if (reg.test(el[field_name])) {
             const result_arr = el[field_name].match(reg);
             const name = el[field_name].replace(result_arr[0], `<span>${result_arr[0]}</span>`);
-            list_search_parameters += `<div onclick="determines_type_search_command('${el[field_name]}')">${name}</div>`;
+            list_search_parameters += `<button class="button_found_search_parameters"  onclick="determines_type_search_command('${el[field_name]}')">${name}</button>`;
         }
     });
 

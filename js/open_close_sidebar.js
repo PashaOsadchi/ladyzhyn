@@ -20,6 +20,16 @@ function open_close_sidebar() {
         sidebar_hidden = false;
     } else {
         // Потрібно приховати бокову панель
+
+        // Закриває усі details першого рівня
+        close_details_all_level_1();
+
+        // Очищає поле пошуку
+        id_input_search.value = '';
+
+        // Очищає результати пошуку
+        document.querySelector("#id_list_search_parameters").innerHTML = '';
+
         document.body.style.gridTemplateColumns = "1fr 0%";
         sidebar.style.display = "none";
         map_hidden = false;
