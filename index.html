@@ -283,6 +283,17 @@
         .summary_address_type_name {
             background-color: rgba(231, 199, 57, 0.6);
         }
+
+        .summary_first_forms_list_search_commands {
+            margin-top: 2px;
+            background-color: rgba(231, 199, 57, 0.6);
+        }
+
+        .summary_next_forms_list_search_commands {
+            margin-top: 5px;
+            background-color: rgba(231, 199, 57, 0.6);
+        }
+
     </style>
 
     <!-- tag_details -->
@@ -486,6 +497,15 @@
             background-color: rgba(0, 102, 255, 0.6);
             border-radius: var(--border-radius);
         }
+
+        .button_commands_service_teams {
+            width: 100%;
+            background-color: rgba(158, 158, 158, 0.6);
+            border-radius: var(--border-radius);
+        }
+
+        
+
     </style>
 
     <!-- class_div_level -->
@@ -1326,38 +1346,6 @@
             overflow-x: hidden;
         }
 
-        #id_list_search_voice_commands div {
-            display: inline-block;
-            position: relative;
-            color: rgb(255, 255, 255);
-            width: 97%;
-            padding: 2px 5px 2px 5px;
-            margin: 0px 0px 5px 0px;
-            background-color: rgba(102, 255, 0, 0.6);
-            border-radius: var(--border-radius);
-            border-radius: 7px;
-        }
-
-        #id_list_search_voice_commands div:hover {
-            outline: none;
-            border: none;
-            opacity: 0.6;
-        }
-
-        #id_list_search_voice_commands div:focus {
-            outline: none;
-            border: none;
-        }
-
-        #id_list_search_voice_commands div:active {
-            border: none;
-            opacity: 1;
-        }
-
-        #id_list_search_voice_commands hr {
-            margin: 1px 0px 1px 0px;
-        }
-
         #id_list_search_voice_commands span {
             background-color: rgba(244, 248, 0, 0.705);
         }
@@ -1381,6 +1369,35 @@
 
         #id_dialog_statistics th, td {
             padding: 3px;
+        }
+    </style>
+
+    <!-- attribute placeholder -->
+    <style>
+        ::-webkit-input-placeholder {   
+            opacity: 0.5;
+        }
+        ::-moz-placeholder {   
+            opacity: 0.5;
+        }
+        :-moz-placeholder {   
+            opacity: 0.5;
+        }
+        :-ms-input-placeholder {   
+            opacity: 0.5;
+        }
+
+        :focus::-webkit-input-placeholder { 
+            color: transparent; 
+        }
+        :focus::-moz-placeholder { 
+            color: transparent; 
+        }
+        :focus:-moz-placeholder { 
+            color: transparent; 
+        }
+        :focus:-ms-input-placeholder { 
+            color: transparent; 
         }
     </style>
 
@@ -1497,7 +1514,7 @@
 
     <script defer src="js/open_dialog_statistics.js"></script>
 
-    <script defer src="js/forms_list_search_voice_commands.js"></script>
+    <script defer src="js/forms_list_search_commands.js"></script>
 
     <script defer src="js/determines_type_search_command.js"></script>
 
@@ -1550,12 +1567,12 @@
 
     <div class="div_first_page_level_1" id="id_sidebar">
 
-        <input type="search" id="id_input_search" placeholder="Пошук..." oninput="event_value_search_field_changes()">
+        <input type="search" id="id_input_search" placeholder="Введіть пошуковий запит" oninput="event_value_search_field_changes()">
     
         <div id="id_list_search_parameters"></div>
         
         <details class="datails_leveil_1" id="id_details_search_voice_commands" onclick="onclick_details(this)">
-            <summary class="summary_title_name">Пошукові-голосові команди</summary>
+            <summary class="summary_title_name">Доступні команди для пошуку</summary>
 
             <div id="id_list_search_voice_commands"></div>
             
