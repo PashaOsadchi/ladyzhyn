@@ -14,7 +14,7 @@ function event_value_search_field_changes() {
         list_search_parameters += adding_selecting_found(data_organization_type_arr, "organization_type");
 
         if (list_search_parameters == "") {
-            document.querySelector("#id_list_search_parameters").innerHTML = '';
+            document.querySelector("#id_list_search_parameters").innerHTML = '<div id="id_div_search_nothing_found">На жаль, за вашим запитом нічого не знайдено</div>';
         } else {
             document.querySelector("#id_list_search_parameters").innerHTML = list_search_parameters;
         }
