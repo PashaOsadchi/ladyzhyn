@@ -240,6 +240,21 @@ function open_dialog_detailed_information(id) {
 
             <div id="dialog_detailed_information_content">
             ${alternative_energy_facilities_arr[0].detailed_information}</div>`;
+            break;
+        // Архівні фото
+        case 13:
+            const archival_photos_arr = data_archival_photos_arr.filter((e) => e.id == id_arr[1]);
+            dialog_detailed_information.showModal();
+
+            dialog_detailed_information.innerHTML = `
+            <div>
+                <div id="dialog_detailed_information_header">${archival_photos_arr[0].name}</div>
+                <img height="16" width="16" id="icon_close_dialog" src="icon/close.png" alt="Закрити" onclick="id_dialog_detailed_information.close()"> 
+            </div> 
+
+            <div id="">
+                <img id="img_archival_photos" src="archival_photos/${archival_photos_arr[0].id}.webp" alt="${archival_photos_arr[0].name}""> 
+            </div>`;
             break;   
         default:
             return open_dialog_error(error_text_29);

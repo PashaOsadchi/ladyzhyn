@@ -160,6 +160,10 @@ function determines_type_search_command(command_str) {
              case 19:
                 add_overlay_map_house_multifamily_all();
                 break;
+            // Архівні фото
+            case 20:
+                add_map_archival_photos();
+                break;
             default:
                 console.log('default');
                 break;

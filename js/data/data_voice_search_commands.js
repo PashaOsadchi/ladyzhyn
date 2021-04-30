@@ -152,4 +152,11 @@ const data_voice_search_commands_arr = [
             "Багатоповерхівки",
         ],
     },
+    {
+        id: 20,
+        name: "Архівні фото",
+        voice_search: [
+            "Архівні фото",
+        ],
+    },
 ]

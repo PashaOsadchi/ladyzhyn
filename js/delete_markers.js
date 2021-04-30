@@ -21,6 +21,7 @@ function delete_all_overlay_maps() {
 
     delete_heatmap_house_multifamily();
     delete_heatmap_house_private();
+    delete_archival_photos_markers()
 
     // Змінює колір кнопок
     const elements = document.querySelectorAll('.button_sidebar_add_map');
@@ -225,4 +226,16 @@ function delete_video_surveillance_markers() {
         video_surveillance_arr[i].setMap(null);
     }
     video_surveillance_arr = [];
+}
+
+// Видаляє маркери архівних фото
+function delete_archival_photos_markers() {
+    archival_photos_or_added = false;
+
+    // Видаляє маркери
+    for (let i = 0; i < markers_archival_photos.length; i++) {
+        markers_archival_photos[i].remove();
+        markers_archival_photos[i].setMap(null);
+    }
+    markers_archival_photos = [];
 }

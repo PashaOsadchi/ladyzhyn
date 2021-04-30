@@ -732,6 +732,19 @@
         .marker_alternative_energy_facilities::after {
             background: rgba(128, 189, 31, 0.753);
         }
+
+        /* Трикутник */
+        .marker_archival_photos {
+            position: absolute;
+            transform: translateY(50%);
+            border: 10px solid transparent;
+            border-top: 10px solid rgba(31, 189, 189, 0.753);
+        }
+
+        /* Напис */
+        .marker_archival_photos::after {
+            background: rgba(31, 189, 189, 0.753);
+        }
     </style>
 
     <!-- class_div_add_address_route -->
@@ -1279,6 +1292,15 @@
         }
     </style>
 
+    <!-- img_archival_photos -->
+    <style>
+        #img_archival_photos {
+            display: block;
+            max-width: 100%;
+            max-height: 85vh;
+        }
+    </style>
+
     <!-- search -->
     <style>
         #id_input_search {
@@ -1462,6 +1484,7 @@
     <script defer src="js/add_map/add_map_organization.js"></script>
     <script defer src="js/add_map/add_map_parking_space.js"></script>
     <script defer src="js/add_map/add_map_video_surveillance.js"></script>
+    <script defer src="js/add_map/add_map_archival_photos.js"></script>
 
     <script defer src="js/data/data_street.js"></script>
     <script defer src="js/data/data_house.js"></script>
@@ -1476,6 +1499,7 @@
     <script defer src="js/data/data_alternative_energy_facilities.js"></script>
     <script defer src="js/data/data_voice_search_commands.js"></script>
     <script defer src="js/data/data_information_registered_vehicles.js"></script>
+    <script defer src="js/data/data_archival_photos.js"></script>
 
     <script defer src="js/data/data_community_boundary.js"></script>
     <script defer src="js/data/data_community_boundary_ladyzhyn.js"></script>
@@ -2026,6 +2050,13 @@
             <summary class="summary_title_name">Статистика</summary>
 
             <button class="button_sidebar_add_map" id="id_button_statistics" onclick="open_dialog_statistics_information_registered_vehicles()">Інформація про зареєстровані транспортні засоби</button>
+
+        </details>
+
+        <details class="datails_leveil_1" id="id_details_archival_photos" onclick="onclick_details(this)">
+            <summary class="summary_title_name">Архівні фото</summary>
+
+            <button class="button_sidebar_add_map" id="id_button_archival_photos" onclick="change_color_show_hide_button(this); add_map_archival_photos()">Архівні фото</button>
 
         </details>
     </div>
