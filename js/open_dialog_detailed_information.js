@@ -263,7 +263,7 @@ function open_dialog_detailed_information(id) {
                 if (!archival_photo_upload_status) {
                     open_circles_preloader()
                 }
-            }, 100);
+            }, 200);
             
             break;   
         default:
