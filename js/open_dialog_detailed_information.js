@@ -1,3 +1,5 @@
+let archival_photo_upload_status = false;
+
 function open_dialog_detailed_information(id) {
     //console.log(id)
     const id_arr = id.split("-");
@@ -243,8 +245,9 @@ function open_dialog_detailed_information(id) {
             break;
         // Архівні фото
         case 13:
+            archival_photo_upload_status = false;
+
             const archival_photos_arr = data_archival_photos_arr.filter((e) => e.id == id_arr[1]);
-            dialog_detailed_information.showModal();
 
             dialog_detailed_information.innerHTML = `
             <div>
@@ -253,10 +256,26 @@ function open_dialog_detailed_information(id) {
             </div> 
 
             <div id="">
-                <img id="img_archival_photos" src="archival_photos/${archival_photos_arr[0].id}.webp" alt="${archival_photos_arr[0].name}""> 
+                <img id="img_archival_photos" src="archival_photos/${archival_photos_arr[0].id}.webp" alt="${archival_photos_arr[0].name}" onload="img_archival_photos_loaded()""> 
             </div>`;
+
+            setTimeout(() => {
+                if (!archival_photo_upload_status) {
+                    open_circles_preloader()
+                }
+            }, 100);
+            
             break;   
         default:
             return open_dialog_error(error_text_29);
     }
+}
+
+function img_archival_photos_loaded() {
+    archival_photo_upload_status = true;
+
+    const dialog_detailed_information = document.getElementById("id_dialog_detailed_information");
+
+    id_dialog_circles_preloader.close();
+    dialog_detailed_information.showModal();
 }
