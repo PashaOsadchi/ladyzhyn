@@ -21,9 +21,11 @@ function open_dialog_detailed_information(id) {
             <div id="dialog_detailed_information_content">
             <b>Номер будинку: </b> ${house_arr[0].house_name} `;
 
-            house_arr[0].house_multifamily == "true" ? house_str += `(багатоквартирний)<br>` : house_str += `<br>`;
+            house_arr[0].house_multifamily == "true" ? (house_str += `(багатоквартирний)<br>`) : (house_str += `<br>`);
 
-            if (house_arr[0].house_kadastr_number) { house_str += `<b>Кадастровий номер:</b> <a href="https://e.land.gov.ua/back/cadaster/?cad_num=${house_arr[0].house_kadastr_number}">${house_arr[0].house_kadastr_number}</a>` }
+            if (house_arr[0].house_kadastr_number) {
+                house_str += `<b>Кадастровий номер:</b> <a href="https://e.land.gov.ua/back/cadaster/?cad_num=${house_arr[0].house_kadastr_number}">${house_arr[0].house_kadastr_number}</a>`;
+            }
 
             dialog_detailed_information.innerHTML = `${house_str}</div>`;
             break;
@@ -32,7 +34,7 @@ function open_dialog_detailed_information(id) {
             const entrance_arr = data_entrance_arr.filter((e) => e.entrance_id == id_arr[1]);
             dialog_detailed_information.showModal();
 
-            dialog_detailed_information.innerHTML =  `
+            dialog_detailed_information.innerHTML = `
             <div>
                 <div id="dialog_detailed_information_header">Детальна інформація про підїзд</div>
                 <img height="16" width="16" id="icon_close_dialog" src="icon/close.png" alt="Закрити" onclick="id_dialog_detailed_information.close()"> 
@@ -56,7 +58,9 @@ function open_dialog_detailed_information(id) {
 
             <div id="dialog_detailed_information_content">
             <b>Номер квартири: </b> ${apartment_arr[0].name} `;
-            if (apartment_arr[0].kadastr_number) { apartment_str += `<b>Кадастровий номер:</b> <a href="https://e.land.gov.ua/back/cadaster/?cad_num=${apartment_arr[0].kadastr_number}">${apartment_arr[0].kadastr_number}</a>` }
+            if (apartment_arr[0].kadastr_number) {
+                apartment_str += `<b>Кадастровий номер:</b> <a href="https://e.land.gov.ua/back/cadaster/?cad_num=${apartment_arr[0].kadastr_number}">${apartment_arr[0].kadastr_number}</a>`;
+            }
 
             dialog_detailed_information.innerHTML = `${apartment_str}</div>`;
             break;
@@ -77,7 +81,7 @@ function open_dialog_detailed_information(id) {
             <b>Адреса: </b> ${organization_arr[0].organization_address}<br>`;
 
             if (organization_arr[0].organization_note_address) organization_str += `<b>Примітка до адреси: </b> ${organization_arr[0].organization_note_address}<br>`;
-            
+
             organization_str += `
             <b>Графік роботи</b><br>
             <b>Понеділок: </b> ${organization_arr[0].organization_monday}<br>
@@ -104,7 +108,9 @@ function open_dialog_detailed_information(id) {
 
             <div id="dialog_detailed_information_content">
             ${equipped_recreation_areas_arr[0].name} `;
-            if (equipped_recreation_areas_arr[0].detailed_information !== '') { equipped_recreation_areas_str += `<br><b>Детальна інформація:</b><br> ${equipped_recreation_areas_arr[0].detailed_information}` }
+            if (equipped_recreation_areas_arr[0].detailed_information !== "") {
+                equipped_recreation_areas_str += `<br><b>Детальна інформація:</b><br> ${equipped_recreation_areas_arr[0].detailed_information}`;
+            }
 
             dialog_detailed_information.innerHTML = `${equipped_recreation_areas_str}</div>`;
             break;
@@ -122,7 +128,7 @@ function open_dialog_detailed_information(id) {
             <div id="dialog_detailed_information_content">
             ${public_transport_stops_arr[0].detailed_information}</div>`;
 
-            break;    
+            break;
         // Дошка оголошень
         case 7:
             const bulletin_boards_arr = data_bulletin_boards_arr.filter((e) => e.id == id_arr[1]);
@@ -137,7 +143,7 @@ function open_dialog_detailed_information(id) {
             <div id="dialog_detailed_information_content">
             ${bulletin_boards_arr[0].detailed_information}</div>`;
 
-            break;  
+            break;
         // Білборди
         case 8:
             const billboards_arr = data_billboards_arr.filter((e) => e.id == id_arr[1]);
@@ -152,7 +158,7 @@ function open_dialog_detailed_information(id) {
             <div id="dialog_detailed_information_content">
             ${billboards_arr[0].detailed_information}</div>`;
 
-            break; 
+            break;
         // Сітілайти
         case 9:
             const city_lights_arr = data_city_lights_arr.filter((e) => e.id == id_arr[1]);
@@ -167,7 +173,7 @@ function open_dialog_detailed_information(id) {
             <div id="dialog_detailed_information_content">
             ${city_lights_arr[0].detailed_information}</div>`;
 
-            break; 
+            break;
         // Велопарковки
         case 10:
             const bicycle_parking_arr = data_bicycle_parking_arr.filter((e) => e.id == id_arr[1]);
@@ -188,7 +194,7 @@ function open_dialog_detailed_information(id) {
             const human_settlement_arr = data_human_settlement_arr.filter((e) => e.human_settlement_id == id_arr[1]);
             dialog_detailed_information.showModal();
 
-            const number_house_arr = data_house_arr.filter((e) => e.house_human_settlement_code == id_arr[1])
+            const number_house_arr = data_house_arr.filter((e) => e.house_human_settlement_code == id_arr[1]);
 
             const number_entrance_arr = data_entrance_arr.filter((e) => e.entrance_human_settlement_code == id_arr[1]);
             street_arr = data_street_arr.filter((e) => e.street_human_settlement_code == id_arr[1]);
@@ -199,11 +205,23 @@ function open_dialog_detailed_information(id) {
                 counter_apartment += arr.length;
             }
 
-            const total_number_registered_person = human_settlement_arr[0].human_settlement_total_number_registered_men + human_settlement_arr[0].human_settlement_total_number_registered_women + human_settlement_arr[0].human_settlement_total_number_registered_children_up_14_years + human_settlement_arr[0].human_settlement_total_number_registered_children_from_14_to_18_years;
-            const human_settlement_total_number_registered_men = `${human_settlement_arr[0].human_settlement_total_number_registered_men} (${Math.trunc((((human_settlement_arr[0].human_settlement_total_number_registered_men / total_number_registered_person) * 100) * 100) / 100)}%)`;
-            const human_settlement_total_number_registered_women = `${human_settlement_arr[0].human_settlement_total_number_registered_women} (${Math.trunc((((human_settlement_arr[0].human_settlement_total_number_registered_women / total_number_registered_person) * 100) * 100) / 100)}%)`;
-            const human_settlement_total_number_registered_children_up_14_years = `${human_settlement_arr[0].human_settlement_total_number_registered_children_up_14_years} (${Math.trunc((((human_settlement_arr[0].human_settlement_total_number_registered_children_up_14_years / total_number_registered_person) * 100) * 100) / 100)}%)`;
-            const human_settlement_total_number_registered_children_from_14_to_18_years = `${human_settlement_arr[0].human_settlement_total_number_registered_children_from_14_to_18_years} (${Math.trunc((((human_settlement_arr[0].human_settlement_total_number_registered_children_from_14_to_18_years / total_number_registered_person) * 100) * 100) / 100)}%)`;
+            const total_number_registered_person =
+                human_settlement_arr[0].human_settlement_total_number_registered_men +
+                human_settlement_arr[0].human_settlement_total_number_registered_women +
+                human_settlement_arr[0].human_settlement_total_number_registered_children_up_14_years +
+                human_settlement_arr[0].human_settlement_total_number_registered_children_from_14_to_18_years;
+            const human_settlement_total_number_registered_men = `${human_settlement_arr[0].human_settlement_total_number_registered_men} (${Math.trunc(
+                ((human_settlement_arr[0].human_settlement_total_number_registered_men / total_number_registered_person) * 100 * 100) / 100
+            )}%)`;
+            const human_settlement_total_number_registered_women = `${human_settlement_arr[0].human_settlement_total_number_registered_women} (${Math.trunc(
+                ((human_settlement_arr[0].human_settlement_total_number_registered_women / total_number_registered_person) * 100 * 100) / 100
+            )}%)`;
+            const human_settlement_total_number_registered_children_up_14_years = `${human_settlement_arr[0].human_settlement_total_number_registered_children_up_14_years} (${Math.trunc(
+                ((human_settlement_arr[0].human_settlement_total_number_registered_children_up_14_years / total_number_registered_person) * 100 * 100) / 100
+            )}%)`;
+            const human_settlement_total_number_registered_children_from_14_to_18_years = `${
+                human_settlement_arr[0].human_settlement_total_number_registered_children_from_14_to_18_years
+            } (${Math.trunc(((human_settlement_arr[0].human_settlement_total_number_registered_children_from_14_to_18_years / total_number_registered_person) * 100 * 100) / 100)}%)`;
 
             dialog_detailed_information.innerHTML = `
             <div>
@@ -255,17 +273,17 @@ function open_dialog_detailed_information(id) {
                 <img height="16" width="16" id="icon_close_dialog" src="icon/close.png" alt="Закрити" onclick="id_dialog_detailed_information.close()"> 
             </div> 
 
-            <div id="">
-                <img id="img_archival_photos" src="archival_photos/${archival_photos_arr[0].id}.webp" alt="${archival_photos_arr[0].name}" onload="img_archival_photos_loaded()""> 
+            <div>
+                <img class="img_archival_photos" src="archival_photos/${archival_photos_arr[0].id}.webp" alt="${archival_photos_arr[0].name}" onload="img_archival_photos_loaded()""> 
             </div>`;
 
             setTimeout(() => {
                 if (!archival_photo_upload_status) {
-                    open_circles_preloader()
+                    open_circles_preloader();
                 }
             }, 300);
-            
-            break;   
+
+            break;
         default:
             return open_dialog_error(error_text_29);
     }
@@ -279,3 +297,39 @@ function img_archival_photos_loaded() {
     id_dialog_circles_preloader.close();
     dialog_detailed_information.showModal();
 }
+
+function view_all_archival_photos() {
+    let list_archival_photos = "";
+
+    const dialog_detailed_information = document.getElementById("id_dialog_detailed_information");
+
+    data_archival_photos_arr.forEach((el) => {
+        list_archival_photos += `
+        <div class="block_archival_photos">
+            <img class="view_all_img_archival_photos" src="archival_photos/${el.id}.webp" alt="${el.name}">
+
+            <div class="block_archival_photos_name">
+                ${el.name}
+            </div>
+        </div>
+        `;
+    });
+
+    dialog_detailed_information.innerHTML = `
+            <div>
+                <div id="dialog_detailed_information_header">Галерея архівних фото</div>
+                <img height="16" width="16" id="icon_close_dialog" src="icon/close.png" alt="Закрити" onclick="id_dialog_detailed_information.close()"> 
+            </div> 
+
+            <div>
+                ${list_archival_photos}
+            </div>`;
+
+    open_circles_preloader();
+
+    setTimeout(() => {
+        id_dialog_circles_preloader.close();
+        dialog_detailed_information.showModal();
+    }, 1000);
+}
+
