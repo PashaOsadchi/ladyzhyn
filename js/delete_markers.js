@@ -230,12 +230,8 @@ function delete_video_surveillance_markers() {
 
 // Видаляє маркери архівних фото
 function delete_archival_photos_markers() {
-    archival_photos_or_added = false;
-
-    // Видаляє маркери
-    for (let i = 0; i < markers_archival_photos.length; i++) {
-        markers_archival_photos[i].remove();
-        markers_archival_photos[i].setMap(null);
+    for (let i = 0; i < archival_photos_arr.length; i++) {
+        archival_photos_arr[i].setMap(null);
     }
-    markers_archival_photos = [];
+    archival_photos_arr = [];
 }
