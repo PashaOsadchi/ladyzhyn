@@ -12,7 +12,7 @@ function add_map_organization() {
     if (find_organization_arr.length == 1) return map_offset_selected_organization(organization_arr);
 
     // Маштабує карту враховуючи видимість декількох організацій
-    map_offset_few_organization(find_organization_arr);
+    map_offset(find_organization_arr);
 }
 
 // Відображає на карті одну вибрану організацію
@@ -39,7 +39,7 @@ function add_overlay_map_organization(organization_arr) {
     delete_markers_organization();
 
     for (let i = 0; i < organization_arr.length; i++) {
-        overlay = new custom_marker(new google.maps.LatLng(Number(organization_arr[i].organization_latitude), Number(organization_arr[i].organization_longitude)), map, {
+        overlay = new custom_marker(new google.maps.LatLng(Number(organization_arr[i].latitude), Number(organization_arr[i].longitude)), map, {
             marker_id: `4-${organization_arr[i].organization_id}`,
             marker_name: `${organization_arr[i].organization_id}. ${organization_arr[i].organization_type}: ${organization_arr[i].organization_name}`,
             marker_class_name: 'marker marker_organization'

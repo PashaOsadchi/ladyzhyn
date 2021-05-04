@@ -307,8 +307,8 @@ async function onchange_house() {
 
     // Виводить на сторінку детальну інформацію про будинок
     house_name.value = house_arr[0].house_name;
-    id_house_longitude.value = house_arr[0].house_longitude;
-    id_house_latitude.value = house_arr[0].house_latitude;
+    id_house_longitude.value = house_arr[0].longitude;
+    id_house_latitude.value = house_arr[0].latitude;
     id_house_kadastr_number.value = house_arr[0].house_kadastr_number;
 
     const number_entrance_arr = data_entrance_arr.filter((e) => e.entrance_code_house == entrance_code_house);

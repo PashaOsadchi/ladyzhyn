@@ -49,7 +49,7 @@ async function add_map_addresses() {
 
             add_overlay_map_house(arr_house_3);
 
-            map.panTo(new google.maps.LatLng(arr_house_3[0].house_latitude, arr_house_3[0].house_longitude));
+            map.panTo(new google.maps.LatLng(arr_house_3[0].latitude, arr_house_3[0].longitude));
             map.setZoom(19);
             break;
         case '1,1,1,1,0':  // Адреса підїзду
@@ -77,7 +77,7 @@ async function add_map_addresses() {
 function add_overlay_map_house(arr) {
     for (let i = 0; i < arr.length; i++) {
         overlay = new custom_marker(
-            new google.maps.LatLng(Number(arr[i].house_latitude), Number(arr[i].house_longitude)),
+            new google.maps.LatLng(Number(arr[i].latitude), Number(arr[i].longitude)),
             map,
             {
                 marker_id: `1-${arr[i].house_id}`,
@@ -93,7 +93,7 @@ function add_overlay_map_house(arr) {
 function add_overlay_map_house_2(arr) {
     for (let i = 0; i < arr.length; i++) {
         overlay = new custom_marker(
-            new google.maps.LatLng(Number(arr[i].house_latitude), Number(arr[i].house_longitude)),
+            new google.maps.LatLng(Number(arr[i].latitude), Number(arr[i].longitude)),
             map,
             {
                 marker_id: `1-${arr[i].house_id}`,

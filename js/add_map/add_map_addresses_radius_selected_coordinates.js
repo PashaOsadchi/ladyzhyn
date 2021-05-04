@@ -7,7 +7,7 @@ function add_map_addresses_radius_selected_coordinates() {
     if (last_selected_address_obj.lat == 0 || last_selected_address_obj.lon == 0) return open_dialog_error(error_text_20);
 
     for (let i = 0; i < data_house_arr.length; i++) {
-        const distance = calculate_distance(last_selected_address_obj.lat, last_selected_address_obj.lon, Number(data_house_arr[i].house_latitude), Number(data_house_arr[i].house_longitude));
+        const distance = calculate_distance(last_selected_address_obj.lat, last_selected_address_obj.lon, Number(data_house_arr[i].latitude), Number(data_house_arr[i].longitude));
         if (distance < 500) arr_house_radius_selected_coordinates.push(data_house_arr[i]);
     }
 

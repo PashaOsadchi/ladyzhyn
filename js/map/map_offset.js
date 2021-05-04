@@ -11,7 +11,7 @@ function map_offset_display_addresses_radius_current_coordinates(lat, lon) {
 
 // Після додавання однієї організації маштабує карту
 function map_offset_selected_organization(arr) {
-    map.panTo(new google.maps.LatLng(Number(arr[0].organization_latitude), Number(arr[0].organization_longitude)));
+    map.panTo(new google.maps.LatLng(Number(arr[0].latitude), Number(arr[0].longitude)));
     map.setZoom(19);
 }
 
@@ -20,11 +20,8 @@ function map_offset_community_boundary() {
     // Коефіцієнт ширини екрана
     let screen_width_ratio = 12;
 
-    if (window.innerWidth < 500) {
-        screen_width_ratio = 10;
-    }
+    if (window.innerWidth < 500) screen_width_ratio = 10;
 
-    //console.log(screen_width_ratio);
     map.panTo(new google.maps.LatLng(48.67427770149395, 29.19269771294938));
     map.setZoom(screen_width_ratio);
 }
@@ -34,9 +31,7 @@ function map_offset_human_settlement(human_settlement_code) {
     // Коефіцієнт ширини екрана
     let screen_width_ratio = 0;
 
-    if (window.innerWidth < 500) {
-        screen_width_ratio = 2;
-    }
+    if (window.innerWidth < 500) screen_width_ratio = 2;
 
     switch (Number(human_settlement_code)) {
         case 1:
@@ -63,198 +58,6 @@ function map_offset_human_settlement(human_settlement_code) {
             map.panTo(new google.maps.LatLng(48.70237907383064, 29.109437764549867));
             map.setZoom(15 - screen_width_ratio);
             break;
-    }
-}
-
-// Відповідно до вибраної вулиці маштабує карту
-function map_offset(filtered_gpx_arr) {
-    let central_point_lat = 0;
-    let central_point_lon = 0;
-
-    // Фільтрує масив щоб небуло пустих значень широти та довготи
-    const data_arr = filtered_gpx_arr.filter((e) => e.house_latitude != "" && e.house_longitude != "");
-
-    for (let i = 0; i < data_arr.length; i++) {
-        central_point_lat += Number(data_arr[i].house_latitude);
-        central_point_lon += Number(data_arr[i].house_longitude);
-    }
-
-    central_point_lat /= data_arr.length;
-    central_point_lon /= data_arr.length;
-
-    let arr = [];
-
-    for (let i = 0; i < data_arr.length; i++) {
-        let obj = {};
-
-        obj.lat = data_arr[i].house_latitude;
-        obj.lon = data_arr[i].house_longitude;
-
-        obj.distance = calculate_distance(central_point_lat, central_point_lon, Number(obj.lat), Number(obj.lon));
-
-        obj.distance = Math.trunc(obj.distance * 10) / 10;
-
-        arr.push(obj);
-    }
-
-    // Сортує масив за спаданням для знаходження найбільшої відстані
-    arr.sort(function (a, b) {
-        return b.distance - a.distance;
-    });
-
-    // Відстань між центром і найдальшою точкою
-    const distance = calculate_distance(central_point_lat, central_point_lon, arr[0].lat, arr[0].lon);
-
-    // Курс від найдальшої точки на центр
-    const course = calculate_course(arr[0].lat, arr[0].lon, central_point_lat, central_point_lon);
-
-    // Розрахунок кординат точки на курсові до другої точки на певні відстані від центру
-    const coordinates_arr = calculate_point_course(central_point_lat, central_point_lon, distance, course);
-
-    // Маштабує карту
-    if (!map_hidden) {
-        //console.log("Карта видима можна маштабувати карту одразу");
-        const point_1 = new google.maps.LatLng(Number(arr[0].lat), Number(arr[0].lon));
-        const point_2 = new google.maps.LatLng(coordinates_arr[0], coordinates_arr[1]);
-        let bounds = new google.maps.LatLngBounds();
-        bounds.extend(point_1);
-        bounds.extend(point_2);
-        map.fitBounds(bounds);
-    } else {
-        //console.log("Карта прихована відкласти маштабування карти до часу коли буде видима карта");
-        // Кординати першої і другої точки які потрібно показати маштабуючи карту
-        coordinates_map_scaling_obj.lat_1 = Number(arr[0].lat);
-        coordinates_map_scaling_obj.lon_1 = Number(arr[0].lon);
-        coordinates_map_scaling_obj.lat_2 = coordinates_arr[0];
-        coordinates_map_scaling_obj.lon_2 = coordinates_arr[1];
-    }
-}
-
-// Відповідно до вибраних організацій маштабує карту
-function map_offset_few_organization(filtered_gpx_arr) {
-    let central_point_lat = 0;
-    let central_point_lon = 0;
-
-    // Фільтрує масив щоб небуло пустих значень широти та довготи
-    const data_arr = filtered_gpx_arr.filter((e) => e.organization_latitude != "" && e.organization_longitude != "");
-
-    for (let i = 0; i < data_arr.length; i++) {
-        central_point_lat += Number(data_arr[i].organization_latitude);
-        central_point_lon += Number(data_arr[i].organization_longitude);
-    }
-
-    central_point_lat /= data_arr.length;
-    central_point_lon /= data_arr.length;
-
-    let arr = [];
-
-    for (let i = 0; i < data_arr.length; i++) {
-        let obj = {};
-
-        obj.lat = data_arr[i].organization_latitude;
-        obj.lon = data_arr[i].organization_longitude;
-
-        obj.distance = calculate_distance(central_point_lat, central_point_lon, Number(obj.lat), Number(obj.lon));
-
-        obj.distance = Math.trunc(obj.distance * 10) / 10;
-
-        arr.push(obj);
-    }
-
-    // Сортує масив за спаданням для знаходження найбільшої відстані
-    arr.sort(function (a, b) {
-        return b.distance - a.distance;
-    });
-
-    // Відстань між центром і найдальшою точкою
-    const distance = calculate_distance(central_point_lat, central_point_lon, arr[0].lat, arr[0].lon);
-
-    // Курс від найдальшої точки на центр
-    const course = calculate_course(arr[0].lat, arr[0].lon, central_point_lat, central_point_lon);
-
-    // Розрахунок кординат точки на курсові до другої точки на певні відстані від центру
-    const coordinates_arr = calculate_point_course(central_point_lat, central_point_lon, distance, course);
-
-    // Маштабує карту
-    if (!map_hidden) {
-        //console.log("Карта видима можна маштабувати карту одразу");
-        const point_1 = new google.maps.LatLng(Number(arr[0].lat), Number(arr[0].lon));
-        const point_2 = new google.maps.LatLng(coordinates_arr[0], coordinates_arr[1]);
-        let bounds = new google.maps.LatLngBounds();
-        bounds.extend(point_1);
-        bounds.extend(point_2);
-        map.fitBounds(bounds);
-    } else {
-        //console.log("Карта прихована відкласти маштабування карти до часу коли буде видима карта");
-        // Кординати першої і другої точки які потрібно показати маштабуючи карту
-        coordinates_map_scaling_obj.lat_1 = Number(arr[0].lat);
-        coordinates_map_scaling_obj.lon_1 = Number(arr[0].lon);
-        coordinates_map_scaling_obj.lat_2 = coordinates_arr[0];
-        coordinates_map_scaling_obj.lon_2 = coordinates_arr[1];
-    }
-}
-
-// Відповідно до вибраних точок маршруту маштабує карту
-function map_offset_route(filtered_gpx_arr) {
-    let central_point_lat = 0;
-    let central_point_lon = 0;
-
-    // Фільтрує масив щоб небуло пустих значень широти та довготи
-    const data_arr = filtered_gpx_arr;
-
-    for (let i = 0; i < data_arr.length; i++) {
-        central_point_lat += Number(data_arr[i].latitude);
-        central_point_lon += Number(data_arr[i].longitude);
-    }
-
-    central_point_lat /= data_arr.length;
-    central_point_lon /= data_arr.length;
-
-    let arr = [];
-
-    for (let i = 0; i < data_arr.length; i++) {
-        let obj = {};
-
-        obj.lat = data_arr[i].latitude;
-        obj.lon = data_arr[i].longitude;
-
-        obj.distance = calculate_distance(central_point_lat, central_point_lon, Number(obj.lat), Number(obj.lon));
-
-        obj.distance = Math.trunc(obj.distance * 10) / 10;
-
-        arr.push(obj);
-    }
-
-    // Сортує масив за спаданням для знаходження найбільшої відстані
-    arr.sort(function (a, b) {
-        return b.distance - a.distance;
-    });
-
-    // Відстань між центром і найдальшою точкою
-    const distance = calculate_distance(central_point_lat, central_point_lon, arr[0].lat, arr[0].lon);
-
-    // Курс від найдальшої точки на центр
-    const course = calculate_course(arr[0].lat, arr[0].lon, central_point_lat, central_point_lon);
-
-    // Розрахунок кординат точки на курсові до другої точки на певні відстані від центру
-    const coordinates_arr = calculate_point_course(central_point_lat, central_point_lon, distance, course);
-
-    // Маштабує карту
-    if (!map_hidden) {
-        //console.log("Карта видима можна маштабувати карту одразу");
-        const point_1 = new google.maps.LatLng(Number(arr[0].lat), Number(arr[0].lon));
-        const point_2 = new google.maps.LatLng(coordinates_arr[0], coordinates_arr[1]);
-        let bounds = new google.maps.LatLngBounds();
-        bounds.extend(point_1);
-        bounds.extend(point_2);
-        map.fitBounds(bounds);
-    } else {
-        //console.log("Карта прихована відкласти маштабування карти до часу коли буде видима карта");
-        // Кординати першої і другої точки які потрібно показати маштабуючи карту
-        coordinates_map_scaling_obj.lat_1 = Number(arr[0].lat);
-        coordinates_map_scaling_obj.lon_1 = Number(arr[0].lon);
-        coordinates_map_scaling_obj.lat_2 = coordinates_arr[0];
-        coordinates_map_scaling_obj.lon_2 = coordinates_arr[1];
     }
 }
 
@@ -296,14 +99,13 @@ function map_offset_house_multifamily() {
     }
 }
 
-
-// Відповідно до вибраних камер відеоспостереження маштабує карту
-function map_offset_video_surveillance() {
+// Відповідно до вибраних даних маштабує карту
+function map_offset(dataset_arr) {
     let central_point_lat = 0;
     let central_point_lon = 0;
 
     // Фільтрує масив щоб небуло пустих значень широти та довготи
-    const data_arr = data_place_installation_surveillance_camera_arr.filter((e) => e.latitude != "" && e.longitude != "");
+    const data_arr = dataset_arr.filter((e) => e.latitude != "" && e.longitude != "");
 
     for (let i = 0; i < data_arr.length; i++) {
         central_point_lat += Number(data_arr[i].latitude);
@@ -329,9 +131,7 @@ function map_offset_video_surveillance() {
     }
 
     // Сортує масив за спаданням для знаходження найбільшої відстані
-    arr.sort(function (a, b) {
-        return b.distance - a.distance;
-    });
+    arr.sort((a, b) => b.distance - a.distance);
 
     // Відстань між центром і найдальшою точкою
     const distance = calculate_distance(central_point_lat, central_point_lon, arr[0].lat, arr[0].lon);
@@ -360,69 +160,3 @@ function map_offset_video_surveillance() {
         coordinates_map_scaling_obj.lon_2 = coordinates_arr[1];
     }
 }
-
-// Відповідно до вибраних архівних фото маштабує карту
-function map_offset_archival_photos() {
-    let central_point_lat = 0;
-    let central_point_lon = 0;
-
-    // Фільтрує масив щоб небуло пустих значень широти та довготи
-    const data_arr = data_archival_photos_arr.filter((e) => e.latitude != "" && e.longitude != "");
-
-    for (let i = 0; i < data_arr.length; i++) {
-        central_point_lat += Number(data_arr[i].latitude);
-        central_point_lon += Number(data_arr[i].longitude);
-    }
-
-    central_point_lat /= data_arr.length;
-    central_point_lon /= data_arr.length;
-
-    let arr = [];
-
-    for (let i = 0; i < data_arr.length; i++) {
-        let obj = {};
-
-        obj.lat = data_arr[i].latitude;
-        obj.lon = data_arr[i].longitude;
-
-        obj.distance = calculate_distance(central_point_lat, central_point_lon, Number(obj.lat), Number(obj.lon));
-
-        obj.distance = Math.trunc(obj.distance * 10) / 10;
-
-        arr.push(obj);
-    }
-
-    // Сортує масив за спаданням для знаходження найбільшої відстані
-    arr.sort(function (a, b) {
-        return b.distance - a.distance;
-    });
-
-    // Відстань між центром і найдальшою точкою
-    const distance = calculate_distance(central_point_lat, central_point_lon, arr[0].lat, arr[0].lon);
-
-    // Курс від найдальшої точки на центр
-    const course = calculate_course(arr[0].lat, arr[0].lon, central_point_lat, central_point_lon);
-
-    // Розрахунок кординат точки на курсові до другої точки на певні відстані від центру
-    const coordinates_arr = calculate_point_course(central_point_lat, central_point_lon, distance, course);
-
-    // Маштабує карту
-    if (!map_hidden) {
-        //console.log("Карта видима можна маштабувати карту одразу");
-        const point_1 = new google.maps.LatLng(Number(arr[0].lat), Number(arr[0].lon));
-        const point_2 = new google.maps.LatLng(coordinates_arr[0], coordinates_arr[1]);
-        let bounds = new google.maps.LatLngBounds();
-        bounds.extend(point_1);
-        bounds.extend(point_2);
-        map.fitBounds(bounds);
-    } else {
-        //console.log("Карта прихована відкласти маштабування карти до часу коли буде видима карта");
-        // Кординати першої і другої точки які потрібно показати маштабуючи карту
-        coordinates_map_scaling_obj.lat_1 = Number(arr[0].lat);
-        coordinates_map_scaling_obj.lon_1 = Number(arr[0].lon);
-        coordinates_map_scaling_obj.lat_2 = coordinates_arr[0];
-        coordinates_map_scaling_obj.lon_2 = coordinates_arr[1];
-    }
-}
-
-

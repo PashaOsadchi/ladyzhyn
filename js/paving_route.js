@@ -37,7 +37,7 @@ function paving_route() {
                 }
 
                 directionsDisplay.setMap(map);
-                map_offset_route(waypoints_full_arr);
+                map_offset(waypoints_full_arr);
                 break;
             case google.maps.DirectionsStatus.NOT_FOUND:
                 open_dialog_error(error_text_31);

@@ -35,7 +35,7 @@ function add_map_archival_photos_all() {
     }
 
     // Після додавання архівних фото маштабує карту
-    map_offset_archival_photos() 
+    map_offset(data_archival_photos_arr);
 };
 
 // Додає на карту архівне фото

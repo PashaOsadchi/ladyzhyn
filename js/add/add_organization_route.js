@@ -15,8 +15,8 @@ function add_organization_route() {
     waypoints_arr.push(
         {
             location: {
-                lat: Number(organization_arr[0].organization_latitude),
-                lng: Number(organization_arr[0].organization_longitude)
+                lat: Number(organization_arr[0].latitude),
+                lng: Number(organization_arr[0].longitude)
             },
             stopover: true
         });
@@ -29,8 +29,8 @@ function add_organization_route() {
         'data_organization_arr', 
         'Організація', 
         name_organization, 
-        organization_arr[0].organization_longitude, 
-        organization_arr[0].organization_latitude,
+        organization_arr[0].longitude, 
+        organization_arr[0].latitude,
         4
     );
 }

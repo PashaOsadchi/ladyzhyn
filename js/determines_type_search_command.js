@@ -194,7 +194,7 @@ function voice_command_add_map_organization(organization_type) {
     if (organization_arr.length == 1) return map_offset_selected_organization(organization_arr);
 
     // Маштабує карту враховуючи видимість декількох організацій
-    map_offset_few_organization(organization_arr);
+    map_offset(organization_arr);
 }
 
 // Декодує голосову команду пошуку адреси
@@ -287,7 +287,7 @@ function add_map_street_voice(house_arr) {
 
     // Додає будинки на карту
     for (let i = 0; i < house_arr.length; i++) {
-        overlay = new custom_marker(new google.maps.LatLng(Number(house_arr[i].house_latitude), Number(house_arr[i].house_longitude)), map, {
+        overlay = new custom_marker(new google.maps.LatLng(Number(house_arr[i].latitude), Number(house_arr[i].longitude)), map, {
             marker_id: `1-${house_arr[i].house_id}`,
             marker_name: house_arr[i].house_name,
             marker_class_name: "marker marker_house",
@@ -321,7 +321,7 @@ function add_map_house_voice(house_arr) {
     // Видаляє попередньо додані маркери
     delete_voice_search_address_markers();
 
-    overlay = new custom_marker(new google.maps.LatLng(Number(house_arr[0].house_latitude), Number(house_arr[0].house_longitude)), map, {
+    overlay = new custom_marker(new google.maps.LatLng(Number(house_arr[0].latitude), Number(house_arr[0].longitude)), map, {
         marker_id: `1-${house_arr[0].house_id}`,
         marker_name: house_arr[0].house_name,
         marker_class_name: "marker marker_house",
@@ -343,6 +343,6 @@ function add_map_house_voice(house_arr) {
     }
 
     // Після додавання будинку маштабує карту
-    map.panTo(new google.maps.LatLng(Number(house_arr[0].house_latitude), Number(house_arr[0].house_longitude)));
+    map.panTo(new google.maps.LatLng(Number(house_arr[0].latitude), Number(house_arr[0].longitude)));
     map.setZoom(19);
 }

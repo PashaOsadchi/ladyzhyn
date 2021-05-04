@@ -18,15 +18,15 @@ function find_coordinates_last_selected_address() {
             const arr_house_2 = data_house_arr.filter((e) => e.house_code_street == selected_code_administrative_unit.street_code);
 
             // Знаходить кординати першого будинку на вулиці
-            last_selected_address_obj.lat = Number(arr_house_2[0].house_latitude);
-            last_selected_address_obj.lon = Number(arr_house_2[0].house_longitude);
+            last_selected_address_obj.lat = Number(arr_house_2[0].latitude);
+            last_selected_address_obj.lon = Number(arr_house_2[0].longitude);
             break;
         case '1,1,1,0,0':  // Адреса будинку
             const arr_house_3 = data_house_arr.filter((e) => e.house_id == selected_code_administrative_unit.house_code);
             
             // Знаходить кординати будинку
-            last_selected_address_obj.lat = Number(arr_house_3[0].house_latitude);
-            last_selected_address_obj.lon = Number(arr_house_3[0].house_longitude);
+            last_selected_address_obj.lat = Number(arr_house_3[0].latitude);
+            last_selected_address_obj.lon = Number(arr_house_3[0].longitude);
             break;
         case '1,1,1,1,0':  // Адреса підїзду
             const entrance_arr_1 = data_entrance_arr.filter((e) => e.entrance_id == selected_code_administrative_unit.entrance_code);

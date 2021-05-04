@@ -28,7 +28,7 @@ ${data_surveillance_cameras_arr[i].detailed_information}
     }
 
     // Після додавання камер відеоспостереження маштабує карту
-    map_offset_video_surveillance() 
+    map_offset(data_place_installation_surveillance_camera_arr);
 };
 
 

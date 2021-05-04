@@ -150,7 +150,7 @@ function add_map_density_population_house_private_2() {
     for (let i = 0; i < data_house_arr.length; i++) {
         if (!data_house_arr[i].house_multifamily) {
             const obj = {
-                location: new google.maps.LatLng(Number(data_house_arr[i].house_latitude), Number(data_house_arr[i].house_longitude)),
+                location: new google.maps.LatLng(Number(data_house_arr[i].latitude), Number(data_house_arr[i].longitude)),
                 weight: 1,
             };
             heat_map_data.push(obj);

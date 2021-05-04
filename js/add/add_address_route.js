@@ -41,8 +41,8 @@ function add_address_route() {
 
             waypoints_arr.push({
                 location: {
-                    lat: Number(house_arr[0].house_latitude),
-                    lng: Number(house_arr[0].house_longitude),
+                    lat: Number(house_arr[0].latitude),
+                    lng: Number(house_arr[0].longitude),
                 },
                 stopover: true,
             });
@@ -53,8 +53,8 @@ function add_address_route() {
                 "data_house_arr", 
                 `Перший будинок на вулиці`, 
                 full_address, 
-                house_arr[0].house_longitude, 
-                house_arr[0].house_latitude,
+                house_arr[0].longitude, 
+                house_arr[0].latitude,
                 1
             );
             break;
@@ -66,8 +66,8 @@ function add_address_route() {
 
             waypoints_arr.push({
                 location: {
-                    lat: Number(house_arr_2[0].house_latitude),
-                    lng: Number(house_arr_2[0].house_longitude),
+                    lat: Number(house_arr_2[0].latitude),
+                    lng: Number(house_arr_2[0].longitude),
                 },
                 stopover: true,
             });
@@ -78,8 +78,8 @@ function add_address_route() {
                 "data_house_arr", 
                 `Будинок`, 
                 full_address, 
-                house_arr_2[0].house_longitude, 
-                house_arr_2[0].house_latitude,
+                house_arr_2[0].longitude, 
+                house_arr_2[0].latitude,
                 1
             );
             break;
