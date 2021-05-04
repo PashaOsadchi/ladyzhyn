@@ -73,7 +73,7 @@
         * {
             font-family: Helvetica, Geneva, Arial, sans-serif;
             resize: none;
-            font-size: 1.15rem;
+            font-size: var(--font-size-1);
         }
     </style>
 
@@ -155,6 +155,25 @@
             --button-header-width: 336px;
             /* --background-color-page: rgba(187, 158, 61, 0.247); */
             --background-color-page: rgba(0, 0, 0, 0.8);
+            --font-size-1: 1.15rem;
+            --font-size-2: 2rem;
+            --font-size-3: 1.5rem;
+            /* Значення у px зумовлене особливостями дизайну */
+            --font-size-4: 12px;
+
+            --marker-house-color: rgba(248, 141, 0, 0.705);
+            --marker-route-color: rgba(56, 192, 216, 0.753);
+            --marker-entrance-color: rgba(244, 248, 0, 0.705);
+            --marker-apartment-color: rgba(132, 248, 0, 0.705);
+            --marker-billboards-color: rgba(189, 31, 163, 0.753);
+            --marker-city-lights-color: rgba(189, 31, 65, 0.753);
+            --marker-organization-color: rgba(0, 248, 236, 0.705);
+            --marker-bulletin-boards-color: rgba(118, 31, 189, 0.753);
+            --marker-bicycle-parking-color: rgba(31, 189, 110, 0.753);
+            --marker-public-transport-stops-color: rgba(31, 118, 189, 0.753);
+            --marker-center-human-settlement-color: rgba(128, 189, 31, 0.753);
+            --marker-equipped-recreation-areas-color: rgba(49, 189, 31, 0.753);
+            --marker-alternative-energy-facilities-color: rgba(128, 189, 31, 0.753);
         }
     </style>
 
@@ -257,8 +276,7 @@
         summary {
             color: rgb(255, 255, 255);
             padding-left: 6px;
-            /* border-radius: var(--border-radius); */
-            font-size: 20px;
+            font-size: var(--font-size-1);
         }
 
         summary>select {
@@ -299,8 +317,6 @@
     <!-- tag_details -->
     <style>
         details {
-            /* margin-top: 4px;
-            margin-bottom: 4px; */
             display: flex;
             flex-direction: column;
         }
@@ -319,7 +335,7 @@
         /* https://bitsofco.de/when-do-the-hover-focus-and-active-pseudo-classes-apply/ */
 
         button {
-            font-size: 1.15rem;
+            font-size: var(--font-size-1);
             min-height: 35px;
             color: rgb(255, 255, 255);
             margin-top: 4px;
@@ -354,45 +370,36 @@
             outline: none;
             text-decoration: none;
             margin-top: 4px;
+            width: 100%;
+            background-color: rgba(0, 119, 255, 0.616);
+            border-radius: var(--border-radius);
+            font-size: var(--font-size-1);
+            min-height: 35px;
+            color: rgb(255, 255, 255);
+            border: none;
+            text-align: center;
         }
 
-        /* Стан за замовчуванням */
-        /* a:link {
-            color: #1623dd;
-        } */
-
-        /* Посилання, коли вона вже переглянуло (існує в історії браузера) */
-        a:visited {
-            color: #ffffff;
-        }
-
-        /* Посилання, коли вона була сфокусована */
-        a:focus {
-            border-bottom: 1px solid;
-            background: #bae498;
-        }
-
-        /* Посилання, коли на неї вказівником миші */
         a:hover {
-            background: #ffffff;
-            color: hsl(234, 69%, 34%);
+            outline: none;
+            border: none;
+            opacity: 0.6;
         }
 
-        /* Посилання, коли вона активується (наприклад при кліці по ній) */
+        a:focus {
+            outline: none;
+            border: none;
+        }
+
         a:active {
-            background: #265301;
-            color: #cdfeaa;
+            border: none;
+            opacity: 1;
         }
     </style>
 
     <!-- tag_dialog -->
     <style>
         dialog {
-            /* position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            margin: 0; */
             padding: 0px;
             border: none;
             z-index: 2;
@@ -409,7 +416,7 @@
         }
 
         #dialog_error_header {
-            font-size: 10mm;
+            font-size: var(--font-size-2);
             background-color: rgba(255, 0, 0, 0.767);
             color: #ffffff;
             text-align: center;
@@ -422,7 +429,7 @@
         }
 
         #dialog_detailed_information_header {
-            font-size: 7mm;
+            font-size: var(--font-size-3);
             background-color: rgba(0, 102, 255, 0.767);
             color: #ffffff;
             text-align: center;
@@ -448,7 +455,7 @@
         }
 
         #dialog_statistics_header {
-            font-size: 7mm;
+            font-size: var(--font-size-3);
             background-color: rgba(132, 0, 255, 0.767);
             color: #ffffff;
             text-align: center;
@@ -510,9 +517,6 @@
             background-color: rgba(102, 255, 0, 0.6);
             border-radius: var(--border-radius);
         }
-
-        
-
     </style>
 
     <!-- class_div_level -->
@@ -541,6 +545,13 @@
 
     <!-- class_marker -->
     <style>
+        /* Трикутник */
+        .marker {
+            position: absolute;
+            transform: translateY(50%);
+            border: 10px solid transparent;
+        }
+
         /* Напис */
         .marker::after {
             content: attr(data-before);
@@ -553,7 +564,7 @@
             padding: 0px 1px 0px 1px;
             color: white;
             /* background: rgba(0, 17, 248, 0.705); */
-            font-size: 12px;
+            font-size: var(--font-size-4);
             border-radius: 2px;
             text-align: center;
             white-space: nowrap;
@@ -563,187 +574,108 @@
             text-overflow: ellipsis;
         }
 
-        /* Трикутник */
         .marker_house {
-            position: absolute;
-            transform: translateY(50%);
-            border: 10px solid transparent;
-            border-top: 10px solid rgba(248, 141, 0, 0.705);
+            border-top: 10px solid var(--marker-house-color);
         }
 
-        /* Напис */
         .marker_house::after {
-            background: rgba(248, 141, 0, 0.705);
+            background: var(--marker-house-color);
         }
 
-        /* Трикутник */
         .marker_entrance {
-            position: absolute;
-            transform: translateY(50%);
-            border: 10px solid transparent;
-            border-top: 10px solid rgba(244, 248, 0, 0.705);
+            border-top: 10px solid var(--marker-entrance-color);
         }
 
-        /* Напис */
         .marker_entrance::after {
-            background: rgba(244, 248, 0, 0.705);
+            background: var(--marker-entrance-color);
         }
 
-        /* Трикутник */
         .marker_apartment {
-            position: absolute;
-            transform: translateY(50%);
-            border: 10px solid transparent;
-            border-top: 10px solid rgba(132, 248, 0, 0.705);
+            border-top: 10px solid var(--marker-apartment-color);
         }
 
-        /* Напис */
         .marker_apartment::after {
-            background: rgba(132, 248, 0, 0.705);
+            background: var(--marker-apartment-color);
         }
 
-        /* Трикутник */
         .marker_organization {
-            position: absolute;
-            transform: translateY(50%);
-            border: 10px solid transparent;
-            border-top: 10px solid rgba(0, 248, 236, 0.705);
+            border-top: 10px solid var(--marker-organization-color);
         }
 
-        /* Напис */
         .marker_organization::after {
-            background: rgba(0, 248, 236, 0.705);
+            background: var(--marker-organization-color);
         }
 
-
-        /* Трикутник */
         .marker_route {
-            position: absolute;
-            transform: translateY(50%);
-            border: 10px solid transparent;
-            border-top: 10px solid rgba(56, 192, 216, 0.753);
+            border-top: 10px solid var(--marker-route-color);
         }
 
-        /* Напис */
         .marker_route::after {
-            background: rgba(56, 192, 216, 0.753);
+            background: var(--marker-route-color);
         }
 
-        /* Трикутник */
         .marker_equipped_recreation_areas {
-            position: absolute;
-            transform: translateY(50%);
-            border: 10px solid transparent;
-            border-top: 10px solid rgba(49, 189, 31, 0.753);
+            border-top: 10px solid var(--marker-equipped-recreation-areas-color);
         }
 
-        /* Напис */
         .marker_equipped_recreation_areas::after {
-            background: rgba(49, 189, 31, 0.753);
+            background: var(--marker-equipped-recreation-areas-color);
         }
 
-        /* Трикутник */
         .marker_public_transport_stops {
-            position: absolute;
-            transform: translateY(50%);
-            border: 10px solid transparent;
-            border-top: 10px solid rgba(31, 118, 189, 0.753);
+            border-top: 10px solid var(--marker-public-transport-stops-color);
         }
 
-        /* Напис */
         .marker_public_transport_stops::after {
-            background: rgba(31, 118, 189, 0.753);
+            background: var(--marker-public-transport-stops-color);
         }
 
-        /* Трикутник */
         .marker_bulletin_boards {
-            position: absolute;
-            transform: translateY(50%);
-            border: 10px solid transparent;
-            border-top: 10px solid rgba(118, 31, 189, 0.753);
+            border-top: 10px solid var(--marker-bulletin-boards-color);
         }
 
-        /* Напис */
         .marker_bulletin_boards::after {
-            background: rgba(118, 31, 189, 0.753);
+            background: var(--marker-bulletin-boards-color);
         }
 
-        /* Трикутник */
         .marker_billboards {
-            position: absolute;
-            transform: translateY(50%);
-            border: 10px solid transparent;
-            border-top: 10px solid rgba(189, 31, 163, 0.753);
+            border-top: 10px solid var(--marker-billboards-color);
         }
 
-        /* Напис */
         .marker_billboards::after {
-            background: rgba(189, 31, 163, 0.753);
+            background: var(--marker-billboards-color);
         }
 
-        /* Трикутник */
         .marker_city_lights {
-            position: absolute;
-            transform: translateY(50%);
-            border: 10px solid transparent;
-            border-top: 10px solid rgba(189, 31, 65, 0.753);
+            border-top: 10px solid var(--marker-city-lights-color);
         }
 
-        /* Напис */
         .marker_city_lights::after {
-            background: rgba(189, 31, 65, 0.753);
+            background: var(--marker-city-lights-color);
         }
 
-        /* Трикутник */
         .marker_bicycle_parking {
-            position: absolute;
-            transform: translateY(50%);
-            border: 10px solid transparent;
-            border-top: 10px solid rgba(31, 189, 110, 0.753);
+            border-top: 10px solid var(--marker-bicycle-parking-color);
         }
 
-        /* Напис */
         .marker_bicycle_parking::after {
-            background: rgba(31, 189, 110, 0.753);
+            background: var(--marker-bicycle-parking-color);
         }
 
-        /* Трикутник */
         .marker_center_human_settlement {
-            position: absolute;
-            transform: translateY(50%);
-            border: 10px solid transparent;
-            border-top: 10px solid rgba(128, 189, 31, 0.753);
+            border-top: 10px solid var(--marker-center-human-settlement-color);
         }
 
-        /* Напис */
         .marker_center_human_settlement::after {
-            background: rgba(128, 189, 31, 0.753);
+            background: var(--marker-center-human-settlement-color);
         }
 
-        /* Трикутник */
         .marker_alternative_energy_facilities {
-            position: absolute;
-            transform: translateY(50%);
-            border: 10px solid transparent;
-            border-top: 10px solid rgba(128, 189, 31, 0.753);
+            border-top: 10px solid var(--marker-alternative-energy-facilities-color);
         }
 
-        /* Напис */
         .marker_alternative_energy_facilities::after {
-            background: rgba(128, 189, 31, 0.753);
-        }
-
-        /* Трикутник */
-        .marker_archival_photos {
-            position: absolute;
-            transform: translateY(50%);
-            border: 10px solid transparent;
-            border-top: 10px solid rgba(31, 189, 189, 0.753);
-        }
-
-        /* Напис */
-        .marker_archival_photos::after {
-            background: rgba(31, 189, 189, 0.753);
+            background: var(--marker-alternative-energy-facilities-color);
         }
     </style>
 
@@ -786,8 +718,6 @@
         .checkbox_block {
             display: grid;
             grid-template-columns: 30px 1fr;
-            /* justify-content: center; */
-            /* align-items: center;  */
             margin: 4px 0px 4px 0px;
         }
     </style>
@@ -826,10 +756,6 @@
     <!-- id_icon_voice_recognition -->
     <style>
         #icon_voice_recognition {
-            /* display: none;
-            position: absolute;
-            right: 50%; 
-            transform: translate(50%, 0%); */
             float: right;
             margin: 7px 15px 0px 0px;
         }
@@ -930,20 +856,6 @@
             transform: translateX(-50%) translateY(-50%);
             animation: rotatePreloader 2s infinite ease-in;
         }
-
-        /* #id_dialog_circles_preloader {
-      position: absolute;
-      left: 50%;
-      background-color: rgba(0, 0, 0, 0);
-    }
-  
-    .preloader {
-      position: absolute;
-      left: 50%;
-      width: 100px;
-      height: 100px;
-      animation: rotatePreloader 2s infinite ease-in;
-    } */
 
         @keyframes rotatePreloader {
             0% {
@@ -1314,7 +1226,6 @@
     <!-- id_list_search_parameters -->
     <style>
         #id_list_search_parameters {
-            /* height: 100vh; */
             margin: 3px 0px 3px 0px;
             overflow: auto;
             overflow-x: hidden;
@@ -1328,7 +1239,6 @@
     <!-- id_list_search_voice_commands -->
     <style>
         #id_list_search_voice_commands {
-            /* height: 100vh; */
             margin: 3px 0px 3px 0px;
             overflow: auto;
             overflow-x: hidden;
@@ -1415,7 +1325,6 @@
         .block_archival_photos {
             background-color: rgba(0, 0, 0, 0.274);
             color: rgb(255, 255, 255);
-            /* padding-top: 0.2rem; */
             margin-bottom: 1rem;
             text-align: center;
         }

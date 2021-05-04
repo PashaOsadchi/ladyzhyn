@@ -15,7 +15,7 @@ function determines_type_search_command(command_str) {
     let voice_search_command_id = 0;
     let voice_search_command_name = '';
 
-    // Визначає пошукову команду
+    // Шукає основну команду
     for (let i_1 = 0; i_1 < data_voice_search_commands_arr.length; i_1++) {
 
         for (let i_2 = 0; i_2 < data_voice_search_commands_arr[i_1].voice_search.length; i_2++) {
@@ -32,7 +32,7 @@ function determines_type_search_command(command_str) {
     }
     // console.log(`${command_str} - ${voice_search_command_id} - ${voice_search_command_name}`)
 
-    // Шукає населений пункт
+    // Шукає адресу (населений пункт)
     for (let i = 0; i < data_human_settlement_arr.length; i++) {
         const reg = new RegExp(`^${data_human_settlement_arr[i].human_settlement_name_voice_search}`, "i");
 
@@ -80,7 +80,7 @@ function determines_type_search_command(command_str) {
     // console.log('human_settlement_id - ', human_settlement_id)
     // console.log('organization_type_id', organization_type_id)
 
-    // Перевіряє чи знайдено начення
+    // Перевіряє чи знайдено основну команду
     if (voice_search_command_id !== 0 && human_settlement_id == 0 && organization_type == 0) {
         switch (voice_search_command_id) {
             // Очищає карту
