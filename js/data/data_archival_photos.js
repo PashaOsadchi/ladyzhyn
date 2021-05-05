@@ -501,13 +501,13 @@ const data_archival_photos_arr = [
     },
     {
         id: 52,
-        name: "Сонечко",
-        latitude: 0,
-        longitude: 0,
+        name: "МНВЦ 'Спадщина'",
+        latitude: 48.689798215919495,
+        longitude: 29.235775092531334,
         viewing_angle: 90,
         radius: 40,
-        latitude_point_course: 0,
-        longitude_point_course: 0,
+        latitude_point_course: 48.690287155703864,
+        longitude_point_course: 29.23562350958484,
     },
     {
         id: 53,
