@@ -4,12 +4,12 @@ function open_dialog_error(str) {
     dialog_error.showModal();
 
     dialog_error.innerHTML = `
-    <div>
+    <div id="dialog_header">
         <div id="dialog_error_header">Помилка</div>
         <img height="16" width="16" id="icon_close_dialog" src="icon/close.png" alt="Закрити" onclick="id_dialog_error.close();"> 
     </div> 
 
-    <div class="dialog_value">${str}</div>
+    <div class="dialog_content">${str}</div>
     `;
 }
 

@@ -4,12 +4,12 @@ function open_dialog_statistics_information_registered_vehicles() {
     statistics.showModal();
 
     let str = `
-        <div>
+        <div id="dialog_header">
              <div id="dialog_statistics_header">Інформація про зареєстровані <br>транспортні засоби у м.Ладижин</div>
             <img height="16" width="16" id="icon_close_dialog" src="icon/close.png" alt="Закрити" onclick="id_dialog_statistics.close()"> 
         </div> 
 
-        <div id="dialog_statistics_content">
+        <div id="dialog_content">
 
         <table>
             <tr> 

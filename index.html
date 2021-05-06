@@ -410,6 +410,18 @@
             background-color: rgba(0, 0, 0, 0.8);
         }
 
+        #dialog_header {
+            position: sticky;
+            top: 0;
+        }
+
+        #dialog_content {
+            max-height: 85vh;
+            padding: 5px;
+            color: rgba(0, 0, 0, 0.8);
+            overflow: auto;
+        }
+
         #id_dialog_error {
             width: 300px;
             padding: 0px;
@@ -423,11 +435,6 @@
             padding: 5px;
         }
 
-        #dialog_error_content {
-            padding: 5px;
-            color: rgba(0, 0, 0, 0.8);
-        }
-
         #dialog_detailed_information_header {
             font-size: var(--font-size-3);
             background-color: rgba(0, 102, 255, 0.767);
@@ -435,12 +442,6 @@
             text-align: center;
             padding: 5px 30px 5px 30px;
         }
-
-        #dialog_detailed_information_content {
-            padding: 5px;
-            color: rgba(0, 0, 0, 0.8);
-        }
-
 
         #id_dialog_openseadragon_master_plan_map {
             padding: 0;
@@ -462,9 +463,22 @@
             padding: 5px 30px 5px 30px;
         }
 
-        #dialog_statistics_content {
-            padding: 5px;
+        #id_dialog_statistics table, th, td {
+            border: 1px solid rgba(0, 0, 0, 0.3);
+            border-collapse: collapse;
+        }
+
+        #id_dialog_statistics table  {
+            width: 100%;
             color: rgba(0, 0, 0, 0.8);
+        }
+
+        #id_dialog_statistics th {
+            text-align: left;
+        }
+
+        #id_dialog_statistics th, td {
+            padding: 3px;
         }
     </style>
 
@@ -1249,27 +1263,6 @@
         }
     </style>
 
-    <!-- id_dialog_statistics table, th, td  -->
-    <style>
-        #id_dialog_statistics table, th, td {
-            border: 1px solid rgba(0, 0, 0, 0.3);
-            border-collapse: collapse;
-        }
-
-        #id_dialog_statistics table  {
-            width: 100%;
-            color: rgba(0, 0, 0, 0.8);
-        }
-
-        #id_dialog_statistics th {
-            text-align: left;
-        }
-
-        #id_dialog_statistics th, td {
-            padding: 3px;
-        }
-    </style>
-
     <!-- attribute placeholder -->
     <style>
         ::-webkit-input-placeholder {   
@@ -1317,6 +1310,7 @@
         }
     </style>
 
+    <!-- archival_photos -->
     <style>
         .block_archival_photos_name {
             padding: 0.3rem;
