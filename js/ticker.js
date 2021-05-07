@@ -2,14 +2,30 @@ const sponsors_arr = [
     {
         id: 1,
         name: 'депутату Ладижинської МР адвокату Бодачевському Р.',
-        phone_text: '097-610-01-20',
-        phone: '+380976100120'
+        phone: [
+            {
+                text: '097-610-01-20',
+                number: '+380976100120'
+            },
+            {
+                text: '096-113-06-07',
+                number: '+380961130607'
+            }
+        ],
     },
     {
         id: 2,
-        name: 'Бодачевському К. (ремонт, продаж, обслуговування комп. та офісної техніки)',
-        phone_text: '098-544-09-81',
-        phone: '+3800985440981'
+        name: ' ФОП Бодачевському К. (ремонт, продаж, обслуговування комп. та офісної техніки)',
+        phone: [
+            {
+                text: '067-139-56-97',
+                number: '+380671395697'
+            },
+            {
+                text: '093-264-11-90',
+                number: '+380932641190'
+            }
+        ],
     },
 ]
 
@@ -24,5 +40,11 @@ setInterval(() => {
 document.addEventListener("DOMContentLoaded",() => {document.getElementById('id_page_footer').innerHTML = generate_message_sponsors(0);}, true);
 
 function generate_message_sponsors(i) {
-    return `Дякуємо за підтримку ${sponsors_arr[i].name} <a href="tel:${sponsors_arr[i].phone}">${sponsors_arr[i].phone_text}</a>`;
+    let phone_text = '';
+
+    sponsors_arr[i].phone.forEach((el) => {
+        phone_text += `<a href="tel:${el.number}">${el.text}</a> `;
+    });
+
+    return `Дякуємо за підтримку ${sponsors_arr[i].name} ${phone_text}`;
 }
