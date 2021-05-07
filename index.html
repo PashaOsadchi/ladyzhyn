@@ -93,9 +93,10 @@
             display: grid;
             grid-template-areas:
                 "header header"
-                "map sidebar";
-            grid-template-rows: 48px 1fr;
-            grid-template-columns: 1fr 350px;
+                "map sidebar"
+                "footer footer";
+            grid-template-rows: 48px 1fr 27px;
+           /*  grid-template-columns: 1fr 350px; */
             grid-template-columns: 1fr 0%;
             gap: 0px;
             height: 100vh;
@@ -122,6 +123,15 @@
             display: none;
         }
 
+        #id_page_footer {
+            grid-area: footer;
+            padding: 4px;
+            line-height: 18px;
+            text-align: center;
+            font-size: 14px;
+            color: rgb(255, 255, 255);
+        }
+
         /* Виправляє помилку коли не маштабується карта у повноекранному режимі */
         body:fullscreen {
             display: inline;
@@ -144,6 +154,18 @@
             dialog {
                 width: 92% !important;
                 margin: auto;
+            }
+        }
+
+        @media screen and (max-width: 440px) {
+            body {
+                grid-template-rows: 48px 1fr 65px !important;
+            }
+        }
+
+        @media screen and (max-width: 800px) {
+            body {
+                grid-template-rows: 48px 1fr 45px;
             }
         }
     </style>
@@ -366,7 +388,7 @@
     <style>
         /* https://developer.mozilla.org/ru/docs/Learn/CSS/Styling_text/Styling_links */
 
-        a {
+        #id_details_virtual_tour a {
             outline: none;
             text-decoration: none;
             margin-top: 4px;
@@ -394,6 +416,18 @@
         a:active {
             border: none;
             opacity: 1;
+        }
+
+        #id_page_footer  a {
+            display: inline-block;
+            outline: none;
+            text-decoration: none;
+            padding: 0 5px 0 5px;
+            background-color: rgba(0, 119, 255, 0.616);
+            border-radius: var(--border-radius);
+            font-size: 14px;
+            color: rgb(255, 255, 255);
+            border: none;
         }
     </style>
 
@@ -1452,6 +1486,8 @@
 
     <script defer src="js/generates_polyline.js"></script>
 
+    <script defer src="js/ticker.js"></script>
+
     <script defer src="js/content_loaded.js"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -1988,6 +2024,8 @@
 
         </details>
     </div>
+
+    <footer id="id_page_footer"></footer>
 </body>
 
 </html>
