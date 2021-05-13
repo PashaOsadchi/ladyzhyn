@@ -1,4 +1,4 @@
-const sponsors_arr = [
+/* const sponsors_arr = [
     {
         id: 1,
         name: 'Із пропозиціями щодо участі у проекті звертатися до Осадчого П.',
@@ -58,3 +58,5 @@ function generate_message_sponsors(i) {
 
     return `${sponsors_arr[i].name} ${phone_text}`;
 }
+ */
+

@@ -93,10 +93,13 @@
             display: grid;
             grid-template-areas:
                 "header header"
+                "map sidebar";
+            grid-template-rows: 48px 1fr;
+            /* grid-template-areas:
+                "header header"
                 "map sidebar"
                 "footer footer";
-            grid-template-rows: 48px 1fr 27px;
-           /*  grid-template-columns: 1fr 350px; */
+            grid-template-rows: 48px 1fr 27px; */
             grid-template-columns: 1fr 0%;
             gap: 0px;
             height: 100vh;
@@ -123,14 +126,14 @@
             display: none;
         }
 
-        #id_page_footer {
+        /* #id_page_footer {
             grid-area: footer;
             padding: 4px;
             line-height: 18px;
             text-align: center;
             font-size: 14px;
             color: rgb(255, 255, 255);
-        }
+        } */
 
         /* Виправляє помилку коли не маштабується карта у повноекранному режимі */
         body:fullscreen {
@@ -157,7 +160,7 @@
             }
         }
 
-        @media screen and (max-width: 440px) {
+        /* @media screen and (max-width: 440px) {
             body {
                 grid-template-rows: 48px 1fr 65px !important;
             }
@@ -167,7 +170,7 @@
             body {
                 grid-template-rows: 48px 1fr 45px;
             }
-        }
+        } */
     </style>
 
     <!-- variables -->
@@ -418,7 +421,7 @@
             opacity: 1;
         }
 
-        #id_page_footer  a {
+        /* #id_page_footer  a {
             display: inline-block;
             outline: none;
             text-decoration: none;
@@ -428,7 +431,7 @@
             font-size: 14px;
             color: rgb(255, 255, 255);
             border: none;
-        }
+        } */
     </style>
 
     <!-- tag_dialog -->
@@ -2059,7 +2062,7 @@
         </details>
     </div>
 
-    <footer id="id_page_footer"></footer>
+    <!-- <footer id="id_page_footer"></footer> -->
 </body>
 
 </html>
