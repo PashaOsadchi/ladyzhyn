@@ -314,7 +314,9 @@ function img_archival_photos_loaded() {
 
 function view_all_archival_photos() {
     data_archival_photos_arr.forEach((el) => {
-        new Image().src = `archival_photos/${el.id}.webp`
+        let img = new Image(el.width, el.height);
+
+        img.src = `archival_photos/${el.id}.webp`;
     });
 
     open_circles_preloader(); 

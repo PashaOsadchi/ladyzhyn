@@ -8,6 +8,8 @@ const data_archival_photos_arr = [
         radius: 40,
         latitude_point_course: 48.68842759728093,
         longitude_point_course: 29.23730873356012,
+        width: 4055,
+        height: 2733,
     },
     {
         id: 2,
@@ -18,6 +20,8 @@ const data_archival_photos_arr = [
         radius: 40,
         latitude_point_course: 48.69141833887735,
         longitude_point_course: 29.236897939809285,
+        width: 3969,
+        height: 2770,
     },
     {
         id: 3,
@@ -28,6 +32,8 @@ const data_archival_photos_arr = [
         radius: 40,
         latitude_point_course: 48.688824090134915,
         longitude_point_course: 29.22995569878275,
+        width: 4055,
+        height: 2746,
     },
     {
         id: 4,
@@ -38,6 +44,8 @@ const data_archival_photos_arr = [
         radius: 40,
         latitude_point_course: 48.690226441773504,
         longitude_point_course: 29.237831070999963,
+        width: 4079,
+        height: 2746,
     },
     {
         id: 5,
@@ -48,6 +56,8 @@ const data_archival_photos_arr = [
         radius: 40,
         latitude_point_course: 48.70809094407334,
         longitude_point_course: 29.221345504327925,
+        width: 4079,
+        height: 2746,
     },
     {
         id: 6,
@@ -58,6 +68,8 @@ const data_archival_photos_arr = [
         radius: 40,
         latitude_point_course: 48.70792220609272,
         longitude_point_course: 29.21848943852899,
+        width: 5341,
+        height: 3972,
     },
     {
         id: 7,
@@ -68,6 +80,8 @@ const data_archival_photos_arr = [
         radius: 40,
         latitude_point_course: 48.705497677149,
         longitude_point_course: 29.220988257712484,
+        width: 4067,
+        height: 2733,
     },
     {
         id: 8,
@@ -78,6 +92,8 @@ const data_archival_photos_arr = [
         radius: 40,
         latitude_point_course: 48.70684484547714,
         longitude_point_course: 29.21890857205832,
+        width: 4067,
+        height: 2697,
     },
     {
         id: 9,
@@ -88,6 +104,8 @@ const data_archival_photos_arr = [
         radius: 40,
         latitude_point_course: 48.707678039736535,
         longitude_point_course: 29.219994977836915,
+        width: 3993,
+        height: 2746,
     },
     {
         id: 10,
@@ -98,6 +116,8 @@ const data_archival_photos_arr = [
         radius: 40,
         latitude_point_course: 48.70654980739586,
         longitude_point_course: 29.219357037452202,
+        width: 4057,
+        height: 2756,
     },
     {
         id: 11,
@@ -108,6 +128,8 @@ const data_archival_photos_arr = [
         radius: 40,
         latitude_point_course: 48.68861875475563,
         longitude_point_course: 29.230137773161417,
+        width: 4018,
+        height: 2660,
     },
     {
         id: 12,
@@ -118,6 +140,8 @@ const data_archival_photos_arr = [
         radius: 40,
         latitude_point_course: 48.687196408640595,
         longitude_point_course: 29.23077503354109,
+        width: 4018,
+        height: 2660,
     },
     {
         id: 13,
@@ -128,6 +152,8 @@ const data_archival_photos_arr = [
         radius: 40,
         latitude_point_course: 48.6879977353295, 
         longitude_point_course: 29.232360597921986,
+        width: 4055,
+        height: 2697,
     },
     {
         id: 14,
@@ -138,6 +164,8 @@ const data_archival_photos_arr = [
         radius: 40,
         latitude_point_course: 48.688877345286244, 
         longitude_point_course: 29.235087864579945,
+        width: 4006,
+        height: 2782,
     },
     {
         id: 15,
@@ -148,6 +176,8 @@ const data_archival_photos_arr = [
         radius: 40,
         latitude_point_course: 48.68898935949995,
         longitude_point_course: 29.235395171043518,
+        width: 3969,
+        height: 2782,
     },
     {
         id: 16,
@@ -158,6 +188,8 @@ const data_archival_photos_arr = [
         radius: 40,
         latitude_point_course: 48.6891195713183,
         longitude_point_course: 29.23663175953197,
+        width: 4079,
+        height: 2697,
     },
     {
         id: 17,
@@ -168,6 +200,8 @@ const data_archival_photos_arr = [
         radius: 40,
         latitude_point_course: 48.68942515055038,
         longitude_point_course: 29.236647587538616,
+        width: 4030,
+        height: 2746,
     },
     {
         id: 18,
@@ -178,6 +212,8 @@ const data_archival_photos_arr = [
         radius: 40,
         latitude_point_course: 48.704756719196595,
         longitude_point_course: 29.22017169402005,
+        width: 4055,
+        height: 2770,
     },
     {
         id: 19,
@@ -188,6 +224,8 @@ const data_archival_photos_arr = [
         radius: 40,
         latitude_point_course: 48.70527875888941,
         longitude_point_course: 29.22059273467396,
+        width: 4006,
+        height: 2672,
     },
     {
         id: 20,
@@ -198,6 +236,8 @@ const data_archival_photos_arr = [
         radius: 40,
         latitude_point_course: 48.706760648513175,
         longitude_point_course: 29.217556138442728,
+        width: 4018,
+        height: 2721,
     },
     {
         id: 21,
@@ -208,6 +248,8 @@ const data_archival_photos_arr = [
         radius: 40,
         latitude_point_course: 48.684882506220944,
         longitude_point_course: 29.23666969169304,
+        width: 4042,
+        height: 2660,
     },
     {
         id: 22,
@@ -218,6 +260,8 @@ const data_archival_photos_arr = [
         radius: 40,
         latitude_point_course: 48.6847673091683,
         longitude_point_course: 29.236525549476596,
+        width: 4055,
+        height: 2770,
     },
     {
         id: 23,
@@ -228,6 +272,8 @@ const data_archival_photos_arr = [
         radius: 40,
         latitude_point_course: 48.68817803207718,
         longitude_point_course: 29.232428875813984,
+        width: 4030,
+        height: 2746,
     },
     {
         id: 24,
@@ -238,6 +284,8 @@ const data_archival_photos_arr = [
         radius: 40,
         latitude_point_course: 48.68801776834944,
         longitude_point_course: 29.233574427200498,
+        width: 4055,
+        height: 2770,
     },
     {
         id: 25,
@@ -248,6 +296,8 @@ const data_archival_photos_arr = [
         radius: 40,
         latitude_point_course: 48.70796465170188,
         longitude_point_course: 29.21898512490448,
+        width: 4030,
+        height: 2733,
     },
     {
         id: 26,
@@ -258,6 +308,8 @@ const data_archival_photos_arr = [
         radius: 40,
         latitude_point_course: 48.68720141696398,
         longitude_point_course: 29.229318438470063,
+        width: 4055,
+        height: 2733,
     },
     {
         id: 27,
@@ -268,6 +320,8 @@ const data_archival_photos_arr = [
         radius: 40,
         latitude_point_course: 48.686615438809575,
         longitude_point_course: 29.230463989769177,
+        width: 4055,
+        height: 2733,
     },
     {
         id: 28,
@@ -278,6 +332,8 @@ const data_archival_photos_arr = [
         radius: 40,
         latitude_point_course: 48.68586417478797,
         longitude_point_course: 29.229773624391434,
+        width: 4067,
+        height: 2782,
     },
     {
         id: 29,
@@ -288,6 +344,8 @@ const data_archival_photos_arr = [
         radius: 40,
         latitude_point_course: 48.6862848840191,
         longitude_point_course: 29.227899775577644,
+        width: 4006,
+        height: 2672,
     },
     {
         id: 30,
@@ -298,6 +356,8 @@ const data_archival_photos_arr = [
         radius: 40,
         latitude_point_course: 48.686750665139655,
         longitude_point_course: 29.22843082584876,
+        width: 4055,
+        height: 2721,
     },   
     {
         id: 31,
@@ -308,6 +368,8 @@ const data_archival_photos_arr = [
         radius: 40,
         latitude_point_course: 48.70346843673679,
         longitude_point_course: 29.22477762374514,
+        width: 4030,
+        height: 2697,
     },   
     {
         id: 32,
@@ -318,6 +380,8 @@ const data_archival_photos_arr = [
         radius: 40,
         latitude_point_course: 48.70578395338817,
         longitude_point_course: 29.22172826862837,
+        width: 4006,
+        height: 2758,
     },   
     {
         id: 33,
@@ -328,6 +392,8 @@ const data_archival_photos_arr = [
         radius: 40,
         latitude_point_course: 48.70572501433374,
         longitude_point_course: 29.221422057174088,
+        width: 4079,
+        height: 2782,
     },   
     {
         id: 34,
@@ -338,6 +404,8 @@ const data_archival_photos_arr = [
         radius: 40,
         latitude_point_course: 48.68798771882457,
         longitude_point_course: 29.230281915432197,
+        width: 4006,
+        height: 2709,
     },   
     {
         id: 35,
@@ -348,6 +416,8 @@ const data_archival_photos_arr = [
         radius: 40,
         latitude_point_course: 48.706760648513175,
         longitude_point_course: 29.217556138442728,
+        width: 4055,
+        height: 2721,
     },   
     {
         id: 36,
@@ -358,6 +428,8 @@ const data_archival_photos_arr = [
         radius: 40,
         latitude_point_course: 48.705497677149,
         longitude_point_course: 29.220988257712484,
+        width: 4055,
+        height: 2746,
     },
     {
         id: 37,
@@ -368,6 +440,8 @@ const data_archival_photos_arr = [
         radius: 40,
         latitude_point_course: 48.69175586745613, 
         longitude_point_course: 29.22731774057354,
+        width: 6603,
+        height: 1777,
     },
     {
         id: 38,
@@ -378,6 +452,8 @@ const data_archival_photos_arr = [
         radius: 40,
         latitude_point_course: 48.68834776557458,
         longitude_point_course: 29.22748725399208,
+        width: 7158,
+        height: 1876,
     },
     {
         id: 39,
@@ -388,6 +464,8 @@ const data_archival_photos_arr = [
         radius: 40,
         latitude_point_course: 48.692677840464754,
         longitude_point_course: 29.235937568540805,
+        width: 7151,
+        height: 1876,
     },
     {
         id: 40,
@@ -398,6 +476,8 @@ const data_archival_photos_arr = [
         radius: 40,
         latitude_point_course: 0,
         longitude_point_course: 0,
+        width: 4104,
+        height: 2758,
     },
     {
         id: 41,
@@ -408,6 +488,8 @@ const data_archival_photos_arr = [
         radius: 40,
         latitude_point_course: 0,
         longitude_point_course: 0,
+        width: 4055,
+        height: 2733,
     },
     {
         id: 42,
@@ -418,6 +500,8 @@ const data_archival_photos_arr = [
         radius: 40,
         latitude_point_course: 0,
         longitude_point_course: 0,
+        width: 4067,
+        height: 2733,
     },
     {
         id: 43,
@@ -428,6 +512,8 @@ const data_archival_photos_arr = [
         radius: 40,
         latitude_point_course: 0,
         longitude_point_course: 0,
+        width: 4079,
+        height: 2782,
     },
     {
         id: 44,
@@ -438,6 +524,8 @@ const data_archival_photos_arr = [
         radius: 40,
         latitude_point_course: 0,
         longitude_point_course: 0,
+        width: 4055,
+        height: 2856,
     },
     {
         id: 45,
@@ -448,6 +536,8 @@ const data_archival_photos_arr = [
         radius: 40,
         latitude_point_course: 0,
         longitude_point_course: 0,
+        width: 4030,
+        height: 2672,
     },
     {
         id: 46,
@@ -458,6 +548,8 @@ const data_archival_photos_arr = [
         radius: 40,
         latitude_point_course: 0,
         longitude_point_course: 0,
+        width: 4067,
+        height: 2733,
     },
     {
         id: 47,
@@ -468,6 +560,8 @@ const data_archival_photos_arr = [
         radius: 40,
         latitude_point_course: 0,
         longitude_point_course: 0,
+        width: 4104,
+        height: 2709,
     },
     {
         id: 48,
@@ -478,6 +572,8 @@ const data_archival_photos_arr = [
         radius: 40,
         latitude_point_course: 0,
         longitude_point_course: 0,
+        width: 4030,
+        height: 2672,
     },
     {
         id: 49,
@@ -488,6 +584,8 @@ const data_archival_photos_arr = [
         radius: 40,
         latitude_point_course: 0,
         longitude_point_course: 0,
+        width: 4055,
+        height: 2746,
     },
     {
         id: 50,
@@ -498,6 +596,8 @@ const data_archival_photos_arr = [
         radius: 40,
         latitude_point_course: 0,
         longitude_point_course: 0,
+        width: 4006,
+        height: 2709,
     },
     {
         id: 51,
@@ -508,6 +608,8 @@ const data_archival_photos_arr = [
         radius: 40,
         latitude_point_course: 48.690287155703864,
         longitude_point_course: 29.23562350958484,
+        width: 4042,
+        height: 2746,
     },
     {
         id: 52,
@@ -518,6 +620,8 @@ const data_archival_photos_arr = [
         radius: 40,
         latitude_point_course: 0,
         longitude_point_course: 0,
+        width: 4055,
+        height: 2721,
     },
     {
         id: 53,
@@ -528,6 +632,8 @@ const data_archival_photos_arr = [
         radius: 40,
         latitude_point_course: 0,
         longitude_point_course: 0,
+        width: 4140,
+        height: 2765,
     },
     {
         id: 54,
@@ -538,6 +644,8 @@ const data_archival_photos_arr = [
         radius: 40,
         latitude_point_course: 0,
         longitude_point_course: 0,
+        width: 4030,
+        height: 2672,
     },
     {
         id: 55,
@@ -548,5 +656,7 @@ const data_archival_photos_arr = [
         radius: 40,
         latitude_point_course: 0,
         longitude_point_course: 0,
+        width: 4153,
+        height: 2733,
     }, 
 ]
