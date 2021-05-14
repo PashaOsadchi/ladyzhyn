@@ -360,7 +360,7 @@ const data_archival_photos_arr = [
         longitude_point_course: 29.220988257712484,
     },
     {
-        id: 38,
+        id: 37,
         name: "Панорама №1",
         latitude: 48.68832067265999, 
         longitude: 29.234381865069594,
@@ -370,7 +370,7 @@ const data_archival_photos_arr = [
         longitude_point_course: 29.22731774057354,
     },
     {
-        id: 39,
+        id: 38,
         name: "Панорама №2",
         latitude: 48.68799718915407,
         longitude: 29.230885975727208,
@@ -380,7 +380,7 @@ const data_archival_photos_arr = [
         longitude_point_course: 29.22748725399208,
     },
     {
-        id: 40,
+        id: 39,
         name: "Панорама №3",
         latitude: 48.688621370017756,
         longitude: 29.23478443080925,
@@ -390,7 +390,7 @@ const data_archival_photos_arr = [
         longitude_point_course: 29.235937568540805,
     },
     {
-        id: 41,
+        id: 40,
         name: "вул.Будівельників, буд. 29",
         latitude: 0,
         longitude: 0,
@@ -400,7 +400,7 @@ const data_archival_photos_arr = [
         longitude_point_course: 0,
     },
     {
-        id: 42,
+        id: 41,
         name: "Будинок із блок-кімнат",
         latitude: 0,
         longitude: 0,
@@ -410,7 +410,7 @@ const data_archival_photos_arr = [
         longitude_point_course: 0,
     },
     {
-        id: 43,
+        id: 42,
         name: "Дробарний пристрій",
         latitude: 0,
         longitude: 0,
@@ -420,7 +420,7 @@ const data_archival_photos_arr = [
         longitude_point_course: 0,
     },
     {
-        id: 44,
+        id: 43,
         name: "Залізнична станція ТЕС",
         latitude: 0,
         longitude: 0,
@@ -430,7 +430,7 @@ const data_archival_photos_arr = [
         longitude_point_course: 0,
     },
     {
-        id: 45,
+        id: 44,
         name: "Закриті скидні канали",
         latitude: 0,
         longitude: 0,
@@ -440,7 +440,7 @@ const data_archival_photos_arr = [
         longitude_point_course: 0,
     },
     {
-        id: 46,
+        id: 45,
         name: "ІБК",
         latitude: 0,
         longitude: 0,
@@ -450,7 +450,7 @@ const data_archival_photos_arr = [
         longitude_point_course: 0,
     },
     {
-        id: 47,
+        id: 46,
         name: "Котлован вагоноопрокидувача",
         latitude: 0,
         longitude: 0,
@@ -460,7 +460,7 @@ const data_archival_photos_arr = [
         longitude_point_course: 0,
     },
     {
-        id: 48,
+        id: 47,
         name: "Магазин на 28 продавців",
         latitude: 0,
         longitude: 0,
@@ -470,7 +470,7 @@ const data_archival_photos_arr = [
         longitude_point_course: 0,
     },
     {
-        id: 49,
+        id: 48,
         name: "Пускова котельна",
         latitude: 0,
         longitude: 0,
@@ -480,7 +480,7 @@ const data_archival_photos_arr = [
         longitude_point_course: 0,
     },
     {
-        id: 50,
+        id: 49,
         name: "Розвантажувальний пристрій",
         latitude: 0,
         longitude: 0,
@@ -490,7 +490,7 @@ const data_archival_photos_arr = [
         longitude_point_course: 0,
     },
     {
-        id: 51,
+        id: 50,
         name: "РУС",
         latitude: 0,
         longitude: 0,
@@ -500,7 +500,7 @@ const data_archival_photos_arr = [
         longitude_point_course: 0,
     },
     {
-        id: 52,
+        id: 51,
         name: "МНВЦ 'Спадщина'",
         latitude: 48.689798215919495,
         longitude: 29.235775092531334,
@@ -510,7 +510,7 @@ const data_archival_photos_arr = [
         longitude_point_course: 29.23562350958484,
     },
     {
-        id: 53,
+        id: 52,
         name: "Столова на 200 місць",
         latitude: 0,
         longitude: 0,
@@ -520,7 +520,7 @@ const data_archival_photos_arr = [
         longitude_point_course: 0,
     },
     {
-        id: 54,
+        id: 53,
         name: "Столова на 530 місць",
         latitude: 0,
         longitude: 0,
@@ -530,7 +530,7 @@ const data_archival_photos_arr = [
         longitude_point_course: 0,
     },
     {
-        id: 55,
+        id: 54,
         name: "ХВО",
         latitude: 0,
         longitude: 0,
@@ -540,7 +540,7 @@ const data_archival_photos_arr = [
         longitude_point_course: 0,
     },
     {
-        id: 56,
+        id: 55,
         name: "Хімводоочистка",
         latitude: 0,
         longitude: 0,
