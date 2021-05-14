@@ -314,11 +314,8 @@ function img_archival_photos_loaded() {
 
 function view_all_archival_photos() {
 
-    let dialog_width = 0;
-
-    if (window.innerWidth < 540) {
-        dialog_width = (540/100)* 92;
-    } 
+    // Усуває помилку зміщення контенту підчас завантаження зображення
+    let img_width = ((window.innerWidth/100)* 92) - 10;
 
     // Попередньо завантажує зображення
     data_archival_photos_arr.forEach((el) => {
@@ -335,9 +332,12 @@ function view_all_archival_photos() {
         const dialog_detailed_information = document.getElementById("id_dialog_detailed_information");
 
         data_archival_photos_arr.forEach((el) => {
+            // Усуває помилку зміщення контенту підчас завантаження зображення
+            const img_height = el.height/(el.width/img_width);
+
             list_archival_photos += `
             <div class="block_archival_photos">
-                <img class="view_all_img_archival_photos" src="archival_photos/${el.id}.webp" alt="${el.name}">
+                <img class="view_all_img_archival_photos" height="${img_height}" src="archival_photos/${el.id}.webp" alt="${el.name}">
 
                 <div class="block_archival_photos_name">
                     ${el.name}
