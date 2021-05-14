@@ -329,7 +329,7 @@ function view_all_archival_photos() {
         data_archival_photos_arr.forEach((el) => {
             list_archival_photos += `
             <div class="block_archival_photos">
-                <img class="view_all_img_archival_photos" src="archival_photos/${el.id}.webp" alt="${el.name}">
+                <img class="view_all_img_archival_photos"  src="archival_photos/${el.id}.webp" alt="${el.name}">
 
                 <div class="block_archival_photos_name">
                     ${el.name}
@@ -350,7 +350,7 @@ function view_all_archival_photos() {
 
         id_dialog_circles_preloader.close();
         dialog_detailed_information.showModal();
-    }, 1000);
+    }, 2000);
 }
 
 function view_spadshchyna_photos(id) {
