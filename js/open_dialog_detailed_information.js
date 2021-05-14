@@ -313,35 +313,39 @@ function img_archival_photos_loaded() {
 }
 
 function view_all_archival_photos() {
-    let list_archival_photos = "";
-
-    const dialog_detailed_information = document.getElementById("id_dialog_detailed_information");
-
     data_archival_photos_arr.forEach((el) => {
-        list_archival_photos += `
-        <div class="block_archival_photos">
-            <img class="view_all_img_archival_photos" src="archival_photos/${el.id}.webp" alt="${el.name}">
-
-            <div class="block_archival_photos_name">
-                ${el.name}
-            </div>
-        </div>
-        `;
+        new Image().src = `archival_photos/${el.id}.webp`
     });
 
-    dialog_detailed_information.innerHTML = `
-            <div id="dialog_header">
-                <div id="dialog_detailed_information_header">Галерея архівних фото</div>
-                <img height="16" width="16" id="icon_close_dialog" src="icon/close.png" alt="Закрити" onclick="id_dialog_detailed_information.close()"> 
-            </div> 
-
-            <div id="dialog_content">
-                ${list_archival_photos}
-            </div>`;
-
-    open_circles_preloader();
+    open_circles_preloader(); 
 
     setTimeout(() => {
+        let list_archival_photos = "";
+
+        const dialog_detailed_information = document.getElementById("id_dialog_detailed_information");
+
+        data_archival_photos_arr.forEach((el) => {
+            list_archival_photos += `
+            <div class="block_archival_photos">
+                <img class="view_all_img_archival_photos" src="archival_photos/${el.id}.webp" alt="${el.name}">
+
+                <div class="block_archival_photos_name">
+                    ${el.name}
+                </div>
+            </div>
+            `;
+        });
+
+        dialog_detailed_information.innerHTML = `
+                <div id="dialog_header">
+                    <div id="dialog_detailed_information_header">Галерея архівних фото</div>
+                    <img height="16" width="16" id="icon_close_dialog" src="icon/close.png" alt="Закрити" onclick="id_dialog_detailed_information.close()"> 
+                </div> 
+
+                <div id="dialog_content">
+                    ${list_archival_photos}
+                </div>`;
+
         id_dialog_circles_preloader.close();
         dialog_detailed_information.showModal();
     }, 1000);
