@@ -313,6 +313,14 @@ function img_archival_photos_loaded() {
 }
 
 function view_all_archival_photos() {
+
+    let dialog_width = 0;
+
+    if (window.innerWidth < 540) {
+        dialog_width = (540/100)* 92;
+    } 
+
+    // Попередньо завантажує зображення
     data_archival_photos_arr.forEach((el) => {
         let img = new Image(el.width, el.height);
 
