@@ -329,7 +329,7 @@ function view_all_archival_photos() {
         data_archival_photos_arr.forEach((el) => {
             list_archival_photos += `
             <div class="block_archival_photos">
-                <img class="view_all_img_archival_photos" width="${el.width}" src="archival_photos/${el.id}.webp" alt="${el.name}">
+                <img class="view_all_img_archival_photos" src="archival_photos/${el.id}.webp" alt="${el.name}">
 
                 <div class="block_archival_photos_name">
                     ${el.name}
