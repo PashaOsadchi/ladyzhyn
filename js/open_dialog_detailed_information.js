@@ -336,10 +336,10 @@ function view_all_archival_photos() {
             const img_height = el.height/(el.width/img_width);
 
             list_archival_photos += `
-            <div class="block_archival_photos">
+            <div class="block_photos">
                 <img class="view_all_img_archival_photos" height="${img_height}" src="archival_photos/${el.id}.webp" alt="${el.name}">
 
-                <div class="block_archival_photos_name">
+                <div class="block_photos_name">
                     ${el.name}
                 </div>
             </div>
@@ -362,6 +362,9 @@ function view_all_archival_photos() {
 }
 
 function view_spadshchyna_photos(id) {
+    // Усуває помилку зміщення контенту підчас завантаження зображення
+    let img_width = ((window.innerWidth/100)* 92) - 10;
+
     const spadshchyna_photos_arr = data_spadshchyna_photos.filter((e) => e.workshop_id == id);
 
     // Попередньо завантажує зображення
@@ -379,18 +382,21 @@ function view_spadshchyna_photos(id) {
         const dialog_detailed_information = document.getElementById("id_dialog_detailed_information");
 
         spadshchyna_photos_arr[0].photos.forEach((el) => {
+            // Усуває помилку зміщення контенту підчас завантаження зображення
+            const img_height = el.height/(el.width/img_width);
+
             if (el.name == '') {
                 list_spadshchyna_photos += `
-            <div class="block_archival_photos">
-                <img class="view_all_img_archival_photos" src="spadshchyna_photos/${id}/${el.id}.webp" alt="${el.name}">
+            <div class="block_photos">
+                <img class="view_all_img_archival_photos" height="${img_height}" src="spadshchyna_photos/${id}/${el.id}.webp" alt="${el.name}">
             </div>
             `;
             } else {
                 list_spadshchyna_photos += `
-            <div class="block_archival_photos">
-                <img class="view_all_img_archival_photos" src="spadshchyna_photos/${id}/${el.id}.webp" alt="${el.name}">
+            <div class="block_photos">
+                <img class="view_all_img_archival_photos" height="${img_height}" src="spadshchyna_photos/${id}/${el.id}.webp" alt="${el.name}">
 
-                <div class="block_archival_photos_name">
+                <div class="block_photos_name">
                     ${el.name}
                 </div>
             </div>
