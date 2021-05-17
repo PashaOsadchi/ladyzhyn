@@ -9,7 +9,7 @@ function open_dialog_error(str) {
         <img height="16" width="16" id="icon_close_dialog" src="icon/close.png" alt="Закрити" onclick="id_dialog_error.close();"> 
     </div> 
 
-    <div class="dialog_content">${str}</div>
+    <div id="dialog_error_content">${str}</div>
     `;
 }
 

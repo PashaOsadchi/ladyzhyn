@@ -57,7 +57,7 @@ if ("webkitSpeechRecognition" in window || "SpeechRecognition" in window) {
         const transcript = results[results.length - 1][0].transcript;
 
         // console.log(`5 - onresult:  (${performance.now() - t_0})`, transcript);
-        determines_type_search_command(transcript);
+        determines_type_search_command(transcript, "voiсe");
     };
 
     // Виконується, коли мова, яка буде використана для розпізнавання мови, закінчиться.

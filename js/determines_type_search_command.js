@@ -1,23 +1,25 @@
 // Визначає тип пошукової команди
-function determines_type_search_command(command_str) {
+function determines_type_search_command(command_str, search_source) {
     // Видаляє всі накладення на карті
     delete_all_overlay_maps();
 
     command_str = command_str.replace("вулиця", "вул");
     // console.log('command_str: ', command_str)
 
+    let voice_search_command_id = 0;
+    let voice_search_command_name = "";
+
     let human_settlement_id = 0;
-    let human_settlement_name_voice_search = '';
+    let human_settlement_name_voice_search = "";
 
     let organization_type_id = 0;
-    let organization_type = '';
+    let organization_type = "";
 
-    let voice_search_command_id = 0;
-    let voice_search_command_name = '';
+    let organization_id = 0;
+    let organization_name = "";
 
     // Шукає основну команду
     for (let i_1 = 0; i_1 < data_voice_search_commands_arr.length; i_1++) {
-
         for (let i_2 = 0; i_2 < data_voice_search_commands_arr[i_1].voice_search.length; i_2++) {
             const reg = new RegExp(`^${data_voice_search_commands_arr[i_1].voice_search[i_2]}`, "i");
 
@@ -30,7 +32,7 @@ function determines_type_search_command(command_str) {
             }
         }
     }
-    // console.log(`${command_str} - ${voice_search_command_id} - ${voice_search_command_name}`)
+    //console.log(`Основна команда: ${command_str} - ${voice_search_command_id} - ${voice_search_command_name}`)
 
     // Шукає адресу (населений пункт)
     for (let i = 0; i < data_human_settlement_arr.length; i++) {
@@ -42,46 +44,53 @@ function determines_type_search_command(command_str) {
             break;
         }
     }
-    // console.log('human_settlement_id: ', human_settlement_id)
+    //console.log(`Адреса: ${command_str} - ${human_settlement_id} - ${human_settlement_name_voice_search}`)
 
     // Шукає тип організації
     for (let i_1 = 0; i_1 < data_organization_type_arr.length; i_1++) {
-
         for (let i_2 = 0; i_2 < data_organization_type_arr[i_1].voice_search.length; i_2++) {
             const reg = new RegExp(`^${data_organization_type_arr[i_1].voice_search[i_2]}`, "i");
 
             if (reg.test(command_str)) {
                 organization_type_id = data_organization_type_arr[i_1].organization_id;
-                organization_type = data_organization_type_arr[i_1].organization_type;
+                organization_type = data_organization_type_arr[i_1].organization_name;
                 break;
             }
         }
     }
-    // console.log(`${command_str} - ${organization_type_id} - ${organization_type}`)
+    //console.log(`Типи організацій: ${command_str} - ${organization_type_id} - ${organization_type}`)
 
-    // Знаходить найдовший текст який відповідає пошуку
-    if (human_settlement_name_voice_search.length > organization_type.length && human_settlement_name_voice_search.length > voice_search_command_name.length) {
-        organization_type_id = 0;
-        voice_search_command_id = 0;
+    // Шукає організації
+    for (let i = 0; i < data_organization_arr.length; i++) {
+        let reg;
+
+        if (search_source == "organization") {
+            // Пропускає поточну ітерацію циклу якщо відсутня назва організації
+            if (data_organization_arr[i].organization_name == "") continue;
+            reg = new RegExp(`^${data_organization_arr[i].organization_type}: ${data_organization_arr[i].organization_name}`, "i");
+        } else if (search_source == "voiсe") {
+            // Пропускає поточну ітерацію циклу якщо відсутня назва організації
+            if (data_organization_arr[i].organization_name == "") continue;
+            reg = new RegExp(`^${data_organization_arr[i].organization_name}`, "i");
+        } else {
+            reg = new RegExp(`^${data_organization_arr[i].organization_name}`, "i");
+        }
+
+        if (reg.test(command_str)) {
+            organization_id = data_organization_arr[i].organization_id;
+            organization_name = data_organization_arr[i].organization_name;
+            break;
+        }
     }
+    // console.log(`Організації: ${command_str} - ${organization_id} - ${organization_name}`);
 
-    // Знаходить найдовший текст який відповідає пошуку
-    if (organization_type.length > human_settlement_name_voice_search.length && organization_type.length > voice_search_command_name.length) {
-        human_settlement_id = 0;
-        voice_search_command_id = 0;
-    }
+    /* console.log('voice_search_command_id - ', voice_search_command_id)
+    console.log('human_settlement_id - ', human_settlement_id)
+    console.log('organization_type_id', organization_type_id)
+    console.log('organization_id', organization_id) */
 
-    // Знаходить найдовший текст який відповідає пошуку
-    if (voice_search_command_name.length > human_settlement_name_voice_search.length && voice_search_command_name.length > organization_type.length) {
-        human_settlement_id = 0;
-        organization_type_id = 0;
-    }
-    // console.log('voice_search_command_id - ', voice_search_command_id)
-    // console.log('human_settlement_id - ', human_settlement_id)
-    // console.log('organization_type_id', organization_type_id)
-
-    // Перевіряє чи знайдено основну команду
-    if (voice_search_command_id !== 0 && human_settlement_id == 0 && organization_type == 0) {
+    // Основна команда
+    if (voice_search_command_id > 0) {
         switch (voice_search_command_id) {
             // Очищає карту
             case 1:
@@ -108,11 +117,11 @@ function determines_type_search_command(command_str) {
             case 6:
                 add_map_current_coordinates();
                 break;
-            // Облаштовані зони відпочинку  
+            // Облаштовані зони відпочинку
             case 7:
                 add_map_equipped_recreation_areas_all();
                 break;
-            // Зони відпочинку  
+            // Зони відпочинку
             case 8:
                 add_map_recreation_areas_all();
                 break;
@@ -152,38 +161,47 @@ function determines_type_search_command(command_str) {
             case 17:
                 add_map_parking_space_all();
                 break;
-             // Камери відеоспостереження
-             case 18:
+            // Камери відеоспостереження
+            case 18:
                 add_map_video_surveillance_all();
                 break;
-             // Багатоквартирні будинки
-             case 19:
+            // Багатоквартирні будинки
+            case 19:
                 add_overlay_map_house_multifamily_all();
                 break;
             // Архівні фото
             case 20:
                 add_map_archival_photos();
                 break;
-            default:
-                console.log('default');
-                break;
         }
-        return; 
+        return;
+    }
 
-    } else if (voice_search_command_id == 0 && human_settlement_id !== 0 && organization_type == 0) {
-        
-        return voice_command_decoding_address(command_str, human_settlement_id);
+    if (human_settlement_id > 0) return voice_command_decoding_address(command_str, human_settlement_id);
 
-    } else if (voice_search_command_id == 0 && human_settlement_id == 0 && organization_type_id > 0) {
-        
-        return voice_command_add_map_organization(organization_type)
+    if (search_source == "organization_type" && organization_type_id > 0) return voice_command_add_map_organization(organization_type);
 
-    } else if (voice_search_command_id !== 0 && human_settlement_id !== 0 && organization_type !== 0) {
-        
-        return open_dialog_error("Одночасно розпізнає лише одну команду!<br> Спробуйте ще раз.");
-    } 
+    if (search_source == "organization" && organization_id > 0) return voice_command_add_map_organization_find_id(organization_id);
+
+    if (search_source == "voiсe") {
+        if (organization_type_id > 0) return voice_command_add_map_organization(organization_type);
+        if (organization_id > 0) return voice_command_add_map_organization_find_id(organization_id);
+    }
+
+    open_dialog_error("На жаль, за вашим запитом нічого незнайдено.");
 }
 
+function voice_command_add_map_organization_find_id(id) {
+    const organization_arr = data_organization_arr.filter((e) => e.organization_id == id);
+
+    add_overlay_map_organization(organization_arr);
+
+    // Якщо було знайдено одну організацію то маштабує карту для однієї організації
+    if (organization_arr.length == 1) return map_offset_selected_organization(organization_arr);
+
+    // Маштабує карту враховуючи видимість декількох організацій
+    map_offset(organization_arr);
+}
 
 function voice_command_add_map_organization(organization_type) {
     const organization_arr = data_organization_arr.filter((e) => e.organization_type == organization_type);

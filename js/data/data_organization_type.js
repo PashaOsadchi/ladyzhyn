@@ -1,7 +1,8 @@
 const data_organization_type_arr = [
     {
         organization_id: 1,
-        organization_type: "Автомагазин",
+        organization_name: "Автомагазин",
+        organization_type: "Автомагазини",
         voice_search: [
             "Автомагазин",
             "Автомагазини",
@@ -9,7 +10,8 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 2,
-        organization_type: "Автомийка",
+        organization_name: "Автомийка",
+        organization_type: "Автомийки",
         voice_search: [
             "Автомийка",
             "Автомийки",
@@ -18,7 +20,8 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 3,
-        organization_type: "Автомобільна школа",
+        organization_name: "Автомобільна школа",
+        organization_type: "Автомобільні школи",
         voice_search: [
             "Автомобільна школа",
             "Автомобільні школи",
@@ -27,7 +30,8 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 4,
-        organization_type: "Автосервіс",
+        organization_name: "Автосервіс",
+        organization_type: "Автосервіси",
         voice_search: [
             "Автосервіс",
             "Автосервіси",
@@ -37,7 +41,8 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 5,
-        organization_type: "Автостанція",
+        organization_name: "Автостанція",
+        organization_type: "Автостанції",
         voice_search: [
             "Автостанція",
             "Автостанції",
@@ -47,7 +52,8 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 6,
-        organization_type: "Аптека",
+        organization_name: "Аптека",
+        organization_type: "Аптеки",
         voice_search: [
             "Аптека",
             "Аптеки",
@@ -55,6 +61,7 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 7,
+        organization_name: "Ательє з пошиття одягу",
         organization_type: "Ательє з пошиття одягу",
         voice_search: [
             "Ательє",
@@ -68,7 +75,8 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 8,
-        organization_type: "Банк",
+        organization_name: "Банк",
+        organization_type: "Банки",
         voice_search: [
             "Банк",
             "Банки",
@@ -78,15 +86,18 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 9,
-        organization_type: "Безоплатна правова допомога",
+        organization_name: "Безоплатна правова допомога",
+        organization_type: "Безоплатні правові допомоги",
         voice_search: [
             "Безоплатна правова допомога",
+            "Безоплатні правові допомоги",
             /* "Правова допомога", (може бути у адвоката)*/
         ],
     },
     {
         organization_id: 10,
-        organization_type: "Будівельна організація",
+        organization_name: "Будівельна організація",
+        organization_type: "Будівельні організації",
         voice_search: [
             "Будівельна організація",
             "Будівельні організації",
@@ -95,7 +106,8 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 11,
-        organization_type: "Будівельний супермаркет",
+        organization_name: "Будівельний супермаркет",
+        organization_type: "Будівельні супермаркети",
         voice_search: [
             "Будівельний супермаркет",
             "Будівельні супермаркети",
@@ -103,7 +115,8 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 12,
-        organization_type: "Ветаптека",
+        organization_name: "Ветаптека",
+        organization_type: "Ветаптеки",
         voice_search: [
             "Ветаптека",
             "Ветаптеки",
@@ -112,7 +125,8 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 13,
-        organization_type: "Виробництво пам'ятників",
+        organization_name: "Виробництво пам'ятників",
+        organization_type: "Виробники пам'ятників",
         voice_search: [
             "Виробництво пам'ятників",
             "Виробники пам'ятників",
@@ -121,6 +135,7 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 14,
+        organization_name: "Відділення кабельного телебачення",
         organization_type: "Відділення кабельного телебачення",
         voice_search: [
             "Відділення кабельного телебачення",
@@ -128,6 +143,7 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 15,
+        organization_name: "Відділення обміну валют",
         organization_type: "Відділення обміну валют",
         voice_search: [
             "Відділення обміну валют",
@@ -138,6 +154,7 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 16,
+        organization_name: "Відділення ПАТ",
         organization_type: "Відділення ПАТ",
         voice_search: [
             "Відділення ПАТ",
@@ -145,6 +162,7 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 17,
+        organization_name: "Відділення ремонту телерадіоапаратури",
         organization_type: "Відділення ремонту телерадіоапаратури",
         voice_search: [
             "Відділення ремонту телерадіоапаратури",
@@ -159,15 +177,18 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 18,
-        organization_type: "Відділення служби доставки",
+        organization_name: "Відділення служби доставки",
+        organization_type: "Відділення служб доставки",
         voice_search: [
+            "Відділення служб доставки",
             "Відділення служби доставки",
             "Служби доставки",
         ],
     },
     {
         organization_id: 19,
-        organization_type: "Відділення страхової компанії",
+        organization_name: "Відділення страхової компанії",
+        organization_type: "Відділення страхових компаній",
         voice_search: [
             "Відділення страхової компанії",
             "Відділення страхової",
@@ -179,6 +200,7 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 20,
+        organization_name: "Відділення ТРК",
         organization_type: "Відділення ТРК",
         voice_search: [
             "Відділення ТРК",
@@ -190,6 +212,7 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 21,
+        organization_name: "ВКП",
         organization_type: "ВКП",
         voice_search: [
             "ВКП",
@@ -197,7 +220,8 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 22,
-        organization_type: "Гаражний кооператив",
+        organization_name: "Гаражний кооператив",
+        organization_type: "Гаражні кооперативи",
         voice_search: [
             "Гаражний кооператив",
             "Гаражні кооперативи",
@@ -205,7 +229,8 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 23,
-        organization_type: "Готель",
+        organization_name: "Готель",
+        organization_type: "Готелі",
         voice_search: [
             "Готель",
             "Готелі",
@@ -215,7 +240,8 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 24,
-        organization_type: "Державна установа",
+        organization_name: "Державна установа",
+        organization_type: "Державні установи",
         voice_search: [
             "Державна установа",
             "Державні установи",
@@ -225,7 +251,8 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 25,
-        organization_type: "Дошкільний навчальний заклад",
+        organization_name: "Дошкільний навчальний заклад",
+        organization_type: "Дошкільні навчальні заклади",
         voice_search: [
             "Дошкільний навчальний заклад",
             "Дошкільні навчальні заклади",
@@ -238,7 +265,8 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 26,
-        organization_type: "Друкарня",
+        organization_name: "Друкарня",
+        organization_type: "Друкарні",
         voice_search: [
             "Друкарня",
             "Друкарні",
@@ -246,7 +274,8 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 27,
-        organization_type: "Заправка",
+        organization_name: "Заправка",
+        organization_type: "Заправки",
         voice_search: [
             "Заправка",
             "Заправки",
@@ -257,7 +286,8 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 28,
-        organization_type: "Кавярня",
+        organization_name: "Кавярня",
+        organization_type: "Кавярні",
         voice_search: [
             "Кавярня",
             "кав'ярня",
@@ -267,6 +297,7 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 29,
+        organization_name: "Кафе",
         organization_type: "Кафе",
         voice_search: [
             "Кафе",
@@ -278,7 +309,8 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 30,
-        organization_type: "Кінотеатр",
+        organization_name: "Кінотеатр",
+        organization_type: "Кінотеатри",
         voice_search: [
             "Кінотеатр",
             "Кінотеатри",
@@ -286,7 +318,8 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 31,
-        organization_type: "Кіоск",
+        organization_name: "Кіоск",
+        organization_type: "Кіоски",
         voice_search: [
             "Кіоск",
             "Кіоски",
@@ -294,7 +327,8 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 32,
-        organization_type: "Комунальне підприємство",
+        organization_name: "Комунальне підприємство",
+        organization_type: "Комунальні підприємства",
         voice_search: [
             "Комунальне підприємство",
             "Комунальні підприємства",
@@ -302,7 +336,8 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 33,
-        organization_type: "Кузня",
+        organization_name: "Кузня",
+        organization_type: "Кузні",
         voice_search: [
             "Кузня",
             "Кузні",
@@ -310,7 +345,8 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 34,
-        organization_type: "Лазня",
+        organization_name: "Лазня",
+        organization_type: "Лазні",
         voice_search: [
             "Лазня",
             "Лазні",
@@ -320,7 +356,8 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 35,
-        organization_type: "Ломбард",
+        organization_name: "Ломбард",
+        organization_type: "Ломбарди",
         voice_search: [
             "Ломбард",
             "Ломбарди",
@@ -328,7 +365,8 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 36,
-        organization_type: "Лото Маркет",
+        organization_name: "Лото маркет",
+        organization_type: "Лото Маркети",
         voice_search: [
             "Лото маркет",
             "Лотомаркет",
@@ -343,7 +381,8 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 37,
-        organization_type: "Магазин",
+        organization_name: "Магазин",
+        organization_type: "Магазини",
         voice_search: [
             "Магазин",
             "Магазини",
@@ -351,7 +390,8 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 38,
-        organization_type: "Майстерня",
+        organization_name: "Майстерня",
+        organization_type: "Майстерні",
         voice_search: [
             "Майстерня",
             "Майстерні",
@@ -359,7 +399,8 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 39,
-        organization_type: "Масажний кабінет",
+        organization_name: "Масажний кабінет",
+        organization_type: "Масажні кабінети",
         voice_search: [
             "Масажний кабінет",
             "Масажні кабінети",
@@ -368,7 +409,8 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 40,
-        organization_type: "МАФ",
+        organization_name: "МАФ",
+        organization_type: "Мафи",
         voice_search: [
             "МАФ",
             "Мафи",
@@ -378,7 +420,8 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 41,
-        organization_type: "Меблевий цех",
+        organization_name: "Меблевий цех",
+        organization_type: "Меблеві цехи",
         voice_search: [
             "Меблевий цех",
             "Меблеві цехи",
@@ -391,7 +434,8 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 42,
-        organization_type: "Медичний заклад",
+        organization_name: "Медичний заклад",
+        organization_type: "Медичні заклади",
         voice_search: [
             "Медичний заклад",
             "Медичні заклади",
@@ -407,7 +451,8 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 43,
-        organization_type: "Медичний кабінет",
+        organization_name: "Медичний кабінет",
+        organization_type: "Медичні кабінети",
         voice_search: [
             "Медичний кабінет",
             "Медичні кабінети",
@@ -415,7 +460,8 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 44,
-        organization_type: "Медичний центр",
+        organization_name: "Медичний центр",
+        organization_type: "Медичні центри",
         voice_search: [
             "Медичний центр",
             "Медичні центри",
@@ -425,7 +471,8 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 45,
-        organization_type: "Модуль",
+        organization_name: "Модуль",
+        organization_type: "Модулі",
         voice_search: [
             "Модуль",
             "Модулі",
@@ -435,7 +482,8 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 46,
-        organization_type: "Олійня",
+        organization_name: "Олійня",
+        organization_type: "Олійні",
         voice_search: [
             "Олійня",
             "Олійні",
@@ -443,7 +491,8 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 47,
-        organization_type: "Перукарня",
+        organization_name: "Перукарня",
+        organization_type: "Перукарні",
         voice_search: [
             "Перукарня",
             "Перукарні",
@@ -451,7 +500,8 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 48,
-        organization_type: "Приватний нотаріус",
+        organization_name: "Приватний нотаріус",
+        organization_type: "Приватні нотаріуси",
         voice_search: [
             "Приватний нотаріус",
             "Приватні нотаріуси",
@@ -461,7 +511,8 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 49,
-        organization_type: "Пункт збору вторсировини",
+        organization_name: "Пункт збору вторсировини",
+        organization_type: "Пункти збору вторсировини",
         voice_search: [
             "Пункт збору вторсировини",
             "Пункти збору вторсировини",
@@ -478,7 +529,8 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 50,
-        organization_type: "Релігійна споруда",
+        organization_name: "Релігійна споруда",
+        organization_type: "Релігійні споруди",
         voice_search: [
             "Релігійна споруда",
             "Релігійні споруди",
@@ -492,7 +544,8 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 51,
-        organization_type: "Ресторан",
+        organization_name: "Ресторан",
+        organization_type: "Ресторани",
         voice_search: [
             "Ресторан",
             "Ресторани",
@@ -500,7 +553,8 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 52,
-        organization_type: "Розважальний комплекс",
+        organization_name: "Розважальний комплекс",
+        organization_type: "Розважальні комплекси",
         voice_search: [
             "Розважальний комплекс",
             "Розважальні комплекси",
@@ -514,7 +568,8 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 53,
-        organization_type: "Салон краси",
+        organization_name: "Салон краси",
+        organization_type: "Салони краси",
         voice_search: [
             "Салон краси",
             "Салони краси",
@@ -523,7 +578,8 @@ const data_organization_type_arr = [
     },
     {
         organization_id: "54",
-        organization_type: "Сервісний центр",
+        organization_name: "Сервісний центр",
+        organization_type: "Сервісні центри",
         voice_search: [
             "Сервісний центр",
             "Сервісні центри",
@@ -531,7 +587,8 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 55,
-        organization_type: "Склад",
+        organization_name: "Склад",
+        organization_type: "Склади",
         voice_search: [
             "Склад",
             "Склади",
@@ -539,7 +596,8 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 56,
-        organization_type: "Спортзал",
+        organization_name: "Спортзал",
+        organization_type: "Спортзали",
         voice_search: [
             "Спортзал",
             "Спортзали",
@@ -553,7 +611,8 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 57,
-        organization_type: "Стоматологічний кабінет",
+        organization_name: "Стоматологічний кабінет",
+        organization_type: "Стоматологічні кабінети",
         voice_search: [
             "Стоматологічний кабінет",
             "Стоматологічні кабінети",
@@ -567,7 +626,8 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 58,
-        organization_type: "Супермаркет",
+        organization_name: "Супермаркет",
+        organization_type: "Супермаркети",
         voice_search: [
             "Супермаркет",
             "Супермаркети",
@@ -575,7 +635,8 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 59,
-        organization_type: "Торгівельний павільйон",
+        organization_name: "Торгівельний павільйон",
+        organization_type: "Торгівельні павільйони",
         voice_search: [
             "Торгівельний павільйон",
             "Торгівельні павільйони",
@@ -584,7 +645,8 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 60,
-        organization_type: "Торгівельний центр",
+        organization_name: "Торгівельний центр",
+        organization_type: "Торгівельні центри",
         voice_search: [
             "Торгівельний центр",
             "Торгівельні центри",
@@ -593,7 +655,8 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 61,
-        organization_type: "Торгівельно-розважальний комплекс",
+        organization_name: "Торгівельно-розважальний комплекс",
+        organization_type: "Торгівельно-розважальні комплекси",
         voice_search: [
             "Торгівельно-розважальний комплекс",
             "Торгівельно розважальні комплекси",
@@ -601,7 +664,8 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 62,
-        organization_type: "Торговий причіп",
+        organization_name: "Торговий причіп",
+        organization_type: "Торгові причепи",
         voice_search: [
             "Торговий причіп",
             "Торгові причепи",
@@ -611,7 +675,8 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 63,
-        organization_type: "Туристична агенція",
+        organization_name: "Туристична агенція",
+        organization_type: "Туристичні агенції",
         voice_search: [
             "Туристична агенція",
             "Туристичні агенції",
@@ -623,6 +688,7 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 64,
+        organization_name: "Фотопослуги",
         organization_type: "Фотопослуги",
         voice_search: [
             "Фотопослуги",
@@ -630,7 +696,8 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 65,
-        organization_type: "Центр вивчення мов",
+        organization_name: "Центр вивчення іноземних мов",
+        organization_type: "Центри вивчення мов",
         voice_search: [
             "Центр вивчення іноземних мов",
             "Центри вивчення іноземних мов",
@@ -648,7 +715,8 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 66,
-        organization_type: "Швейна майстерня",
+        organization_name: "Швейна майстерня",
+        organization_type: "Швейні майстерні",
         voice_search: [
             "Швейна майстерня",
             "Швейні майстерні",
@@ -668,7 +736,8 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 67,
-        organization_type: "Шиномонтаж",
+        organization_name: "Шиномонтаж",
+        organization_type: "Шиномонтажі",
         voice_search: [
             "Шиномонтаж",
             "Шиномонтажі",
@@ -676,7 +745,8 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 68,
-        organization_type: "Школа",
+        organization_name: "Школа",
+        organization_type: "Школи",
         voice_search: [
             "Школа",
             "Школи",
@@ -688,7 +758,8 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 69,
-        organization_type: "Ювелірна майстерня",
+        organization_name: "Ювелірна майстерня",
+        organization_type: "Ювелірні майстерні",
         voice_search: [
             "Ювелірна майстерня",
             "Ювелірні майстерні",
@@ -697,7 +768,8 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 70,
-        organization_type: "Адвокат",
+        organization_name: "Адвокат",
+        organization_type: "Адвокати",
         voice_search: [
             "Адвокат",
             "Адвокати",

@@ -13,6 +13,9 @@ function event_value_search_field_changes() {
         // Додає типи організацій
         list_search_parameters += adding_selecting_found(data_organization_type_arr, "organization_type");
 
+        // Додає організації
+        list_search_parameters += adding_selecting_found_organization(data_organization_arr, "organization_name");
+
         if (list_search_parameters == "") {
             document.querySelector("#id_list_search_parameters").innerHTML = '<div id="id_div_search_nothing_found">На жаль, за вашим запитом нічого не знайдено</div>';
         } else {
@@ -32,7 +35,24 @@ function adding_selecting_found(arr, field_name) {
         if (reg.test(el[field_name])) {
             const result_arr = el[field_name].match(reg);
             const name = el[field_name].replace(result_arr[0], `<span>${result_arr[0]}</span>`);
-            list_search_parameters += `<button class="button_found_search_parameters"  onclick="determines_type_search_command('${el[field_name]}')">${name}</button>`;
+            list_search_parameters += `<button class="button_found_search_parameters"  onclick="determines_type_search_command('${el[field_name]}', 'organization_type')">${name}</button>`;
+        }
+    });
+
+    return list_search_parameters;
+};
+
+function adding_selecting_found_organization(arr, field_name) {
+    let list_search_parameters = "";
+
+    arr.forEach((el) => {
+        const reg = new RegExp(id_input_search.value, "i");
+
+        if (reg.test(el[field_name])) {
+            const result_arr = el[field_name].match(reg);
+            const name = el[field_name].replace(result_arr[0], `<span>${result_arr[0]}</span>`);
+            list_search_parameters += `<button class="button_found_search_parameters"  onclick="determines_type_search_command('${el.organization_type}: ${el[field_name]}', 'organization')">${el.organization_type}: ${name}</button>`;
+
         }
     });
 

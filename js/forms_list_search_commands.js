@@ -30,7 +30,7 @@ function forms_list_search_commands() {
 
     // Додає типи організацій
     data_organization_type_arr.forEach((el) => {
-        list_search_parameters += `<button class="button_commands_service_teams" onclick="determines_type_search_command('${el.organization_type}')">${el.organization_type}</button>`;
+        list_search_parameters += `<button class="button_commands_service_teams" onclick="determines_type_search_command('${el.organization_type}', 'organization_type')">${el.organization_type}</button>`;
     });
 
     list_search_parameters += `
