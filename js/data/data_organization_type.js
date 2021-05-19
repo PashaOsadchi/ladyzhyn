@@ -125,12 +125,15 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 13,
-        organization_name: "Виробництво пам'ятників",
-        organization_type: "Виробники пам'ятників",
+        organization_name: "Виробництво памятників",
+        organization_type: "Виробники памятників",
         voice_search: [
+            "Виробництво памятників",
+            "Виробники памятників",
+            "Виробники памятників",
             "Виробництво пам'ятників",
             "Виробники пам'ятників",
-            "Виробники памятників",
+            "Виробники пам'ятників",
         ],
     },
     {
@@ -365,10 +368,10 @@ const data_organization_type_arr = [
     },
     {
         organization_id: 36,
-        organization_name: "Лото маркет",
+        organization_name: "Лото Маркет",
         organization_type: "Лото Маркети",
         voice_search: [
-            "Лото маркет",
+            "Лото Маркет",
             "Лотомаркет",
             "Лото маркети",
             "Лотомаркети",

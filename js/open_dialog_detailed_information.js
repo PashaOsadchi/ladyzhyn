@@ -79,17 +79,6 @@ function open_dialog_detailed_information(id) {
             <b>Назва: </b> ${organization_arr[0].organization_name}<br>
             <b>Тип: </b> ${organization_arr[0].organization_type}<br>`;
 
-            switch (organization_arr[0].organization_commodity_specialization) {
-                case "food_goods":
-                    organization_str += `<b>Спеціалізація: </b> харчові групи товарів<br>`;
-                    break;
-                case "mixed_goods":
-                    organization_str += `<b>Спеціалізація: </b> змішані групи товарів<br>`;
-                    break;
-                case "non_food_goods":
-                    organization_str += `<b>Спеціалізація: </b> нехарчові групи товарів<br>`;
-            }
-
             if (organization_arr[0].organization_phone_2) organization_str += `<b>Телефон: </b> <a href="tel:${organization_arr[0].organization_phone_2}">${organization_arr[0].organization_phone_2}</a><br>`;
 
             organization_str += `<b>Адреса: </b> ${organization_arr[0].organization_address}<br>`;

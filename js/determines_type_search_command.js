@@ -73,6 +73,8 @@ function determines_type_search_command(command_str, search_source) {
             if (data_organization_arr[i].organization_name == "") continue;
             reg = new RegExp(`^${data_organization_arr[i].organization_name}`, "i");
         } else {
+            // Пропускає поточну ітерацію циклу якщо відсутня назва організації
+            if (data_organization_arr[i].organization_name == "") continue;
             reg = new RegExp(`^${data_organization_arr[i].organization_name}`, "i");
         }
 
@@ -205,6 +207,8 @@ function voice_command_add_map_organization_find_id(id) {
 
 function voice_command_add_map_organization(organization_type) {
     const organization_arr = data_organization_arr.filter((e) => e.organization_type == organization_type);
+
+    if (organization_arr.length == 0) return open_dialog_error("На жаль, за вашим запитом нічого незнайдено.");
 
     add_overlay_map_organization(organization_arr);
 

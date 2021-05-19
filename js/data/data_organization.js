@@ -16,7 +16,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2553511779279",
         latitude: "48.6830922528056",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 2,
@@ -35,7 +34,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.232298148536",
         latitude: "48.6972586827159",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 3,
@@ -54,7 +52,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2394611680772",
         latitude: "48.6885974164397",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 4,
@@ -73,7 +70,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2564510539353",
         latitude: "48.682397085841",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 5,
@@ -92,7 +88,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2260004434767",
         latitude: "48.6850562600612",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 6,
@@ -111,7 +106,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2427642123641",
         latitude: "48.6863998041395",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 7,
@@ -130,7 +124,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2620222759549",
         latitude: "48.680896581247",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 8,
@@ -149,7 +142,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2605465526332",
         latitude: "48.6830529223854",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 9,
@@ -168,7 +160,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.229670812872",
         latitude: "48.6890741879452",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 10,
@@ -187,7 +178,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.257716",
         latitude: "48.682039",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 11,
@@ -206,7 +196,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.224764",
         latitude: "48.682894",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 12,
@@ -225,7 +214,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2283199000985",
         latitude: "48.688307173308",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 13,
@@ -244,7 +232,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2594224861136",
         latitude: "48.6765332190528",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 14,
@@ -263,7 +250,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2242323077136",
         latitude: "48.6870367307112",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 15,
@@ -282,7 +268,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.232224",
         latitude: "48.697326",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 16,
@@ -301,7 +286,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2323058550427",
         latitude: "48.691383806953",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 17,
@@ -320,7 +304,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2308582004944",
         latitude: "48.6862827203877",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 18,
@@ -339,7 +322,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2347688612381",
         latitude: "48.6919769793041",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 19,
@@ -358,7 +340,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2348534630905",
         latitude: "48.684382504545",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 20,
@@ -377,7 +358,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2292566077651",
         latitude: "48.68104897795",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 21,
@@ -396,7 +376,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2370527896073",
         latitude: "48.6905458205031",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 22,
@@ -415,7 +394,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2369144076949",
         latitude: "48.6855532882409",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 23,
@@ -434,7 +412,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2324881329898",
         latitude: "48.6888546272828",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 24,
@@ -453,7 +430,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2320279464817",
         latitude: "48.6911856212725",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 25,
@@ -472,7 +448,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2274534954387",
         latitude: "48.6792756386806",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 26,
@@ -491,7 +466,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.234452",
         latitude: "48.685362",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 27,
@@ -510,7 +484,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.229747",
         latitude: "48.681481",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 28,
@@ -529,7 +502,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2318959014358",
         latitude: "48.682982795097",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 29,
@@ -548,7 +520,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.234933929361",
         latitude: "48.685590183585",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 30,
@@ -567,7 +538,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2334948832076",
         latitude: "48.6911912399505",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 31,
@@ -586,7 +556,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2305404709946",
         latitude: "48.6864861848039",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 32,
@@ -605,7 +574,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2305641060179",
         latitude: "48.6820537166641",
-        organization_commodity_specialization: "food_goods",
     },
     {
         organization_id: 33,
@@ -624,7 +592,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2202812226603",
         latitude: "48.6830449548726",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 34,
@@ -643,7 +610,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2324417601092",
         latitude: "48.6916102032781",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 35,
@@ -662,7 +628,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2320305734654",
         latitude: "48.6911507052406",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 36,
@@ -681,11 +646,10 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.259648",
         latitude: "48.6773",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 37,
-        organization_type: "Відділення кабельного  телебачення",
+        organization_type: "Відділення кабельного телебачення",
         organization_name: "ТОВ КТЛ",
         organization_phone_2: "+380434364053",
         organization_does_not_work: "false",
@@ -699,8 +663,7 @@ const data_organization_arr = [
         organization_address: "24321, Вінницька обл., м.Ладижин, вул. Петра Кравчика 12Б",
         organization_note_address: "біля буд. 10",
         longitude: "29.230286",
-        latitude: "48.688314,",
-        organization_commodity_specialization: "non_food_goods",
+        latitude: "48.688314",
     },
     {
         organization_id: 38,
@@ -719,7 +682,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2323276897724",
         latitude: "48.6865536203036",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 39,
@@ -738,7 +700,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.236865",
         latitude: "48.683843",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 40,
@@ -757,7 +718,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.230039",
         latitude: "48.688137",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 41,
@@ -776,7 +736,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2284046441168",
         latitude: "48.698449783067",
-        organization_commodity_specialization: "mixed_goods",
     },
     {
         organization_id: 42,
@@ -795,7 +754,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2369249202277",
         latitude: "48.6838390920361",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 43,
@@ -814,7 +772,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2373912110691",
         latitude: "48.6856708900953",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 44,
@@ -833,7 +790,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.234538",
         latitude: "48.693644",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 45,
@@ -852,7 +808,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.23204",
         latitude: "48.691678",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 46,
@@ -871,7 +826,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.230992",
         latitude: "48.689533",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 47,
@@ -890,7 +844,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.237198",
         latitude: "48.684264",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 48,
@@ -909,7 +862,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.26079",
         latitude: "48.678685",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 49,
@@ -928,7 +880,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2214751090457",
         latitude: "48.6807326697926",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 50,
@@ -947,7 +898,7 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2282271531349",
         latitude: "48.6758755985645",
-        organization_commodity_specialization: "",
+        organization_commodity_specialization: "managing_organization",
     },
     {
         organization_id: 51,
@@ -966,7 +917,7 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2245605954361",
         latitude: "48.6812721144869",
-        organization_commodity_specialization: "",
+        organization_commodity_specialization: "managing_organization",
     },
     {
         organization_id: 52,
@@ -985,7 +936,7 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2245820531082",
         latitude: "48.6855363116758",
-        organization_commodity_specialization: "",
+        organization_commodity_specialization: "managing_organization",
     },
     {
         organization_id: 53,
@@ -1004,7 +955,7 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2231873044204",
         latitude: "48.6784243930634",
-        organization_commodity_specialization: "",
+        organization_commodity_specialization: "managing_organization",
     },
     {
         organization_id: 54,
@@ -1023,7 +974,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2293871083264",
         latitude: "48.7047012448634",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 55,
@@ -1042,7 +992,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2271823453079",
         latitude: "48.6855016450497",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 56,
@@ -1061,7 +1010,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2355314629985",
         latitude: "48.6900622929437",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 57,
@@ -1080,7 +1028,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2300630377899",
         latitude: "48.6866243021508",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 58,
@@ -1099,7 +1046,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2582373757731",
         latitude: "48.6795146556952",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 59,
@@ -1118,7 +1064,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2369438188018",
         latitude: "48.6844419632809",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 60,
@@ -1137,7 +1082,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2324481336536",
         latitude: "48.6900265566908",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 61,
@@ -1156,7 +1100,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2292156820741",
         latitude: "48.6841401500851",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 62,
@@ -1175,7 +1118,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2351388418874",
         latitude: "48.6879336347117",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 63,
@@ -1194,7 +1136,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2293660416965",
         latitude: "48.6824869516246",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 64,
@@ -1213,7 +1154,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2284472253061",
         latitude: "48.6813835787464",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 65,
@@ -1232,7 +1172,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2319141402606",
         latitude: "48.6845092539978",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 66,
@@ -1251,7 +1190,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2366541399008",
         latitude: "48.6850298687189",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 67,
@@ -1270,7 +1208,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2349923634737",
         latitude: "48.6932964120634",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 68,
@@ -1289,7 +1226,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2421486581002",
         latitude: "48.6873809979143",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 69,
@@ -1308,7 +1244,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2625195290673",
         latitude: "48.6800614305444",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 70,
@@ -1327,7 +1262,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2571136950612",
         latitude: "48.6744457115483",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 71,
@@ -1346,7 +1280,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2302215439175",
         latitude: "48.681784764711",
-        organization_commodity_specialization: "food_goods",
     },
     {
         organization_id: 72,
@@ -1365,7 +1298,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2346937593857",
         latitude: "48.6928411320173",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 73,
@@ -1384,7 +1316,6 @@ const data_organization_arr = [
         organization_note_address: "Біля ЗОШ № 3",
         longitude: "29.2316509055267",
         latitude: "48.685884130406",
-        organization_commodity_specialization: "food_goods",
     },
     {
         organization_id: 74,
@@ -1403,7 +1334,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2251260794894",
         latitude: "48.6836198391809",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 75,
@@ -1422,7 +1352,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2323375510346",
         latitude: "48.6827391645582",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 76,
@@ -1441,7 +1370,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2607173268432",
         latitude: "48.6787470229093",
-        organization_commodity_specialization: "food_goods",
     },
     {
         organization_id: 77,
@@ -1460,7 +1388,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2591271460269",
         latitude: "48.6773918697915",
-        organization_commodity_specialization: "food_goods",
     },
     {
         organization_id: 78,
@@ -1479,7 +1406,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2601504642313",
         latitude: "48.6792086512531",
-        organization_commodity_specialization: "food_goods",
     },
     {
         organization_id: 79,
@@ -1498,7 +1424,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2329694407305",
         latitude: "48.6968698519585",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 80,
@@ -1517,7 +1442,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2399167381099",
         latitude: "48.6879976436278",
-        organization_commodity_specialization: "food_goods",
     },
     {
         organization_id: 81,
@@ -1536,7 +1460,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2297451767201",
         latitude: "48.7044404696196",
-        organization_commodity_specialization: "food_goods",
     },
     {
         organization_id: 82,
@@ -1555,7 +1478,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2371420481479",
         latitude: "48.6836914028299",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 83,
@@ -1574,7 +1496,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2615988236771",
         latitude: "48.6804872772054",
-        organization_commodity_specialization: "food_goods",
     },
     {
         organization_id: 84,
@@ -1593,7 +1514,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2347225689884",
         latitude: "48.6915394320741",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 85,
@@ -1612,7 +1532,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2293894651148",
         latitude: "48.697612227036",
-        organization_commodity_specialization: "food_goods",
     },
     {
         organization_id: 86,
@@ -1631,7 +1550,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2297769559866",
         latitude: "48.6880159944381",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 87,
@@ -1650,7 +1568,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2367475626402",
         latitude: "48.6856360422062",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 88,
@@ -1669,7 +1586,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.231978",
         latitude: "48.691377",
-        organization_commodity_specialization: "food_goods",
     },
     {
         organization_id: 89,
@@ -1688,7 +1604,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.236845",
         latitude: "48.685776",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 90,
@@ -1707,7 +1622,6 @@ const data_organization_arr = [
         organization_note_address: "біля паркану міського ринку",
         longitude: "29.2336959776321",
         latitude: "48.6920532470419",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 91,
@@ -1726,7 +1640,6 @@ const data_organization_arr = [
         organization_note_address: "біля паркану міського ринку",
         longitude: "29.2335565027633",
         latitude: "48.691927538411",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 92,
@@ -1745,7 +1658,6 @@ const data_organization_arr = [
         organization_note_address: "біля паркану міського ринку",
         longitude: "29.234039300386",
         latitude: "48.6923170570921",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 93,
@@ -1764,7 +1676,6 @@ const data_organization_arr = [
         organization_note_address: "біля паркану міського ринку",
         longitude: "29.2339481052795",
         latitude: "48.6922755039864",
-        organization_commodity_specialization: "food_goods",
     },
     {
         organization_id: 94,
@@ -1783,7 +1694,6 @@ const data_organization_arr = [
         organization_note_address: "біля паркану міського ринку",
         longitude: "29.2338730034271",
         latitude: "48.6921987473038",
-        organization_commodity_specialization: "food_goods",
     },
     {
         organization_id: 95,
@@ -1802,7 +1712,6 @@ const data_organization_arr = [
         organization_note_address: "біля паркану міського ринку",
         longitude: "29.2338197926581",
         latitude: "48.6921527344611",
-        organization_commodity_specialization: "food_goods",
     },
     {
         organization_id: 96,
@@ -1821,7 +1730,6 @@ const data_organization_arr = [
         organization_note_address: "біля паркану міського ринку",
         longitude: "29.2337925371567",
         latitude: "48.6921417740585",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 97,
@@ -1840,7 +1748,6 @@ const data_organization_arr = [
         organization_note_address: "біля паркану міського ринку",
         longitude: "29.2337603506485",
         latitude: "48.6921081338105",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 98,
@@ -1859,7 +1766,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2339105543533",
         latitude: "48.6919239973182",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 99,
@@ -1878,7 +1784,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2339020123646",
         latitude: "48.6919017333704",
-        organization_commodity_specialization: "food_goods",
     },
     {
         organization_id: 100,
@@ -1897,7 +1802,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2338300880829",
         latitude: "48.6918327589626",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 101,
@@ -1916,7 +1820,6 @@ const data_organization_arr = [
         organization_note_address: "біля будинку 17",
         longitude: "29.2336571978699",
         latitude: "48.6855618512706",
-        organization_commodity_specialization: "food_goods",
     },
     {
         organization_id: 102,
@@ -1935,7 +1838,6 @@ const data_organization_arr = [
         organization_note_address: "біля будинку 17",
         longitude: "29.2322892712723",
         latitude: "48.6863445255931",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 103,
@@ -1954,7 +1856,6 @@ const data_organization_arr = [
         organization_note_address: "біля будинку 17",
         longitude: "29.2338288592468",
         latitude: "48.6854697711389",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 104,
@@ -1973,7 +1874,6 @@ const data_organization_arr = [
         organization_note_address: "біля будинку 17",
         longitude: "29.2325628565918",
         latitude: "48.6861851585046",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 105,
@@ -1992,7 +1892,6 @@ const data_organization_arr = [
         organization_note_address: "біля будинку 17",
         longitude: "29.2325950431",
         latitude: "48.6861709925168",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 106,
@@ -2011,7 +1910,6 @@ const data_organization_arr = [
         organization_note_address: "біля будинку 17",
         longitude: "29.232654966587",
         latitude: "48.6861472239805",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 107,
@@ -2030,7 +1928,6 @@ const data_organization_arr = [
         organization_note_address: "біля будинку 17",
         longitude: "29.2328552173744",
         latitude: "48.6860133956335",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 108,
@@ -2049,7 +1946,6 @@ const data_organization_arr = [
         organization_note_address: "біля будинку 17",
         longitude: "29.232959823526",
         latitude: "48.6859620437335",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 109,
@@ -2068,7 +1964,6 @@ const data_organization_arr = [
         organization_note_address: "біля будинку 17",
         longitude: "29.2331046628128",
         latitude: "48.685873505852",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 110,
@@ -2087,7 +1982,6 @@ const data_organization_arr = [
         organization_note_address: "біля будинку 17",
         longitude: "29.2334372567307",
         latitude: "48.6856893465598",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 111,
@@ -2106,7 +2000,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2342983692881",
         latitude: "48.692181324944",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 112,
@@ -2125,7 +2018,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2380800938482",
         latitude: "48.6930254741572",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 113,
@@ -2144,7 +2036,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2298198716583",
         latitude: "48.6814208716291",
-        organization_commodity_specialization: "food_goods",
     },
     {
         organization_id: 114,
@@ -2163,7 +2054,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2594629291311",
         latitude: "48.6780554068929",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 115,
@@ -2182,7 +2072,6 @@ const data_organization_arr = [
         organization_note_address: "біля будинку 17",
         longitude: "29.2326918833783",
         latitude: "48.6860665834993",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 116,
@@ -2201,7 +2090,6 @@ const data_organization_arr = [
         organization_note_address: "біля будинку 17",
         longitude: "29.2323034245087",
         latitude: "48.68630952184",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 117,
@@ -2220,7 +2108,6 @@ const data_organization_arr = [
         organization_note_address: "біля будинку 17",
         longitude: "29.2382970977358",
         latitude: "48.6798482740076",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 118,
@@ -2239,7 +2126,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2306181863229",
         latitude: "48.6820437494967",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 119,
@@ -2258,7 +2144,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2559631946261",
         latitude: "48.6726768390758",
-        organization_commodity_specialization: "mixed_goods",
     },
     {
         organization_id: 120,
@@ -2277,7 +2162,6 @@ const data_organization_arr = [
         organization_note_address: "біля ДНЗ Берізка",
         longitude: "29.2350030531911",
         latitude: "48.6874117458228",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 121,
@@ -2296,7 +2180,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.227197113777",
         latitude: "48.6869065710993",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 122,
@@ -2315,7 +2198,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2341313974806",
         latitude: "48.6916704841035",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 123,
@@ -2334,7 +2216,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2604213947905",
         latitude: "48.6785926544762",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 124,
@@ -2353,7 +2234,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2593463160119",
         latitude: "48.6767577427382",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 125,
@@ -2372,7 +2252,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.231482",
         latitude: "48.68688",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 126,
@@ -2391,7 +2270,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2349244293609",
         latitude: "48.6923588932723",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 127,
@@ -2410,7 +2288,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2372925056463",
         latitude: "48.6866908412704",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 128,
@@ -2429,7 +2306,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.237161",
         latitude: "48.690812",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 129,
@@ -2448,7 +2324,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2340901576274",
         latitude: "48.6920551882995",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 130,
@@ -2467,7 +2342,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2312575487378",
         latitude: "48.686194227213",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 131,
@@ -2486,7 +2360,6 @@ const data_organization_arr = [
         organization_note_address: "перехрестя вулиць Будівельників та Кравчика",
         longitude: "29.2346723017135",
         latitude: "48.6851352646859",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 132,
@@ -2505,7 +2378,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2291308578888",
         latitude: "48.6880746822413",
-        organization_commodity_specialization: "food_goods",
     },
     {
         organization_id: 133,
@@ -2524,7 +2396,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2297584947983",
         latitude: "48.6877276274147",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 134,
@@ -2543,7 +2414,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2304484466202",
         latitude: "48.6884252027847",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 135,
@@ -2562,7 +2432,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2256520327965",
         latitude: "48.683745179163",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 136,
@@ -2581,7 +2450,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.223974452706",
         latitude: "48.7055212291168",
-        organization_commodity_specialization: "food_goods",
     },
     {
         organization_id: 137,
@@ -2600,7 +2468,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2324782547394",
         latitude: "48.6915769690215",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 138,
@@ -2619,7 +2486,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2326010931085",
         latitude: "48.6914705785454",
-        organization_commodity_specialization: "food_goods",
     },
     {
         organization_id: 139,
@@ -2638,7 +2504,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2327250179687",
         latitude: "48.6914742765159",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 140,
@@ -2657,7 +2522,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2328537640014",
         latitude: "48.6914864993037",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 141,
@@ -2676,7 +2540,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2329288658539",
         latitude: "48.6915153710453",
-        organization_commodity_specialization: "food_goods",
     },
     {
         organization_id: 142,
@@ -2695,7 +2558,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2330365634718",
         latitude: "48.6915848908145",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 143,
@@ -2714,7 +2576,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.232601636354",
         latitude: "48.6918036000169",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 144,
@@ -2733,7 +2594,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2324246105591",
         latitude: "48.6919098329448",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 145,
@@ -2752,7 +2612,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2344899115005",
         latitude: "48.6927773934665",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 146,
@@ -2771,7 +2630,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2355735239425",
         latitude: "48.6922426946675",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 147,
@@ -2790,7 +2648,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2355252441803",
         latitude: "48.6922122142564",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 148,
@@ -2809,7 +2666,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2353053030411",
         latitude: "48.6921647910573",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 149,
@@ -2828,7 +2684,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2350907263199",
         latitude: "48.6917894356095",
-        organization_commodity_specialization: "food_goods",
     },
     {
         organization_id: 150,
@@ -2847,7 +2702,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.234929793779",
         latitude: "48.6918789909531",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 151,
@@ -2866,7 +2720,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2355949816147",
         latitude: "48.6915061466263",
-        organization_commodity_specialization: "mixed_goods",
     },
     {
         organization_id: 152,
@@ -2885,7 +2738,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2319011484996",
         latitude: "48.6867916487105",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 153,
@@ -2904,7 +2756,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2315502104202",
         latitude: "48.6867997752146",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 154,
@@ -2923,7 +2774,6 @@ const data_organization_arr = [
         organization_note_address: "біля ЗОШ №3",
         longitude: "29.2315516637932",
         latitude: "48.6859390238993",
-        organization_commodity_specialization: "food_goods",
     },
     {
         organization_id: 155,
@@ -2942,7 +2792,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2354918288361",
         latitude: "48.6837414666615",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 156,
@@ -2961,7 +2810,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2350465821396",
         latitude: "48.6842727141053",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 157,
@@ -2980,7 +2828,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2322195338379",
         latitude: "48.6865711801391",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 158,
@@ -2999,7 +2846,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.232423381723",
         latitude: "48.6864791018528",
-        organization_commodity_specialization: "food_goods",
     },
     {
         organization_id: 159,
@@ -3018,7 +2864,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2319781350266",
         latitude: "48.6869642816985",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 160,
@@ -3037,7 +2882,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.232423381723",
         latitude: "48.6863799404332",
-        organization_commodity_specialization: "food_goods",
     },
     {
         organization_id: 161,
@@ -3056,7 +2900,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2325306700836",
         latitude: "48.6863161937031",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 162,
@@ -3075,7 +2918,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.232657648796",
         latitude: "48.6862623225706",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 163,
@@ -3094,7 +2936,6 @@ const data_organization_arr = [
         organization_note_address: "біля Зош №3",
         longitude: "29.2317939774932",
         latitude: "48.6860250421124",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 164,
@@ -3113,7 +2954,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2320156859528",
         latitude: "48.6916670966246",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 165,
@@ -3132,7 +2972,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2320550953711",
         latitude: "48.6916374015952",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 166,
@@ -3151,7 +2990,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2321176137229",
         latitude: "48.6918183408711",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 167,
@@ -3170,7 +3008,6 @@ const data_organization_arr = [
         organization_note_address: "перехрестя вулиць Процишина та Наконечного",
         longitude: "29.2357633253407",
         latitude: "48.6928628567943",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 168,
@@ -3189,7 +3026,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2346289438627",
         latitude: "48.6930709214261",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 169,
@@ -3208,7 +3044,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2346891298193",
         latitude: "48.6929912756887",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 170,
@@ -3227,7 +3062,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2327900953849",
         latitude: "48.6918358113015",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 171,
@@ -3246,7 +3080,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2350097637496",
         latitude: "48.6915861345632",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 172,
@@ -3265,7 +3098,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2349478632165",
         latitude: "48.6915298070756",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 173,
@@ -3284,7 +3116,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2627292419135",
         latitude: "48.6811128745135",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 174,
@@ -3303,7 +3134,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2625064178576",
         latitude: "48.6812330086476",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 175,
@@ -3322,7 +3152,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2369958769269",
         latitude: "48.6928913212685",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 176,
@@ -3341,7 +3170,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2366916911544",
         latitude: "48.6927205422021",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 177,
@@ -3360,7 +3188,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2367883162301",
         latitude: "48.6927444971967",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 178,
@@ -3379,7 +3206,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2272804166236",
         latitude: "48.6855557009499",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 179,
@@ -3398,7 +3224,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2273475477875",
         latitude: "48.6861145891136",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 180,
@@ -3417,7 +3242,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.225135397203",
         latitude: "48.6836920103918",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 181,
@@ -3436,7 +3260,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2312135979798",
         latitude: "48.6791068736354",
-        organization_commodity_specialization: "mixed_goods",
     },
     {
         organization_id: 182,
@@ -3455,7 +3278,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2314255999695",
         latitude: "48.6819245580498",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 183,
@@ -3474,7 +3296,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2322785424362",
         latitude: "48.6819139326604",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 184,
@@ -3493,7 +3314,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2290062474381",
         latitude: "48.6831818799608",
-        organization_commodity_specialization: "food_goods",
     },
     {
         organization_id: 185,
@@ -3512,7 +3332,6 @@ const data_organization_arr = [
         organization_note_address: "біля ДНЗ Джерельце",
         longitude: "29.2302543895187",
         latitude: "48.684009883904",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 186,
@@ -3531,7 +3350,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2366612719666",
         latitude: "48.6877150617354",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 187,
@@ -3550,7 +3368,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2365191148888",
         latitude: "48.6886552917024",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 188,
@@ -3569,7 +3386,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2371258876628",
         latitude: "48.6895555632794",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 189,
@@ -3588,7 +3404,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2437656775257",
         latitude: "48.6746376082434",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 190,
@@ -3607,7 +3422,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2227120864968",
         latitude: "48.6837230094833",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 191,
@@ -3626,7 +3440,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2352075146805",
         latitude: "48.6841593817875",
-        organization_commodity_specialization: "food_goods",
     },
     {
         organization_id: 192,
@@ -3645,7 +3458,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2294110300074",
         latitude: "48.6813206552059",
-        organization_commodity_specialization: "food_goods",
     },
     {
         organization_id: 193,
@@ -3664,7 +3476,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2626255691048",
         latitude: "48.6717811294425",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 194,
@@ -3683,7 +3494,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2615528941559",
         latitude: "48.6804781263515",
-        organization_commodity_specialization: "mixed_goods",
     },
     {
         organization_id: 195,
@@ -3702,7 +3512,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2626302447699",
         latitude: "48.6802537542513",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 196,
@@ -3721,7 +3530,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2324175022186",
         latitude: "48.6930350129256",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 197,
@@ -3740,7 +3548,6 @@ const data_organization_arr = [
         organization_note_address: "ринкова площа",
         longitude: "29.2328233058706",
         latitude: "48.6921548224671",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 198,
@@ -3759,7 +3566,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2593695009703",
         latitude: "48.6781274997655",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 199,
@@ -3778,7 +3584,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2593206428385",
         latitude: "48.6775137620075",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 200,
@@ -3797,7 +3602,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.261081522387",
         latitude: "48.6716017697447",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 201,
@@ -3816,7 +3620,6 @@ const data_organization_arr = [
         organization_note_address: "ринкова площа",
         longitude: "29.233118353575",
         latitude: "48.6916863902207",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 202,
@@ -3835,7 +3638,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2331448945057",
         latitude: "48.6911941501875",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 203,
@@ -3854,7 +3656,6 @@ const data_organization_arr = [
         organization_note_address: "між будинками 6 та 7/2",
         longitude: "29.2335545502711",
         latitude: "48.6916029667209",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 204,
@@ -3873,7 +3674,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2343799678679",
         latitude: "48.6933349585975",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 205,
@@ -3892,7 +3692,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2284976193896",
         latitude: "48.6843636426217",
-        organization_commodity_specialization: "food_goods",
     },
     {
         organization_id: 206,
@@ -3911,7 +3710,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.1993565749848",
         latitude: "48.648857225978",
-        organization_commodity_specialization: "mixed_goods",
     },
     {
         organization_id: 207,
@@ -3930,7 +3728,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2292696422319",
         latitude: "48.6811417239283",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 208,
@@ -3949,7 +3746,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.232205964405",
         latitude: "48.6866979240836",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 209,
@@ -3968,7 +3764,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.229644134239",
         latitude: "48.6814435182163",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 210,
@@ -3987,7 +3782,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2271636359354",
         latitude: "48.6827065400503",
-        organization_commodity_specialization: "food_goods",
     },
     {
         organization_id: 211,
@@ -4006,7 +3800,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2314266925181",
         latitude: "48.6867860933823",
-        organization_commodity_specialization: "food_goods",
     },
     {
         organization_id: 212,
@@ -4025,7 +3818,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2347298102372",
         latitude: "48.6853905611674",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 213,
@@ -4044,7 +3836,6 @@ const data_organization_arr = [
         organization_note_address: "між будинками 45 та 54",
         longitude: "29.2258543166924",
         latitude: "48.6834411052606",
-        organization_commodity_specialization: "mixed_goods",
     },
     {
         organization_id: 214,
@@ -4063,7 +3854,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2351163300382",
         latitude: "48.6896931784852",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 215,
@@ -4082,7 +3872,6 @@ const data_organization_arr = [
         organization_note_address: "між будинками 55 та 56",
         longitude: "29.2272605997676",
         latitude: "48.6844638490244",
-        organization_commodity_specialization: "mixed_goods",
     },
     {
         organization_id: 216,
@@ -4101,7 +3890,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.229763",
         latitude: "48.687709",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 217,
@@ -4120,7 +3908,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.255385",
         latitude: "48.683156",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 218,
@@ -4139,7 +3926,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2457147634528",
         latitude: "48.6863507031981",
-        organization_commodity_specialization: "food_goods",
     },
     {
         organization_id: 219,
@@ -4158,7 +3944,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.234518",
         latitude: "48.69021",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 220,
@@ -4177,7 +3962,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.236051",
         latitude: "48.693488",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 221,
@@ -4196,7 +3980,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.236142",
         latitude: "48.693662",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 222,
@@ -4215,7 +3998,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.236399",
         latitude: "48.691782",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 223,
@@ -4234,7 +4016,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.234683",
         latitude: "48.685401",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 224,
@@ -4253,7 +4034,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.234624",
         latitude: "48.685362",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 225,
@@ -4272,7 +4052,6 @@ const data_organization_arr = [
         organization_note_address: "між ЗОШ №3 та буд. 90",
         longitude: "29.234613",
         latitude: "48.685383",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 226,
@@ -4291,7 +4070,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.230466",
         latitude: "48.686081",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 227,
@@ -4310,7 +4088,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.23211",
         latitude: "48.686633",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 228,
@@ -4329,7 +4106,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2307648941439",
         latitude: "48.7009236576576",
-        organization_commodity_specialization: "food_goods",
     },
     {
         organization_id: 229,
@@ -4348,7 +4124,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.229266327528",
         latitude: "48.6977223738637",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 230,
@@ -4367,7 +4142,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.23488",
         latitude: "48.684379",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 231,
@@ -4386,7 +4160,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.234352",
         latitude: "48.693377",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 232,
@@ -4405,7 +4178,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.257716",
         latitude: "48.682039",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 233,
@@ -4424,7 +4196,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.234361",
         latitude: "48.685419",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 234,
@@ -4443,7 +4214,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2598527844261",
         latitude: "48.6771242499977",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 235,
@@ -4462,7 +4232,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2324997124115",
         latitude: "48.6918744219937",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 236,
@@ -4481,7 +4250,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2300910887161",
         latitude: "48.6791319452749",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 237,
@@ -4500,7 +4268,6 @@ const data_organization_arr = [
         organization_note_address: "біля ринкової площі",
         longitude: "29.2333794769684",
         latitude: "48.6917752711982",
-        organization_commodity_specialization: "food_goods",
     },
     {
         organization_id: 238,
@@ -4519,7 +4286,6 @@ const data_organization_arr = [
         organization_note_address: "біля ринкової площі",
         longitude: "29.2335243162552",
         latitude: "48.6918885863771",
-        organization_commodity_specialization: "food_goods",
     },
     {
         organization_id: 239,
@@ -4538,7 +4304,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2336594298146",
         latitude: "48.6917111973771",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 240,
@@ -4557,7 +4322,6 @@ const data_organization_arr = [
         organization_note_address: "біля Зош №3",
         longitude: "29.2315412792871",
         latitude: "48.6861141020654",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 241,
@@ -4576,7 +4340,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2284644412171",
         latitude: "48.6843860461681",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 242,
@@ -4595,7 +4358,6 @@ const data_organization_arr = [
         organization_note_address: "біля Зош №3",
         longitude: "29.2321168025597",
         latitude: "48.685814319586",
-        organization_commodity_specialization: "food_goods",
     },
     {
         organization_id: 243,
@@ -4614,7 +4376,6 @@ const data_organization_arr = [
         organization_note_address: "біля Зош №3",
         longitude: "29.2318172024857",
         latitude: "48.6859868343125",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 244,
@@ -4633,7 +4394,6 @@ const data_organization_arr = [
         organization_note_address: "біля Зош №3",
         longitude: "29.2320103215347",
         latitude: "48.6859053795072",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 245,
@@ -4652,7 +4412,6 @@ const data_organization_arr = [
         organization_note_address: "біля будинку 17",
         longitude: "29.233855681337",
         latitude: "48.6854520634019",
-        organization_commodity_specialization: "food_goods",
     },
     {
         organization_id: 246,
@@ -4671,7 +4430,6 @@ const data_organization_arr = [
         organization_note_address: "біля будинку 17",
         longitude: "29.2321551608215",
         latitude: "48.6864047308064",
-        organization_commodity_specialization: "food_goods",
     },
     {
         organization_id: 247,
@@ -4690,7 +4448,6 @@ const data_organization_arr = [
         organization_note_address: "біля будинку 17",
         longitude: "29.2335499095093",
         latitude: "48.6856220574196",
-        organization_commodity_specialization: "food_goods",
     },
     {
         organization_id: 248,
@@ -4709,7 +4466,6 @@ const data_organization_arr = [
         organization_note_address: "біля будинку 39",
         longitude: "29.2309106158386",
         latitude: "48.6843258385415",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 249,
@@ -4728,7 +4484,6 @@ const data_organization_arr = [
         organization_note_address: "біля будинку 51",
         longitude: "29.2292744683396",
         latitude: "48.6833200063699",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 250,
@@ -4747,7 +4502,6 @@ const data_organization_arr = [
         organization_note_address: "біля будинку 17",
         longitude: "29.2324448393952",
         latitude: "48.6862630713665",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 251,
@@ -4766,7 +4520,6 @@ const data_organization_arr = [
         organization_note_address: "біля будинку 17",
         longitude: "29.2327220218124",
         latitude: "48.6860852477076",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 252,
@@ -4785,7 +4538,6 @@ const data_organization_arr = [
         organization_note_address: "біля будинку 17",
         longitude: "29.2332709597717",
         latitude: "48.68578142629",
-        organization_commodity_specialization: "food_goods",
     },
     {
         organization_id: 253,
@@ -4804,7 +4556,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2370813624425",
         latitude: "48.6927641750754",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 254,
@@ -4823,7 +4574,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2370421225139",
         latitude: "48.6928207772742",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 255,
@@ -4842,7 +4592,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2296624675325",
         latitude: "48.6813882613304",
-        organization_commodity_specialization: "mixed_goods",
     },
     {
         organization_id: 256,
@@ -4861,7 +4610,6 @@ const data_organization_arr = [
         organization_note_address: "ринкова площа",
         longitude: "29.2316508656161",
         latitude: "48.6929883132511",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 257,
@@ -4880,7 +4628,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2317020393696",
         latitude: "48.6876683559428",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 258,
@@ -4899,7 +4646,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.229474",
         latitude: "48.685249",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 259,
@@ -4918,7 +4664,6 @@ const data_organization_arr = [
         organization_note_address: "біля Зош №3",
         longitude: "29.231773",
         latitude: "48.686021",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 260,
@@ -4937,7 +4682,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2594234200664",
         latitude: "48.6782010137327",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 261,
@@ -4956,7 +4700,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2590094208587",
         latitude: "48.6769364571707",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 262,
@@ -4975,7 +4718,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.232388",
         latitude: "48.686519",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 263,
@@ -4994,7 +4736,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2317349688949",
         latitude: "48.683156339159",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 264,
@@ -5013,7 +4754,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.22581",
         latitude: "48.681895",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 265,
@@ -5032,7 +4772,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2349536193854",
         latitude: "48.6855858933487",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 266,
@@ -5051,7 +4790,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2592803059522",
         latitude: "48.6773358677033",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 267,
@@ -5070,7 +4808,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2373439480864",
         latitude: "48.6906096773823",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 268,
@@ -5089,7 +4826,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2305218503257",
         latitude: "48.6864949362996",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 269,
@@ -5108,7 +4844,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2338238730792",
         latitude: "48.6847784159663",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 270,
@@ -5127,7 +4862,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2344993475022",
         latitude: "48.6914760796638",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 271,
@@ -5146,7 +4880,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2346660867099",
         latitude: "48.6853415264843",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 272,
@@ -5165,7 +4898,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2342546325",
         latitude: "48.683124810451",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 273,
@@ -5184,7 +4916,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.23204",
         latitude: "48.691678",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 274,
@@ -5203,7 +4934,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.234593",
         latitude: "48.687395",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 275,
@@ -5222,7 +4952,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.22965",
         latitude: "48.681694",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 276,
@@ -5241,7 +4970,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2298224367806",
         latitude: "48.6886147592029",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 277,
@@ -5260,7 +4988,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.234511",
         latitude: "48.693177",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 278,
@@ -5279,7 +5006,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2399335669647",
         latitude: "48.6852572778846",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 279,
@@ -5298,7 +5024,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2388897040356",
         latitude: "48.6879522706509",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 280,
@@ -5317,7 +5042,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2292787134409",
         latitude: "48.6787105684454",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 281,
@@ -5336,7 +5060,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2259742926205",
         latitude: "48.6845822485622",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 282,
@@ -5355,7 +5078,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2436574625729",
         latitude: "48.6871002545248",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 283,
@@ -5374,7 +5096,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2471546558504",
         latitude: "48.6858365931722",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 284,
@@ -5393,7 +5114,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2604960789463",
         latitude: "48.679079169263",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 285,
@@ -5412,7 +5132,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2685450340564",
         latitude: "48.678747304214",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 286,
@@ -5431,7 +5150,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2423005449772",
         latitude: "48.6898894744216",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 287,
@@ -5450,7 +5168,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2290426034772",
         latitude: "48.7048687804463",
-        organization_commodity_specialization: "food_goods",
     },
     {
         organization_id: 288,
@@ -5469,7 +5186,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2359943168105",
         latitude: "48.6846473767666",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 289,
@@ -5488,7 +5204,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.237637",
         latitude: "48.685681",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 290,
@@ -5507,7 +5222,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2318654822479",
         latitude: "48.687045734791",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 291,
@@ -5526,7 +5240,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2309016892035",
         latitude: "48.6894410340337",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 292,
@@ -5545,7 +5258,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2302672639255",
         latitude: "48.6818246388003",
-        organization_commodity_specialization: "food_goods",
     },
     {
         organization_id: 293,
@@ -5564,7 +5276,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.234527",
         latitude: "48.685377",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 294,
@@ -5583,7 +5294,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2595381644376",
         latitude: "48.6776665005493",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 295,
@@ -5602,7 +5312,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2350633978931",
         latitude: "48.6834665504797",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 296,
@@ -5621,7 +5330,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2316079901825",
         latitude: "48.6830579200403",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 297,
@@ -5640,7 +5348,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2297350859837",
         latitude: "48.6885312905345",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 298,
@@ -5659,7 +5366,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2355813436097",
         latitude: "48.6839101321001",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 299,
@@ -5678,7 +5384,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2320235798002",
         latitude: "48.6917179848192",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 300,
@@ -5697,7 +5402,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2426736418072",
         latitude: "48.6869968566547",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 301,
@@ -5716,7 +5420,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2624287493713",
         latitude: "48.6719246209467",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 302,
@@ -5735,7 +5438,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2359954023137",
         latitude: "48.6935130904437",
-        organization_commodity_specialization: "food_goods",
     },
     {
         organization_id: 303,
@@ -5754,7 +5456,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2298102051852",
         latitude: "48.6814583941903",
-        organization_commodity_specialization: "mixed_goods",
     },
     {
         organization_id: 304,
@@ -5773,7 +5474,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2299293055896",
         latitude: "48.6879267958481",
-        organization_commodity_specialization: "food_goods",
     },
     {
         organization_id: 305,
@@ -5792,7 +5492,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2365758195285",
         latitude: "48.685777135962",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 306,
@@ -5811,7 +5510,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2362912837735",
         latitude: "48.6847395011355",
-        organization_commodity_specialization: "food_goods",
     },
     {
         organization_id: 307,
@@ -5830,7 +5528,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2369327076566",
         latitude: "48.692791573236",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 308,
@@ -5849,7 +5546,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2321456608215",
         latitude: "48.6866120778433",
-        organization_commodity_specialization: "food_goods",
     },
     {
         organization_id: 309,
@@ -5868,7 +5564,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2346454796234",
         latitude: "48.6853406753438",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 310,
@@ -5887,7 +5582,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2299194273392",
         latitude: "48.6878869896218",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 311,
@@ -5906,7 +5600,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2370163885387",
         latitude: "48.6859297096948",
-        organization_commodity_specialization: "mixed_goods",
     },
     {
         organization_id: 312,
@@ -5925,7 +5618,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.231512659494",
         latitude: "48.6867183217243",
-        organization_commodity_specialization: "food_goods",
     },
     {
         organization_id: 313,
@@ -5944,7 +5636,6 @@ const data_organization_arr = [
         organization_note_address: "біля магазину Енергетик",
         longitude: "29.2318579512088",
         latitude: "48.6867990978548",
-        organization_commodity_specialization: "food_goods",
     },
     {
         organization_id: 314,
@@ -5963,7 +5654,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.231595",
         latitude: "48.686845",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 315,
@@ -5982,7 +5672,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.232308",
         latitude: "48.686537",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 316,
@@ -6001,7 +5690,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2373",
         latitude: "48.690642",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 317,
@@ -6020,7 +5708,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.23221",
         latitude: "48.685678",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 318,
@@ -6039,7 +5726,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.22965",
         latitude: "48.681591",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 319,
@@ -6058,7 +5744,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.237282405204",
         latitude: "48.6906584768281",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 320,
@@ -6077,7 +5762,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.237064",
         latitude: "48.690826",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 321,
@@ -6096,7 +5780,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2199911558153",
         latitude: "48.6874168741475",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 322,
@@ -6115,7 +5798,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2629789522093",
         latitude: "48.6810036363173",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 323,
@@ -6134,7 +5816,6 @@ const data_organization_arr = [
         organization_note_address: "біля будинку побуту Чайка",
         longitude: "29.2611480729522",
         latitude: "48.6789382209481",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 324,
@@ -6153,83 +5834,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.262063",
         latitude: "48.68089",
-        organization_commodity_specialization: "",
-    },
-    {
-        organization_id: 325,
-        organization_type: "Школа",
-        organization_name: "ЗОШ № 3",
-        organization_phone_2: "",
-        organization_does_not_work: "false",
-        organization_monday: "",
-        organization_tuesday: "",
-        organization_wednesday: "",
-        organization_thursday: "",
-        organization_friday: "",
-        organization_saturday: "",
-        organization_sunday: "",
-        organization_address: "",
-        organization_note_address: "",
-        longitude: "29.2313937917118",
-        latitude: "48.6853875666885",
-        organization_commodity_specialization: "",
-    },
-    {
-        organization_id: 326,
-        organization_type: "Школа",
-        organization_name: "ЗОШ № 2",
-        organization_phone_2: "",
-        organization_does_not_work: "false",
-        organization_monday: "",
-        organization_tuesday: "",
-        organization_wednesday: "",
-        organization_thursday: "",
-        organization_friday: "",
-        organization_saturday: "",
-        organization_sunday: "",
-        organization_address: "",
-        organization_note_address: "",
-        longitude: "29.2338367939013",
-        latitude: "48.6895131538441",
-        organization_commodity_specialization: "",
-    },
-    {
-        organization_id: 327,
-        organization_type: "Школа",
-        organization_name: "ЗОШ № 4",
-        organization_phone_2: "",
-        organization_does_not_work: "false",
-        organization_monday: "",
-        organization_tuesday: "",
-        organization_wednesday: "",
-        organization_thursday: "",
-        organization_friday: "",
-        organization_saturday: "",
-        organization_sunday: "",
-        organization_address: "",
-        organization_note_address: "",
-        longitude: "29.2325643056288",
-        latitude: "48.6806524976607",
-        organization_commodity_specialization: "",
-    },
-    {
-        organization_id: 328,
-        organization_type: "Школа",
-        organization_name: "ЗОШ № 1",
-        organization_phone_2: "",
-        organization_does_not_work: "false",
-        organization_monday: "",
-        organization_tuesday: "",
-        organization_wednesday: "",
-        organization_thursday: "",
-        organization_friday: "",
-        organization_saturday: "",
-        organization_sunday: "",
-        organization_address: "",
-        organization_note_address: "",
-        longitude: "29.2566646686967",
-        latitude: "48.6771713036425",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 329,
@@ -6248,7 +5852,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2373",
         latitude: "48.690642",
-        organization_commodity_specialization: "",
     },
     {
         organization_id: 330,
@@ -6267,7 +5870,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2615186260092",
         latitude: "48.6805472682738",
-        organization_commodity_specialization: "food_goods",
     },
     {
         organization_id: 331,
@@ -6286,7 +5888,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.1560171244313",
         latitude: "48.6921612621535",
-        organization_commodity_specialization: "food_goods",
     },
     {
         organization_id: 332,
@@ -6305,7 +5906,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.1580019234526",
         latitude: "48.6933183047598",
-        organization_commodity_specialization: "mixed_goods",
     },
     {
         organization_id: 333,
@@ -6324,7 +5924,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.1583446304277",
         latitude: "48.6933190251102",
-        organization_commodity_specialization: "food_goods",
     },
     {
         organization_id: 334,
@@ -6343,7 +5942,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.156011853338292",
         latitude: "48.69214488871823",
-        organization_commodity_specialization: "mixed_goods",
     },
     {
         organization_id: 335,
@@ -6362,7 +5960,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.1105900853041",
         latitude: "48.6979816849784",
-        organization_commodity_specialization: "food_goods",
     },
     {
         organization_id: 336,
@@ -6381,7 +5978,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.1113468357812",
         latitude: "48.7008498366351",
-        organization_commodity_specialization: "food_goods",
     },
     {
         organization_id: 337,
@@ -6400,7 +5996,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.197142656737",
         latitude: "48.6530761675059",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 338,
@@ -6419,7 +6014,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.1969941162577",
         latitude: "48.6535065320217",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 339,
@@ -6438,7 +6032,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.3001610263856",
         latitude: "48.6177920969192",
-        organization_commodity_specialization: "mixed_goods",
     },
     {
         organization_id: 340,
@@ -6457,7 +6050,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.3019192099758",
         latitude: "48.6174721534281",
-        organization_commodity_specialization: "mixed_goods",
     },
     {
         organization_id: 341,
@@ -6476,7 +6068,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2315238571007",
         latitude: "48.6868967976749",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 342,
@@ -6495,7 +6086,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2370927907217",
         latitude: "48.6865457099976",
-        organization_commodity_specialization: "food_goods",
     },
     {
         organization_id: 343,
@@ -6514,7 +6104,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2325174877108",
         latitude: "48.6915091612905",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 344,
@@ -6533,7 +6122,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2375334129795",
         latitude: "48.6869106132462",
-        organization_commodity_specialization: "food_goods",
     },
     {
         organization_id: 345,
@@ -6552,7 +6140,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2428912542235",
         latitude: "48.6872981943965",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 346,
@@ -6571,7 +6158,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2321534411718",
         latitude: "48.6866439745636",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 347,
@@ -6590,7 +6176,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2335694689899",
         latitude: "48.6846107247438",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 348,
@@ -6609,7 +6194,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2318730986909",
         latitude: "48.6858817280724",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 349,
@@ -6628,7 +6212,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2282285834079",
         latitude: "48.6997564888862",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 350,
@@ -6647,7 +6230,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2342103329959",
         latitude: "48.6935001720916",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 351,
@@ -6666,7 +6248,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2342979699852",
         latitude: "48.6931798392297",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 352,
@@ -6685,7 +6266,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2366998162036",
         latitude: "48.6850992049881",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 353,
@@ -6704,7 +6284,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2328441064959",
         latitude: "48.6916828820875",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 354,
@@ -6723,7 +6302,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.232858",
         latitude: "48.680651",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 355,
@@ -6742,7 +6320,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2338930984629",
         latitude: "48.689339663191",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 356,
@@ -6761,7 +6338,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.231318348373",
         latitude: "48.6854628789363",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 357,
@@ -6780,7 +6356,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2564241152349",
         latitude: "48.6771432901002",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 358,
@@ -6799,7 +6374,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.26849",
         latitude: "48.678634",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 359,
@@ -6818,7 +6392,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2398895590601",
         latitude: "48.6852850737474",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 360,
@@ -6837,7 +6410,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2258239431874",
         latitude: "48.6846612103714",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 361,
@@ -6856,7 +6428,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2294022661384",
         latitude: "48.6787231184381",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 362,
@@ -6875,7 +6446,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2593787525684",
         latitude: "48.6780930432743",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 363,
@@ -6894,7 +6464,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2435534797147",
         latitude: "48.6870993682724",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 364,
@@ -6913,7 +6482,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2470845211902",
         latitude: "48.6857436575549",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 365,
@@ -6932,7 +6500,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.241811705617",
         latitude: "48.690145631418",
-        organization_commodity_specialization: "non_food_goods",
     },
     {
         organization_id: 366,
@@ -6951,7 +6518,6 @@ const data_organization_arr = [
         organization_note_address: "",
         longitude: "29.2551332939495",
         latitude: "48.6832064334458",
-        organization_commodity_specialization: "non_food_goods",
     },
 ];
 
