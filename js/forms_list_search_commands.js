@@ -8,7 +8,7 @@ function forms_list_search_commands() {
 
     // Додає типовий перелік команд
     data_voice_search_commands_arr.forEach((el) => {
-        list_search_parameters += `<button class="button_commands_service_teams" onclick="determines_type_search_command("${el.name}")">${el.name}</button>`;
+        list_search_parameters += `<button class="button_commands_service_teams" onclick="determines_type_search_command('${el.name}')">${el.name}</button>`;
     });
 
     list_search_parameters += `
@@ -19,7 +19,7 @@ function forms_list_search_commands() {
 
     // Додає назви населених пунктів
     data_human_settlement_arr.forEach((el) => {
-        list_search_parameters += `<button class="button_commands_service_teams" onclick="determines_type_search_command("${el.human_settlement_name_voice_search}")">${el.human_settlement_name_voice_search}</button>`;
+        list_search_parameters += `<button class="button_commands_service_teams" onclick="determines_type_search_command('${el.human_settlement_name_voice_search}')">${el.human_settlement_name_voice_search}</button>`;
     });
 
     list_search_parameters += `
@@ -30,7 +30,7 @@ function forms_list_search_commands() {
 
     // Додає типи організацій
     data_organization_type_arr.forEach((el) => {
-        list_search_parameters += `<button class="button_commands_service_teams" onclick="determines_type_search_command("${el.organization_type}", 'organization_type')">${el.organization_type}</button>`;
+        list_search_parameters += `<button class="button_commands_service_teams" onclick="determines_type_search_command('${el.organization_type}', 'organization_type')">${el.organization_type}</button>`;
     });
 
     list_search_parameters += `
