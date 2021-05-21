@@ -1,15 +1,8 @@
 function open_dialog_statistics_information_registered_vehicles() {
-    const statistics = document.getElementById("id_dialog_statistics");
-
-    statistics.showModal();
+    const photo_gallery_content = document.getElementById("photo_gallery_content");
 
     let str = `
-        <div id="dialog_header">
-             <div id="dialog_statistics_header">Інформація про зареєстровані <br>транспортні засоби у м.Ладижин</div>
-            <img height="16" width="16" id="icon_close_dialog" src="icon/close.png" alt="Закрити" onclick="id_dialog_statistics.close()"> 
-        </div> 
-
-        <div id="dialog_content">
+        <div id="statistics_information_registered_vehicles">
 
         <table>
             <tr> 
@@ -27,7 +20,15 @@ function open_dialog_statistics_information_registered_vehicles() {
     </tr>`)
     );
 
-    statistics.innerHTML = `${str} 
+    photo_gallery_content.innerHTML = `${str} 
         </table> 
     </div>`;
+
+    document.getElementById("id_page_header").style.display = "none";
+    document.getElementById("map").style.display = "none";
+    document.getElementById("id_sidebar").style.display = "none";
+    document.getElementById("id_body").style.display = "block";
+    document.getElementById("id_body").style.backgroundColor = "rgb(255, 255, 255)";
+
+    document.getElementById("photo_gallery").style.display = "block";
 }

@@ -79,7 +79,8 @@ function open_dialog_detailed_information(id) {
             <b>Назва: </b> ${organization_arr[0].organization_name}<br>
             <b>Тип: </b> ${organization_arr[0].organization_type}<br>`;
 
-            if (organization_arr[0].organization_phone_2) organization_str += `<b>Телефон: </b> <a href="tel:${organization_arr[0].organization_phone_2}">${organization_arr[0].organization_phone_2}</a><br>`;
+            if (organization_arr[0].organization_phone_2)
+                organization_str += `<b>Телефон: </b> <a href="tel:${organization_arr[0].organization_phone_2}">${organization_arr[0].organization_phone_2}</a><br>`;
 
             organization_str += `<b>Адреса: </b> ${organization_arr[0].organization_address}<br>`;
 
@@ -302,7 +303,6 @@ function img_archival_photos_loaded() {
 }
 
 function view_all_archival_photos() {
-
     let list_archival_photos = "";
 
     data_archival_photos_arr.forEach((el) => {
@@ -322,75 +322,54 @@ function view_all_archival_photos() {
 
     const photo_gallery_content = document.getElementById("photo_gallery_content");
 
-    photo_gallery_content.innerHTML = `
-    <div id="dialog_content_new">
-        ${list_archival_photos}
-    </div>`;
+    photo_gallery_content.innerHTML = list_archival_photos;
 
-    document.getElementById("id_page_header").style.display = 'none';
-    document.getElementById("map").style.display = 'none';
-    document.getElementById("id_sidebar").style.display = 'none';
-    document.getElementById("id_body").style.display = 'block';
-    document.getElementById("id_body").style.backgroundColor = 'rgb(255, 255, 255)';
+    document.getElementById("id_page_header").style.display = "none";
+    document.getElementById("map").style.display = "none";
+    document.getElementById("id_sidebar").style.display = "none";
+    document.getElementById("id_body").style.display = "block";
+    document.getElementById("id_body").style.backgroundColor = "rgb(255, 255, 255)";
 
-    document.getElementById("photo_gallery").style.display = 'block';
+    document.getElementById("photo_gallery").style.display = "block";
 }
 
 function view_spadshchyna_photos(id) {
-    // Усуває помилку зміщення контенту підчас завантаження зображення
-    let img_width = ((window.innerWidth/100)* 92) - 10;
-
     const spadshchyna_photos_arr = data_spadshchyna_photos.filter((e) => e.workshop_id == id);
 
-    // Попередньо завантажує зображення
-    spadshchyna_photos_arr[0].photos.forEach((el) => {
-        let img = new Image();
+    let list_spadshchyna_photos = "";
 
-        img.src = `spadshchyna_photos/${id}/${el.id}.webp`;
+    spadshchyna_photos_arr[0].photos.forEach((el) => {
+        // Усуває помилку зміщення контенту підчас завантаження зображення
+        const img_height = el.height / (el.width / window.innerWidth);
+
+        if (el.name == "") {
+            list_spadshchyna_photos += `
+        <div class="block_photos">
+            <img class="view_all_img_archival_photos" height="${img_height}" src="spadshchyna_photos/${id}/${el.id}.webp" alt="${el.name}">
+        </div>
+        `;
+        } else {
+            list_spadshchyna_photos += `
+        <div class="block_photos">
+            <img class="view_all_img_archival_photos" height="${img_height}" src="spadshchyna_photos/${id}/${el.id}.webp" alt="${el.name}">
+
+            <div class="block_photos_name">
+                ${el.name}
+            </div>
+        </div>
+        `;
+        }
     });
 
-    open_circles_preloader(); 
+    const photo_gallery_content = document.getElementById("photo_gallery_content");
 
-    setTimeout(() => {
-        let list_spadshchyna_photos = "";
+    photo_gallery_content.innerHTML = list_spadshchyna_photos;
 
-        const dialog_detailed_information = document.getElementById("id_dialog_detailed_information");
+    document.getElementById("id_page_header").style.display = "none";
+    document.getElementById("map").style.display = "none";
+    document.getElementById("id_sidebar").style.display = "none";
+    document.getElementById("id_body").style.display = "block";
+    document.getElementById("id_body").style.backgroundColor = "rgb(255, 255, 255)";
 
-        spadshchyna_photos_arr[0].photos.forEach((el) => {
-            // Усуває помилку зміщення контенту підчас завантаження зображення
-            const img_height = el.height/(el.width/img_width);
-
-            if (el.name == '') {
-                list_spadshchyna_photos += `
-            <div class="block_photos">
-                <img class="view_all_img_archival_photos" height="${img_height}" src="spadshchyna_photos/${id}/${el.id}.webp" alt="${el.name}">
-            </div>
-            `;
-            } else {
-                list_spadshchyna_photos += `
-            <div class="block_photos">
-                <img class="view_all_img_archival_photos" height="${img_height}" src="spadshchyna_photos/${id}/${el.id}.webp" alt="${el.name}">
-
-                <div class="block_photos_name">
-                    ${el.name}
-                </div>
-            </div>
-            `;
-            }
-        });
-
-        dialog_detailed_information.innerHTML = `
-                <div id="dialog_header">
-                    <div id="dialog_detailed_information_header">${spadshchyna_photos_arr[0].workshop_name}</div>
-                    <img height="16" width="16" id="icon_close_dialog" src="icon/close.png" alt="Закрити" onclick="id_dialog_detailed_information.close()"> 
-                </div> 
-
-                <div id="dialog_content">
-                    ${list_spadshchyna_photos}
-                </div>`;
-
-        id_dialog_circles_preloader.close();
-        dialog_detailed_information.showModal();
-    }, 1000);
+    document.getElementById("photo_gallery").style.display = "block";
 }
-
