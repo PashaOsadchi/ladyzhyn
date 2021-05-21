@@ -303,51 +303,37 @@ function img_archival_photos_loaded() {
 
 function view_all_archival_photos() {
 
-    // Усуває помилку зміщення контенту підчас завантаження зображення
-    let img_width = ((window.innerWidth/100)* 92) - 10;
+    let list_archival_photos = "";
 
-    // Попередньо завантажує зображення
     data_archival_photos_arr.forEach((el) => {
-        let img = new Image(el.width, el.height);
+        // Усуває помилку зміщення контенту підчас завантаження зображення
+        const img_height = el.height / (el.width / window.innerWidth);
 
-        img.src = `archival_photos/${el.id}.webp`;
+        list_archival_photos += `
+        <div class="photo_gallery_block_photos">
+            <img height="${img_height}" src="archival_photos/${el.id}.webp" alt="${el.name}">
+
+            <div class="photo_gallery_block_photos_name">
+                ${el.name}
+            </div>
+        </div>
+        `;
     });
 
-    open_circles_preloader(); 
+    const photo_gallery_content = document.getElementById("photo_gallery_content");
 
-    setTimeout(() => {
-        let list_archival_photos = "";
+    photo_gallery_content.innerHTML = `
+    <div id="dialog_content_new">
+        ${list_archival_photos}
+    </div>`;
 
-        const dialog_detailed_information = document.getElementById("id_dialog_detailed_information");
+    document.getElementById("id_page_header").style.display = 'none';
+    document.getElementById("map").style.display = 'none';
+    document.getElementById("id_sidebar").style.display = 'none';
+    document.getElementById("id_body").style.display = 'block';
+    document.getElementById("id_body").style.backgroundColor = 'rgb(255, 255, 255)';
 
-        data_archival_photos_arr.forEach((el) => {
-            // Усуває помилку зміщення контенту підчас завантаження зображення
-            const img_height = el.height/(el.width/img_width);
-
-            list_archival_photos += `
-            <div class="block_photos">
-                <img class="view_all_img_archival_photos" height="${img_height}" src="archival_photos/${el.id}.webp" alt="${el.name}">
-
-                <div class="block_photos_name">
-                    ${el.name}
-                </div>
-            </div>
-            `;
-        });
-
-        dialog_detailed_information.innerHTML = `
-                <div id="dialog_header">
-                    <div id="dialog_detailed_information_header">Галерея архівних фото</div>
-                    <img height="16" width="16" id="icon_close_dialog" src="icon/close.png" alt="Закрити" onclick="id_dialog_detailed_information.close()"> 
-                </div> 
-
-                <div id="dialog_content">
-                    ${list_archival_photos}
-                </div>`;
-
-        id_dialog_circles_preloader.close();
-        dialog_detailed_information.showModal();
-    }, 1000);
+    document.getElementById("photo_gallery").style.display = 'block';
 }
 
 function view_spadshchyna_photos(id) {
