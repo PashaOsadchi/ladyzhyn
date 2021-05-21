@@ -1406,9 +1406,11 @@
                 text-shadow: none;
             }
 
-            /* #id_close_photo_gallery img {
-                margin-top: 6px;
-            } */
+            #id_close_photo_gallery img {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
 
             #photo_gallery_content {
                 position: relative;
@@ -2139,7 +2141,7 @@
 
     <div id="photo_gallery">
         <button id="id_close_photo_gallery" onclick="close_photo_gallery()">
-            <img height="29" width="29" src="icon/close.png" alt="Закрити" onclick="">
+            <img height="30" width="30" src="icon/close.png" alt="Закрити" onclick="">
         </button>
 
         <div id="photo_gallery_content"></div>
