@@ -357,6 +357,15 @@
         .datails_leveil_1 {
             margin-bottom: 7px;
         }
+
+        .datails_leveil_2_first_block {
+            margin-top: 7px;
+            margin-bottom: 7px;
+        }
+
+        .datails_leveil_2 {
+            margin-bottom: 7px;
+        }
     </style>
 
     <!-- tag_button -->
@@ -395,15 +404,16 @@
     <style>
         /* https://developer.mozilla.org/ru/docs/Learn/CSS/Styling_text/Styling_links */
 
-        #id_details_virtual_tour a {
+        #id_details_virtual_tour a, #id_details_vacancies a {
             outline: none;
             text-decoration: none;
             margin-top: 4px;
+            padding: 4px 0 4px 0;
             width: 100%;
             background-color: rgba(0, 119, 255, 0.616);
             border-radius: var(--border-radius);
             font-size: var(--font-size-1);
-            min-height: 35px;
+            /* min-height: 35px; */
             color: rgb(255, 255, 255);
             border: none;
             text-align: center;
@@ -1964,18 +1974,36 @@
         <details class="datails_leveil_1" id="id_details_virtual_tour" onclick="onclick_details(this)">
             <summary class="summary_title_name">Віртуальні тури</summary>
 
-            <a href="https://pashaosadchi.github.io/Winter_tale_in_the_dendrological_park_Ladyzhynsky_grove/">Зимова
-                казка у дендрологічному парку "Ладижинський гай"</a>
+            <details class="datails_leveil_2_first_block">
+                <summary class="summary_address_type_name">Дендрологічний парк "Ладижинський гай"</summary>
 
-            <a href="https://pashaosadchi.github.io/Spring_has_come_in_the_dendrological_park_Ladyzhynsky_grove/">Весна у дендрологічному парку "Ладижинський гай"</a>
+                <a href="https://pashaosadchi.github.io/Winter_tale_in_the_dendrological_park_Ladyzhynsky_grove/">Зимова казка</a>
+    
+                <a href="https://pashaosadchi.github.io/Spring_has_come_in_the_dendrological_park_Ladyzhynsky_grove/">Цвітіння квітів</a>
 
-            <a href="https://pashaosadchi.github.io/Olhopil/">Мамонт та благоустрій центру села Ольгопіль, що у Вінницькі області</a>
+            </details>
 
-            <a href="https://pashaosadchi.github.io/Eco_country_in_the_open_air/">Еко країна під відкритим небом у Ладижинському НВК №1</a>
+            <details class="datails_leveil_2">
+                <summary class="summary_address_type_name">Ладижинський НВК №1</summary>
 
-            <a href="https://pashaosadchi.github.io/Preschool_subdivision_of_Ladyzhyn_Educational_Complex/">Дошкільний підрозділ Ладижинського НВК №1</a>
+                <a href="https://pashaosadchi.github.io/Eco_country_in_the_open_air/">Еко країна під відкритим небом</a>
 
-            <a href="https://pashaosadchi.github.io/Playground_preschool_subdivision_of_Ladyzhyn_Educational_Complex/">Дитячий майданчик у дошкільному підрозділі Ладижинського НВК №1</a>
+                <a href="https://pashaosadchi.github.io/Preschool_subdivision_of_Ladyzhyn_Educational_Complex/">Дошкільний підрозділ</a>
+    
+                <a href="https://pashaosadchi.github.io/Playground_preschool_subdivision_of_Ladyzhyn_Educational_Complex/">Дитячий майданчик у дошкільному підрозділі</a>
+            </details>
+
+            <details class="datails_leveil_2">
+                <summary class="summary_address_type_name">Цікаві локації Гайсинського району</summary>
+
+                <a href="https://pashaosadchi.github.io/Olhopil/">Мамонт та благоустрій центру села Ольгопіль, що у Вінницькі області</a>
+            </details>
+        </details>
+
+        <details class="datails_leveil_1" id="id_details_vacancies" onclick="onclick_details(this)">
+            <summary class="summary_title_name">Вакансії</summary>
+
+            <a href="https://www.dcz.gov.ua/userSearch/vacancy?koatuuVal=101010510600000&koatuuLab=Ладижинkey=">Вакансії м. Ладижина на сайті Державної служби зайнятості</a>
         </details>
 
         <details class="datails_leveil_1" id="id_details_density_population" onclick="onclick_details(this)">
