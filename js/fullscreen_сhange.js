@@ -7,6 +7,7 @@ document.addEventListener("fullscreenchange", function(e){
         setTimeout(() => {
             document_fullscreen = false;
             id_dialog_openseadragon_master_plan_map.close();
+            id_dialog_openseadragon_scheme_engineering_thermal_networks_map.close();
         }, 0);
 
         return;

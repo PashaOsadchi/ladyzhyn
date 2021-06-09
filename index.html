@@ -503,14 +503,16 @@
             padding: 5px 30px 5px 30px;
         }
 
-        #id_dialog_openseadragon_master_plan_map {
+        #id_dialog_openseadragon_master_plan_map,
+        #id_dialog_openseadragon_scheme_engineering_thermal_networks_map {
             padding: 0;
             width: 90%;
             height: 70%;
             z-index: 1000 !important;
         }
 
-        #openseadragon_master_plan_map {
+        #openseadragon_master_plan_map,
+        #openseadragon_scheme_engineering_thermal_networks_map {
             width: 100%;
             height: 100%;
         }
@@ -1771,6 +1773,10 @@
     <div id="openseadragon_master_plan_map"></div>
 </dialog>
 
+<dialog id="id_dialog_openseadragon_scheme_engineering_thermal_networks_map">
+    <div id="openseadragon_scheme_engineering_thermal_networks_map"></div>
+</dialog>
+
 <dialog id="id_dialog_circles_preloader"></dialog>
 
 <dialog id="id_dialog_statistics"></dialog>
@@ -2247,12 +2253,13 @@
         </details>
 
         <details class="datails_leveil_1" id="id_details_master_plan_map" onclick="onclick_details(this)">
-            <summary class="summary_title_name">Плани зонування</summary>
+            <summary class="summary_title_name">Плани та схеми</summary>
 
             <button class="button_sidebar_add_map" id="id_button_add_map_master_plan"
-                onclick="id_dialog_openseadragon_master_plan_map.showModal()">Показати план зонування
-                м.Ладижина</button>
-
+                onclick="id_dialog_openseadragon_master_plan_map.showModal()">План зонування м.Ладижина</button>
+            
+            <button class="button_sidebar_add_map" id="id_button_add_map_master_plan"
+                onclick="id_dialog_openseadragon_scheme_engineering_thermal_networks_map.showModal()">Схема теплових та інженерних мереж м.Ладижина</button>
         </details>
 
         <details class="datails_leveil_1" id="id_details_public_transport" onclick="onclick_details(this)">
