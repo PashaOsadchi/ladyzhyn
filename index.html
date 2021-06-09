@@ -1470,6 +1470,148 @@
         }
     </style>
 
+    <style>
+        #quest {
+            display: none;
+            overflow: hidden;
+        }
+
+        .photo_quest_block_code {
+            padding: 5px;
+            font-size: 13px;
+            margin: auto;
+        }
+
+        .photo_quest_block_code input {
+            margin-top: 3px;
+        }
+
+        .photo_quest_block_photos {
+            background-color: rgba(177, 177, 177, 0.274);
+            color: rgb(0, 0, 0, 0.8);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .photo_quest_block_photos img {
+            margin: auto;
+            display: block;
+            max-width: 100%;
+            max-height: 80vh;
+        }
+
+        .quest_code {
+            margin-top: 10px;
+            width: 45px !important;
+            margin: auto;
+        }
+
+        #quest_header {
+            height: 135px;
+            width: 100%;
+            position: fixed;
+            padding: 5px;
+            background-color: rgb(0, 102, 255);
+        }
+        
+        #quest_name {
+            text-align: center;
+            /* display: inline-block; */
+            font-size: 30px;
+            color: rgb(255, 255, 255);
+        }
+
+        #quest_location,
+        #quest_hint,
+        #quest_error,
+        #quest_find,
+        #quest_time,
+        #quest_date_time_start {
+            margin-bottom: 3px;
+            text-align: center;
+            /* display: inline-block; */
+            font-size: 13px;
+            color: rgb(255, 255, 255);
+        }
+
+        /* #icon_quest_timer_start {
+            position: fixed;
+            top: 0px;
+            right: 120px;
+            margin: 7px 15px 0px 0px;
+        }
+
+        #icon_quest_delete_waypoints {
+            position: fixed;
+            top: 0px;
+            right: 80px;
+            margin: 7px 15px 0px 0px;
+        }
+
+        #icon_quest_information {
+            position: fixed;
+            top: 0px;
+            right: 40px;
+            margin: 7px 15px 0px 0px;
+        } */
+
+        #icon_quest_close {
+            position: fixed;
+            top: 0px;
+            right: 0px;
+            margin: 7px 15px 0px 0px;
+        }
+
+        #quest_content {
+             margin-top: 145px;
+             height: calc(100vh - 145px);
+             overflow-y: scroll;
+        }
+
+        .button_hint {
+            margin: auto;
+            width: 200px;
+            margin: 5px;
+            border-radius: 20px;
+            background: rgba(49, 110, 13, 0.753);
+        }
+
+        .hint_foto_block {
+            font-size: 30px;
+        }
+
+        #title_message_about_successful_completion_quest {
+            margin-top: 50px;
+            padding: 0px 5px;
+            font-size: 40px;
+            color: rgb(0, 102, 255);
+            text-align: center;
+        }
+
+        #title_message_end_quest_due_maximum_maintenance_erroneous_codes {
+            margin-top: 50px;
+            padding: 0px 5px;
+            font-size: 40px;
+            color: rgb(255, 0, 0);
+            text-align: center;
+        }
+
+        #text_message_about_successful_completion_quest {
+            font-size: 30px;
+            padding: 0px 5px;
+            color: rgb(90, 105, 128);
+            text-align: center;
+        }
+
+        #text_copy_clipboard_message_about_successful_completion_quest {
+            margin-top: 5px;
+            font-size: 20px;
+            padding: 0px 5px;
+            color: rgb(90, 105, 128);
+            text-align: center;
+        }
+    </style>
+
     <script src="js/map/map.js"></script>
 
     <!-- Використовуються для формування сторінки -->
@@ -1584,6 +1726,8 @@
     <script defer src="js/data/data_surveillance_cameras.js"></script>
     <script defer src="js/data/data_place_installation_surveillance_camera.js"></script>
 
+    <script defer src="js/data/data_quests_arboretum_1.js"></script>
+
     <script defer src="js/open_dialog_statistics.js"></script>
 
     <script defer src="js/forms_list_search_commands.js"></script>
@@ -1597,6 +1741,16 @@
     <script defer src="js/content_loaded.js"></script>
 
     <script defer src="js/close_photo_gallery.js"></script>
+
+    <script defer src="js/quest.js"></script>
+    <script defer src="js/quest_start.js"></script>
+    <script defer src="js/quest_timer.js"></script>
+    <script defer src="js/quest_hint.js"></script>
+    <script defer src="js/quest_validate_code.js"></script>
+    <script defer src="js/quest_search_for_saved.js"></script>
+
+    <script defer src="js/date_now.js"></script>
+    <script defer src="js/formatting_seconds_days_hours_min_seconds.js"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-8FMGYGY8LZ"></script>
@@ -2034,6 +2188,17 @@
             <a href="https://www.dcz.gov.ua/userSearch/vacancy?koatuuVal=101010510600000&koatuuLab=Ладижинkey=">Вакансії м. Ладижина на сайті Державної служби зайнятості</a>
         </details>
 
+        <details class="datails_leveil_1" id="id_details_quests" onclick="onclick_details(this)">
+            <summary class="summary_title_name">Квести</summary>
+
+            <details class="datails_leveil_2_first_block" onclick="quest_search_for_saved()">
+                <summary class="summary_address_type_name">Квест №1 у Дендрологічному парку "Ладижинський гай"</summary>
+
+                <div id="quests_data_1"></div>
+            </details>
+
+        </details>
+
         <details class="datails_leveil_1" id="id_details_density_population" onclick="onclick_details(this)">
             <summary class="summary_title_name">Густота населення</summary>
 
@@ -2217,6 +2382,53 @@
         </div>
 
         <div id="photo_gallery_content"></div>
+    </div>
+
+    <div id="quest">
+        <div id="quest_header">
+            <div id="quest_name">
+                Квест №1
+            </div>
+
+            <div id="quest_location">
+                Локація: Дендрологічний парк Ладижинський гай
+            </div>
+
+            <div id="quest_hint">
+                Використано підказок: 0 із 5
+            </div>
+
+            <div id="quest_error">
+                Введено помилкових кодів: 0 із 5
+            </div>
+
+            <div id="quest_find">
+                Знайдено місць зйомки фото: 0 із 10
+            </div>
+
+            <div id="quest_time">
+                Час проходження квесту: 
+            </div>
+
+            <div id="quest_date_time_start">
+                Квест розпочався:
+            </div>
+
+            <img height="26" width="26" id="icon_quest_close" src="icon/close.png" alt="Закрити" title="Закрити" onclick="close_quest()">
+
+            <!-- <img height="26" width="26" id="icon_quest_information" src="icon/information.png" alt="Правила" title="Правила" onclick="">
+
+            <img height="26" width="26" id="icon_quest_delete_waypoints" src="icon/delete.png" alt="Очистити" title="Очистити" onclick="">
+
+            <img height="26" width="26" id="icon_quest_timer_start" src="icon/timer_start.png" alt="Завантажити попередні результати квесту" title="Завантажити попередні результати квесту" onclick="download_preliminary_quest_results()"> -->
+
+        </div>
+
+        <!-- <div id="id_close_photo_gallery" onclick="close_quest()">
+            <img height="30" width="30" src="icon/close.png" alt="Закрити" onclick="">
+        </div> -->
+
+        <div id="quest_content"></div>
     </div>
 
     <!-- <footer id="id_page_footer"></footer> -->
