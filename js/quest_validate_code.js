@@ -56,7 +56,7 @@ function event_value_validate_quest_code(id, text) {
             if (quest_obj.wrong_code_used == 5) {
                 return end_quest_due_maximum_maintenance_erroneous_codes();
             } else {
-                return open_dialog_error('Помилковий код!');
+                return open_dialog_error('Код не відповідає місцю зйомки фото!');
             }
         }
 
