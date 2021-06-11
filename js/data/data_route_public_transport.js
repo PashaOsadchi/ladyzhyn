@@ -5276,13 +5276,18 @@ const data_route_public_transport_arr = [
 
 // Додає маршрути у список
 function add_select_route_public_transport() {
-    for (i = 0; i < data_route_public_transport_arr.length; i++) {
-        const option = document.createElement("option");
-        option.setAttribute("value", data_route_public_transport_arr[i].id);
-        option.innerHTML = `${data_route_public_transport_arr[i].name}`;
 
-        document.getElementById("id_select_route_public_transport").appendChild(option);
-    };
+    let list_search_parameters = `Маршрути громадського транспорту
+    <button class="button_sidebar_delete" onclick="change_color_show_hide_button_bloсk('id_details_route_public_transport'); delete_route_public_transport_markers()">Видалити маршрут із карти</button>
+    `;
+
+    // Додає назви населених пунктів
+    data_route_public_transport_arr.forEach((el) => {
+        list_search_parameters += `<button class="button_sidebar_add_map" id="button_add_map_polyline_route_public_transport_${el.id}" onclick="change_color_show_hide_button_bloсk('id_details_route_public_transport'); change_color_show_hide_button(this); add_map_polyline_route_public_transport('${el.id}')">${el.name}</button>`;
+    });
+
+
+    document.getElementById("id_details_route_public_transport").innerHTML = list_search_parameters;
 }
 
 // Додає маршрути у список після завантаження сторінки

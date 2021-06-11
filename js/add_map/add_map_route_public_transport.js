@@ -1,7 +1,14 @@
 let polyline_route_public_transport_arr = [];
 
 // Додає на карту маршрут руху
-function add_map_polyline_route_public_transport(obj) {
+function add_map_polyline_route_public_transport(id) {
+
+    delete_route_public_transport_markers();
+
+    const arr = data_route_public_transport_arr.filter((e) => e.id == id);
+
+    const obj = arr[0];
+
     const name_polyline = `polyline_route_public_transport_${obj}`;
 
     window[name_polyline] = new google.maps.Polyline({
@@ -45,17 +52,4 @@ function add_map_polyline_route_public_transport(obj) {
     google.maps.event.addListener(window[name_polyline], "mouseout", function () {
         infoWindow.close();
     });
-}
-
-function add_map_route_public_transport() {
-    delete_route_public_transport_markers();
-
-    // Визначає вибраний маршрут
-    const select_route_public_transport_selectedIndex = document.getElementById('id_select_route_public_transport').selectedIndex;
-    const select_route_public_transport_options = document.getElementById('id_select_route_public_transport').options;
-    const select_route_public_transport_value = select_route_public_transport_options[select_route_public_transport_selectedIndex].value;
-
-    const arr = data_route_public_transport_arr.filter((e) => e.id == select_route_public_transport_value);
-
-    add_map_polyline_route_public_transport(arr[0]);
 }

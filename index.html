@@ -1614,6 +1614,14 @@
         }
     </style>
 
+    <!-- id_details_route_public_transport -->
+    <style>
+        #id_details_route_public_transport {
+            color: rgb(255, 255, 255);
+            text-align: center;
+        }
+    </style>
+
     <script src="js/map/map.js"></script>
 
     <!-- Використовуються для формування сторінки -->
@@ -2269,13 +2277,7 @@
                 onclick="change_color_show_hide_button(this); add_map_public_transport_stops_all()">Показати\Приховати
                 зупинки громадського транспорту</button>
 
-            <button class="button_sidebar_delete" onclick="delete_route_public_transport_markers()">Приховати
-                маршрут</button>
-
-            <label for="">Вибрати та показати маршрут</label>
-            <select name="" id="id_select_route_public_transport" onchange="add_map_route_public_transport()">
-                <option value=""></option>
-            </select>
+            <div class="div_first_page_level_2" id="id_details_route_public_transport"></div>
 
         </details>
 
