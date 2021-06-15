@@ -3,13 +3,9 @@
     // console.log(event.request.url);
 }); */
 
-/* self.addEventListener("install", function (event) {
-    event.waitUntil(
-        caches.open("v1").then(function (cache) {
-            return cache.addAll(["/index.html"]);
-        })
-    );
-});
+
+// Кешує тільки визначені ресурси
+self.addEventListener("install", (event) => event.waitUntil(caches.open("v1").then((cache) => cache.addAll(["/index.html"]))));
 
 addEventListener("fetch", function (event) {
     if (event.request.headers.get("Accept").includes("text/html")) {
@@ -23,9 +19,11 @@ addEventListener("fetch", function (event) {
                 })
         );
     }
-}); */
+});
 
-self.addEventListener("install", (event) => event.waitUntil(caches.open("v1").then((cache) => cache.addAll(["/index.html"]))));
+
+// Кешує всі ресурси тому викликає помилку переповнення кешу
+/* self.addEventListener("install", (event) => event.waitUntil(caches.open("v1").then((cache) => cache.addAll(["/index.html"]))));
 
 self.addEventListener("fetch", (event) => {
     event.respondWith(
@@ -46,4 +44,4 @@ self.addEventListener("fetch", (event) => {
             })
             .catch(() => console.log('not found'))
     );
-});
+}); */
