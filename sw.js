@@ -25,11 +25,9 @@ addEventListener("fetch", function (event) {
     }
 }); */
 
-
-
 self.addEventListener("install", (event) => event.waitUntil(caches.open("v1").then((cache) => cache.addAll(["/"]))));
 
-addEventListener("fetch", function (event) {
+/* addEventListener("fetch", function (event) {
     if (event.request.headers.get("Accept").includes("text/html")) {
         event.respondWith(
             fetch(event.request)
@@ -41,4 +39,25 @@ addEventListener("fetch", function (event) {
                 })
         );
     }
+}); */
+
+self.addEventListener("fetch", (event) => {
+    event.respondWith(
+        caches
+            .match(event.request)
+            .then((resp) => {
+                return (
+                    resp ||
+                    fetch(event.request).then((response) => {
+                        let responseClone = response.clone();
+                        caches.open("v1").then((cache) => {
+                            cache.put(event.request, responseClone);
+                        });
+
+                        return response;
+                    })
+                );
+            })
+            .catch(() => console.log('not found'))
+    );
 });
