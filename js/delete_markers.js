@@ -21,7 +21,9 @@ function delete_all_overlay_maps() {
 
     delete_heatmap_house_multifamily();
     delete_heatmap_house_private();
-    delete_archival_photos_markers()
+    delete_archival_photos_markers();
+
+    add_map_polyline_community_boundary_all();
 
     // Змінює колір кнопок
     const elements = document.querySelectorAll('.button_sidebar_add_map');
