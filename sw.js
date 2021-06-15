@@ -4,23 +4,14 @@
 // Кешує тільки визначені ресурси
 self.addEventListener("install", (event) => event.waitUntil(caches.open("v1").then((cache) => cache.addAll(["/index.html"]))));
 
-
-
-/* self.addEventListener("fetch", function (event) {
-    // тут нічого не робити, просто реєструвати всі запити мережі
-    // console.log(event.request.url);
-}); */
-
 addEventListener("fetch", function (event) {
+    // console.log(event.request.url);
+
     if (event.request.headers.get("Accept").includes("text/html")) {
         event.respondWith(
             fetch(event.request)
-                .then(function (response) {
-                    return response;
-                })
-                .catch(function (error) {
-                    return caches.match("index.html");
-                })
+                .then((response) => response)
+                .catch((error) => caches.match("index.html"))
         );
     }
 });
