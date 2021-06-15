@@ -27,13 +27,7 @@ addEventListener("fetch", function (event) {
 
 
 
-self.addEventListener("install", function (event) {
-    event.waitUntil(
-        caches.open("v1").then(function (cache) {
-            return cache.addAll(["/"]);
-        })
-    );
-});
+self.addEventListener("install", (event) => event.waitUntil(caches.open("v1").then((cache) => cache.addAll(["/"]))));
 
 addEventListener("fetch", function (event) {
     if (event.request.headers.get("Accept").includes("text/html")) {
@@ -48,5 +42,3 @@ addEventListener("fetch", function (event) {
         );
     }
 });
-
-
