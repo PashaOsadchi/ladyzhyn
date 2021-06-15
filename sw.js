@@ -4,7 +4,7 @@ self.addEventListener("fetch", function (event) {
 
     // Кешувати статичний ресурс, але не зображення
     // if (event.request.url.indexOf(staticHost) !== -1 && event.request.url.search(/\.(svg|png|jpeg|jpg|gif|webp)/) === -1) {
-    if (event.request.url.indexOf() !== -1 && event.request.url.search(/\.(svg|png|jpeg|jpg|gif|webp)/) === -1) {
+    if (event.request.url.indexOf('https://ladyzhyn.com/') !== -1 && event.request.url.search(/\.(svg|png|jpeg|jpg|gif|webp)/) === -1) {
         return event.respondWith(
             // Перевірте, чи дані в кеші
             caches.match(event.request).then(function (response) {
