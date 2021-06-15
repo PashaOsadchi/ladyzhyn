@@ -1,3 +1,6 @@
+// https://web.dev/add-manifest/
+// https://dev.to/njromano/how-to-scope-your-pwa-service-workers-1n6m
+
 // https://habr.com/ru/post/547436/
 // https://developers.google.com/web/tools/workbox/
 // https://github.com/mdn/sw-test/blob/gh-pages/sw.js#L1-L17
