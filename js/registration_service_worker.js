@@ -1,5 +1,7 @@
 // https://habr.com/ru/post/547436/
 // https://developers.google.com/web/tools/workbox/
+// https://github.com/mdn/sw-test/blob/gh-pages/sw.js#L1-L17
+// https://developer.mozilla.org/ru/docs/Web/API/Service_Worker_API/Using_Service_Workers
 
 if ("serviceWorker" in navigator) {
     window.addEventListener("load", function () {
