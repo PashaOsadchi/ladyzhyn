@@ -19,7 +19,6 @@ document.onclick = (event) => {
         id_dialog_detailed_information.close();
         id_dialog_openseadragon_master_plan_map.close();
         id_dialog_circles_preloader.close();
-        id_dialog_statistics.close();
         id_dialog_openseadragon_scheme_engineering_thermal_networks_map.close();
     }
 };
