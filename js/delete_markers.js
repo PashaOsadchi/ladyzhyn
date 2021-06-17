@@ -23,7 +23,11 @@ function delete_all_overlay_maps() {
     delete_heatmap_house_private();
     delete_archival_photos_markers();
 
-    add_map_polyline_community_boundary_all();
+    // Видаляє межі усіх населених пунктів
+    for (let i = 0; i < polyline_arr.length; i++) {
+        polyline_arr[i].setMap(null);
+    }
+    polyline_arr = [];
 
     // Змінює колір кнопок
     const elements = document.querySelectorAll('.button_sidebar_add_map');
