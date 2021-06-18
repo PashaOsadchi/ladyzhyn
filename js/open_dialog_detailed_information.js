@@ -1,6 +1,6 @@
 let archival_photo_upload_status = false;
 
-function open_dialog_detailed_information(id) {
+function add_data_dialog_detailed_information(id) {
     //console.log(id)
     const id_arr = id.split("-");
     //console.log(id_arr)
@@ -10,12 +10,12 @@ function open_dialog_detailed_information(id) {
         // Будинок
         case 1:
             const house_arr = data_house_arr.filter((e) => e.house_id == id_arr[1]);
-            dialog_detailed_information.showModal();
+            open_dialog_detailed_information();
 
             let house_str = `
             <div id="dialog_header">
                 <div id="dialog_detailed_information_header">Детальна інформація про будинок</div>
-                <img height="16" width="16" id="icon_close_dialog" src="icon/close.png" alt="Закрити" onclick="id_dialog_detailed_information.close()"> 
+                <img height="16" width="16" id="icon_close_dialog" src="icon/close.png" alt="Закрити" onclick="close_dialog_detailed_information()"> 
             </div> 
 
             <div id="dialog_content">
@@ -32,12 +32,12 @@ function open_dialog_detailed_information(id) {
         // Підїзд
         case 2:
             const entrance_arr = data_entrance_arr.filter((e) => e.entrance_id == id_arr[1]);
-            dialog_detailed_information.showModal();
+            open_dialog_detailed_information();
 
             dialog_detailed_information.innerHTML = `
             <div id="dialog_header">
                 <div id="dialog_detailed_information_header">Детальна інформація про підїзд</div>
-                <img height="16" width="16" id="icon_close_dialog" src="icon/close.png" alt="Закрити" onclick="id_dialog_detailed_information.close()"> 
+                <img height="16" width="16" id="icon_close_dialog" src="icon/close.png" alt="Закрити" onclick="close_dialog_detailed_information()"> 
             </div> 
 
             <div id="dialog_content">
@@ -48,12 +48,12 @@ function open_dialog_detailed_information(id) {
         // Квартира
         case 3:
             const apartment_arr = data_apartment_arr.filter((e) => e.id == id_arr[1]);
-            dialog_detailed_information.showModal();
+            open_dialog_detailed_information();
 
             let apartment_str = `
             <div id="dialog_header">
                 <div id="dialog_detailed_information_header">Детальна інформація про квартиру</div>
-                <img height="16" width="16" id="icon_close_dialog" src="icon/close.png" alt="Закрити" onclick="id_dialog_detailed_information.close()"> 
+                <img height="16" width="16" id="icon_close_dialog" src="icon/close.png" alt="Закрити" onclick="close_dialog_detailed_information()"> 
             </div> 
 
             <div id="dialog_content">
@@ -67,12 +67,12 @@ function open_dialog_detailed_information(id) {
         // Організація
         case 4:
             const organization_arr = data_organization_arr.filter((e) => e.organization_id == id_arr[1]);
-            dialog_detailed_information.showModal();
+            open_dialog_detailed_information();
 
             let organization_str = `
             <div id="dialog_header">
                 <div id="dialog_detailed_information_header">Детальна інформація про організацію</div>
-                <img height="16" width="16" id="icon_close_dialog" src="icon/close.png" alt="Закрити" onclick="id_dialog_detailed_information.close()"> 
+                <img height="16" width="16" id="icon_close_dialog" src="icon/close.png" alt="Закрити" onclick="close_dialog_detailed_information()"> 
             </div> 
 
             <div id="dialog_content">
@@ -102,12 +102,12 @@ function open_dialog_detailed_information(id) {
         // Облаштована зона відпочинку
         case 5:
             const equipped_recreation_areas_arr = data_equipped_recreation_areas_arr.filter((e) => e.id == id_arr[1]);
-            dialog_detailed_information.showModal();
+            open_dialog_detailed_information();
 
             let equipped_recreation_areas_str = `
             <div id="dialog_header">
                 <div id="dialog_detailed_information_header">Детальна інформація про облаштовану зону відпочинку</div>
-                <img height="16" width="16" id="icon_close_dialog" src="icon/close.png" alt="Закрити" onclick="id_dialog_detailed_information.close()"> 
+                <img height="16" width="16" id="icon_close_dialog" src="icon/close.png" alt="Закрити" onclick="close_dialog_detailed_information()"> 
             </div> 
 
             <div id="dialog_content">
@@ -121,12 +121,12 @@ function open_dialog_detailed_information(id) {
         // Зупинка громадського транспорту
         case 6:
             const public_transport_stops_arr = data_public_transport_stops_arr.filter((e) => e.id == id_arr[1]);
-            dialog_detailed_information.showModal();
+            open_dialog_detailed_information();
 
             dialog_detailed_information.innerHTML = `
             <div id="dialog_header">
                 <div id="dialog_detailed_information_header">Детальна інформація про графіки руху</div>
-                <img height="16" width="16" id="icon_close_dialog" src="icon/close.png" alt="Закрити" onclick="id_dialog_detailed_information.close()"> 
+                <img height="16" width="16" id="icon_close_dialog" src="icon/close.png" alt="Закрити" onclick="close_dialog_detailed_information()"> 
             </div> 
 
             <div id="dialog_content">
@@ -136,12 +136,12 @@ function open_dialog_detailed_information(id) {
         // Дошка оголошень
         case 7:
             const bulletin_boards_arr = data_bulletin_boards_arr.filter((e) => e.id == id_arr[1]);
-            dialog_detailed_information.showModal();
+            open_dialog_detailed_information();
 
             dialog_detailed_information.innerHTML = `
             <div id="dialog_header">
                 <div id="dialog_detailed_information_header">Детальна інформація про дошку оголошень</div>
-                <img height="16" width="16" id="icon_close_dialog" src="icon/close.png" alt="Закрити" onclick="id_dialog_detailed_information.close()"> 
+                <img height="16" width="16" id="icon_close_dialog" src="icon/close.png" alt="Закрити" onclick="close_dialog_detailed_information()"> 
             </div> 
 
             <div id="dialog_content">
@@ -151,12 +151,12 @@ function open_dialog_detailed_information(id) {
         // Білборди
         case 8:
             const billboards_arr = data_billboards_arr.filter((e) => e.id == id_arr[1]);
-            dialog_detailed_information.showModal();
+            open_dialog_detailed_information();
 
             dialog_detailed_information.innerHTML = `
             <div id="dialog_header">
                 <div id="dialog_detailed_information_header">Детальна інформація про білборд</div>
-                <img height="16" width="16" id="icon_close_dialog" src="icon/close.png" alt="Закрити" onclick="id_dialog_detailed_information.close()"> 
+                <img height="16" width="16" id="icon_close_dialog" src="icon/close.png" alt="Закрити" onclick="close_dialog_detailed_information()"> 
             </div> 
 
             <div id="dialog_content">
@@ -166,12 +166,12 @@ function open_dialog_detailed_information(id) {
         // Сітілайти
         case 9:
             const city_lights_arr = data_city_lights_arr.filter((e) => e.id == id_arr[1]);
-            dialog_detailed_information.showModal();
+            open_dialog_detailed_information();
 
             dialog_detailed_information.innerHTML = `
             <div id="dialog_header">
                 <div id="dialog_detailed_information_header">Детальна інформація про сітілайт</div>
-                <img height="16" width="16" id="icon_close_dialog" src="icon/close.png" alt="Закрити" onclick="id_dialog_detailed_information.close()"> 
+                <img height="16" width="16" id="icon_close_dialog" src="icon/close.png" alt="Закрити" onclick="close_dialog_detailed_information()"> 
             </div> 
 
             <div id="dialog_content">
@@ -181,12 +181,12 @@ function open_dialog_detailed_information(id) {
         // Велопарковки
         case 10:
             const bicycle_parking_arr = data_bicycle_parking_arr.filter((e) => e.id == id_arr[1]);
-            dialog_detailed_information.showModal();
+            open_dialog_detailed_information();
 
             dialog_detailed_information.innerHTML = `
             <div id="dialog_header">
                 <div id="dialog_detailed_information_header">Детальна інформація про велопарковку</div>
-                <img height="16" width="16" id="icon_close_dialog" src="icon/close.png" alt="Закрити" onclick="id_dialog_detailed_information.close()"> 
+                <img height="16" width="16" id="icon_close_dialog" src="icon/close.png" alt="Закрити" onclick="close_dialog_detailed_information()"> 
             </div> 
 
             <div id="dialog_content">
@@ -196,7 +196,7 @@ function open_dialog_detailed_information(id) {
         // Населений пункт
         case 11:
             const human_settlement_arr = data_human_settlement_arr.filter((e) => e.human_settlement_id == id_arr[1]);
-            dialog_detailed_information.showModal();
+            open_dialog_detailed_information();
 
             const number_house_arr = data_house_arr.filter((e) => e.house_human_settlement_code == id_arr[1]);
 
@@ -230,7 +230,7 @@ function open_dialog_detailed_information(id) {
             dialog_detailed_information.innerHTML = `
             <div id="dialog_header">
                 <div id="dialog_detailed_information_header">Детальна інформація про населений пункт</div>
-                <img height="16" width="16" id="icon_close_dialog" src="icon/close.png" alt="Закрити" onclick="id_dialog_detailed_information.close()"> 
+                <img height="16" width="16" id="icon_close_dialog" src="icon/close.png" alt="Закрити" onclick="close_dialog_detailed_information()"> 
             </div> 
 
             <div id="dialog_content">
@@ -254,12 +254,12 @@ function open_dialog_detailed_information(id) {
         // Об'єкти альтернативної енергетики
         case 12:
             const alternative_energy_facilities_arr = data_alternative_energy_facilities_arr.filter((e) => e.id == id_arr[1]);
-            dialog_detailed_information.showModal();
+            open_dialog_detailed_information();
 
             dialog_detailed_information.innerHTML = `
             <div id="dialog_header">
                 <div id="dialog_detailed_information_header">Детальна інформація про об'єкт альтернативної енергетики</div>
-                <img height="16" width="16" id="icon_close_dialog" src="icon/close.png" alt="Закрити" onclick="id_dialog_detailed_information.close()"> 
+                <img height="16" width="16" id="icon_close_dialog" src="icon/close.png" alt="Закрити" onclick="close_dialog_detailed_information()"> 
             </div> 
 
             <div id="dialog_content">
@@ -274,7 +274,7 @@ function open_dialog_detailed_information(id) {
             dialog_detailed_information.innerHTML = `
             <div id="dialog_header">
                 <div id="dialog_detailed_information_header">${archival_photos_arr[0].name}</div>
-                <img height="16" width="16" id="icon_close_dialog" src="icon/close.png" alt="Закрити" onclick="id_dialog_detailed_information.close()"> 
+                <img height="16" width="16" id="icon_close_dialog" src="icon/close.png" alt="Закрити" onclick="close_dialog_detailed_information()"> 
             </div> 
 
             <div id="dialog_content">
@@ -296,10 +296,8 @@ function open_dialog_detailed_information(id) {
 function img_archival_photos_loaded() {
     archival_photo_upload_status = true;
 
-    const dialog_detailed_information = document.getElementById("id_dialog_detailed_information");
-
-    id_dialog_circles_preloader.close();
-    dialog_detailed_information.showModal();
+    close_circles_preloader();
+    open_dialog_detailed_information();
 }
 
 function view_all_archival_photos() {

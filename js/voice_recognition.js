@@ -48,7 +48,7 @@ if ("webkitSpeechRecognition" in window || "SpeechRecognition" in window) {
 
     // Виконується коли служба розпізнавання мови повертає результат
     recognition.onresult = (e) => {
-        // id_dialog_circles_preloader.close();
+        // close_circles_preloader();
 
         const results = e.results;
         recognition.stop();

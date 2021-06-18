@@ -129,7 +129,7 @@ function determines_type_search_command(command_str, search_source) {
                 break;
             // План зонування м.Ладижина
             case 9:
-                id_dialog_openseadragon_master_plan_map.showModal();
+                open_dialog_openseadragon_master_plan_map();
                 break;
             // Зупинки громадського транспорту
             case 10:

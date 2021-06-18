@@ -13,7 +13,7 @@ function add_map_archival_photos_all() {
 
             const message_text = `<div>
             <div id="dialog_detailed_information_header">${data_archival_photos_arr[i].name}</div>
-                <img height="16" width="16" id="icon_close_dialog" src="icon/close.png" alt="Закрити" onclick="id_dialog_detailed_information.close()"> 
+                <img height="16" width="16" id="icon_close_dialog" src="icon/close.png" alt="Закрити" onclick="close_dialog_detailed_information()"> 
             </div> 
 
             <div>
@@ -66,6 +66,6 @@ function add_map_archival_photos(id, lat_1, lon_1, lat_2, lon_2, name_polygon, m
     info_window_archival_photos = new google.maps.InfoWindow();
 
     google.maps.event.addListener(window[name_polygon], "click", function (e) {
-        open_dialog_detailed_information(`13-${id}`)
+        add_data_dialog_detailed_information(`13-${id}`)
     });
 }

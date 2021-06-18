@@ -19,7 +19,7 @@ custom_marker.prototype.draw = function () {
         div.setAttribute('data-before', this.args.marker_name);
 
         div.className = this.args.marker_class_name;
-        div.addEventListener('click' , () => open_dialog_detailed_information(self.args.marker_id));
+        div.addEventListener('click' , () => add_data_dialog_detailed_information(self.args.marker_id));
 
         // Додає до DIC атрибути користувача
         /* if (typeof (self.args.marker_id) !== 'undefined') {
