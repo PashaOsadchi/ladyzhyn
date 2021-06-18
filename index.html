@@ -155,7 +155,7 @@
     <!-- media_screen -->
     <style>
         @media screen and (max-width: 540px) {
-            dialog {
+            .dialog_content {
                 width: 92% !important;
                 margin: auto;
             }
@@ -449,17 +449,35 @@
         } */
     </style>
 
-    <!-- tag_dialog -->
+    <!-- dialog -->
     <style>
-        dialog {
-            padding: 0px;
-            border: none;
-            z-index: 2;
-            background: rgb(255, 255, 255);
+        .dialog {
+            display: none;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+
+            margin: 0;
+            border: 0 none;
+            padding: 0;
+
+            width: 100vw;
+            min-width: 100vw;
+            height: 100vh;
+
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 10;
+
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
-        dialog::backdrop {
-            background-color: rgba(0, 0, 0, 0.8);
+        .dialog_content {
+            padding: 0px;
+            border: none;
+            background: rgb(255, 255, 255);
+            z-index: 20;
         }
 
         #dialog_header {
@@ -467,7 +485,7 @@
             top: 0;
         }
 
-        #dialog_content {
+        #dialog_data {
             max-height: 85vh;
             padding: 5px;
             color: rgba(0, 0, 0, 0.8);
@@ -475,7 +493,7 @@
             scroll-behavior: smooth;
         }
 
-        #dialog_error_content {
+        #dialog_error_data {
             font-size: var(--font-size-3);
             max-height: 85vh;
             padding: 5px;
@@ -504,18 +522,12 @@
             padding: 5px 30px 5px 30px;
         }
 
-        #id_dialog_openseadragon_master_plan_map,
-        #id_dialog_openseadragon_scheme_engineering_thermal_networks_map {
+        #openseadragon_master_plan_map,
+        #openseadragon_scheme_engineering_thermal_networks_map {
             padding: 0;
             width: 90%;
             height: 70%;
             z-index: 1000 !important;
-        }
-
-        #openseadragon_master_plan_map,
-        #openseadragon_scheme_engineering_thermal_networks_map {
-            width: 100%;
-            height: 100%;
         }
 
         #id_dialog_detailed_information {
@@ -1767,19 +1779,43 @@
 
 </head>
 
-<dialog id="id_dialog_error"></dialog>
+<div class="dialog" id="id_dialog_error">
+    <div class="dialog_content" id="id_dialog_error_content">
+        <div id="dialog_header">
+            <div id="dialog_error_header">Помилка</div>
+            <img height="16" width="16" id="icon_close_dialog" src="icon/close.png" alt="Закрити" onclick="close_dialog_error()"> 
+        </div> 
 
-<dialog id="id_dialog_detailed_information"></dialog>
+        <div id="dialog_error_data"></div>
+    </div>
+</div>
 
-<dialog id="id_dialog_openseadragon_master_plan_map">
-    <div id="openseadragon_master_plan_map"></div>
-</dialog>
+<div class="dialog" id="id_dialog_detailed_information">
+    <div class="dialog_content" id="id_dialog_detailed_information_content"></div>
+</div>
 
-<dialog id="id_dialog_openseadragon_scheme_engineering_thermal_networks_map">
-    <div id="openseadragon_scheme_engineering_thermal_networks_map"></div>
-</dialog>
+<div class="dialog" id="id_dialog_openseadragon_master_plan_map">
+    <div class="dialog_content" id="openseadragon_master_plan_map"></div>
+</div>
 
-<dialog id="id_dialog_circles_preloader"></dialog>
+<div class="dialog" id="id_dialog_openseadragon_scheme_engineering_thermal_networks_map">
+    <div class="dialog_content" id="openseadragon_scheme_engineering_thermal_networks_map"></div></div>
+</div>
+
+<div class="dialog" id="id_dialog_circles_preloader">
+    <div style="border: none !important" class="preloader">
+        <div style="border: none !important"></div>
+        <div style="border: none !important"></div>
+        <div style="border: none !important"></div>
+        <div style="border: none !important"></div>
+        <div style="border: none !important"></div>
+        <div style="border: none !important"></div>
+        <div style="border: none !important"></div>
+        <div style="border: none !important"></div>
+        <div style="border: none !important"></div>
+        <div style="border: none !important"></div>
+    </div>
+</div>
 
 <body id="id_body">
     <header id="id_page_header">
