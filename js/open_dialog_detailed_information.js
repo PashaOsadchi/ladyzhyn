@@ -320,7 +320,7 @@ function view_all_archival_photos() {
 
     const photo_gallery_content = document.getElementById("photo_gallery_content");
 
-    photo_gallery_content_content.innerHTML = list_archival_photos;
+    photo_gallery_content.innerHTML = list_archival_photos;
 
     document.getElementById("id_page_header").style.display = "none";
     document.getElementById("map").style.display = "none";
@@ -361,7 +361,7 @@ function view_spadshchyna_photos(id) {
 
     const photo_gallery_content = document.getElementById("photo_gallery_content");
 
-    photo_gallery_content_content.innerHTML = list_spadshchyna_photos;
+    photo_gallery_content.innerHTML = list_spadshchyna_photos;
 
     document.getElementById("id_page_header").style.display = "none";
     document.getElementById("map").style.display = "none";
