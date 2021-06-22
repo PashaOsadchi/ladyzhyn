@@ -39,6 +39,7 @@ function open_circles_preloader() {
 }
 
 function close_circles_preloader() {
+    unlocks_scrolling();
     document.getElementById("id_dialog_circles_preloader").style.display = "none";
 }
 
@@ -49,7 +50,6 @@ document.onclick = (event) => {
         close_dialog_detailed_information();
         close_dialog_openseadragon_master_plan_map();
         close_dialog_scheme_engineering_thermal_networks_map();
-        close_circles_preloader();
     }
 };
 
@@ -58,4 +58,9 @@ function disable_scrolling() {
     const x = window.scrollX;
     const y = window.scrollY;
     window.onscroll = () => window.scrollTo(x, y);
+}
+
+// Розблоковує прокрутку сторінки
+function unlocks_scrolling() {
+    window.onscroll = () => {};
 }

@@ -916,7 +916,7 @@
             right: 0px;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(5px);
         }
 
         .preloader {
@@ -2333,6 +2333,13 @@
 
         </details>
 
+        <details class="datails_leveil_1" id="id_details_video" onclick="onclick_details(this)">
+            <summary class="summary_title_name">Цікаві відео</summary>
+
+            <button class="button_sidebar_add_map" id="id_button_archival_photos" onclick="view_video_1()">Переглянути підводну зйомку (формат 360) кар'єру, що у с.Губник</button>
+
+        </details>
+
         <details class="datails_leveil_1" id="id_details_advertising_media" onclick="onclick_details(this)">
             <summary class="summary_title_name">Рекламні засоби</summary>
 
@@ -2435,13 +2442,7 @@
             <button class="button_sidebar_add_map" onclick="view_spadshchyna_photos(13)">В'язання<br>(Ткачук О.)</button>
 
         </details>
-
-        <details class="datails_leveil_1" id="id_details_video" onclick="onclick_details(this)">
-            <summary class="summary_title_name">Відео</summary>
-
-            <button class="button_sidebar_add_map" id="id_button_archival_photos" onclick="view_video_1()">Переглянути підводну зйомку (формат 360) кар'єру, що у с.Губник</button>
-
-        </details>
+        
     </div>
 
     <div id="photo_gallery">
@@ -2496,7 +2497,6 @@
 
         <div id="iframe_video_content"></div>
     </div>
-
 
     <!-- <footer id="id_page_footer"></footer> -->
 </body>

@@ -22,13 +22,17 @@ function view_video_1() {
     
     </div>`;
 
-    setTimeout(() => {
-        document.getElementById("id_page_header").style.display = "none";
-        document.getElementById("map").style.display = "none";
-        document.getElementById("id_sidebar").style.display = "none";
-        document.getElementById("id_body").style.display = "block";
-        document.getElementById("id_body").style.backgroundColor = "rgb(255, 255, 255)";
+    document.getElementById("id_page_header").style.display = "none";
+    document.getElementById("map").style.display = "none";
+    document.getElementById("id_sidebar").style.display = "none";
+    document.getElementById("id_body").style.display = "block";
+    document.getElementById("id_body").style.backgroundColor = "rgb(255, 255, 255)";
 
-        document.getElementById("iframe_video").style.display = "block";
-    }, 100);
+    document.getElementById("iframe_video").style.display = "block";
+
+    open_circles_preloader();
+
+    setTimeout(() => {
+        close_circles_preloader();
+    }, 3000);
 }
