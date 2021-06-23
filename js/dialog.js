@@ -36,6 +36,14 @@ function close_dialog_scheme_engineering_thermal_networks_map() {
 function open_circles_preloader() {
     disable_scrolling();
     document.getElementById("id_dialog_circles_preloader").style.display = "flex";
+
+    // Зменшує розмиття фону
+    let blur = 5;
+    let blurValue = setInterval(() => {
+        --blur
+        document.getElementById("id_dialog_circles_preloader").style.backdropFilter = `blur(${blur}px)`;
+        if (blur == 1) clearInterval(blurValue);
+    }, 500);
 }
 
 function close_circles_preloader() {
