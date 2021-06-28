@@ -3,7 +3,7 @@ function open_close_sidebar() {
 
     if (sidebar_hidden) {
         // Потрібно показати бокову панель
-        if (window.innerWidth < 700) {
+        if (window.innerWidth < 650) {
             // Ширина екрана менше 400 тому панелі даємо розмір ширини вікна
             document.body.style.gridTemplateColumns = "0% 1fr";
             sidebar.style.display = "block";

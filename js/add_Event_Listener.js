@@ -34,7 +34,7 @@ window.addEventListener("resize", () => {
 
     const sidebar = document.getElementById("id_sidebar");
 
-    if (window.innerWidth < 700) {
+    if (window.innerWidth < 650) {
         // ширина вікна менше 700
         if (!sidebar_hidden) {
             // Бокове меню видиме тому ширина бокового меню дорівнює ширині вікна
