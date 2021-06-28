@@ -101,6 +101,3 @@ function add_select_human_settlements() {
         document.getElementById("id_human_settlements").appendChild(option);
     }
 }
-
-// Додає населені пункти у список після завантаження сторінки
-document.addEventListener("DOMContentLoaded", add_select_human_settlements(), false);

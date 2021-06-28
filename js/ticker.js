@@ -47,8 +47,6 @@ setInterval(() => {
     counter_sponsors += 1;
 }, 10000);
 
-document.addEventListener("DOMContentLoaded",() => {document.getElementById('id_page_footer').innerHTML = generate_message_sponsors(0);}, true);
-
 function generate_message_sponsors(i) {
     let phone_text = '';
 

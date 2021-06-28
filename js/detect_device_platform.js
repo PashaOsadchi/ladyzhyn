@@ -18,15 +18,13 @@ function detect_device_platform_1() {
                 return userDeviceArray[i].device;
             }
         }
-        return "Неизвестная платформа!" + platform;
+        return "Невідома платформа!" + platform;
     }
     return getPlatform();
 }
 
 function detect_device_platform_2() {
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
-        console.log("Вы используете мобильное устройство (телефон или планшет).");
-    } else console.log("Вы используете ПК.");
+        console.log("Вы використовуєте мобільний пристрій (телефон або планшет).");
+    } else console.log("Ви використовуєте ПК.");
 }
-
-// document.addEventListener("DOMContentLoaded", detect_device_platform_2(), false);

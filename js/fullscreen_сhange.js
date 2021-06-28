@@ -1,7 +1,7 @@
 let document_fullscreen = false; 
 
 // Закриває діалогове вікно із планом зонування при виході із повноекранного режиму (виправляє помлку коли пропадає background-color при виході із повноекранного режиму)
-document.addEventListener("fullscreenchange", function(e){
+document.addEventListener("fullscreenchange", () => {
 
     if(document_fullscreen)  {
         setTimeout(() => {

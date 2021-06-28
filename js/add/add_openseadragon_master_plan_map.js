@@ -1,7 +1,7 @@
 let viewer_selection_coordinates_map;
 let box;
 
-document.addEventListener("DOMContentLoaded", async () => {
+function open_openseadragon_master_plan_map() {
     viewer_selection_coordinates_map = OpenSeadragon({
         id: "openseadragon_master_plan_map",
         prefixUrl: "icon/",
@@ -20,12 +20,9 @@ document.addEventListener("DOMContentLoaded", async () => {
             },
         },
     });
-});
+}
 
-
-let viewer_selection_coordinates_map_2;
-
-document.addEventListener("DOMContentLoaded", async () => {
+function open_openseadragon_scheme_engineering_thermal_networks_map() {
     viewer_selection_coordinates_map = OpenSeadragon({
         id: "openseadragon_scheme_engineering_thermal_networks_map",
         prefixUrl: "icon/",
@@ -44,4 +41,4 @@ document.addEventListener("DOMContentLoaded", async () => {
             },
         },
     });
-});
+}

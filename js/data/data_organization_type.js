@@ -790,6 +790,3 @@ function add_select_organization_type() {
         document.getElementById("id_select_organization_type").appendChild(option);
     }
 }
-
-// Додає типи організацій у список після завантаження сторінки
-document.addEventListener("DOMContentLoaded", add_select_organization_type(), false);

@@ -5289,6 +5289,3 @@ function add_select_route_public_transport() {
 
     document.getElementById("id_details_route_public_transport").innerHTML = list_search_parameters;
 }
-
-// Додає маршрути у список після завантаження сторінки
-document.addEventListener('DOMContentLoaded', add_select_route_public_transport(), false);
