@@ -31,4 +31,26 @@ document.addEventListener("DOMContentLoaded", () => {
 window.addEventListener("resize", () => {
     // Адаптує висоту вікна
     adaptive_height_body();
+
+    const sidebar = document.getElementById("id_sidebar");
+
+    if (window.innerWidth < 700) {
+        // ширина вікна менше 700
+        if (!sidebar_hidden) {
+            // Бокове меню видиме тому ширина бокового меню дорівнює ширині вікна
+            document.body.style.gridTemplateColumns = "0% 1fr";
+            sidebar.style.display = "block";
+            // Відзначаємо що карта прихована
+            map_hidden = true;
+        }
+    } else {
+        // Ширина вікна більше 700
+        if (!sidebar_hidden) {
+            // Бокове меню видиме тому ширина бокового меню має фіксовану ширину
+            document.body.style.gridTemplateColumns = "1fr 350px";
+            sidebar.style.display = "block";
+            // Відзначаємо що карта видима
+            map_hidden = false;
+        }
+    }
 });
