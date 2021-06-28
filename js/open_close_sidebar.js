@@ -1,20 +1,10 @@
 function open_close_sidebar() {
-    const sidebar = document.getElementById("id_sidebar");
-
     if (sidebar_hidden) {
         // Потрібно показати бокову панель
         if (window.innerWidth < 600) {
-            // Ширина екрана менше 400 тому панелі даємо розмір ширини вікна
-            document.body.style.gridTemplateColumns = "0% 1fr";
-            sidebar.style.display = "block";
-            // Відзначаємо що карта прихована
-            map_hidden = true;
+            assigns_sidebar_window_width();
         } else {
-            // Ширина екрана більше 400 тому панелі даємо фіксований розмір
-            document.body.style.gridTemplateColumns = "1fr 350px";
-            sidebar.style.display = "block";
-            // Відзначаємо що карта видима
-            map_hidden = false;
+            assigns_sidebar_fixed_width();
         }
 
         sidebar_hidden = false;
@@ -25,17 +15,12 @@ function open_close_sidebar() {
         close_details_all_level_1();
 
         // Очищає поле пошуку
-        id_input_search.value = '';
+        id_input_search.value = "";
 
         // Очищає результати пошуку
-        document.querySelector("#id_list_search_parameters").innerHTML = '';
+        document.querySelector("#id_list_search_parameters").innerHTML = "";
 
-        document.body.style.gridTemplateColumns = "1fr 0%";
-        sidebar.style.display = "none";
-        map_hidden = false;
-
-        // Відзначаємо що карта видима
-        sidebar_hidden = true;
+        sidebar_hides();
 
         // Маштабує карту щоб було видно задані кординати
         if (coordinates_map_scaling_obj.lat_1 != 0) {
@@ -68,11 +53,39 @@ function open_close_sidebar() {
                 map_offset_house_private();
             }, 100);
         }
-
     }
 
     // Toggle працює як перимикач і трансформує зовнішній вигляд меню
     document.getElementById("id_bar_1").classList.toggle("bar_1_change");
     document.getElementById("id_bar_2").classList.toggle("bar_2_change");
     document.getElementById("id_bar_3").classList.toggle("bar_3_change");
+}
+
+// Призначає боковому меню фіксовану ширину
+function assigns_sidebar_fixed_width() {
+    // Бокове меню видиме тому ширина бокового меню має фіксовану ширину
+    document.body.style.gridTemplateColumns = "1fr 350px";
+    document.getElementById("id_sidebar").style.display = "block";
+
+    // Відзначаємо що карта видима
+    map_hidden = false;
+}
+
+// Призначає боковому меню ширину вікна
+function assigns_sidebar_window_width() {
+    document.body.style.gridTemplateColumns = "0% 1fr";
+    document.getElementById("id_sidebar").style.display = "block";
+
+    // Відзначаємо що карта прихована
+    map_hidden = true;
+}
+
+// Приховує бокове меню
+function sidebar_hides() {
+    document.body.style.gridTemplateColumns = "1fr 0%";
+    document.getElementById("id_sidebar").style.display = "none";
+    map_hidden = false;
+
+    // Відзначаємо що карта видима
+    sidebar_hidden = true;
 }
