@@ -5283,7 +5283,7 @@ function add_select_route_public_transport() {
 
     // Додає назви населених пунктів
     data_route_public_transport_arr.forEach((el) => {
-        list_search_parameters += `<button class="button_sidebar_add_map" id="button_add_map_polyline_route_public_transport_${el.id}" onclick="change_color_show_hide_button_bloсk('id_details_route_public_transport'); change_color_show_hide_button(this); add_map_polyline_route_public_transport('${el.id}')">${el.name}</button>`;
+        list_search_parameters += `<button class="button_sidebar_add_map" id="button_add_map_polyline_route_public_transport_${el.id}" onclick="change_color_show_hide_button_bloсk('id_details_route_public_transport'); add_map_polyline_route_public_transport('${el.id}')">${el.name}</button>`;
     });
 
 

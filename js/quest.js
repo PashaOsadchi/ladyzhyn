@@ -15,7 +15,9 @@ let quest_obj = {
 
 // Зберігає дані у локальному сховищі
 function save_quest_obj() {
-    localStorage.clear();
+    //localStorage.clear();
+    localStorage.removeItem('quest_obj');
+
     const quest_str = JSON.stringify(quest_obj);
     localStorage.setItem("quest_obj", quest_str);
 }

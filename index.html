@@ -1790,6 +1790,8 @@
     <script defer src="js/view_video.js"></script>
     <script defer src="js/close_iframe_video.js"></script>
 
+    <script defer src="js/settings.js"></script>
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-8FMGYGY8LZ"></script>
     <script>
@@ -1882,6 +1884,16 @@
                 Шановний відвідувачу,<br>
                 з питаннями та пропозиціями звертатися до Осадчого П. П.<br>
                 тел. <a href="tel:+380989711130">+380-98-97-111-30</a>
+            </div>
+            
+        </details>
+
+        <details class="datails_leveil_1" id="id_settings" onclick="onclick_details(this)">
+            <summary class="summary_title_name">Налаштування</summary>
+
+            <div class="checkbox_block" id="id_block_close_menu_when_adding_data_to_map">
+                <input type="checkbox" name="" id="id_close_menu_when_adding_data_to_map" onchange="onchange_checkbox_id_close_menu_when_adding_data_to_map()">
+                <label id="id_close_menu_when_adding_data_to_map" for="id_close_menu_when_adding_data_to_map">Згортати меню (у мобільні версії сайту) після натискання кнопки яка додає дані на карту</label>
             </div>
             
         </details>
@@ -2268,13 +2280,13 @@
             <summary class="summary_title_name">Густота населення</summary>
 
             <button class="button_sidebar_add_map" id="id_button_add_map_density_population_house_multifamily" 
-                onclick="change_color_show_hide_button(this); add_map_density_population_house_multifamily()">Показати\Приховати
+                onclick="add_map_density_population_house_multifamily()">Показати\Приховати
                 на
                 карті густоту
                 населення у багатоквартирних будинках</button>
 
             <button class="button_sidebar_add_map" id="id_button_add_map_density_population_house_private"
-                onclick="change_color_show_hide_button(this); add_map_density_population_house_private()">Показати\Приховати
+                onclick="add_map_density_population_house_private()">Показати\Приховати
                 на
                 карті густоту
                 населення у приватних будинках</button>
@@ -2284,7 +2296,7 @@
             <summary class="summary_title_name">Межі населених пунктів</summary>
 
             <button class="button_sidebar_add_map" id="id_button_add_map_polyline_community_boundary_all"
-                onclick="change_color_show_hide_button(this); add_map_polyline_community_boundary_all()">Показати\Приховати
+                onclick="add_map_polyline_community_boundary_all()">Показати\Приховати
                 межі населених
                 пунктів</button>
         </details>
@@ -2292,7 +2304,7 @@
         <details class="datails_leveil_1" id="id_details_current_coordinates" onclick="onclick_details(this)">
             <summary class="summary_title_name">Поточні кординати</summary>
             <button class="button_sidebar_add_map" id="id_button_add_map_current_coordinates"
-                onclick="change_color_show_hide_button(this); add_map_current_coordinates()">Показати\Приховати поточні
+                onclick="add_map_current_coordinates()">Показати\Приховати поточні
                 кординати</button>
             <button class="button_sidebar_add_address_route" onclick="add_current_coordinates_route()">Додати у маршрут
                 поточні координати</button>
@@ -2302,11 +2314,11 @@
             <summary class="summary_title_name">Зони відпочинку</summary>
 
             <button class="button_sidebar_add_map" id="id_button_add_map_recreation_areas_all"
-                onclick="change_color_show_hide_button(this); add_map_recreation_areas_all()">Показати\Приховати зони
+                onclick="add_map_recreation_areas_all()">Показати\Приховати зони
                 відпочинку</button>
 
             <button class="button_sidebar_add_map" id="id_button_add_map_equipped_recreation_areas_all"
-                onclick="change_color_show_hide_button(this); add_map_equipped_recreation_areas_all()">Показати\Приховати
+                onclick="add_map_equipped_recreation_areas_all()">Показати\Приховати
                 облаштовані зони відпочинку</button>
 
         </details>
@@ -2325,7 +2337,7 @@
             <summary class="summary_title_name">Громадський транспорт</summary>
 
             <button class="button_sidebar_add_map" id="id_button_add_map_public_transport_stops_all"
-                onclick="change_color_show_hide_button(this); add_map_public_transport_stops_all()">Показати\Приховати
+                onclick="add_map_public_transport_stops_all()">Показати\Приховати
                 зупинки громадського транспорту</button>
 
             <div class="div_first_page_level_2" id="id_details_route_public_transport"></div>
@@ -2343,15 +2355,15 @@
             <summary class="summary_title_name">Рекламні засоби</summary>
 
             <button class="button_sidebar_add_map" id="id_button_add_map_bulletin_boards_all"
-                onclick="change_color_show_hide_button(this); add_map_bulletin_boards_all()">Показати\Приховати
+                onclick="add_map_bulletin_boards_all()">Показати\Приховати
                 дошки оголошень</button>
 
             <button class="button_sidebar_add_map" id="id_button_add_map_billboards_all"
-                onclick="change_color_show_hide_button(this); add_map_billboards_all()">Показати\Приховати
+                onclick="add_map_billboards_all()">Показати\Приховати
                 білборди</button>
 
             <button class="button_sidebar_add_map" id="id_button_add_map_city_lights_all"
-                onclick="change_color_show_hide_button(this); add_map_city_lights_all()">Показати\Приховати
+                onclick="add_map_city_lights_all()">Показати\Приховати
                 сітілайти</button>
         </details>
 
@@ -2359,11 +2371,11 @@
             <summary class="summary_title_name">Велоінфраструктура</summary>
 
             <button class="button_sidebar_add_map" id="id_button_add_map_bicycle_parking_all"
-                onclick="change_color_show_hide_button(this); add_map_bicycle_parking_all()">Показати\Приховати
+                onclick="add_map_bicycle_parking_all()">Показати\Приховати
                 велопарковки</button>
 
             <button class="button_sidebar_add_map" id="id_button_add_map_bicycle_service_center_all"
-                onclick="change_color_show_hide_button(this); add_map_bicycle_service_center_all()">Показати\Приховати
+                onclick="add_map_bicycle_service_center_all()">Показати\Приховати
                 веломайстерні</button>
 
         </details>
@@ -2372,7 +2384,7 @@
             <summary class="summary_title_name">Альтернативна енергетика</summary>
 
             <button class="button_sidebar_add_map" id="id_button_add_map_alternative_energy_facilities_all"
-                onclick="change_color_show_hide_button(this); add_map_alternative_energy_facilities_all()">Показати\Приховати
+                onclick="add_map_alternative_energy_facilities_all()">Показати\Приховати
                 об'єкти альтернативної енергетики</button>
 
         </details>
@@ -2381,7 +2393,7 @@
             <summary class="summary_title_name">Паркувальний простір</summary>
 
             <button class="button_sidebar_add_map" id="id_button_add_map_parking_space_all"
-                onclick="change_color_show_hide_button(this); add_map_parking_space_all()">Показати\Приховати
+                onclick="add_map_parking_space_all()">Показати\Приховати
                 об'єкти паркувального простору</button>
 
         </details>
@@ -2390,7 +2402,7 @@
             <summary class="summary_title_name">Камери відеоспостереження</summary>
 
             <button class="button_sidebar_add_map" id="id_button_add_map_video_surveillance_cameras_all"
-                onclick="change_color_show_hide_button(this); add_map_video_surveillance_all()">Показати\Приховати
+                onclick="add_map_video_surveillance_all()">Показати\Приховати
                 камери відеоспостереження</button>
 
         </details>
@@ -2407,7 +2419,7 @@
 
             <button class="button_sidebar_add_map" id="id_button_archival_photos" onclick="view_all_archival_photos()">Переглянути усі архівні фото</button>
 
-            <button class="button_sidebar_add_map" id="id_button_archival_photos" onclick="change_color_show_hide_button(this); add_map_archival_photos_all()">Показати\Приховати місця зйомки архівних фото</button>
+            <button class="button_sidebar_add_map" id="id_button_archival_photos" onclick="add_map_archival_photos_all()">Показати\Приховати місця зйомки архівних фото</button>
 
         </details>
 

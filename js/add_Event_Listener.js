@@ -18,6 +18,12 @@ document.addEventListener("DOMContentLoaded", () => {
     // Додає маршрути у список
     add_select_route_public_transport();
 
+    // Перевіряє чи є збережені налаштування
+    settings_search_for_saved();
+
+    // Додає обробник події який спрацьовує при натисканні нва кнопки які виводять інформацію на карту
+    add_event_listener_class_button_sidebar_add_map();
+
     open_openseadragon_master_plan_map();
 
     open_openseadragon_scheme_engineering_thermal_networks_map();
@@ -32,6 +38,7 @@ window.addEventListener("resize", () => {
     // Адаптує висоту вікна
     adaptive_height_body();
 
+    // Адаптує ширину бокового меню
     if (window.innerWidth < 600) {
         if (!sidebar_hidden) assigns_sidebar_window_width();
     } else {
