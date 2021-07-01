@@ -319,8 +319,8 @@ const data_place_installation_surveillance_camera_arr = [
     },
     {
         id: 54,
-        latitude: 48.68856363177137,
-        longitude: 29.23914110070163,
+        latitude: 48.68883114394521,
+        longitude: 29.239401066347025,
         detailed_information: ``,
     },
     {
@@ -363,6 +363,42 @@ const data_place_installation_surveillance_camera_arr = [
         id: 61,
         latitude: 48.67627060875002,
         longitude: 29.25757884615395,
+        detailed_information: ``,
+    },
+    {
+        id: 62,
+        latitude: 48.684970712359096,
+        longitude: 29.236439183750665,
+        detailed_information: ``,
+    },
+    {
+        id: 63,
+        latitude: 48.6800582321678,
+        longitude: 29.228420393268273,
+        detailed_information: ``,
+    },
+    {
+        id: 64,
+        latitude: 48.679558191278375,
+        longitude: 29.26206175368067,
+        detailed_information: ``,
+    },
+    {
+        id: 65,
+        latitude: 48.663708771098854,
+        longitude: 29.27897158525087,
+        detailed_information: ``,
+    },
+    {
+        id: 66,
+        latitude: 48.66468926175543,
+        longitude: 29.282350654306136,
+        detailed_information: ``,
+    },
+    {
+        id: 67,
+        latitude: 48.68238700264815, 
+        longitude: 29.22465381923849,
         detailed_information: ``,
     },
 ]

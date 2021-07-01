@@ -722,8 +722,8 @@ const data_surveillance_cameras_arr = [
         detailed_information: `
         <b>Власник:</b> Ладижинська міська рада<br>
         `,
-        latitude_point_course: 48.68862287770565,
-        longitude_point_course: 29.2393374467349,
+        latitude_point_course: 48.68863405390666,
+        longitude_point_course: 29.2396537295641,
     },
     {
         id: 67,
@@ -812,5 +812,71 @@ const data_surveillance_cameras_arr = [
         `,
         latitude_point_course: 48.67643264839869,
         longitude_point_course: 29.25747824180945,
+    },
+    {
+        id: 75,
+        viewing_angle: 90,
+        radius: 15,
+        place_installation_id: 62,
+        detailed_information: `
+        <b>Власник:</b> Ладижинська міська рада<br>
+        `,
+        latitude_point_course: 48.68512318658477,
+        longitude_point_course: 29.236169727694985,
+    },
+    {
+        id: 76,
+        viewing_angle: 90,
+        radius: 15,
+        place_installation_id: 63,
+        detailed_information: `
+        <b>Власник:</b> Ладижинська міська рада<br>
+        `,
+        latitude_point_course: 48.68022893227549,
+        longitude_point_course: 29.22865065883967,
+    },
+    {
+        id: 77,
+        viewing_angle: 90,
+        radius: 15,
+        place_installation_id: 64,
+        detailed_information: `
+        <b>Власник:</b> Ладижинська міська рада<br>
+        `,
+        latitude_point_course: 48.680119264056245,
+        longitude_point_course: 29.26204785900138,
+    },
+    {
+        id: 78,
+        viewing_angle: 90,
+        radius: 15,
+        place_installation_id: 65,
+        detailed_information: `
+        <b>Власник:</b> Ладижинська міська рада<br>
+        `,
+        latitude_point_course: 48.66347948575319,
+        longitude_point_course: 29.279144241192423,
+    },
+    {
+        id: 79,
+        viewing_angle: 90,
+        radius: 15,
+        place_installation_id: 66,
+        detailed_information: `
+        <b>Власник:</b> Ладижинська міська рада<br>
+        `,
+        latitude_point_course: 48.664623287985386,
+        longitude_point_course: 29.28268868279826,
+    },
+    {
+        id: 80,
+        viewing_angle: 90,
+        radius: 15,
+        place_installation_id: 67,
+        detailed_information: `
+        <b>Власник:</b> Ладижинська міська рада<br>
+        `,
+        latitude_point_course: 48.68237964932186,
+        longitude_point_course: 29.224491001015277,
     },
 ]

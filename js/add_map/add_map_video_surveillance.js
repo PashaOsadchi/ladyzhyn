@@ -12,6 +12,7 @@ function add_map_video_surveillance_all() {
 
         const message_text = `
 <b>Детальна інформація про камеру відеоспостереження</b><br>
+<b>Номер:</b> ${data_surveillance_cameras_arr[i].id}<br>
 ${data_surveillance_cameras_arr[i].detailed_information}
 `;
 
