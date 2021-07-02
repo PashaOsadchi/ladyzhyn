@@ -21,12 +21,15 @@ document.addEventListener("DOMContentLoaded", () => {
     // Перевіряє чи є збережені налаштування
     settings_search_for_saved();
 
-    // Додає обробник події який спрацьовує при натисканні нва кнопки які виводять інформацію на карту
-    add_event_listener_class_button_sidebar_add_map();
-
     open_openseadragon_master_plan_map();
 
     open_openseadragon_scheme_engineering_thermal_networks_map();
+
+    // Формує список кнопок які додають камерам відеоспостереження
+    generates_list_surveillance_cameras();
+
+    // Додає обробник події який спрацьовує при натисканні нва кнопки які виводять інформацію на карту
+    add_event_listener_class_button_sidebar_add_map();
 
     // Показує інформацію про спонсорів
     //document.getElementById('id_page_footer').innerHTML = generate_message_sponsors(0);

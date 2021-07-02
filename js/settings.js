@@ -43,7 +43,7 @@ function save_settings_obj() {
     localStorage.setItem("settings_obj", settings_str);
 }
 
-// Додає обробник події який спрацьовує при натисканні нва кнопки які виводять інформацію на карту
+// Додає обробник події який спрацьовує при натисканні на кнопки які виводять інформацію на карту
 function add_event_listener_class_button_sidebar_add_map() {
     const el_arr = document.querySelectorAll(".button_sidebar_add_map");
 
