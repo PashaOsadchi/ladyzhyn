@@ -879,4 +879,26 @@ const data_surveillance_cameras_arr = [
         latitude_point_course: 48.68237964932186,
         longitude_point_course: 29.224491001015277,
     },
+    {
+        id: 81,
+        viewing_angle: 90,
+        radius: 15,
+        place_installation_id: 68,
+        detailed_information: `
+        <b>Власник:</b> Ладижинська міська рада<br>
+        `,
+        latitude_point_course: 48.685441888913736,
+        longitude_point_course: 29.236367649093335,
+    },
+    {
+        id: 82,
+        viewing_angle: 90,
+        radius: 15,
+        place_installation_id: 68,
+        detailed_information: `
+        <b>Власник:</b> Ладижинська міська рада<br>
+        `,
+        latitude_point_course: 48.68503443037571,
+        longitude_point_course: 29.23573976911986,
+    },
 ]
