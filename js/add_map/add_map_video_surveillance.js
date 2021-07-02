@@ -6,14 +6,16 @@ function add_map_video_surveillance_all() {
     if (video_surveillance_arr.length) {
         return delete_video_surveillance_markers();
     }
-    
+
     for (let i = 0; i < data_surveillance_cameras_arr.length; i++) {
-        const place_installation_surveillance_camera_arr = data_place_installation_surveillance_camera_arr.filter(function (e) { return e.id == data_surveillance_cameras_arr[i].place_installation_id });
+        const place_installation_surveillance_camera_arr = data_place_installation_surveillance_camera_arr.filter((e) => e.id == data_surveillance_cameras_arr[i].place_installation_id);
+
+        const owners_surveillance_cameras_arr = data_owners_surveillance_cameras_arr.filter((e) => e.id == data_surveillance_cameras_arr[i].owners_code);
 
         const message_text = `
 <b>Детальна інформація про камеру відеоспостереження</b><br>
 <b>Номер:</b> ${data_surveillance_cameras_arr[i].id}<br>
-${data_surveillance_cameras_arr[i].detailed_information}
+<b>Власник:</b> ${owners_surveillance_cameras_arr[0].owners_name}<br>
 `;
 
         add_map_video_surveillance(
@@ -22,16 +24,15 @@ ${data_surveillance_cameras_arr[i].detailed_information}
             data_surveillance_cameras_arr[i].latitude_point_course,
             data_surveillance_cameras_arr[i].longitude_point_course,
             `video_surveillance_${data_surveillance_cameras_arr[i].id}`,
-             message_text,
-             data_surveillance_cameras_arr[i].viewing_angle,
-             data_surveillance_cameras_arr[i].radius,
-           );
+            message_text,
+            data_surveillance_cameras_arr[i].viewing_angle,
+            data_surveillance_cameras_arr[i].radius
+        );
     }
 
     // Після додавання камер відеоспостереження маштабує карту
     map_offset(data_place_installation_surveillance_camera_arr);
-};
-
+}
 
 // Додає на карту камеру відеоспостереження
 function add_map_video_surveillance(lat_1, lon_1, lat_2, lon_2, name_polygon, message_text, viewing_angle, radius) {

@@ -4,9 +4,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 1,
-        detailed_information: `
-        <b>Власник:</b> КП Дендрологічний парк "Ладижинський гай"<br>
-        `,
+        owners_code: 2,
+        detailed_information: ``,
         latitude_point_course: 48.68690544802297,
         longitude_point_course: 29.24015224953737,
     },
@@ -15,9 +14,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 2,
-        detailed_information: `
-        <b>Власник:</b> КП Дендрологічний парк "Ладижинський гай"<br>
-        `,
+        owners_code: 2,
+        detailed_information: ``,
         latitude_point_course: 48.68675298538826,
         longitude_point_course: 29.24008669685658,
     },
@@ -26,9 +24,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 3,
-        detailed_information: `
-        <b>Власник:</b> КП Дендрологічний парк "Ладижинський гай"<br>
-        `,
+        owners_code: 2,
+        detailed_information: ``,
         latitude_point_course: 48.686986287736,
         longitude_point_course: 29.23970158016115,
     },
@@ -37,9 +34,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 4,
-        detailed_information: `
-        <b>Власник:</b> КП Дендрологічний парк "Ладижинський гай"<br>
-        `,
+        owners_code: 2,
+        detailed_information: ``,
         latitude_point_course: 48.68656361268437,
         longitude_point_course: 29.23961392997874,
     },
@@ -48,9 +44,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 5,
-        detailed_information: `
-        <b>Власник:</b> КП Дендрологічний парк "Ладижинський гай"<br>
-        `,
+        owners_code: 2,
+        detailed_information: ``,
         latitude_point_course: 48.68673894665856,
         longitude_point_course: 29.23947393315968,
     },
@@ -59,9 +54,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 6,
-        detailed_information: `
-        <b>Власник:</b> КП Дендрологічний парк "Ладижинський гай"<br>
-        `,
+        owners_code: 2,
+        detailed_information: ``,
         latitude_point_course: 48.68688051180346,
         longitude_point_course: 29.23926305338632,
     },
@@ -70,9 +64,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 7,
-        detailed_information: `
-        <b>Власник:</b> КП Дендрологічний парк "Ладижинський гай"<br>
-        `,
+        owners_code: 2,
+        detailed_information: ``,
         latitude_point_course: 48.68697586927317,
         longitude_point_course: 29.23900462169907,
     },
@@ -81,9 +74,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 9,
-        detailed_information: `
-        <b>Власник:</b> КП Дендрологічний парк "Ладижинський гай"<br>
-        `,
+        owners_code: 2,
+        detailed_information: ``,
         latitude_point_course: 48.68717134710011,
         longitude_point_course: 29.23846810277742,
     },
@@ -92,9 +84,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 8,
-        detailed_information: `
-        <b>Власник:</b> КП Дендрологічний парк "Ладижинський гай"<br>
-        `,
+        owners_code: 2,
+        detailed_information: ``,
         latitude_point_course: 48.68702265095984,
         longitude_point_course: 29.23872735209503,
     },
@@ -103,9 +94,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 10,
-        detailed_information: `
-        <b>Власник:</b> КП Дендрологічний парк "Ладижинський гай"<br>
-        `,
+        owners_code: 2,
+        detailed_information: ``,
         latitude_point_course: 48.68674539348316,
         longitude_point_course: 29.23823118743619,
     },
@@ -114,9 +104,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 11,
-        detailed_information: `
-        <b>Власник:</b> КП Дендрологічний парк "Ладижинський гай"<br>
-        `,
+        owners_code: 2,
+        detailed_information: ``,
         latitude_point_course: 48.68668519702457,
         longitude_point_course: 29.23785749144091,
     },
@@ -125,9 +114,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 11,
-        detailed_information: `
-        <b>Власник:</b> КП Дендрологічний парк "Ладижинський гай"<br>
-        `,
+        owners_code: 2,
+        detailed_information: ``,
         latitude_point_course: 48.68660702283821,
         longitude_point_course: 29.23792876867178,
     },
@@ -136,9 +124,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 12,
-        detailed_information: `
-        <b>Власник:</b> КП Дендрологічний парк "Ладижинський гай"<br>
-        `,
+        owners_code: 2,
+        detailed_information: ``,
         latitude_point_course: 48.68645989685838,
         longitude_point_course: 29.23751669676506,
     },
@@ -147,9 +134,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 12,
-        detailed_information: `
-        <b>Власник:</b> КП Дендрологічний парк "Ладижинський гай"<br>
-        `,
+        owners_code: 2,
+        detailed_information: ``,
         latitude_point_course: 48.68640913599369,
         longitude_point_course: 29.23763943191009,
     },
@@ -158,9 +144,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 13,
-        detailed_information: `
-        <b>Власник:</b> КП Дендрологічний парк "Ладижинський гай"<br>
-        `,
+        owners_code: 2,
+        detailed_information: ``,
         latitude_point_course: 48.68664458709232,
         longitude_point_course: 29.23779080584562,
     },
@@ -169,9 +154,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 14,
-        detailed_information: `
-        <b>Власник:</b> КП Дендрологічний парк "Ладижинський гай"<br>
-        `,
+        owners_code: 2,
+        detailed_information: ``,
         latitude_point_course: 48.68627267819265,
         longitude_point_course: 29.23813973100774,
     },
@@ -180,9 +164,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 15,
-        detailed_information: `
-        <b>Власник:</b> КП Дендрологічний парк "Ладижинський гай"<br>
-        `,
+        owners_code: 2,
+        detailed_information: ``,
         latitude_point_course: 48.68602500952627,
         longitude_point_course: 29.23892753058881,
     },
@@ -191,9 +174,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 15,
-        detailed_information: `
-        <b>Власник:</b> КП Дендрологічний парк "Ладижинський гай"<br>
-        `,
+        owners_code: 2,
+        detailed_information: ``,
         latitude_point_course: 48.68613647993003,
         longitude_point_course: 29.23893832814384,
     },
@@ -202,9 +184,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 16,
-        detailed_information: `
-        <b>Власник:</b> КП Дендрологічний парк "Ладижинський гай"<br>
-        `,
+        owners_code: 2,
+        detailed_information: ``,
         latitude_point_course: 48.68652144997539,
         longitude_point_course: 29.23898239679877,
     },
@@ -213,9 +194,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 17,
-        detailed_information: `
-        <b>Власник:</b> КП Дендрологічний парк "Ладижинський гай"<br>
-        `,
+        owners_code: 2,
+        detailed_information: ``,
         latitude_point_course: 48.68647378476159,
         longitude_point_course: 29.23902468087027,
     },
@@ -224,9 +204,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 17,
-        detailed_information: `
-        <b>Власник:</b> КП Дендрологічний парк "Ладижинський гай"<br>
-        `,
+        owners_code: 2,
+        detailed_information: ``,
         latitude_point_course: 48.68653048648852,
         longitude_point_course: 29.2387488696855,
     },
@@ -235,9 +214,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 17,
-        detailed_information: `
-        <b>Власник:</b> КП Дендрологічний парк "Ладижинський гай"<br>
-        `,
+        owners_code: 2,
+        detailed_information: ``,
         latitude_point_course: 48.68635946862501,
         longitude_point_course: 29.23883004284787,
     },
@@ -246,9 +224,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 18,
-        detailed_information: `
-        <b>Власник:</b> КП Дендрологічний парк "Ладижинський гай"<br>
-        `,
+        owners_code: 2,
+        detailed_information: ``,
         latitude_point_course: 48.68586431737354,
         longitude_point_course: 29.23915296482801,
     },
@@ -257,9 +234,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 18,
-        detailed_information: `
-        <b>Власник:</b> КП Дендрологічний парк "Ладижинський гай"<br>
-        `,
+        owners_code: 2,
+        detailed_information: ``,
         latitude_point_course: 48.68581712762833,
         longitude_point_course: 29.23914271467452,
     },
@@ -268,9 +244,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 18,
-        detailed_information: `
-        <b>Власник:</b> КП Дендрологічний парк "Ладижинський гай"<br>
-        `,
+        owners_code: 2,
+        detailed_information: ``,
         latitude_point_course: 48.68583252842383,
         longitude_point_course: 29.23875562846612,
     },
@@ -279,9 +254,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 19,
-        detailed_information: `
-        <b>Власник:</b> КП Дендрологічний парк "Ладижинський гай"<br>
-        `,
+        owners_code: 2,
+        detailed_information: ``,
         latitude_point_course: 48.68575281502211,
         longitude_point_course: 29.23803495670187,
     },
@@ -290,9 +264,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 19,
-        detailed_information: `
-        <b>Власник:</b> КП Дендрологічний парк "Ладижинський гай"<br>
-        `,
+        owners_code: 2,
+        detailed_information: ``,
         latitude_point_course: 48.68585603808051,
         longitude_point_course: 29.238049709463,
     },
@@ -301,9 +274,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 20,
-        detailed_information: `
-        <b>Власник:</b> КП Дендрологічний парк "Ладижинський гай"<br>
-        `,
+        owners_code: 2,
+        detailed_information: ``,
         latitude_point_course: 48.68527307642573,
         longitude_point_course: 29.23972402851467,
     },
@@ -312,9 +284,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 21,
-        detailed_information: `
-        <b>Власник:</b> КП Дендрологічний парк "Ладижинський гай"<br>
-        `,
+        owners_code: 2,
+        detailed_information: ``,
         latitude_point_course: 48.68393474931331,
         longitude_point_course: 29.24049013728355,
     },
@@ -323,9 +294,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 21,
-        detailed_information: `
-        <b>Власник:</b> КП Дендрологічний парк "Ладижинський гай"<br>
-        `,
+        owners_code: 2,
+        detailed_information: ``,
         latitude_point_course: 48.68403420486363,
         longitude_point_course: 29.24010691178637,
     },
@@ -334,9 +304,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 22,
-        detailed_information: `
-        <b>Власник:</b> КП Дендрологічний парк "Ладижинський гай"<br>
-        `,
+        owners_code: 2,
+        detailed_information: ``,
         latitude_point_course: 48.68344647500181,
         longitude_point_course: 29.23962453270779,
     },
@@ -345,9 +314,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 22,
-        detailed_information: `
-        <b>Власник:</b> КП Дендрологічний парк "Ладижинський гай"<br>
-        `,
+        owners_code: 2,
+        detailed_information: ``,
         latitude_point_course: 48.68329614574549,
         longitude_point_course: 29.23947424729784,
     },
@@ -356,9 +324,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 23,
-        detailed_information: `
-        <b>Власник:</b> КП Дендрологічний парк "Ладижинський гай"<br>
-        `,
+        owners_code: 2,
+        detailed_information: ``,
         latitude_point_course: 48.6830839810613,
         longitude_point_course: 29.23886082002764,
     },
@@ -367,9 +334,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 24,
-        detailed_information: `
-        <b>Власник:</b> КП Дендрологічний парк "Ладижинський гай"<br>
-        `,
+        owners_code: 2,
+        detailed_information: ``,
         latitude_point_course: 48.68363206997874,
         longitude_point_course: 29.23805577172771,
     },
@@ -378,9 +344,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 25,
-        detailed_information: `
-        <b>Власник:</b> КП Дендрологічний парк "Ладижинський гай"<br>
-        `,
+        owners_code: 2,
+        detailed_information: ``,
         latitude_point_course: 48.68378183124584,
         longitude_point_course: 29.23895367288204,
     },
@@ -389,9 +354,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 26,
-        detailed_information: `
-        <b>Власник:</b> КП Дендрологічний парк "Ладижинський гай"<br>
-        `,
+        owners_code: 2,
+        detailed_information: ``,
         latitude_point_course: 48.68347976220426,
         longitude_point_course: 29.23948238628758,
     },
@@ -400,9 +364,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 27,
-        detailed_information: `
-        <b>Власник:</b> КП Дендрологічний парк "Ладижинський гай"<br>
-        `,
+        owners_code: 2,
+        detailed_information: ``,
         latitude_point_course: 48.68421823649844,
         longitude_point_course: 29.23911236805039,
     },
@@ -411,9 +374,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 27,
-        detailed_information: `
-        <b>Власник:</b> КП Дендрологічний парк "Ладижинський гай"<br>
-        `,
+        owners_code: 2,
+        detailed_information: ``,
         latitude_point_course: 48.6841158070041,
         longitude_point_course: 29.23896669540542,
     },
@@ -422,9 +384,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 28,
-        detailed_information: `
-        <b>Власник:</b> КП Дендрологічний парк "Ладижинський гай"<br>
-        `,
+        owners_code: 2,
+        detailed_information: ``,
         latitude_point_course: 48.68407779426359,
         longitude_point_course: 29.23840927822771,
     },
@@ -433,9 +394,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 29,
-        detailed_information: `
-        <b>Власник:</b> КП Дендрологічний парк "Ладижинський гай"<br>
-        `,
+        owners_code: 2,
+        detailed_information: ``,
         latitude_point_course: 48.68439926228323,
         longitude_point_course: 29.23748857398174,
     },
@@ -444,9 +404,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 30,
-        detailed_information: `
-        <b>Власник:</b> КП Дендрологічний парк "Ладижинський гай"<br>
-        `,
+        owners_code: 2,
+        detailed_information: ``,
         latitude_point_course: 48.684832947584,
         longitude_point_course: 29.23780033307293,
     },
@@ -455,9 +414,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 30,
-        detailed_information: `
-        <b>Власник:</b> КП Дендрологічний парк "Ладижинський гай"<br>
-        `,
+        owners_code: 2,
+        detailed_information: ``,
         latitude_point_course: 48.68484004582542,
         longitude_point_course: 29.23796570058529,
     },
@@ -466,9 +424,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 31,
-        detailed_information: `
-        <b>Власник:</b> Розважальний комплекс "Комора"<br>
-        `,
+        owners_code: 3,
+        detailed_information: ``,
         latitude_point_course: 48.6857645247688,
         longitude_point_course: 29.23788443944531,
     },
@@ -477,9 +434,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 33,
-        detailed_information: `
-        <b>Власник:</b> Ладижинська міська рада<br>
-        `,
+        owners_code: 1,
+        detailed_information: ``,
         latitude_point_course: 48.68428068070281,
         longitude_point_course: 29.23616151828185,
     },
@@ -488,9 +444,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 34,
-        detailed_information: `
-        <b>Власник:</b> Ладижинська міська рада<br>
-        `,
+        owners_code: 1,
+        detailed_information: ``,
         latitude_point_course: 48.68426796989918,
         longitude_point_course: 29.23621335249116,
     },
@@ -499,9 +454,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 35,
-        detailed_information: `
-        <b>Власник:</b> Національна поліція<br>
-        `,
+        owners_code: 4,
+        detailed_information: ``,
         latitude_point_course: 48.6844007764794,
         longitude_point_course: 29.23689873631941,
     },
@@ -510,9 +464,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 36,
-        detailed_information: `
-        <b>Власник:</b> Національна поліція<br>
-        `,
+        owners_code: 4,
+        detailed_information: ``,
         latitude_point_course: 48.6844524485626,
         longitude_point_course: 29.23706381635101,
     },
@@ -521,9 +474,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 37,
-        detailed_information: `
-        <b>Власник:</b> КП "Ладижинський комбінат комунальних підприємств"<br>
-        `,
+        owners_code: 5,
+        detailed_information: ``,
         latitude_point_course: 48.68516837743025,
         longitude_point_course: 29.23433046600811,
     },
@@ -532,9 +484,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 39,
-        detailed_information: `
-        <b>Власник:</b> ТЦ "Київстар"<br>
-        `,
+        owners_code: 6,
+        detailed_information: ``,
         latitude_point_course: 48.68532382290201,
         longitude_point_course: 29.23437352090681,
     },
@@ -543,9 +494,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 38,
-        detailed_information: `
-        <b>Власник:</b> ТЦ "Київстар"<br>
-        `,
+        owners_code: 6,
+        detailed_information: ``,
         latitude_point_course: 48.68522923858414,
         longitude_point_course: 29.23450025798043,
     },
@@ -554,9 +504,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 40,
-        detailed_information: `
-        <b>Власник:</b> ТЦ "Київстар"<br>
-        `,
+        owners_code: 6,
+        detailed_information: ``,
         latitude_point_course: 48.68532169328226,
         longitude_point_course: 29.23465358843782,
     },
@@ -565,9 +514,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 41,
-        detailed_information: `
-        <b>Власник:</b> ТЦ "Київстар"<br>
-        `,
+        owners_code: 6,
+        detailed_information: ``,
         latitude_point_course: 48.68533720218904,
         longitude_point_course: 29.23469334524898,
     },
@@ -576,9 +524,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 43,
-        detailed_information: `
-        <b>Власник:</b> Приватбанк<br>
-        `,
+        owners_code: 7,
+        detailed_information: ``,
         latitude_point_course: 48.6855231158627,
         longitude_point_course: 29.23494747838154,
     },
@@ -587,9 +534,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 42,
-        detailed_information: `
-        <b>Власник:</b> ТЦ "Київстар"<br>
-        `,
+        owners_code: 6,
+        detailed_information: ``,
         latitude_point_course: 48.68548884380345,
         longitude_point_course: 29.23463620032751,
     },
@@ -598,9 +544,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 44,
-        detailed_information: `
-        <b>Власник:</b> Приватбанк<br>
-        `,
+        owners_code: 7,
+        detailed_information: ``,
         latitude_point_course: 48.68559297174039,
         longitude_point_course: 29.23496680537591,
     },
@@ -609,9 +554,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 45,
-        detailed_information: `
-        <b>Власник:</b> ТЦ "Київстар"<br>
-        `,
+        owners_code: 6,
+        detailed_information: ``,
         latitude_point_course: 48.68555194553758,
         longitude_point_course: 29.23448071571309,
     },
@@ -620,9 +564,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 46,
-        detailed_information: `
-        <b>Власник:</b> ТЦ "Київстар"<br>
-        `,
+        owners_code: 6,
+        detailed_information: ``,
         latitude_point_course: 48.68544750973541,
         longitude_point_course: 29.23429365270041,
     },
@@ -631,9 +574,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 47,
-        detailed_information: `
-        <b>Власник:</b> Кав'ярня<br>
-        `,
+        owners_code: 8,
+        detailed_information: ``,
         latitude_point_course: 48.68646637402531,
         longitude_point_course: 29.23235961197903,
     },
@@ -642,9 +584,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 48,
-        detailed_information: `
-        <b>Власник:</b> Центр здоров'я"<br>
-        `,
+        owners_code: 9,
+        detailed_information: ``,
         latitude_point_course: 48.68648069084344,
         longitude_point_course: 29.23233903112544,
     },
@@ -653,9 +594,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 49,
-        detailed_information: `
-        <b>Власник:</b> Ладижинська міська рада<br>
-        `,
+        owners_code: 1,
+        detailed_information: ``,
         latitude_point_course: 48.68808768977159,
         longitude_point_course: 29.22828230228182,
     },
@@ -664,9 +604,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 50,
-        detailed_information: `
-        <b>Власник:</b> Ладижинська міська рада<br>
-        `,
+        owners_code: 1,
+        detailed_information: ``,
         latitude_point_course: 48.68818706810346,
         longitude_point_course: 29.22746458975111,
     },
@@ -675,9 +614,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 51,
-        detailed_information: `
-        <b>Власник:</b> Стоматологічний кабінет<br>
-        `,
+        owners_code: 10,
+        detailed_information: ``,
         latitude_point_course: 48.68850837270449,
         longitude_point_course: 29.22965370705041,
     },
@@ -686,9 +624,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 52,
-        detailed_information: `
-        <b>Власник:</b> Салон краси<br>
-        `,
+        owners_code: 11,
+        detailed_information: ``,
         latitude_point_course: 48.6894928289247,
         longitude_point_course: 29.23092260994037,
     },
@@ -697,9 +634,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 52,
-        detailed_information: `
-        <b>Власник:</b> Салон краси<br>
-        `,
+        owners_code: 11,
+        detailed_information: ``,
         latitude_point_course: 48.68959683660297,
         longitude_point_course: 29.23099634907141,
     },
@@ -708,9 +644,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 53,
-        detailed_information: `
-        <b>Власник:</b> Магазин побутової хімії<br>
-        `,
+        owners_code: 12,
+        detailed_information: ``,
         latitude_point_course: 48.69149758439402,
         longitude_point_course: 29.23284038940666,
     },
@@ -719,9 +654,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 54,
-        detailed_information: `
-        <b>Власник:</b> Ладижинська міська рада<br>
-        `,
+        owners_code: 1,
+        detailed_information: ``,
         latitude_point_course: 48.68863405390666,
         longitude_point_course: 29.2396537295641,
     },
@@ -730,9 +664,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 55,
-        detailed_information: `
-        <b>Власник:</b> Ладижинська міська рада<br>
-        `,
+        owners_code: 1,
+        detailed_information: ``,
         latitude_point_course: 48.68589732050225,
         longitude_point_course: 29.23592275371418,
     },
@@ -741,9 +674,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 55,
-        detailed_information: `
-        <b>Власник:</b> Ладижинська міська рада<br>
-        `,
+        owners_code: 1,
+        detailed_information: ``,
         latitude_point_course: 48.68579140589686,
         longitude_point_course: 29.23569952183583,
     },
@@ -752,9 +684,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 56,
-        detailed_information: `
-        <b>Власник:</b> Магазин "Ковбаси"<br>
-        `,
+        owners_code: 13,
+        detailed_information: ``,
         latitude_point_course: 48.6851139666779,
         longitude_point_course: 29.23469488945345,
     },
@@ -763,9 +694,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 57,
-        detailed_information: `
-        <b>Власник:</b> Ладижинська міська рада<br>
-        `,
+        owners_code: 1,
+        detailed_information: ``,
         latitude_point_course: 48.68483184573072,
         longitude_point_course: 29.236097787721,
     },
@@ -774,9 +704,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 59,
-        detailed_information: `
-        <b>Власник:</b> Ладижинська міська рада<br>
-        `,
+        owners_code: 1,
+        detailed_information: ``,
         latitude_point_course: 48.70136548175284,
         longitude_point_course: 29.23067102600233,
     },
@@ -785,9 +714,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 58,
-        detailed_information: `
-        <b>Власник:</b> Ладижинська міська рада<br>
-        `,
+        owners_code: 1,
+        detailed_information: ``,
         latitude_point_course: 48.68518922914269,
         longitude_point_course: 29.23653197445013,
     },
@@ -796,9 +724,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 60,
-        detailed_information: `
-        <b>Власник:</b> Ладижинська міська рада<br>
-        `,
+        owners_code: 1,
+        detailed_information: ``,
         latitude_point_course: 48.67271532715097,
         longitude_point_course: 29.25623186157991,
     },
@@ -807,9 +734,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 61,
-        detailed_information: `
-        <b>Власник:</b> Ладижинська міська рада<br>
-        `,
+        owners_code: 1,
+        detailed_information: ``,
         latitude_point_course: 48.67643264839869,
         longitude_point_course: 29.25747824180945,
     },
@@ -818,9 +744,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 62,
-        detailed_information: `
-        <b>Власник:</b> Ладижинська міська рада<br>
-        `,
+        owners_code: 1,
+        detailed_information: ``,
         latitude_point_course: 48.68512318658477,
         longitude_point_course: 29.236169727694985,
     },
@@ -829,9 +754,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 63,
-        detailed_information: `
-        <b>Власник:</b> Ладижинська міська рада<br>
-        `,
+        owners_code: 1,
+        detailed_information: ``,
         latitude_point_course: 48.68022893227549,
         longitude_point_course: 29.22865065883967,
     },
@@ -840,9 +764,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 64,
-        detailed_information: `
-        <b>Власник:</b> Ладижинська міська рада<br>
-        `,
+        owners_code: 1,
+        detailed_information: ``,
         latitude_point_course: 48.680119264056245,
         longitude_point_course: 29.26204785900138,
     },
@@ -851,9 +774,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 65,
-        detailed_information: `
-        <b>Власник:</b> Ладижинська міська рада<br>
-        `,
+        owners_code: 1,
+        detailed_information: ``,
         latitude_point_course: 48.66347948575319,
         longitude_point_course: 29.279144241192423,
     },
@@ -862,9 +784,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 66,
-        detailed_information: `
-        <b>Власник:</b> Ладижинська міська рада<br>
-        `,
+        owners_code: 1,
+        detailed_information: ``,
         latitude_point_course: 48.664623287985386,
         longitude_point_course: 29.28268868279826,
     },
@@ -873,9 +794,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 67,
-        detailed_information: `
-        <b>Власник:</b> Ладижинська міська рада<br>
-        `,
+        owners_code: 1,
+        detailed_information: ``,
         latitude_point_course: 48.68237964932186,
         longitude_point_course: 29.224491001015277,
     },
@@ -884,9 +804,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 68,
-        detailed_information: `
-        <b>Власник:</b> Ладижинська міська рада<br>
-        `,
+        owners_code: 1,
+        detailed_information: ``,
         latitude_point_course: 48.685441888913736,
         longitude_point_course: 29.236367649093335,
     },
@@ -895,9 +814,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 68,
-        detailed_information: `
-        <b>Власник:</b> Ладижинська міська рада<br>
-        `,
+        owners_code: 1,
+        detailed_information: ``,
         latitude_point_course: 48.68503443037571,
         longitude_point_course: 29.23573976911986,
     },
@@ -906,9 +824,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 270,
         radius: 15,
         place_installation_id: 69,
-        detailed_information: `
-        <b>Власник:</b> Ладижинська міська рада<br>
-        `,
+        owners_code: 1,
+        detailed_information: ``,
         latitude_point_course: 48.68445986196071,
         longitude_point_course: 29.235715020548817,
     },
@@ -917,9 +834,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 70,
-        detailed_information: `
-        <b>Власник:</b> Ладижинська міська рада<br>
-        `,
+        owners_code: 1,
+        detailed_information: ``,
         latitude_point_course: 48.68611358197075,
         longitude_point_course: 29.231921857903835,
     },
@@ -928,9 +844,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 71,
-        detailed_information: `
-        <b>Власник:</b> Ладижинська міська рада<br>
-        `,
+        owners_code: 1,
+        detailed_information: ``,
         latitude_point_course: 48.68639055038315,
         longitude_point_course: 29.231431685387776,
     },
@@ -939,9 +854,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 72,
-        detailed_information: `
-        <b>Власник:</b> Ладижинська міська рада<br>
-        `,
+        owners_code: 1,
+        detailed_information: ``,
         latitude_point_course: 48.68641672432438,
         longitude_point_course: 29.232048854250216,
     },
@@ -950,9 +864,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 73,
-        detailed_information: `
-        <b>Власник:</b> Ладижинська міська рада<br>
-        `,
+        owners_code: 1,
+        detailed_information: ``,
         latitude_point_course: 48.68669738322402,
         longitude_point_course: 29.231900555416683,
     },
@@ -961,9 +874,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 74,
-        detailed_information: `
-        <b>Власник:</b> Приватна особа<br>
-        `,
+        owners_code: 14,
+        detailed_information: ``,
         latitude_point_course: 48.69461336124831,
         longitude_point_course: 29.235641009824647,
     },
@@ -972,9 +884,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 75,
-        detailed_information: `
-        <b>Власник:</b> Приватна особа<br>
-        `,
+        owners_code: 14,
+        detailed_information: ``,
         latitude_point_course: 48.69828093158481,
         longitude_point_course: 29.228111319585068,
     },
@@ -983,9 +894,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 76,
-        detailed_information: `
-        <b>Власник:</b> Приватна особа<br>
-        `,
+        owners_code: 14,
+        detailed_information: ``,
         latitude_point_course: 48.698461756839514,
         longitude_point_course: 29.2278970790181,
     },
@@ -994,9 +904,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 77,
-        detailed_information: `
-        <b>Власник:</b> Приватна особа<br>
-        `,
+        owners_code: 14,
+        detailed_information: ``,
         latitude_point_course: 48.68333825674093,
         longitude_point_course: 29.234455308674416,
     },
@@ -1005,9 +914,8 @@ const data_surveillance_cameras_arr = [
         viewing_angle: 90,
         radius: 15,
         place_installation_id: 78,
-        detailed_information: `
-        <b>Власник:</b> Ладижинська міська рада<br>
-        `,
+        owners_code: 1,
+        detailed_information: ``,
         latitude_point_course: 48.68786890156828,
         longitude_point_course: 29.238383891126862,
     },
