@@ -956,4 +956,48 @@ const data_surveillance_cameras_arr = [
         latitude_point_course: 48.68669738322402,
         longitude_point_course: 29.231900555416683,
     },
+    {
+        id: 88,
+        viewing_angle: 90,
+        radius: 15,
+        place_installation_id: 74,
+        detailed_information: `
+        <b>Власник:</b> Приватна особа<br>
+        `,
+        latitude_point_course: 48.69461336124831,
+        longitude_point_course: 29.235641009824647,
+    },
+    {
+        id: 89,
+        viewing_angle: 90,
+        radius: 15,
+        place_installation_id: 75,
+        detailed_information: `
+        <b>Власник:</b> Приватна особа<br>
+        `,
+        latitude_point_course: 48.69828093158481,
+        longitude_point_course: 29.228111319585068,
+    },
+    {
+        id: 90,
+        viewing_angle: 90,
+        radius: 15,
+        place_installation_id: 76,
+        detailed_information: `
+        <b>Власник:</b> Приватна особа<br>
+        `,
+        latitude_point_course: 48.698461756839514,
+        longitude_point_course: 29.2278970790181,
+    },
+    {
+        id: 91,
+        viewing_angle: 90,
+        radius: 15,
+        place_installation_id: 77,
+        detailed_information: `
+        <b>Власник:</b> Приватна особа<br>
+        `,
+        latitude_point_course: 48.68333825674093,
+        longitude_point_course: 29.234455308674416,
+    },
 ]
