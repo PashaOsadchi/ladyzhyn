@@ -66,7 +66,37 @@ const data_owners_surveillance_cameras_arr = [
     },
     {
         id: 14,
-        owners_name: `Приватна особа`,
-        owners_name_for_button: `Приватних осіб`,
+        owners_name: `Мешканці буд. 7А, що по вул.Піонерська`,
+        owners_name_for_button: `Мешканців буд. 7А, що по вул.Піонерська`,
+    },
+    {
+        id: 15,
+        owners_name: `Мешканці буд. 79, що по вул.Будівельників`,
+        owners_name_for_button: `Мешканців буд. 79, що по вул.Будівельників`,
+    },
+    {
+        id: 16,
+        owners_name: `Мешканці буд. 11, що по вул.Прибережна`,
+        owners_name_for_button: `Мешканців буд. 11, що по вул.Прибережна`,
+    },
+    {
+        id: 17,
+        owners_name: `Мешканці буд. 7, що по вул.Петра Кравчика`,
+        owners_name_for_button: `Мешканців буд. 7, що по вул.Петра Кравчика`,
+    },
+    {
+        id: 18,
+        owners_name: `Кафе "Квартал"`,
+        owners_name_for_button: `Кафе "Квартал"`,
+    },
+    {
+        id: 19,
+        owners_name: `Магазин "Метр"`,
+        owners_name_for_button: `Магазину "Метр"`,
+    },
+    {
+        id: 20,
+        owners_name: `Філія "Комунальний комплекс"`,
+        owners_name_for_button: `Філії "Комунальний комплекс"`,
     },
 ]
