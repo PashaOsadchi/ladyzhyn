@@ -2,7 +2,7 @@ const data_owners_surveillance_cameras_arr = [
     {
         id: 1,
         owners_name: `Ладижинська міська рада`,
-        owners_name_for_button: `Ладижинськаої міської ради`,
+        owners_name_for_button: `Ладижинської міської ради`,
     },
     {
         id: 2,
