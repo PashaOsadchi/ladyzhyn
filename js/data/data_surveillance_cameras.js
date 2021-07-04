@@ -1019,4 +1019,14 @@ const data_surveillance_cameras_arr = [
         latitude_point_course: 48.68451588183694,
         longitude_point_course: 29.23427512259276,
     },
+    {
+        id: 103,
+        viewing_angle: 90,
+        radius: 15,
+        place_installation_id: 88,
+        owners_code: 20,
+        detailed_information: ``,
+        latitude_point_course: 48.683831750221245,
+        longitude_point_course: 29.23510493413707,
+    },
 ]
