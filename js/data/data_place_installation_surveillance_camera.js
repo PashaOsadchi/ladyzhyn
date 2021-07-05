@@ -527,4 +527,10 @@ const data_place_installation_surveillance_camera_arr = [
         longitude: 29.234972241964396, 
         detailed_information: ``,
     },
+    {
+        id: 89,
+        latitude: 48.6845560417234,
+        longitude: 29.236854519096365, 
+        detailed_information: ``,
+    },
 ]
