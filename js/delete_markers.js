@@ -18,6 +18,8 @@ function delete_all_overlay_maps() {
     delete_route_public_transport_markers();
     delete_parking_space_markers();
     delete_video_surveillance_markers();
+    delete_traffic_flows_markers();
+    delete_polyline_traffic_flow();
 
     delete_heatmap_house_multifamily();
     delete_heatmap_house_private();
@@ -241,3 +243,20 @@ function delete_archival_photos_markers() {
     }
     archival_photos_arr = [];
 }
+
+// Видаляє маркери транспортних потоків
+function delete_traffic_flows_markers() {
+    for (let i = 0; i < markers_traffic_flows.length; i++) {
+        markers_traffic_flows[i].setMap(null);
+    }
+    markers_traffic_flows = [];
+}
+
+// Видаляє полілінію транспортних потоків
+function delete_polyline_traffic_flow() {
+    for (let i = 0; i < polyline_traffic_flows_arr.length; i++) {
+        polyline_traffic_flows_arr[i].setMap(null);
+    }
+    polyline_traffic_flows_arr = [];
+}
+

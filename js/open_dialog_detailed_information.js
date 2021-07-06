@@ -288,6 +288,24 @@ function add_data_dialog_detailed_information(id) {
             }, 300);
 
             break;
+        // Транспортні потоки
+        case 14:
+            const traffic_flows_arr = data_traffic_flows_arr.filter((e) => e.id == id_arr[1]);
+            open_dialog_detailed_information();
+
+            dialog_detailed_information_content.innerHTML = `
+            <div id="dialog_header">
+                <div id="dialog_detailed_information_header">Детальна інформація про транспортний потік</div>
+                <img height="16" width="16" id="icon_close_dialog" src="icon/close.png" alt="Закрити" onclick="close_dialog_detailed_information()"> 
+            </div> 
+
+            <div id="dialog_data">
+            <b>Код:</b> ${traffic_flows_arr[0].id}<br>
+            <b>Адреса:</b> ${traffic_flows_arr[0].address}<br>
+            <b>Транспортний потік (транспортних засобів за 24 год):</b> ${traffic_flows_arr[0].total_traffic_flows}<br>
+            ${traffic_flows_arr[0].detailed_information}</div>
+            `;
+            break;
         default:
             return open_dialog_error(error_text_29);
     }

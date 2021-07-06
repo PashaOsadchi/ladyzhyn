@@ -195,13 +195,13 @@
             --font-size-3: 1.5rem;
             /* Значення у px зумовлене особливостями дизайну */
             --font-size-4: 12px;
-
             --marker-house-color: rgba(248, 141, 0, 0.705);
             --marker-route-color: rgba(56, 192, 216, 0.753);
             --marker-entrance-color: rgba(244, 248, 0, 0.705);
             --marker-apartment-color: rgba(132, 248, 0, 0.705);
             --marker-billboards-color: rgba(189, 31, 163, 0.753);
             --marker-city-lights-color: rgba(189, 31, 65, 0.753);
+            --marker-traffic-flows-color: rgba(0, 240, 248, 0.705);
             --marker-organization-color: rgba(0, 248, 236, 0.705);
             --marker-bulletin-boards-color: rgba(118, 31, 189, 0.753);
             --marker-bicycle-parking-color: rgba(31, 189, 110, 0.753);
@@ -742,6 +742,14 @@
 
         .marker_alternative_energy_facilities::after {
             background: var(--marker-alternative-energy-facilities-color);
+        }
+
+        .marker_traffic_flows {
+            border-top: 10px solid var(--marker-traffic-flows-color);
+        }
+
+        .marker_traffic_flows::after {
+            background: var(--marker-traffic-flows-color);
         }
     </style>
 
@@ -1719,6 +1727,7 @@
     <script defer src="js/add_map/add_map_parking_space.js"></script>
     <script defer src="js/add_map/add_map_video_surveillance.js"></script>
     <script defer src="js/add_map/add_map_archival_photos.js"></script>
+    <script defer src="js/add_map/add_map_traffic_flows.js"></script>
 
     <script defer src="js/data/data_street.js"></script>
     <script defer src="js/data/data_house.js"></script>
@@ -1758,6 +1767,8 @@
     <script defer src="js/data/data_quests_arboretum_1.js"></script>
 
     <script defer src="js/data/data_owners_surveillance_cameras.js"></script>
+
+    <script defer src="js/data/data_traffic_flows.js"></script>
 
     <script defer src="js/open_dialog_statistics.js"></script>
 
@@ -2403,6 +2414,8 @@
             <summary class="summary_title_name">Статистика</summary>
 
             <button class="button_sidebar_add_map" id="id_button_statistics" onclick="open_dialog_statistics_information_registered_vehicles()">Інформація про зареєстровані транспортні засоби</button>
+
+            <button class="button_sidebar_add_map" id="id_button_statistics" onclick="add_map_traffic_flows()">Показати/Приховати транспортні потоки</button>
 
         </details>
 
