@@ -15,9 +15,9 @@ async function add_map_addresses() {
 
             let arr_house_1 = data_house_arr.filter((e) => e.house_human_settlement_code == selected_code_administrative_unit.human_settlement_code);
             // Додає до номера будинку назву вулиці
-            for (let i = 0; i < arr_house_1.length; i++) {
+            arr_house_1.forEach(el => {
                 // Знаходить вулицю яка відноситься до даного будинку
-                const find_street_arr = data_street_arr.filter((e) => e.street_code == arr_house_1[i].house_code_street);
+                const find_street_arr = data_street_arr.filter((e) => e.street_code == el.house_code_street);
                 let full_name_street = find_street_arr[0].street_name;
 
                 // Якщо відмічено що відображати скорочену назву вулиці то скорочує назву геоніму і вулиці
@@ -27,8 +27,8 @@ async function add_map_addresses() {
                     const street_name = arr[1].substr(0, 4);
                     full_name_street = `${geonym}.${street_name}`;
                 }
-                arr_house_1[i].house_name_2 = `${full_name_street} ${arr_house_1[i].house_name}`;
-            }
+                el.house_name_2 = `${full_name_street} ${el.house_name}`;
+            });
 
             add_overlay_map_house_2(arr_house_1);
             map_offset_human_settlement(selected_code_administrative_unit.human_settlement_code);
@@ -75,34 +75,34 @@ async function add_map_addresses() {
 
 // Додає на карту будинки
 function add_overlay_map_house(arr) {
-    for (let i = 0; i < arr.length; i++) {
+    arr.forEach(el => {
         overlay = new custom_marker(
-            new google.maps.LatLng(Number(arr[i].latitude), Number(arr[i].longitude)),
+            new google.maps.LatLng(Number(el.latitude), Number(el.longitude)),
             map,
             {
-                marker_id: `1-${arr[i].house_id}`,
-                marker_name: arr[i].house_name,
+                marker_id: `1-${el.house_id}`,
+                marker_name: el.house_name,
                 marker_class_name: 'marker marker_house'
             }
         );
         markers.push(overlay);
-    }
+    });
 }
 
 // Додає на карту будинки (виправляє помилку подвійної назви вулиці)
 function add_overlay_map_house_2(arr) {
-    for (let i = 0; i < arr.length; i++) {
+    arr.forEach(el => {
         overlay = new custom_marker(
-            new google.maps.LatLng(Number(arr[i].latitude), Number(arr[i].longitude)),
+            new google.maps.LatLng(Number(el.latitude), Number(el.longitude)),
             map,
             {
-                marker_id: `1-${arr[i].house_id}`,
-                marker_name: arr[i].house_name_2,
+                marker_id: `1-${el.house_id}`,
+                marker_name: el.house_name_2,
                 marker_class_name: 'marker marker_house'
             }
         );
         markers.push(overlay);
-    }
+    });
 }
 
 // Додає на карту підїзд
@@ -144,9 +144,9 @@ function add_overlay_map_house_multifamily_all() {
     let arr_house = data_house_arr.filter((e) => e.house_multifamily == true);
 
     // Додає до номера будинку назву вулиці
-    for (let i = 0; i < arr_house.length; i++) {
+    arr_house.forEach(el => {
         // Знаходить вулицю яка відноситься до даного будинку
-        const find_street_arr = data_street_arr.filter((e) => e.street_code == arr_house[i].house_code_street);
+        const find_street_arr = data_street_arr.filter((e) => e.street_code == el.house_code_street);
         let full_name_street = find_street_arr[0].street_name;
 
         // Якщо відмічено що відображати скорочену назву вулиці то скорочує назву геоніму і вулиці
@@ -156,8 +156,8 @@ function add_overlay_map_house_multifamily_all() {
             const street_name = arr[1].substr(0, 4);
             full_name_street = `${geonym}.${street_name}`;
         }
-        arr_house[i].house_name_2 = `${full_name_street} ${arr_house[i].house_name}`;
-    }
+        el.house_name_2 = `${full_name_street} ${el.house_name}`;
+    });
     
     add_overlay_map_house_2(arr_house);
     map_offset_community_boundary();

@@ -20,13 +20,5 @@ function сopy_buffer_exchange_data_last_selected_organization() {
 Неділя: ${last_selected_data_organization_arr[0].organization_sunday}
 `;
 
-    navigator.clipboard
-        .writeText(organization_str)
-        .then(() => {
-            //Текст успішно скопійований
-        })
-        .catch((err) => {
-            open_dialog_error(`${error_text_4} (${err})`)
-        });
-    
+    copy_clipboard(organization_str,error_text_4);
 }

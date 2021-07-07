@@ -3,17 +3,7 @@ let markers_bicycle_service_center = [];
 
 function add_map_bicycle_service_center_all() {
  
-    if (bicycle_service_center_or_added) {
-        bicycle_service_center_or_added = false;
-        
-        // Видаляє маркери
-        for (let i = 0; i < markers_bicycle_service_center.length; i++) {
-            markers_bicycle_service_center[i].remove();
-            markers_bicycle_service_center[i].setMap(null);
-        }
-        markers_bicycle_service_center = [];
-        return
-    }
+    if (bicycle_service_center_or_added) return delete_bicycle_service_center_markers();
 
     const organization_arr = data_organization_arr.filter((e) => e.organization_id == "233");
 

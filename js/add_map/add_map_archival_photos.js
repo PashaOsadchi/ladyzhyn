@@ -3,37 +3,34 @@ let info_window_archival_photos = null;
 
 // Додає на карту архівні фото
 function add_map_archival_photos_all() {
-    if (archival_photos_arr.length) {
-        return delete_archival_photos_markers();
-    }
-    
-    for (let i = 0; i < data_archival_photos_arr.length; i++) {
+    if (archival_photos_arr.length) return delete_archival_photos_markers();
 
-        if (data_archival_photos_arr[i].longitude) {
+    data_archival_photos_arr.forEach(el => {
+        if (el.longitude) {
 
             const message_text = `<div>
-            <div id="dialog_detailed_information_header">${data_archival_photos_arr[i].name}</div>
+            <div id="dialog_detailed_information_header">${el.name}</div>
                 <img height="16" width="16" id="icon_close_dialog" src="icon/close.png" alt="Закрити" onclick="close_dialog_detailed_information()"> 
             </div> 
 
             <div>
-                <img class="img_archival_photos" src="archival_photos/${data_archival_photos_arr[i].id}.webp" alt="${data_archival_photos_arr[i].name}""> 
+                <img class="img_archival_photos" src="archival_photos/${el.id}.webp" alt="${el.name}""> 
             </div>`;
 
             add_map_archival_photos(
-                data_archival_photos_arr[i].id,
-                data_archival_photos_arr[i].latitude,
-                data_archival_photos_arr[i].longitude,
-                data_archival_photos_arr[i].latitude_point_course,
-                data_archival_photos_arr[i].longitude_point_course,
-                `archival_photos_${data_archival_photos_arr[i].id}`,
+                el.id,
+                el.latitude,
+                el.longitude,
+                el.latitude_point_course,
+                el.longitude_point_course,
+                `archival_photos_${el.id}`,
                 message_text,
-                data_archival_photos_arr[i].viewing_angle,
-                data_archival_photos_arr[i].radius,
+                el.viewing_angle,
+                el.radius,
             );
         }
-    }
-
+    });
+    
     // Після додавання архівних фото маштабує карту
     map_offset(data_archival_photos_arr);
 };
@@ -65,7 +62,5 @@ function add_map_archival_photos(id, lat_1, lon_1, lat_2, lon_2, name_polygon, m
 
     info_window_archival_photos = new google.maps.InfoWindow();
 
-    google.maps.event.addListener(window[name_polygon], "click", function (e) {
-        add_data_dialog_detailed_information(`13-${id}`)
-    });
+    google.maps.event.addListener(window[name_polygon], "click", () => add_data_dialog_detailed_information(`13-${id}`));
 }

@@ -13,10 +13,9 @@ function add_map_addresses_radius_selected_coordinates() {
 
     if (arr_house_radius_selected_coordinates.length == 0) return open_dialog_error(error_text_21);
 
-    // Додає до номера будинку назву вулиці
-    for (let i = 0; i < arr_house_radius_selected_coordinates.length; i++) {
+    arr_house_radius_selected_coordinates.forEach(el => {
         // Знаходить вулицю яка відноситься до даного будинку
-        const find_street_arr = data_street_arr.filter((e) => e.street_code == arr_house_radius_selected_coordinates[i].house_code_street);
+        const find_street_arr = data_street_arr.filter((e) => e.street_code == el.house_code_street);
         let full_name_street = find_street_arr[0].street_name;
 
         // Якщо відмічено що відображати скорочену назву вулиці то скорочує назву геоніму і вулиці
@@ -26,8 +25,8 @@ function add_map_addresses_radius_selected_coordinates() {
             const street_name = arr[1].substr(0, 4);
             full_name_street = `${geonym}.${street_name}`;
         }
-        arr_house_radius_selected_coordinates[i].house_name_2 = `${full_name_street} ${arr_house_radius_selected_coordinates[i].house_name}`;
-    }
+        el.house_name_2 = `${full_name_street} ${el.house_name}`;
+    });
 
     add_overlay_map_house_2(arr_house_radius_selected_coordinates);
     map_offset_human_settlement(selected_code_administrative_unit.human_settlement_code);

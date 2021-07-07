@@ -1,5 +1,6 @@
 let areas_recreation_arr = [];
 let info_window_recreation_areas = null;
+let recreation_areas_all_or_added = false;
 
 // Додає на карту зону відпочинку
 function add_map_recreation_areas(patch_arr, name_polygon, message_text) {
@@ -40,9 +41,8 @@ function add_map_recreation_areas(patch_arr, name_polygon, message_text) {
 
 // Додає на карту зони відпочинку
 function add_map_recreation_areas_all() {
-    if (areas_recreation_arr.length) {
-        return delete_recreation_areas_markers();
-    }
+   
+    if (recreation_areas_all_or_added) return delete_recreation_areas_markers();
 
     for (let i = 0; i < data_recreation_areas_arr.length; i++) {
         const message_text = `
@@ -52,6 +52,8 @@ ${data_recreation_areas_arr[i].detailed_information}
 
         add_map_recreation_areas(data_recreation_areas_arr[i].patch, `recreation_area_${data_recreation_areas_arr[i].id}`, message_text);
     }
+
+    recreation_areas_all_or_added = true;
 
     // Після додавання зон відпочинку маштабує карту
     map_offset_community_boundary();

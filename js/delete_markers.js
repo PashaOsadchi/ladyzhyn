@@ -20,53 +20,39 @@ function delete_all_overlay_maps() {
     delete_video_surveillance_markers();
     delete_traffic_flows_markers();
     delete_polyline_traffic_flow();
+    delete_bicycle_service_center_markers();
 
     delete_heatmap_house_multifamily();
     delete_heatmap_house_private();
     delete_archival_photos_markers();
 
     // Видаляє межі усіх населених пунктів
-    for (let i = 0; i < polyline_arr.length; i++) {
-        polyline_arr[i].setMap(null);
-    }
-    polyline_arr = [];
+    delete_markers_1(polyline_arr);
 
     // Змінює колір кнопок
-    const elements = document.querySelectorAll('.button_sidebar_add_map');
-    for (let element of elements) element.style.backgroundColor = 'rgba(102, 255, 0, 0.6)';
+    const elements = document.querySelectorAll(".button_sidebar_add_map");
+    elements.forEach((el) => (el.style.backgroundColor = "rgba(102, 255, 0, 0.6)"));
 }
 
 // Видаляє маркери адрес із карти
 function delete_markers() {
-    for (let i = 0; i < markers.length; i++) {
-        markers[i].remove();
-        markers[i].setMap(null);
-    }
-    markers = [];
+    delete_markers_2(markers);
 
     arr_house_radius_current_coordinates = [];
     arr_house_radius_selected_coordinates = [];
 
-    for (let i = 0; i < marker_current_coordinates_arr.length; i++) {
-        marker_current_coordinates_arr[i].setMap(null);
-    }
+    marker_current_coordinates_arr.forEach((el) => el.setMap(null));
     marker_current_coordinates_arr = [];
 }
 
 // Видаляє маркери організацій із карти
 function delete_markers_organization() {
-    for (let i = 0; i < markers_organization.length; i++) {
-        markers_organization[i].remove();
-        markers_organization[i].setMap(null);
-    }
+    delete_markers_2(markers_organization);
 }
 
 // Видаляє маркери маршрутних точок із карти
 function delete_markers_route() {
-    for (let i = 0; i < markers_route.length; i++) {
-        markers_route[i].remove();
-        markers_route[i].setMap(null);
-    }
+    delete_markers_2(markers_route);
 }
 
 // Видаляє маршрут із карти
@@ -93,170 +79,108 @@ function delete_list_waypoints() {
 // Видаляє маркери адрес знайдені за допомогою голосового пошуку
 function delete_voice_search_address_markers() {
     // Видаляє попередній маркер центра населеного пункту
-    for (let i = 0; i < markers_human_settlement_voice.length; i++) {
-        markers_human_settlement_voice[i].remove();
-        markers_human_settlement_voice[i].setMap(null);
-    }
-    markers_human_settlement_voice = [];
+    delete_markers_2(markers_human_settlement_voice);
 
     // Видаляє попередній маркер будинків
-    for (let i = 0; i < markers_house_voice.length; i++) {
-        markers_house_voice[i].remove();
-        markers_house_voice[i].setMap(null);
-    }
-    markers_house_voice = [];
+    delete_markers_2(markers_house_voice);
 
     // Видаляє попередній маркер підїздів
-    for (let i = 0; i < markers_entrance_voice.length; i++) {
-        markers_entrance_voice[i].remove();
-        markers_entrance_voice[i].setMap(null);
-    }
-    markers_entrance_voice = [];
+    delete_markers_2(markers_entrance_voice);
 }
 
 // Видаляє маркери адрес об'єктів альтернативної енергетики
 function delete_alternative_energy_facilities_markers() {
     alternative_energy_facilities_or_added = false;
-
-    // Видаляє маркери
-    for (let i = 0; i < markers_alternative_energy_facilities.length; i++) {
-        markers_alternative_energy_facilities[i].remove();
-        markers_alternative_energy_facilities[i].setMap(null);
-    }
-    markers_alternative_energy_facilities = [];
+    delete_markers_2(markers_alternative_energy_facilities);
 }
 
 // Видаляє маркери велопарковок
 function delete_bicycle_parking_markers() {
     bicycle_parking_or_added = false;
-
-    // Видаляє маркери
-    for (let i = 0; i < markers_bicycle_parking.length; i++) {
-        markers_bicycle_parking[i].remove();
-        markers_bicycle_parking[i].setMap(null);
-    }
-    markers_bicycle_parking = [];
+    delete_markers_2(markers_bicycle_parking);
 }
 
 // Видаляє маркери білбордів
 function delete_billboards_markers() {
     billboards_or_added = false;
-
-    // Видаляє маркери
-    for (let i = 0; i < markers_billboards.length; i++) {
-        markers_billboards[i].remove();
-        markers_billboards[i].setMap(null);
-    }
-    markers_billboards = [];
+    delete_markers_2(markers_billboards);
 }
 
 // Видаляє маркери дошок оголошень
 function delete_bulletin_boards_markers() {
     bulletin_boards_or_added = false;
-
-    // Видаляє маркери
-    for (let i = 0; i < markers_bulletin_boards.length; i++) {
-        markers_bulletin_boards[i].remove();
-        markers_bulletin_boards[i].setMap(null);
-    }
-    markers_bulletin_boards = [];
+    delete_markers_2(markers_bulletin_boards);
 }
 
 // Видаляє маркери сіті лайтів
 function delete_city_lights_markers() {
     city_lights_or_added = false;
-
-    // Видаляє маркери
-    for (let i = 0; i < markers_city_lights.length; i++) {
-        markers_city_lights[i].remove();
-        markers_city_lights[i].setMap(null);
-    }
-    markers_city_lights = [];
+    delete_markers_2(markers_city_lights);
 }
 
 // Видаляє маркери облаштовані зони відпочинку
 function delete_equipped_recreation_areas_markers() {
     equipped_recreation_areas_or_added = false;
-
-    // Видаляє маркери
-    for (let i = 0; i < markers_equipped_recreation_areas.length; i++) {
-        markers_equipped_recreation_areas[i].remove();
-        markers_equipped_recreation_areas[i].setMap(null);
-    }
-    markers_equipped_recreation_areas = [];
+    delete_markers_2(markers_equipped_recreation_areas);
 }
 
 // Видаляє маркери зупинки громадського транспорту
 function delete_public_transport_stops_markers() {
     public_transport_stops_all_or_added = false;
-
-    // Видаляє маркери
-    for (let i = 0; i < markers_public_transport_stops.length; i++) {
-        markers_public_transport_stops[i].remove();
-        markers_public_transport_stops[i].setMap(null);
-    }
-    markers_public_transport_stops = [];
+    delete_markers_2(markers_public_transport_stops);
 }
 
 // Видаляє маркери зони відпочинку
 function delete_recreation_areas_markers() {
-    // Видаляє зони відпочинку
-    for (let i = 0; i < areas_recreation_arr.length; i++) {
-        areas_recreation_arr[i].setMap(null);
-    }
-    areas_recreation_arr = [];
+    recreation_areas_all_or_added = false;
+    delete_markers_1(areas_recreation_arr);
 }
 
 // Видаляє маркери маршрут руху громадського транспорту
 function delete_route_public_transport_markers() {
-    if (polyline_route_public_transport_arr.length) {
-        // Видаляє межі усіх населених пунктів
-        for (let i = 0; i < polyline_route_public_transport_arr.length; i++) {
-            polyline_route_public_transport_arr[i].setMap(null);
-        }
-        polyline_route_public_transport_arr = [];
-    }
+    if (polyline_route_public_transport_arr.length) delete_markers_1(polyline_route_public_transport_arr);
 }
 
 // Видаляє маркери об'єкти паркувального простору
 function delete_parking_space_markers() {
-    // Видаляє об'єкти паркувального простору
-    for (let i = 0; i < parking_space_arr.length; i++) {
-        parking_space_arr[i].setMap(null);
-    }
-    parking_space_arr = [];
+    delete_markers_1(parking_space_arr);
 }
 
 // Видаляє маркери камери відеоспостереження
 function delete_video_surveillance_markers() {
-    // Видаляє об'єкти паркувального простору
-    for (let i = 0; i < video_surveillance_arr.length; i++) {
-        video_surveillance_arr[i].setMap(null);
-    }
-    video_surveillance_arr = [];
+    delete_markers_1(video_surveillance_arr);
 }
 
 // Видаляє маркери архівних фото
 function delete_archival_photos_markers() {
-    for (let i = 0; i < archival_photos_arr.length; i++) {
-        archival_photos_arr[i].setMap(null);
-    }
-    archival_photos_arr = [];
+    delete_markers_1(archival_photos_arr);
 }
 
 // Видаляє маркери транспортних потоків
 function delete_traffic_flows_markers() {
-    for (let i = 0; i < markers_traffic_flows.length; i++) {
-        markers_traffic_flows[i].setMap(null);
-    }
-    markers_traffic_flows = [];
+    delete_markers_1(markers_traffic_flows);
 }
 
 // Видаляє полілінію транспортних потоків
 function delete_polyline_traffic_flow() {
-    for (let i = 0; i < polyline_traffic_flows_arr.length; i++) {
-        polyline_traffic_flows_arr[i].setMap(null);
-    }
-    polyline_traffic_flows_arr = [];
+    delete_markers_1(polyline_traffic_flows_arr);
 }
 
+// Видаляє маркери веломайстернь
+function delete_bicycle_service_center_markers() {
+    bicycle_service_center_or_added = false;
+    delete_markers_2(markers_bicycle_service_center);
+}
+
+function delete_markers_1(arr) {
+    arr.forEach((el) => el.setMap(null));
+    arr = [];
+}
+
+function delete_markers_2(arr) {
+    arr.forEach((el) => {
+        el.remove();
+        el.setMap(null);
+    });
+    arr = [];
+}

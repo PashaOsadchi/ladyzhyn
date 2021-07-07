@@ -6,12 +6,5 @@ function сopy_buffer_exchange_link_coordinates_last_selected_address() {
 
     const text = `https://www.google.com/maps/search/?api=1&query=${last_selected_address_obj.lat}, ${last_selected_address_obj.lon}`;
 
-    navigator.clipboard
-        .writeText(text)
-        .then(() => {
-            //Текст успішно скопійований
-        })
-        .catch((err) => {
-            open_dialog_error(`${error_text_6} (${err})`)
-        });
+    copy_clipboard(text, error_text_6);
 }

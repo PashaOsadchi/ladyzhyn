@@ -5,12 +5,5 @@ function сopy_buffer_exchange_link_coordinates_last_selected_organization() {
 
     const text = `https://www.google.com/maps/search/?api=1&query=${last_selected_data_organization_arr[0].latitude}, ${last_selected_data_organization_arr[0].longitude}`;
 
-    navigator.clipboard
-        .writeText(text)
-        .then(() => {
-            //Текст успішно скопійований
-        })
-        .catch((err) => {
-            open_dialog_error(`${error_text_9} (${err})`)
-        });
+    copy_clipboard(text, error_text_9);
 }
