@@ -50,11 +50,11 @@ function add_organization(arr) {
     id_number_found_organization.value = `Знайдено організацій - ${arr.length}`;
 
     // Додає у список знайдених організацій
-    for (let i = 0; i < arr.length; i++) {
-        const name = `${arr[i].organization_id}. ${arr[i].organization_type}: ${arr[i].organization_name}`;
-        o = new Option(name, arr[i].organization_id, false, false);
+    arr.forEach(el => {
+        const name = `${el.organization_id}. ${el.organization_type}: ${el.organization_name}`;
+        o = new Option(name, el.organization_id, false, false);
         select_found_organization.add(o);
-    };
+    });
 }
 
 function onchange_organization() {

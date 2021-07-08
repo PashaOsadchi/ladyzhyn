@@ -93,11 +93,11 @@ async function onchange_human_settlements() {
     select_street.innerHTML = '<option value=""></option>';
 
     // Додає у список Вулиці
-    for (let i = 0; i < street_arr.length; i++) {
-        const name = (street_arr[i].street_name_old == '') ? street_arr[i].street_name : `${street_arr[i].street_name} (${street_arr[i].street_name_old})`;
-        o = new Option(name, street_arr[i].street_code, false, false);
+    street_arr.forEach(el => {
+        const name = (el.street_name_old == '') ? el.street_name : `${el.street_name} (${el.street_name_old})`;
+        o = new Option(name, el.street_code, false, false);
         select_street.add(o);
-    };
+    });
 
     // Виводить на сторінку детальну інформацію про населений пункт
     human_settlement_name.value = human_settlement_arr[0].human_settlement_name;
@@ -125,10 +125,10 @@ async function onchange_human_settlements() {
     number_street.value = street_arr.length;
 
     let counter_apartment = 0;
-    for (let i = 0; i < number_entrance_arr.length; i++) {
+    number_entrance_arr.forEach(el => {
         const arr = data_apartment_arr.filter((e) => e.entrance_code == number_entrance_arr[i].entrance_id);
         counter_apartment += arr.length;
-    }
+    });
     number_apartment.value = counter_apartment;
 
     // Знаходить кординати останньої вибраної адреси
@@ -206,12 +206,12 @@ async function onchange_streets() {
     house_arr = data_house_arr.filter(function (e) { return e.house_code_street == house_code_street });
 
     // Додає у список будинки
-    for (let i = 0; i < house_arr.length; i++) {
-        let name = house_arr[i].house_name;
-        if (house_arr[i].house_multifamily) name += '  (багатоквартирний)';
-        o = new Option(name, house_arr[i].house_id, false, false);
+    house_arr.forEach(el => {
+        let name = el.house_name;
+        if (el.house_multifamily) name += '  (багатоквартирний)';
+        o = new Option(name, el.house_id, false, false);
         select_house.add(o);
-    };
+    });
 
     // Виводить на сторінку детальну інформацію про вулицю
     const number_house_arr = data_house_arr.filter((e) => e.house_code_street == house_code_street);
@@ -225,10 +225,10 @@ async function onchange_streets() {
     street_number_entrance.value = number_entrance_arr.length;
 
     let counter_apartment = 0;
-    for (let i = 0; i < number_entrance_arr.length; i++) {
+    number_entrance_arr.forEach(el => {
         const arr = data_apartment_arr.filter((e) => e.entrance_code == number_entrance_arr[i].entrance_id);
         counter_apartment += arr.length;
-    }
+    });
     street_number_apartment.value = counter_apartment;
 
     street_name.value = street_arr[0].street_name;
@@ -299,11 +299,11 @@ async function onchange_house() {
     entrance_arr = data_entrance_arr.filter(function (e) { return e.entrance_code_house == entrance_code_house });
 
     // Додає у список підїзди
-    for (let i = 0; i < entrance_arr.length; i++) {
-        const name = `кв. ${entrance_arr[i].entrance_first_apartment_entrance}-${entrance_arr[i].entrance_last_apartment_entrance}`
-        o = new Option(name, entrance_arr[i].entrance_id, false, false);
+    entrance_arr.forEach(el => {
+        const name = `кв. ${el.entrance_first_apartment_entrance}-${el.entrance_last_apartment_entrance}`
+        o = new Option(name, el.entrance_id, false, false);
         select_entrance.add(o);
-    };
+    });
 
     // Виводить на сторінку детальну інформацію про будинок
     house_name.value = house_arr[0].house_name;
@@ -315,10 +315,10 @@ async function onchange_house() {
     id_house_number_entrance.value = number_entrance_arr.length;
 
     let counter_apartment = 0;
-    for (let i = 0; i < number_entrance_arr.length; i++) {
+    number_entrance_arr.forEach(el => {
         const arr = data_apartment_arr.filter((e) => e.entrance_code == number_entrance_arr[i].entrance_id);
         counter_apartment += arr.length;
-    }
+    });
     id_house_number_apartment.value = counter_apartment;
 
     // Знаходить кординати останньої вибраної адреси
@@ -360,10 +360,10 @@ async function onchange_entrance() {
     apartment_arr = data_apartment_arr.filter(function (e) { return e.entrance_code == entrance_code });
 
     // Додає у список квартири
-    for (let i = 0; i < apartment_arr.length; i++) {
-        o = new Option('кв. ' + apartment_arr[i].name, apartment_arr[i].id, false, false);
+    apartment_arr.forEach(el => {
+        o = new Option('кв. ' + el.name, el.id, false, false);
         select_apartment.add(o);
-    };
+    });
 
     // Завантажує підїзди
     entrance_arr = data_entrance_arr.filter((e) => e.entrance_id == entrance_code);
