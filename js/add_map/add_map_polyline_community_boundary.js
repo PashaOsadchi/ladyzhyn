@@ -1,18 +1,18 @@
 // https://coderoad.ru/5112867/%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B7%D0%BA%D0%B0-%D0%BF%D0%BE-%D0%BF%D0%BE%D0%BB%D0%B8%D0%BB%D0%B8%D0%BD%D0%B8%D0%B8-Google-maps-v3
 
 let polyline_arr = [];
+let polyline_community_boundary_or_added = false;
 
 // Додає на карту межі
 function add_map_polyline_community_boundary(arr, stroke_сolor, name_polyline, message_text) {
     let flight_plan_coordinates = [];
 
-    for (let i = 0; i < arr.length; i++) {
+    arr.forEach(el => {
         flight_plan_coordinates.push({
-            lat: Number(arr[i].community_boundary_latitude),
-            lng: Number(arr[i].community_boundary_longitude),
+            lat: Number(el.community_boundary_latitude),
+            lng: Number(el.community_boundary_longitude),
         });
-    }
-    //console.log(flight_plan_coordinates)
+    });
 
     window[name_polyline] = new google.maps.Polyline({
         path: flight_plan_coordinates,
@@ -33,28 +33,26 @@ function add_map_polyline_community_boundary(arr, stroke_сolor, name_polyline, 
     let infoWindow = new google.maps.InfoWindow();
 
     // Відкриває InfoWindow при наведенні курсора миші
-    google.maps.event.addListener(window[name_polyline], "mouseover", function (e) {
+    google.maps.event.addListener(window[name_polyline], "mouseover", (e) => {
         infoWindow.setPosition(e.latLng);
         infoWindow.setContent(content_infoWindow);
         infoWindow.open(map);
     });
 
     // Закриває InfoWindow
-    google.maps.event.addListener(window[name_polyline], "mouseout", function () {
-        infoWindow.close();
-    });
+    google.maps.event.addListener(window[name_polyline], "mouseout", () => infoWindow.close());
 }
 
 // Показує межі усіх населених пунктів
 function add_map_polyline_community_boundary_all() {
-    if (polyline_arr.length) {
-        // Видаляє межі усіх населених пунктів
-        for (let i = 0; i < polyline_arr.length; i++) {
-            polyline_arr[i].setMap(null);
-        }
-        polyline_arr = [];
-        return;
+    // Видаляє межі усіх населених пунктів
+    if (polyline_community_boundary_or_added) {
+        polyline_community_boundary_or_added = false;
+        return delete_markers_1(polyline_arr);
     }
+
+    polyline_community_boundary_or_added = true;
+     
     // Додає на карту межі Ладижинської територіальної громади (сайт на стадії розробки)
     add_map_polyline_community_boundary(data_community_boundary_arr, "#FF0000", "poly_community_boundary", "Межа Ладижинської територіальної громади (сайт на стадії розробки)");
 

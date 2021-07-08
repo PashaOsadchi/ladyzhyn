@@ -5,14 +5,7 @@ let markers_bicycle_parking = [];
 function add_map_bicycle_parking_all() {
     if (bicycle_parking_or_added) return delete_bicycle_parking_markers();
 
-    data_bicycle_parking_arr.forEach((el) => {
-        overlay = new custom_marker(new google.maps.LatLng(el.latitude, el.longitude), map, {
-            marker_id: `10-${el.id}`,
-            marker_name: el.name,
-            marker_class_name: "marker marker_bicycle_parking",
-        });
-        markers_bicycle_parking.push(overlay);
-    });
+    add_map_overlay(data_bicycle_parking_arr, 10, "marker_bicycle_parking", markers_bicycle_parking);
 
     bicycle_parking_or_added = true;
 

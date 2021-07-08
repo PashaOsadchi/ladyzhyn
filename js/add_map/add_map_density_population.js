@@ -66,40 +66,30 @@ let heatmap_house_private = null;
 
 // Додає на карту шар із густиною населення на території Ладижинської територіальної громади (сайт на стадії розробки)
 function add_map_density_population_house_multifamily() {
-    if (heatmap_house_multifamily) {
-        delete_heatmap_house_multifamily();
-        return;
-    }
+    if (heatmap_house_multifamily) return delete_heatmap_house_multifamily();
 
-    if (map_hidden) {
-        // Вказує що продовжити виконання фунції потрібно після закриття меню
-        need_continue_map_offset_house_multifamily_after_close_sidebar = true;
-    } else {
-        // Продовжиує виконання фунції
-        map_offset_house_multifamily();
-    }
+    // Вказує що продовжити виконання фунції потрібно після закриття меню
+    map_hidden ? need_continue_map_offset_house_multifamily_after_close_sidebar = true : map_offset_house_multifamily();
 }
 
 function add_map_density_population_house_multifamily_2() {
     const heat_map_data = [];
 
     // Додає у масив із точками для відображення густини населення кординати підїзду із кількістю квартир у ньому
-    for (let i = 0; i < data_entrance_arr.length; i++) {
-        const first_apartment_entrance = Number(data_entrance_arr[i].entrance_first_apartment_entrance);
-        const last_apartment_entrance = Number(data_entrance_arr[i].entrance_last_apartment_entrance);
+    data_entrance_arr.forEach(el => {
+        const first_apartment_entrance = Number(el.entrance_first_apartment_entrance);
+        const last_apartment_entrance = Number(el.entrance_last_apartment_entrance);
 
         const number_apartments = last_apartment_entrance - first_apartment_entrance + 1;
 
         const obj = {
-            location: new google.maps.LatLng(Number(data_entrance_arr[i].entrance_latitude), Number(data_entrance_arr[i].entrance_longitude)),
+            location: new google.maps.LatLng(Number(el.entrance_latitude), Number(el.entrance_longitude)),
             weight: number_apartments,
         };
         heat_map_data.push(obj);
-    }
-
-    heatmap_house_multifamily = new google.maps.visualization.HeatmapLayer({
-        data: heat_map_data,
-    });
+   });
+    
+    heatmap_house_multifamily = new google.maps.visualization.HeatmapLayer({data: heat_map_data,});
     heatmap_house_multifamily.setMap(map);
 
     let zoom_1 = map.getZoom();
@@ -126,18 +116,10 @@ function add_map_density_population_house_multifamily_2() {
 
 // Додає на карту шар із густиною населення на території Ладижинської територіальної громади (сайт на стадії розробки) для приватних будинків
 function add_map_density_population_house_private() {
-    if (heatmap_house_private) {
-        delete_heatmap_house_private();
-        return;
-    }
+    if (heatmap_house_private) return delete_heatmap_house_private();
 
-    if (map_hidden) {
-        // Вказує що потрібно продовжити виконання фунції потрібно після закриття меню
-        need_continue_map_offset_house_private_after_close_sidebar = true;
-    } else {
-        // Продовжиує виконання фунції
-        map_offset_house_private();
-    }
+    // Вказує що потрібно продовжити виконання фунції потрібно після закриття меню
+    map_hidden ? need_continue_map_offset_house_private_after_close_sidebar = true : map_offset_house_private();
 }
 
 function add_map_density_population_house_private_2() {
@@ -147,19 +129,17 @@ function add_map_density_population_house_private_2() {
     const heat_map_data = [];
 
     // Якщо будинок приватний то додає у масив із точками для відображення густини населення кординати будинку
-    for (let i = 0; i < data_house_arr.length; i++) {
-        if (!data_house_arr[i].house_multifamily) {
+    data_house_arr.forEach(el => {
+        if (!el.house_multifamily) {
             const obj = {
-                location: new google.maps.LatLng(Number(data_house_arr[i].latitude), Number(data_house_arr[i].longitude)),
+                location: new google.maps.LatLng(Number(el.latitude), Number(el.longitude)),
                 weight: 1,
             };
             heat_map_data.push(obj);
         }
-    }
-
-    heatmap_house_private = new google.maps.visualization.HeatmapLayer({
-        data: heat_map_data,
     });
+
+    heatmap_house_private = new google.maps.visualization.HeatmapLayer({data: heat_map_data,});
     heatmap_house_private.setMap(map);
 
     let zoom_1 = map.getZoom();
@@ -171,7 +151,7 @@ function add_map_density_population_house_private_2() {
     heatmap_house_private.set("radius", heatmap_house_private.get("radius") ? null : radius_1);
 
     // Додає прослуховувач на подію маштабування карти
-    listener_add_map_density_population_house_private = google.maps.event.addListener(map, "idle", function () {
+    listener_add_map_density_population_house_private = google.maps.event.addListener(map, "idle", () => {
         let zoom = map.getZoom();
 
         // Знаходить значення радіуса на поточному зумові

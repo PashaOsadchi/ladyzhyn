@@ -20,11 +20,9 @@ function add_map_recreation_areas(patch_arr, name_polygon, message_text) {
 
     info_window_recreation_areas = new google.maps.InfoWindow();
 
-    google.maps.event.addListener(window[name_polygon], "click", function (e) {
+    google.maps.event.addListener(window[name_polygon], "click", (e) => {
         // Закриває попереднє відкрите вікно при клікові у слідуючі зоні відпочинку
-        if (info_window_recreation_areas) {
-            info_window_recreation_areas.close();
-        }
+        if (info_window_recreation_areas) info_window_recreation_areas.close();
 
         info_window_recreation_areas.setPosition(e.latLng);
         info_window_recreation_areas.setContent(content_info_window_recreation_areas);
@@ -32,11 +30,7 @@ function add_map_recreation_areas(patch_arr, name_polygon, message_text) {
     });
 
     // Закриває попереднє відкрите вікно при клікові на карті
-    google.maps.event.addListener(map, "click", function () {
-        if (info_window_recreation_areas) {
-            info_window_recreation_areas.close();
-        }
-    });
+    google.maps.event.addListener(map, "click", () => { if (info_window_recreation_areas) info_window_recreation_areas.close()});
 }
 
 // Додає на карту зони відпочинку
@@ -44,14 +38,11 @@ function add_map_recreation_areas_all() {
    
     if (recreation_areas_all_or_added) return delete_recreation_areas_markers();
 
-    for (let i = 0; i < data_recreation_areas_arr.length; i++) {
-        const message_text = `
-<b>${data_recreation_areas_arr[i].name}</b><br>
-${data_recreation_areas_arr[i].detailed_information}
-`;
+    data_recreation_areas_arr.forEach(el => {
+        const message_text = `<b>${el.name}</b><br>${el.detailed_information}`;
 
-        add_map_recreation_areas(data_recreation_areas_arr[i].patch, `recreation_area_${data_recreation_areas_arr[i].id}`, message_text);
-    }
+        add_map_recreation_areas(el.patch, `recreation_area_${el.id}`, message_text);
+    });
 
     recreation_areas_all_or_added = true;
 

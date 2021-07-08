@@ -42,14 +42,12 @@ function add_map_polyline_route_public_transport(id) {
     let infoWindow = new google.maps.InfoWindow();
 
     // Відкриває InfoWindow при наведенні курсора миші
-    google.maps.event.addListener(window[name_polyline], "mouseover", function (e) {
+    google.maps.event.addListener(window[name_polyline], "mouseover", (e) => {
         infoWindow.setPosition(e.latLng);
         infoWindow.setContent(content_infoWindow);
         infoWindow.open(map);
     });
 
     // Закриває InfoWindow
-    google.maps.event.addListener(window[name_polyline], "mouseout", function () {
-        infoWindow.close();
-    });
+    google.maps.event.addListener(window[name_polyline], "mouseout", () => infoWindow.close());
 }

@@ -38,16 +38,16 @@ function add_map_selected_organization() {
 function add_overlay_map_organization(organization_arr) {
     delete_markers_organization();
 
-    for (let i = 0; i < organization_arr.length; i++) {
-        let marker_name = `${organization_arr[i].organization_id}. ${organization_arr[i].organization_type}: ${organization_arr[i].organization_name}`
-        if (organization_arr[i].organization_phone_2) marker_name = `✆ ${marker_name}`
+    organization_arr.forEach(el => {
+        let marker_name = `${el.organization_id}. ${el.organization_type}: ${el.organization_name}`
+        if (el.organization_phone_2) marker_name = `✆ ${marker_name}`
 
-        overlay = new custom_marker(new google.maps.LatLng(Number(organization_arr[i].latitude), Number(organization_arr[i].longitude)), map, {
-            marker_id: `4-${organization_arr[i].organization_id}`,
+        overlay = new custom_marker(new google.maps.LatLng(Number(el.latitude), Number(el.longitude)), map, {
+            marker_id: `4-${el.organization_id}`,
 
             marker_name: marker_name,
             marker_class_name: 'marker marker_organization'
         });
         markers_organization.push(overlay);
-    }
+    });
 }

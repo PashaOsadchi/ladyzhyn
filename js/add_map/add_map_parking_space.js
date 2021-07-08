@@ -19,11 +19,9 @@ function add_map_parking_space(patch_arr, name_polygon, message_text, fill_сolo
 
     info_window_parking_space = new google.maps.InfoWindow();
 
-    google.maps.event.addListener(window[name_polygon], "click", function (e) {
+    google.maps.event.addListener(window[name_polygon], "click", (e) => {
         // Закриває попереднє відкрите вікно при клікові у слідуючому об'єкті паркувального простору
-        if (info_window_parking_space) {
-            info_window_parking_space.close();
-        }
+        if (info_window_parking_space) info_window_parking_space.close();
 
         info_window_parking_space.setPosition(e.latLng);
         info_window_parking_space.setContent(content_info_window_parking_space);
@@ -31,29 +29,23 @@ function add_map_parking_space(patch_arr, name_polygon, message_text, fill_сolo
     });
 
     // Закриває попереднє відкрите вікно при клікові на карті
-    google.maps.event.addListener(map, "click", function () {
-        if (info_window_parking_space) {
-            info_window_parking_space.close();
-        }
-    });
+    google.maps.event.addListener(map, "click", () => {if (info_window_parking_space) info_window_parking_space.close()});
 }
 
 // Додає на карту об'єкти паркувального простору
 function add_map_parking_space_all() {
-    if (parking_space_arr.length) {
-        return delete_parking_space_markers();
-    }
+    if (parking_space_arr.length) return delete_parking_space_markers();
 
-    for (let i = 0; i < data_parking_space_arr.length; i++) {
-        const parking_space_type_arr = data_parking_space_type_arr.filter(function (e) { return e.id == data_parking_space_arr[i].type });
+    data_parking_space_arr.forEach(el => {
+        const parking_space_type_arr = data_parking_space_type_arr.filter(function (e) { return e.id == el.type });
 
         const message_text = `
 <b>${parking_space_type_arr[0].name}</b><br>
 ${parking_space_type_arr[0].detailed_information}
 `;
 
-        add_map_parking_space(data_parking_space_arr[i].patch, `parking_space_${data_parking_space_arr[i].id}`, message_text, parking_space_type_arr[0].fill_сolor);
-    }
+        add_map_parking_space(el.patch, `parking_space_${el.id}`, message_text, parking_space_type_arr[0].fill_сolor);
+    });
 
     // Після додавання об'єків паркувального простору маштабує карту
     map_offset_community_boundary();

@@ -27,6 +27,7 @@ function delete_all_overlay_maps() {
     delete_archival_photos_markers();
 
     // Видаляє межі усіх населених пунктів
+    polyline_community_boundary_or_added = false;
     delete_markers_1(polyline_arr);
 
     // Змінює колір кнопок

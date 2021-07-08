@@ -1,15 +1,15 @@
 //https://developers.google.com/maps/documentation/javascript/examples/marker-remove
 
 let marker_current_coordinates_arr = [];
+let marker_current_coordinates_or_added = false;
 
 async function add_map_current_coordinates() {
-    if (marker_current_coordinates_arr.length == 1) {
-        for (let i = 0; i < marker_current_coordinates_arr.length; i++) {
-            marker_current_coordinates_arr[i].setMap(null);
-        }
-        marker_current_coordinates_arr = [];
-        return;
+    if (marker_current_coordinates_or_added) {
+        marker_current_coordinates_or_added = false;
+        return  delete_markers_1(marker_current_coordinates_arr);
     }
+
+    marker_current_coordinates_or_added = true;
 
     const geolocation = await geolocation_gps();
 
