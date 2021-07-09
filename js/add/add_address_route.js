@@ -36,7 +36,6 @@ function add_address_route() {
             // Перевіряє чи не перевищено максимальну кількість точок у маршруті
             if (waypoints_arr.length == 25) return open_dialog_error(error_text_12);
 
-            const street_arr = data_street_arr.filter((e) => e.street_code == selected_code_administrative_unit.street_code);
             const house_arr = data_house_arr.filter((e) => e.house_code_street == selected_code_administrative_unit.street_code);
 
             waypoints_arr.push({
