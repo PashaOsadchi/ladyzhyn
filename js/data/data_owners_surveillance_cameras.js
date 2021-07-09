@@ -104,4 +104,9 @@ const data_owners_surveillance_cameras_arr = [
         owners_name: `Магазин "Мастерок"`,
         owners_name_for_button: `Магазину "Мастерок"`,
     },
+    {
+        id: 22,
+        owners_name: `Магазин "АТБ"`,
+        owners_name_for_button: `АТБ"`,
+    },
 ]
