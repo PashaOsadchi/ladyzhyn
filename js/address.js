@@ -226,7 +226,7 @@ async function onchange_streets() {
 
     let counter_apartment = 0;
     number_entrance_arr.forEach(el => {
-        const arr = data_apartment_arr.filter((e) => e.entrance_code == number_entrance_arr[i].entrance_id);
+        const arr = data_apartment_arr.filter((e) => e.entrance_code == el.entrance_id);
         counter_apartment += arr.length;
     });
     street_number_apartment.value = counter_apartment;
