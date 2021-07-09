@@ -109,4 +109,14 @@ const data_owners_surveillance_cameras_arr = [
         owners_name: `Магазин "АТБ"`,
         owners_name_for_button: `АТБ"`,
     },
+    {
+        id: 23,
+        owners_name: `Газова заправка`,
+        owners_name_for_button: `Газової заправки"`,
+    },
+    {
+        id: 24,
+        owners_name: `Філія МХП`,
+        owners_name_for_button: `Філії МХП`,
+    },
 ]
