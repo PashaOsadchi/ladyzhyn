@@ -1,6 +1,5 @@
 function close_iframe_video() {
     document.getElementById("iframe_video").style.display = 'none';
-
     document.getElementById("id_page_header").style.display = 'block';
     document.getElementById("map").style.display = 'block';
     document.getElementById("id_sidebar").style.display = 'block';

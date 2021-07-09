@@ -107,34 +107,34 @@ function add_overlay_map_house_2(arr) {
 
 // Додає на карту підїзд
 function add_overlay_map_entrance(entrance_arr) {
-    for (let i = 0; i < entrance_arr.length; i++) {
+    entrance_arr.forEach(el => {
         overlay = new custom_marker(
-            new google.maps.LatLng(Number(entrance_arr[i].entrance_latitude), Number(entrance_arr[i].entrance_longitude)),
+            new google.maps.LatLng(Number(el.entrance_latitude), Number(el.entrance_longitude)),
             map,
             {
-                marker_id: `2-${entrance_arr[i].entrance_id}`,
-                marker_name: `${entrance_arr[i].entrance_first_apartment_entrance}-${entrance_arr[i].entrance_last_apartment_entrance}`,
+                marker_id: `2-${el.entrance_id}`,
+                marker_name: `${el.entrance_first_apartment_entrance}-${el.entrance_last_apartment_entrance}`,
                 marker_class_name: 'marker marker_entrance'
             }
         );
         markers.push(overlay);
-    }
+    });
 }
 
 // Додає на карту квартиру
 function add_overlay_map_apartment(apartment_arr, entrance_arr) {
-    for (let i = 0; i < apartment_arr.length; i++) {
+    apartment_arr.forEach((el, i) => {
         overlay = new custom_marker(
             new google.maps.LatLng(Number(entrance_arr[i].entrance_latitude), Number(entrance_arr[i].entrance_longitude)),
             map,
             {
-                marker_id: `3-${apartment_arr[i].id}`,
-                marker_name: apartment_arr[i].name,
+                marker_id: `3-${el.id}`,
+                marker_name: el.name,
                 marker_class_name: 'marker marker_apartment'
             }
         );
         markers.push(overlay);
-    }
+    });
 }
 
 // Додає на карту усі багатоквартирні будинки

@@ -8,10 +8,10 @@ async function add_map_addresses_radius_current_coordinates() {
     //geolocation.geolocation_latitude,
     //geolocation.geolocation_longitude,
 
-    for (let i = 0; i < data_house_arr.length; i++) {
-        const distance = calculate_distance(geolocation.geolocation_latitude, geolocation.geolocation_longitude, Number(data_house_arr[i].latitude), Number(data_house_arr[i].longitude));
-        if (distance < 500) arr_house_radius_current_coordinates.push(data_house_arr[i]);
-    }
+    data_house_arr.forEach(el => {
+        const distance = calculate_distance(geolocation.geolocation_latitude, geolocation.geolocation_longitude, Number(el.latitude), Number(el.longitude));
+        if (distance < 500) arr_house_radius_current_coordinates.push(el);
+    });
 
     if (arr_house_radius_current_coordinates.length == 0) return open_dialog_error(error_text_18);
 
@@ -25,9 +25,9 @@ async function add_map_addresses_radius_current_coordinates() {
     marker_current_coordinates_arr.push(marker);
 
     // Додає до номера будинку назву вулиці
-    for (let i = 0; i < arr_house_radius_current_coordinates.length; i++) {
+    arr_house_radius_current_coordinates.forEach(el => {
         // Знаходить вулицю яка відноситься до даного будинку
-        const find_street_arr = data_street_arr.filter((e) => e.street_code == arr_house_radius_current_coordinates[i].house_code_street);
+        const find_street_arr = data_street_arr.filter((e) => e.street_code == el.house_code_street);
         let full_name_street = find_street_arr[0].street_name;
 
         // Якщо відмічено що відображати скорочену назву вулиці то скорочує назву геоніму і вулиці
@@ -37,8 +37,8 @@ async function add_map_addresses_radius_current_coordinates() {
             const street_name = arr[1].substr(0, 4);
             full_name_street = `${geonym}.${street_name}`;
         }
-        arr_house_radius_current_coordinates[i].house_name_2 = `${full_name_street} ${arr_house_radius_current_coordinates[i].house_name}`;
-    }
+        el.house_name_2 = `${full_name_street} ${el.house_name}`;
+    });
 
     add_overlay_map_house_2(arr_house_radius_current_coordinates);
     map_offset_human_settlement(selected_code_administrative_unit.human_settlement_code);

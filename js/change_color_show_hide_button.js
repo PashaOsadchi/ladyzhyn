@@ -9,7 +9,7 @@ function change_color_show_hide_button(el) {
 function change_color_show_hide_button_bloсk(id) {
     const el = document.getElementById(id);
     const elements = el.querySelectorAll(".button_sidebar_add_map");
-    for (let element of elements) element.style.backgroundColor = "rgba(102, 255, 0, 0.6)";
+    elements.forEach(el => el.style.backgroundColor = "rgba(102, 255, 0, 0.6)");
 }
 
 /*// Змінює колір кнопки

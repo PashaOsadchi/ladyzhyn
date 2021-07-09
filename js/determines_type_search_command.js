@@ -226,9 +226,7 @@ function voice_command_decoding_address(command_str, human_settlement_id) {
     let house_id = 0;
 
     // Відфільтровує вулиці знайденого населеного пункту
-    const street_settlement_arr = data_street_arr.filter(function (e) {
-        return e.street_human_settlement_code == human_settlement_id;
-    });
+    const street_settlement_arr = data_street_arr.filter( (e) => e.street_human_settlement_code == human_settlement_id);
 
     // Шукає вулицю
     for (let i = 0; i < street_settlement_arr.length; i++) {
@@ -252,9 +250,7 @@ function voice_command_decoding_address(command_str, human_settlement_id) {
     if (/буд /i.test(command_str) || /будинок /i.test(command_str)) {
         // Якщо зайдено слово будинок то шукає номер будинку із вибраної вулиці
         // Відфільтровує будинки знайденого населеного пункту
-        house_arr = data_house_arr.filter(function (e) {
-            return e.house_code_street == street_id;
-        });
+        house_arr = data_house_arr.filter( (e) => e.house_code_street == street_id);
 
         // Шукає будинок
         for (let i = 0; i < house_arr.length; i++) {
@@ -269,19 +265,13 @@ function voice_command_decoding_address(command_str, human_settlement_id) {
         // console.log('house_id: ', house_id)
 
         // Якщо вказаний номер будинку не знайдений то повертає помилку
-        if (house_id == 0) {
-            return open_dialog_error("Вказаний номер будинку не знайдено! Спробуйте ще раз.");
-        }
+        if (house_id == 0) return open_dialog_error("Вказаний номер будинку не знайдено! Спробуйте ще раз.");
 
-        house_arr = data_house_arr.filter(function (e) {
-            return e.house_id == house_id;
-        });
+        house_arr = data_house_arr.filter( (e) => e.house_id == house_id);
         add_map_house_voice(house_arr);
     } else {
         // Якщо слово будинок не знайдено то відображає всі адреси вулиці
-        house_arr = data_house_arr.filter(function (e) {
-            return e.house_code_street == street_id;
-        });
+        house_arr = data_house_arr.filter( (e) => e.house_code_street == street_id);
         add_map_street_voice(house_arr);
     }
 }
@@ -291,12 +281,7 @@ function add_map_human_settlement_voice(human_settlement_arr) {
     // Видаляє попередньо додані маркери
     delete_voice_search_address_markers();
 
-    overlay = new custom_marker(new google.maps.LatLng(human_settlement_arr[0].human_settlement_latitude, human_settlement_arr[0].human_settlement_longitude), map, {
-        marker_id: `11-${human_settlement_arr[0].human_settlement_id}`,
-        marker_name: human_settlement_arr[0].human_settlement_short_name,
-        marker_class_name: "marker marker_center_human_settlement",
-    });
-    markers_human_settlement_voice.push(overlay);
+    add_map_overlay_one_expanded(human_settlement_arr[0], 11, 'human_settlement_latitude', 'human_settlement_longitude', 'human_settlement_id', 'human_settlement_short_name', 'marker_center_human_settlement', markers_human_settlement_voice);
 
     // Відповідно до вибраного населеного пункту маштабує карту
     map_offset_human_settlement(human_settlement_arr[0].human_settlement_id);
@@ -308,31 +293,13 @@ function add_map_street_voice(house_arr) {
     delete_voice_search_address_markers();
 
     // Додає будинки на карту
-    for (let i = 0; i < house_arr.length; i++) {
-        overlay = new custom_marker(new google.maps.LatLng(Number(house_arr[i].latitude), Number(house_arr[i].longitude)), map, {
-            marker_id: `1-${house_arr[i].house_id}`,
-            marker_name: house_arr[i].house_name,
-            marker_class_name: "marker marker_house",
-        });
-        markers_house_voice.push(overlay);
-    }
+    add_map_overlay_expanded(house_arr, 1, 'latitude', 'longitude', 'house_id', 'house_name', 'marker_house', markers_house_voice);
 
     // Додає підїзди на карту
-    for (let i_1 = 0; i_1 < house_arr.length; i_1++) {
-        // Завантажує підїзди
-        const entrance_arr = data_entrance_arr.filter(function (e) {
-            return e.entrance_code_house == house_arr[i_1].house_id;
-        });
-
-        for (let i = 0; i < entrance_arr.length; i++) {
-            overlay = new custom_marker(new google.maps.LatLng(Number(entrance_arr[i].entrance_latitude), Number(entrance_arr[i].entrance_longitude)), map, {
-                marker_id: `2-${entrance_arr[i].entrance_id}`,
-                marker_name: `${entrance_arr[i].entrance_first_apartment_entrance}-${entrance_arr[i].entrance_last_apartment_entrance}`,
-                marker_class_name: "marker marker_entrance",
-            });
-            markers_entrance_voice.push(overlay);
-        }
-    }
+    house_arr.forEach(el => {
+        const entrance_arr = data_entrance_arr.filter( (e) => e.entrance_code_house == el.house_id);
+        add_map_overlay_entrance(entrance_arr);
+    });
 
     // Відповідно до вибраної вулиці маштабує карту
     map_offset(house_arr);
@@ -343,26 +310,12 @@ function add_map_house_voice(house_arr) {
     // Видаляє попередньо додані маркери
     delete_voice_search_address_markers();
 
-    overlay = new custom_marker(new google.maps.LatLng(Number(house_arr[0].latitude), Number(house_arr[0].longitude)), map, {
-        marker_id: `1-${house_arr[0].house_id}`,
-        marker_name: house_arr[0].house_name,
-        marker_class_name: "marker marker_house",
-    });
-    markers_house_voice.push(overlay);
+    add_map_overlay_expanded(house_arr, 1, 'latitude', 'longitude', 'house_id', 'house_name', 'marker_house', markers_house_voice);
 
     // Завантажує підїзди
-    const entrance_arr = data_entrance_arr.filter(function (e) {
-        return e.entrance_code_house == house_arr[0].house_id;
-    });
+    const entrance_arr = data_entrance_arr.filter( (e) => e.entrance_code_house == house_arr[0].house_id);
 
-    for (let i = 0; i < entrance_arr.length; i++) {
-        overlay = new custom_marker(new google.maps.LatLng(Number(entrance_arr[i].entrance_latitude), Number(entrance_arr[i].entrance_longitude)), map, {
-            marker_id: `2-${entrance_arr[i].entrance_id}`,
-            marker_name: `${entrance_arr[i].entrance_first_apartment_entrance}-${entrance_arr[i].entrance_last_apartment_entrance}`,
-            marker_class_name: "marker marker_entrance",
-        });
-        markers_entrance_voice.push(overlay);
-    }
+    add_map_overlay_entrance(entrance_arr);
 
     // Після додавання будинку маштабує карту
     map.panTo(new google.maps.LatLng(Number(house_arr[0].latitude), Number(house_arr[0].longitude)));
