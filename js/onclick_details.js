@@ -21,9 +21,7 @@ function onclick_details_forms_list_search_commands(el) {
 // Закриває усі details першого рівня
 function close_details_all_level_1() {
     document.getElementById("id_sidebar").childNodes.forEach((el_child_sidebar) => {
-        if (el_child_sidebar.id !== undefined) {
-            document.getElementById(el_child_sidebar.id).open = false;
-        };
+        if (el_child_sidebar.id !== undefined) document.getElementById(el_child_sidebar.id).open = false;
     });
 };
 

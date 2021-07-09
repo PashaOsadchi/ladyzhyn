@@ -4,14 +4,7 @@ let settings_obj = {
 
 // Перевіряє чи є збережені налаштування
 function settings_search_for_saved() {
-    if (localStorage.getItem("settings_obj")) {
-        // Є збережені налаштування
-
-        // Зчитує дані із локального сховища
-        read_settings_obj();
-    } else {
-        // Відсутні збережені налаштування
-    }
+    if (localStorage.getItem("settings_obj")) read_settings_obj();
 }
 
 // Зчитує налаштування із локального сховища

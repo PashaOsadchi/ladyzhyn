@@ -1,11 +1,7 @@
 function open_close_sidebar() {
     if (sidebar_hidden) {
         // Потрібно показати бокову панель
-        if (window.innerWidth < 600) {
-            assigns_sidebar_window_width();
-        } else {
-            assigns_sidebar_fixed_width();
-        }
+        window.innerWidth < 600 ? assigns_sidebar_window_width() : assigns_sidebar_fixed_width();
 
         sidebar_hidden = false;
     } else {

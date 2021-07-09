@@ -19,71 +19,72 @@ function determines_type_search_command(command_str, search_source) {
     let organization_name = "";
 
     // Шукає основну команду
-    for (let i_1 = 0; i_1 < data_voice_search_commands_arr.length; i_1++) {
-        for (let i_2 = 0; i_2 < data_voice_search_commands_arr[i_1].voice_search.length; i_2++) {
-            const reg = new RegExp(`^${data_voice_search_commands_arr[i_1].voice_search[i_2]}`, "i");
+    data_voice_search_commands_arr.forEach(el_1 => {
+        el_1.voice_search.forEach(el_2 => {
+            const reg = new RegExp(`^${el_2}`, "i");
 
             if (reg.test(command_str)) {
                 // Знаходить найдовший текст який відповідає пошуку
-                if (data_voice_search_commands_arr[i_1].name.length > voice_search_command_name.length) {
-                    voice_search_command_id = data_voice_search_commands_arr[i_1].id;
-                    voice_search_command_name = data_voice_search_commands_arr[i_1].name;
+                if (el_1.name.length > voice_search_command_name.length) {
+                    voice_search_command_id = el_1.id;
+                    voice_search_command_name = el_1.name;
                 }
             }
-        }
-    }
+        
+        });
+    });
     //console.log(`Основна команда: ${command_str} - ${voice_search_command_id} - ${voice_search_command_name}`)
 
     // Шукає адресу (населений пункт)
-    for (let i = 0; i < data_human_settlement_arr.length; i++) {
-        const reg = new RegExp(`^${data_human_settlement_arr[i].human_settlement_name_voice_search}`, "i");
+    data_human_settlement_arr.forEach(el => {
+        const reg = new RegExp(`^${el.human_settlement_name_voice_search}`, "i");
 
         if (reg.test(command_str)) {
-            human_settlement_id = data_human_settlement_arr[i].human_settlement_id;
-            human_settlement_name_voice_search = data_human_settlement_arr[i].human_settlement_name_voice_search;
-            break;
+            human_settlement_id = el.human_settlement_id;
+            human_settlement_name_voice_search = el.human_settlement_name_voice_search;
+            return;
         }
-    }
+    });
     //console.log(`Адреса: ${command_str} - ${human_settlement_id} - ${human_settlement_name_voice_search}`)
 
     // Шукає тип організації
-    for (let i_1 = 0; i_1 < data_organization_type_arr.length; i_1++) {
-        for (let i_2 = 0; i_2 < data_organization_type_arr[i_1].voice_search.length; i_2++) {
-            const reg = new RegExp(`^${data_organization_type_arr[i_1].voice_search[i_2]}`, "i");
+    data_organization_type_arr.forEach(el_1 => {
+        el_1.voice_search.forEach(el_2 => {
+            const reg = new RegExp(`^${el_2}`, "i");
 
             if (reg.test(command_str)) {
-                organization_type_id = data_organization_type_arr[i_1].organization_id;
-                organization_type = data_organization_type_arr[i_1].organization_name;
-                break;
+                organization_type_id = el_1.organization_id;
+                organization_type = el_1.organization_name;
+                return;
             }
-        }
-    }
+        });
+    });
     //console.log(`Типи організацій: ${command_str} - ${organization_type_id} - ${organization_type}`)
 
     // Шукає організації
-    for (let i = 0; i < data_organization_arr.length; i++) {
+    data_organization_arr.forEach(el => {
         let reg;
 
         if (search_source == "organization") {
             // Пропускає поточну ітерацію циклу якщо відсутня назва організації
-            if (data_organization_arr[i].organization_name == "") continue;
-            reg = new RegExp(`^${data_organization_arr[i].organization_type}: ${data_organization_arr[i].organization_name}`, "i");
+            if (el.organization_name == "") return;
+            reg = new RegExp(`^${el.organization_type}: ${el.organization_name}`, "i");
         } else if (search_source == "voiсe") {
             // Пропускає поточну ітерацію циклу якщо відсутня назва організації
-            if (data_organization_arr[i].organization_name == "") continue;
-            reg = new RegExp(`^${data_organization_arr[i].organization_name}`, "i");
+            if (el.organization_name == "") return;
+            reg = new RegExp(`^${el.organization_name}`, "i");
         } else {
             // Пропускає поточну ітерацію циклу якщо відсутня назва організації
-            if (data_organization_arr[i].organization_name == "") continue;
-            reg = new RegExp(`^${data_organization_arr[i].organization_name}`, "i");
+            if (el.organization_name == "") return;
+            reg = new RegExp(`^${el.organization_name}`, "i");
         }
 
         if (reg.test(command_str)) {
-            organization_id = data_organization_arr[i].organization_id;
-            organization_name = data_organization_arr[i].organization_name;
-            break;
+            organization_id = el.organization_id;
+            organization_name = el.organization_name;
+            return
         }
-    }
+    });
     // console.log(`Організації: ${command_str} - ${organization_id} - ${organization_name}`);
 
     /* console.log('voice_search_command_id - ', voice_search_command_id)
@@ -229,14 +230,10 @@ function voice_command_decoding_address(command_str, human_settlement_id) {
     const street_settlement_arr = data_street_arr.filter( (e) => e.street_human_settlement_code == human_settlement_id);
 
     // Шукає вулицю
-    for (let i = 0; i < street_settlement_arr.length; i++) {
-        const reg = new RegExp(street_settlement_arr[i].street_voice_search, "i");
-
-        if (reg.test(command_str)) {
-            street_id = street_settlement_arr[i].street_id;
-            break;
-        }
-    }
+    street_settlement_arr.forEach(el => {
+        const reg = new RegExp(el.street_voice_search, "i");
+        if (reg.test(command_str)) return street_id = el.street_id;
+    });
     // console.log('street_id: ', street_id)
 
     // Перевіряє чи знайдено вулицю
@@ -253,15 +250,12 @@ function voice_command_decoding_address(command_str, human_settlement_id) {
         house_arr = data_house_arr.filter( (e) => e.house_code_street == street_id);
 
         // Шукає будинок
-        for (let i = 0; i < house_arr.length; i++) {
-            const str = ` ${house_arr[i].house_name}$`;
+        house_arr.forEach(el => {
+            const str = ` ${el.house_name}$`;
             const reg = new RegExp(str, "i");
 
-            if (reg.test(command_str)) {
-                house_id = house_arr[i].house_id;
-                break;
-            }
-        }
+            if (reg.test(command_str)) return house_id = el.house_id;
+        });
         // console.log('house_id: ', house_id)
 
         // Якщо вказаний номер будинку не знайдений то повертає помилку

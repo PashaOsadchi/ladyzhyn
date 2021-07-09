@@ -27,12 +27,9 @@ function view_video_1() {
     document.getElementById("id_sidebar").style.display = "none";
     document.getElementById("id_body").style.display = "block";
     document.getElementById("id_body").style.backgroundColor = "rgba(0, 0, 0, 0.8)";
-
     document.getElementById("iframe_video").style.display = "block";
 
     open_circles_preloader();
 
-    setTimeout(() => {
-        close_circles_preloader();
-    }, 3000);
+    setTimeout(() => close_circles_preloader(), 3000);
 }

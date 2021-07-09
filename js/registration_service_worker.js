@@ -7,6 +7,12 @@
 // https://developer.mozilla.org/ru/docs/Web/API/Service_Worker_API/Using_Service_Workers
 
 if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+        navigator.serviceWorker.register("/sw.js", { scope: "/" }).then((registration) => console.log(registration.scope), (err) => console.log(err));
+    });
+}
+
+/* if ("serviceWorker" in navigator) {
     window.addEventListener("load", function () {
         navigator.serviceWorker.register("/sw.js", { scope: "/" }).then(
             function (registration) {
@@ -19,4 +25,4 @@ if ("serviceWorker" in navigator) {
             }
         );
     });
-}
+} */

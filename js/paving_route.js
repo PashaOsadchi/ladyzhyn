@@ -68,6 +68,4 @@ function paving_route() {
                 break;
         }
     });
-
-    
 }
