@@ -163,7 +163,7 @@ const data_traffic_flows_arr = [
         name: "",
         address: "перехрестя вул. Карла Маркса та вул. Незалежності",
         total_traffic_flows: 2500,
-        detailed_information: `<b>Ваннтажних автомобілів (09.00 - 18.00):</b> 248`,
+        detailed_information: `<b>Ваннтажних автомобілів (09.00 - 18.00):</b> 24`,
         coordinates: [
             {
                 lat: 48.67645043650053, 
