@@ -119,4 +119,9 @@ const data_owners_surveillance_cameras_arr = [
         owners_name: `Філія МХП`,
         owners_name_for_button: `Філії МХП`,
     },
+    {
+        id: 25,
+        owners_name: `ДТЕК Ладижинська ТЕС`,
+        owners_name_for_button: `ДТЕК Ладижинська ТЕС`,
+    },
 ]
