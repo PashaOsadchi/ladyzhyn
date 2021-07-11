@@ -4,7 +4,7 @@ const data_traffic_flows_arr = [
         name: "",
         address: "перехрестя вул. Карла Маркса та вул. Наконечного",
         total_traffic_flows: 6800,
-        detailed_information: ``,
+        detailed_information: `<b>Ваннтажних автомобілів (09.00 - 18.00):</b> 344`,
         coordinates: [
             {
                 lat: 48.6797750449586,
@@ -40,7 +40,7 @@ const data_traffic_flows_arr = [
         name: "",
         address: "вул. Наконечного",
         total_traffic_flows: 3608,
-        detailed_information: ``,
+        detailed_information: `<b>Ваннтажних автомобілів (09.00 - 18.00):</b> 15`,
         coordinates: [
             {
                 lat: 48.70142885520618,
@@ -58,7 +58,7 @@ const data_traffic_flows_arr = [
         name: "",
         address: "перехрестя вул. Карла Маркса та вул. Слободи",
         total_traffic_flows: 6816,
-        detailed_information: ``,
+        detailed_information: `<b>Ваннтажних автомобілів (09.00 - 18.00):</b> 8`,
         coordinates: [
             {
                 lat: 48.67280270927283,
@@ -94,7 +94,7 @@ const data_traffic_flows_arr = [
         name: "",
         address: "вул. Будівельників",
         total_traffic_flows: 6373,
-        detailed_information: ``,
+        detailed_information: `<b>Ваннтажних автомобілів (09.00 - 18.00):</b> 2`,
         coordinates: [
             {
                 lat: 48.68573154207633,
@@ -110,9 +110,9 @@ const data_traffic_flows_arr = [
     {
         id: 7,
         name: "",
-        address: "",
+        address: "вул. Петра Кравчика",
         total_traffic_flows: 5428,
-        detailed_information: `вул. Петра Кравчика`,
+        detailed_information: `<b>Ваннтажних автомобілів (09.00 - 18.00):</b> 30`,
         coordinates: [
             {
                 lat: 48.68816176761819,
@@ -129,7 +129,7 @@ const data_traffic_flows_arr = [
         name: "",
         address: "перехрестя вул. Наконечного та вул. Будівельників",
         total_traffic_flows: 7117,
-        detailed_information: ``,
+        detailed_information: `<b>Ваннтажних автомобілів (09.00 - 18.00):</b> 19`,
         coordinates: [
             {
                 lat: 48.6888914831065,
@@ -138,6 +138,40 @@ const data_traffic_flows_arr = [
             {
                 lat: 48.68885263861385,
                 lng: 29.23942411270948,
+            },
+        ],
+    },
+    {
+        id: 9,
+        name: "",
+        address: "перехрестя вул. Карла Маркса та вул. Слободи",
+        total_traffic_flows: 1500,
+        detailed_information: `<b>Ваннтажних автомобілів (09.00 - 18.00):</b> 12`,
+        coordinates: [
+            {
+                lat: 48.672722758987135,
+                lng: 29.256454116917396,
+            },
+            {
+                lat: 48.67264242210427,
+                lng: 29.25643365422086,
+            },
+        ],
+    },
+    {
+        id: 10,
+        name: "",
+        address: "перехрестя вул. Карла Маркса та вул. Незалежності",
+        total_traffic_flows: 2500,
+        detailed_information: `<b>Ваннтажних автомобілів (09.00 - 18.00):</b> 248`,
+        coordinates: [
+            {
+                lat: 48.67645043650053, 
+                lng: 29.25734152023936,
+            },
+            {
+                lat: 48.67638813437474,
+                lng: 29.25727971648399,
             },
         ],
     },
