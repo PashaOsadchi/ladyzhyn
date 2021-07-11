@@ -62,7 +62,6 @@ async function onchange_human_settlements() {
     // Визначає вибраний населений пункт
     const select_human_settlements_selectedIndex = document.getElementById('id_human_settlements').selectedIndex;
     const select_human_settlements_options = document.getElementById('id_human_settlements').options;
-    const select_find_text = select_human_settlements_options[select_human_settlements_selectedIndex].text;
     const street_human_settlement_code = select_human_settlements_options[select_human_settlements_selectedIndex].value;
 
     selected_code_administrative_unit.human_settlement_code = select_human_settlements_options[select_human_settlements_selectedIndex].value;

@@ -3,7 +3,7 @@ function clears_div(id) {
 
     for (let i = 0, child; child = elementChildrens[i]; i++) {
         switch (child.type) {
-            case 'text': child.value = ""; //document.getElementById(`'${child.id}'`).innerHTML = "";
+            case 'text': child.value = "";
             case 'textarea': child.value = "";
             case 'date': child.value = "";
             case 'time': child.value = "";
