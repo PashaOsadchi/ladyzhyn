@@ -191,7 +191,7 @@ function determines_type_search_command(command_str, search_source) {
         if (organization_id > 0) return voice_command_add_map_organization_find_id(organization_id);
     }
 
-    open_dialog_error("На жаль, за вашим запитом нічого незнайдено.");
+    open_dialog_error(error_text_40);
 }
 
 function voice_command_add_map_organization_find_id(id) {
@@ -209,7 +209,7 @@ function voice_command_add_map_organization_find_id(id) {
 function voice_command_add_map_organization(organization_type) {
     const organization_arr = data_organization_arr.filter((e) => e.organization_type == organization_type);
 
-    if (organization_arr.length == 0) return open_dialog_error("На жаль, за вашим запитом нічого незнайдено.");
+    if (organization_arr.length == 0) return open_dialog_error(error_text_40);
 
     add_overlay_map_organization(organization_arr);
 
@@ -259,7 +259,7 @@ function voice_command_decoding_address(command_str, human_settlement_id) {
         // console.log('house_id: ', house_id)
 
         // Якщо вказаний номер будинку не знайдений то повертає помилку
-        if (house_id == 0) return open_dialog_error("Вказаний номер будинку не знайдено! Спробуйте ще раз.");
+        if (house_id == 0) return open_dialog_error(error_text_41);
 
         house_arr = data_house_arr.filter( (e) => e.house_id == house_id);
         add_map_house_voice(house_arr);

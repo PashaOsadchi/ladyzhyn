@@ -86,33 +86,33 @@ if ("webkitSpeechRecognition" in window || "SpeechRecognition" in window) {
     recognition.onerror = (e) => {
         switch (e.error) {
             case "not-allowed":
-                open_dialog_error(`Надайте доступ до мікрофону!(${e.error})`);
+                open_dialog_error(`${error_text_43} (${e.error})`);
             case "network":
-                open_dialog_error(`Відсутнє інтернет зєднання!(${e.error})`);
+                open_dialog_error(`${error_text_44} (${e.error})`);
             case "no-speech":
-                open_dialog_error(`Голос не знайдено!(${e.error})`);
+                open_dialog_error(`${error_text_45} (${e.error})`);
             case "aborted":
-                open_dialog_error(`Голосове введення було перерване!(${e.error})`);
+                open_dialog_error(`${error_text_46} (${e.error})`);
             case "audio-capture":
-                open_dialog_error(`Не вдалося розпізнати звук!(${e.error})`);
+                open_dialog_error(`${error_text_47} (${e.error})`);
             case "service-not-allowed":
-                open_dialog_error(`Користувацький агент забороняє використовувти голосову службу!(${e.error})`);
+                open_dialog_error(`${error_text_48} (${e.error})`);
             case "bad-grammar":
-                open_dialog_error(`Помилка в граматиці!(${e.error})`);
+                open_dialog_error(`${error_text_49} (${e.error})`);
             case "language-not-supported":
-                open_dialog_error(`Мова не підтримується!(${e.error})`);
+                open_dialog_error(`${error_text_50} (${e.error})`);
             default:
-                open_dialog_error(`Невідома помилка! (${e.error})`);
+                open_dialog_error(`${error_text_39} (${e.error})`);
         }
     };
 } else {
-    open_dialog_error(`Ваший браузер не підтримує розпізнавання голосу! Використовуйте браузер Chrome останньої версії`);
+    open_dialog_error(error_text_51);
 }
 
 /* // Розпізнавання голосу
 function voice_recognition() {
     if (!('webkitSpeechRecognition' in window)) {
-        return open_dialog_error(`Ваший браузер не підтримує розпізнавання голосу! Використовуйте браузер Chrome останньої версії`);
+        return open_dialog_error(error_text_51);
     };
 
     const recognition = new webkitSpeechRecognition();
@@ -142,23 +142,23 @@ function voice_recognition() {
     recognition.onerror = function (e) {
         switch (e.error) {
             case "not-allowed":
-                open_dialog_error(`Надайте доступ до мікрофону!(${e.error})`);
+                open_dialog_error(`${error_text_43} (${e.error})`);
             case "network":
-                open_dialog_error(`Відсутнє інтернет зєднання!(${e.error})`);
+                open_dialog_error(`${error_text_44} (${e.error})`);
             case "no-speech":
-                open_dialog_error(`Голос не знайдено!(${e.error})`);
+                open_dialog_error(`${error_text_45} (${e.error})`);
             case "aborted":
-                open_dialog_error(`Голосове введення було перерване!(${e.error})`);
+                open_dialog_error(`${error_text_46} (${e.error})`);
             case "audio-capture":
-                open_dialog_error(`Не вдалося розпізнати звук!(${e.error})`);
+                open_dialog_error(`${error_text_47} (${e.error})`);
             case "service-not-allowed":
-                open_dialog_error(`Користувацький агент забороняє використовувти голосову службу!(${e.error})`);
+                open_dialog_error(`${error_text_48} (${e.error})`);
             case "bad-grammar":
-                open_dialog_error(`Помилка в граматиці!(${e.error})`);
+                open_dialog_error(`${error_text_49} (${e.error})`);
             case "language-not-supported":
-                open_dialog_error(`Мова не підтримується!(${e.error})`);
+                open_dialog_error(`${error_text_50} (${e.error})`);
             default:
-                open_dialog_error(`Невідома помилка! (${e.error})`);
+                open_dialog_error(`${error_text_39} (${e.error})`);
         };
     };
 
